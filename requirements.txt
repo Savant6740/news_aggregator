@@ -1,8 +1,0 @@
-telethon==1.36.0
-pdfplumber==0.11.0
-pdf2image==1.17.0
-pytesseract==0.3.10
-google-generativeai==0.8.3
-Pillow==10.3.0
-scikit-learn==1.4.2
-cryptg==0.4.0
