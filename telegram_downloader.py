@@ -73,6 +73,8 @@ def normalise(text: str) -> str:
 
 def get_newspaper_name(filename: str) -> str | None:
     norm = normalise(filename)
+    if "indulge" in norm:
+        return None
     for keyword, name in NEWSPAPER_KEYWORDS.items():
         if keyword in norm:
             return name
@@ -108,7 +110,7 @@ async def download_todays_pdfs() -> dict[str, dict]:
         log.info(f"Connected to Telegram. Scanning: {CHANNEL}")
         entity = await client.get_entity(CHANNEL)
 
-        async for message in client.iter_messages(entity, limit=1000):
+        async for message in client.iter_messages(entity, limit=300):
             if message.date.astimezone(IST).date() < today:
                 break
 
