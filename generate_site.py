@@ -55,6 +55,10 @@ def generate_html(data: dict) -> str:
         by_category[cat].append(art)
 
     sorted_cats = sorted(by_category.keys(), key=lambda c: -len(by_category[c]))
+
+    # Sort articles within each category by importance descending (fallback to 5 if missing)
+    for cat in sorted_cats:
+        by_category[cat].sort(key=lambda a: -a.get("importance", 5))
     total = len(articles)
 
     # ── Nav tabs
@@ -90,6 +94,8 @@ def generate_html(data: dict) -> str:
             card_papers = list(set(src.get("newspaper", "") for src in sources if src.get("newspaper")))
             papers_attr = ",".join(card_papers)
             card_id     = f"card-{abs(hash(headline)) % 10**9}"
+            importance  = art.get("importance", 5)
+            imp_color   = "#c9a66b" if importance >= 8 else ("#7a736c" if importance <= 4 else "#a09890")
 
             source_links = ""
             if sources:
@@ -115,6 +121,7 @@ def generate_html(data: dict) -> str:
                 <div class="card-top">
                     <span class="card-category-dot" style="background:{meta['color']}"></span>
                     {multi_badge}
+                    <span class="imp-badge" style="color:{imp_color}" title="Importance score">{importance}/10</span>
                     <button class="read-btn" onclick="toggleRead('{card_id}', this)">✓</button>
                 </div>
                 <h3 class="card-headline">{headline}</h3>
@@ -207,6 +214,7 @@ body{{background:var(--bg);color:var(--text);font-family:'Source Serif 4',Georgi
 .read-btn{{margin-left:auto;background:none;border:1px solid var(--border);border-radius:4px;color:var(--muted);font-size:11px;padding:2px 7px;cursor:pointer;transition:all 0.15s;font-family:'JetBrains Mono',monospace;flex-shrink:0}}
 .read-btn:hover{{border-color:var(--muted);color:var(--ink)}}
 .card.is-read .read-btn{{background:rgba(201,166,107,0.15);border-color:rgba(201,166,107,0.4);color:#c9a66b}}
+.imp-badge{{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.06em;margin-left:auto}}
 
 .card-headline{{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--ink);line-height:1.4;letter-spacing:-0.01em}}
 .card-summary{{font-size:13.5px;font-weight:300;color:#a09890;line-height:1.75;font-style:italic;flex:1}}
