@@ -1,0 +1,90 @@
+name: 📰 Daily News Digest
+
+# ── Manual trigger only ────────────────────────────────────────────────────────
+# Trigger from your phone after confirming newspapers are posted in Telegram:
+#   - GitHub mobile app: Repo → Actions → "Daily News Digest" → Run workflow
+#   - Browser: github.com/USERNAME/REPO/actions → Run workflow
+#   - Android widget: tap the big button in daily_brief_widget.html
+#
+# Minutes budget (1,200 available = 2,000 total − 800 other repo):
+#   ~15 mins/run × 31 days max = 465 mins/month → 735 mins buffer (61% unused) ✅
+
+on:
+  workflow_dispatch:
+    inputs:
+      note:
+        description: 'Optional note (e.g. "all 7 papers confirmed")'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: 📥 Checkout repo
+        uses: actions/checkout@v4
+
+      - name: 🐍 Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 📦 Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: ${{ runner.os }}-pip-
+
+      - name: 📦 Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: 🛠 Install system dependencies (OCR)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y poppler-utils tesseract-ocr libtesseract-dev
+
+      - name: 🤖 Run digest pipeline
+        env:
+          GEMINI_API_KEY:    ${{ secrets.GEMINI_API_KEY }}
+          TELEGRAM_API_ID:   ${{ secrets.TELEGRAM_API_ID }}
+          TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
+          TELEGRAM_CHANNEL:  ${{ secrets.TELEGRAM_CHANNEL }}
+          NOTIFY_BOT_TOKEN:  ${{ secrets.NOTIFY_BOT_TOKEN }}
+          NOTIFY_CHAT_ID:    ${{ secrets.NOTIFY_CHAT_ID }}
+          SITE_URL:          ${{ secrets.SITE_URL }}
+        run: python3 digest.py
+        # digest.py calls notify.py at the end — sends Telegram message when site is ready.
+        # If notification fails, the workflow still succeeds (non-fatal).
+
+      - name: 💾 Commit site files (no PDFs)
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/index.html docs/digest.json
+          git diff --staged --quiet || git commit -m "📰 Digest: $(TZ='Asia/Kolkata' date +'%d %b %Y')"
+          git push
+
+      - name: 📤 Upload docs/ as Pages artifact (includes PDFs)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/
+
+      - name: 🚀 Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+        id: deployment
+
+      - name: 📤 Upload logs on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: digest-logs
+          path: "*.log"
+          retention-days: 3
