@@ -108,7 +108,7 @@ async def download_todays_pdfs() -> dict[str, dict]:
         log.info(f"Connected to Telegram. Scanning: {CHANNEL}")
         entity = await client.get_entity(CHANNEL)
 
-        async for message in client.iter_messages(entity, limit=300):
+        async for message in client.iter_messages(entity, limit=1000):
             if message.date.astimezone(IST).date() < today:
                 break
 
