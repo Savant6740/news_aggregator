@@ -96,12 +96,14 @@ Rules:
 - SKIP: advertisements, stock tables, weather forecasts, TV schedules, classifieds, obituaries, horoscopes, crosswords.
 - Identify the page number from [PAGE N] markers in the text.
 - Category must be exactly one of: {', '.join(CATEGORIES)}
+- Importance: rate each article 1-10 based on national/global significance and reader impact. Front-page lead stories = 8-10. Minor local briefs = 1-3.
 
 Return ONLY a valid JSON array. Each item must have exactly these fields:
 - "headline": clear factual headline, max 12 words
 - "summary": 2-3 sentences in neutral simple English with key facts and figures
 - "category": one category from the list above
 - "page": integer page number where article starts
+- "importance": integer 1-10 rating of the article's significance
 
 Full newspaper text:
 {full_text}
