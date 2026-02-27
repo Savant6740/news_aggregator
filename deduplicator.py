@@ -16,7 +16,7 @@ from collections import defaultdict
 log = logging.getLogger(__name__)
 
 
-def cosine_cluster(articles: list[dict], threshold: float = 0.35) -> list[list[int]]:
+def cosine_cluster(articles: list[dict], threshold: float = 0.25) -> list[list[int]]:
     """
     Groups article indices by similarity using TF-IDF. No API call — runs locally.
     Returns list of clusters (each cluster = list of article indices).
@@ -25,8 +25,8 @@ def cosine_cluster(articles: list[dict], threshold: float = 0.35) -> list[list[i
         from sklearn.feature_extraction.text import TfidfVectorizer
         from sklearn.metrics.pairwise import cosine_similarity
 
-        texts = [f"{a['headline']} {a['summary']}" for a in articles]
-        vec = TfidfVectorizer(stop_words="english", ngram_range=(1, 2))
+        texts = [f"{a['headline']} {a['headline']} {a['summary']}" for a in articles]  # headline weighted double
+        vec = TfidfVectorizer(stop_words="english", ngram_range=(1, 3))
         tfidf = vec.fit_transform(texts)
         sim = cosine_similarity(tfidf).tolist()
 
