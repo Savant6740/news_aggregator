@@ -39,7 +39,9 @@ def extract_text_by_page(pdf_path: Path) -> list[dict]:
     except Exception as e:
         log.warning(f"pdfplumber failed: {e}")
 
-    if len(pages) < 2:
+    # If total extracted text is suspiciously low, assume scanned PDF
+    total_chars = sum(len(p["text"]) for p in pages)
+    if len(pages) < 2 or total_chars < 5000:
         log.info(f"Falling back to OCR for {pdf_path.name}")
         pages = ocr_by_page(pdf_path)
 
@@ -50,7 +52,9 @@ def ocr_by_page(pdf_path: Path) -> list[dict]:
     try:
         from pdf2image import convert_from_path
         import pytesseract
-        images = convert_from_path(str(pdf_path), dpi=200)
+        from PIL import Image
+        Image.MAX_IMAGE_PIXELS = None  # Suppress DecompressionBombWarning for large newspaper scans
+        images = convert_from_path(str(pdf_path), dpi=150)  # Lowered DPI to reduce memory usage
         results = []
         for i, img in enumerate(images):
             text = pytesseract.image_to_string(img, lang="eng", config="--psm 3")
