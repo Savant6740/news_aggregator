@@ -32,7 +32,7 @@ SESSION_PATH = str(Path(__file__).parent / "news_session")
 # GitHub Actions secret injection is complete before they are accessed.
 def _api_id()   -> int: return int(os.environ["TELEGRAM_API_ID"])
 def _api_hash() -> str: return os.environ["TELEGRAM_API_HASH"]
-def _channel()  -> str: return os.environ["TELEGRAM_CHANNEL"]
+def _channel()  -> str: return os.environ.get("TELEGRAM_CHANNEL", "-1001877410077")
 
 # Full list of newspapers we expect each day
 EXPECTED_NEWSPAPERS = [
