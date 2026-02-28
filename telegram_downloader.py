@@ -47,102 +47,166 @@ EXPECTED_NEWSPAPERS = [
 #   priority 2 = Delhi
 #   priority 3 = any / generic        <- last resort
 #
-# NOTE: After you run scan_group_history.py and share the output,
-# update the keywords below to match the actual filenames in your group.
+# Keywords are matched against the normalised filename, where normalise() lowercases
+# the name and replaces hyphens, underscores and tildes with spaces.
+# Patterns are derived from 3 months of actual filenames in the source group.
 # ─────────────────────────────────────────────────────────────────────────────
 NEWSPAPER_KEYWORDS: list[tuple[str, str, int]] = [
 
     # ── The Hindu ─────────────────────────────────────────────────────────────
-    ("thehindubengaluru",          "The Hindu", 1),
-    ("thehindubangalore",          "The Hindu", 1),
-    ("hindubengaluru",             "The Hindu", 1),
-    ("hindubangalore",             "The Hindu", 1),
-    ("thehindudelhi",              "The Hindu", 2),
-    ("hindudelhi",                 "The Hindu", 2),
-    ("thehindu",                   "The Hindu", 3),
+    # Observed patterns: "TH Bangalore DD-MM-YYYY", "TH -Bangalore -DD-MM-YYYY",
+    # "TH BL HD Bangalore DD~MM~YYYY", "THE HINDU HD Bangalore ...",
+    # "th.th_bangalore.DD_MM_YYYY", "TH Bangalore DD~MM~YYYY"
+    ("the hindu hd bangalore",    "The Hindu", 1),
+    ("th bl hd bangalore",        "The Hindu", 1),   # combo file; also triggers Business Line
+    ("th bangalore",              "The Hindu", 1),
+    ("th  bangalore",             "The Hindu", 1),   # double-space variant
+    ("th.th bangalore",           "The Hindu", 1),   # dot-separated variant normalised
+    ("th bl hd delhi",            "The Hindu", 2),
+    ("th delhi",                  "The Hindu", 2),
+    ("th  delhi",                 "The Hindu", 2),
+    ("th mumbai",                 "The Hindu", 3),
+    ("th  mumbai",                "The Hindu", 3),
 
     # ── Indian Express ────────────────────────────────────────────────────────
-    ("indianexpressbengaluru",     "Indian Express", 1),
-    ("indianexpressbangalore",     "Indian Express", 1),
-    ("iebengaluru",                "Indian Express", 1),
-    ("iebangalore",                "Indian Express", 1),
-    ("indianexpressdelhi",         "Indian Express", 2),
-    ("iedelhi",                    "Indian Express", 2),
-    ("indianexpress",              "Indian Express", 3),
+    # No Bangalore/Bengaluru edition observed in group.
+    # Observed patterns: "IE Delhi DD-MM-YYYY", "IE - Delhi-Month-DD-YYYY",
+    # "cleaned_IE Delhi DD-MM-YYYY", "cleaned_IE - Delhi-Month-DD-YYYY"
+    ("ie delhi",                  "Indian Express", 2),
+    ("ie  delhi",                 "Indian Express", 2),
+    ("ie - delhi",                "Indian Express", 2),
+    ("ie mumbai",                 "Indian Express", 3),
+    ("ie  mumbai",                "Indian Express", 3),
+    ("ie - mumbai",               "Indian Express", 3),
 
     # ── Financial Express ─────────────────────────────────────────────────────
-    ("financialexpressbengaluru",  "Financial Express", 1),
-    ("financialexpressbangalore",  "Financial Express", 1),
-    ("febengaluru",                "Financial Express", 1),
-    ("febangalore",                "Financial Express", 1),
-    ("financialexpressdelhi",      "Financial Express", 2),
-    ("fedelhi",                    "Financial Express", 2),
-    ("financialexpress",           "Financial Express", 3),
+    # Observed patterns: "FE_Bengaluru_DD-MM-YYYY", "FE - Bengaluru  - DD-MM-YYYY",
+    # "FE-Bengaluru DD-MM", "Bangalore_FE_DD-MM-YYYY", "cleaned_FE - Bengaluru  - ..."
+    ("fe bengaluru",              "Financial Express", 1),
+    ("fe  bengaluru",             "Financial Express", 1),
+    ("bangalore fe",              "Financial Express", 1),
+    ("fe - bengaluru",            "Financial Express", 1),
+    ("fe delhi",                  "Financial Express", 2),
+    ("fe  delhi",                 "Financial Express", 2),
+    ("fe - delhi",                "Financial Express", 2),
+    ("fe mumbai",                 "Financial Express", 3),
+    ("fe  mumbai",                "Financial Express", 3),
 
     # ── Times of India ────────────────────────────────────────────────────────
-    ("toibengaluru",               "Times of India", 1),
-    ("toibangalore",               "Times of India", 1),
-    ("bengalurutoi",               "Times of India", 1),
-    ("bangaloretoi",               "Times of India", 1),
-    ("toidelhi",                   "Times of India", 2),
-    ("delhitoi",                   "Times of India", 2),
-    ("timeofindia",                "Times of India", 3),
-    ("timesofindia",               "Times of India", 3),
+    # Observed patterns: "TOI_Bangalore_DD-MM-YYYY", "TOI-Bangalore DD-MM",
+    # "Bangalore_TOI_DD-MM-YYYY", "TOIBe - Bengaluru Times  - DD-MM-YYYY",
+    # "TOI Bengaluru DD-MM", "ToI Bengaluru DD.MM.YYYY"
+    # Note: "TOIBe - Bengaluru Times" is the Bengaluru Times supplement —
+    # it is included here as a Bengaluru-edition proxy since no standalone
+    # main TOI Bengaluru file was consistently posted without it.
+    ("toibe",                     "Times of India", 1),   # Bengaluru Times supplement
+    ("toi bangalore",             "Times of India", 1),
+    ("bangalore toi",             "Times of India", 1),
+    ("toi bengaluru",             "Times of India", 1),
+    ("toi  bengaluru",            "Times of India", 1),
+    ("toi delhi",                 "Times of India", 2),
+    ("delhi toi",                 "Times of India", 2),
+    ("toi  delhi",                "Times of India", 2),
+    ("toi mumbai",                "Times of India", 3),
+    ("toi  mumbai",               "Times of India", 3),
 
     # ── Hindustan Times ───────────────────────────────────────────────────────
-    ("htbengaluru",                "Hindustan Times", 1),
-    ("htbangalore",                "Hindustan Times", 1),
-    ("hindustantimesbengaluru",    "Hindustan Times", 1),
-    ("hindustantimesbangalore",    "Hindustan Times", 1),
-    ("htdelhi",                    "Hindustan Times", 2),
-    ("hindustantimesdelhi",        "Hindustan Times", 2),
-    ("hindustantimes",             "Hindustan Times", 3),
+    # Observed patterns: "Bangalore_HT_DD-MM-YYYY", "HT-Bangalore - DD-MM-YYYY",
+    # "Bangalore _HT_DD-MM-YYYY", "HT Bengaluru superscript-date",
+    # "UHT Bengaluru DD-MM" (UHT = ultra-HD variant of HT)
+    ("bangalore ht",              "Hindustan Times", 1),
+    ("ht bangalore",              "Hindustan Times", 1),
+    ("ht  bangalore",             "Hindustan Times", 1),
+    ("ht bengaluru",              "Hindustan Times", 1),
+    ("ht  bengaluru",             "Hindustan Times", 1),
+    ("uht bengaluru",             "Hindustan Times", 1),   # ultra-HD variant
+    ("ht delhi",                  "Hindustan Times", 2),
+    ("ht  delhi",                 "Hindustan Times", 2),
+    ("ht city delhi",             "Hindustan Times", 2),
+    ("ht hd delhi",               "Hindustan Times", 2),
+    ("ht mumbai",                 "Hindustan Times", 3),
+    ("ht  mumbai",                "Hindustan Times", 3),
 
     # ── Economic Times ────────────────────────────────────────────────────────
-    ("etbengaluru",                "Economic Times", 1),
-    ("etbangalore",                "Economic Times", 1),
-    ("bengalureet",                "Economic Times", 1),
-    ("bangaloreet",                "Economic Times", 1),
-    ("etdelhi",                    "Economic Times", 2),
-    ("delhiet",                    "Economic Times", 2),
-    ("economictimes",              "Economic Times", 3),
+    # Observed patterns: "ET Bengaluru DD-MM-YYYY", "ET- Bengaluru-DD-MM-YYYY",
+    # "ET Bengaluru DD.MM.YYYY", "Bangalore_ET_DD-MM-YYYY", "ET_Bangalore_DD-MM-YYYY",
+    # "ET-Bangalore DD-MM"
+    ("et bengaluru",              "Economic Times", 1),
+    ("et  bengaluru",             "Economic Times", 1),
+    ("et bangalore",              "Economic Times", 1),
+    ("et  bangalore",             "Economic Times", 1),
+    ("bangalore et",              "Economic Times", 1),
+    ("et delhi",                  "Economic Times", 2),
+    ("et  delhi",                 "Economic Times", 2),
+    ("delhi et",                  "Economic Times", 2),
+    ("et mumbai",                 "Economic Times", 3),
+    ("et  mumbai",                "Economic Times", 3),
 
     # ── Business Line (The Hindu Business Line) ───────────────────────────────
-    ("businesslinebengaluru",      "Business Line", 1),
-    ("businesslinebangalore",      "Business Line", 1),
-    ("blbengaluru",                "Business Line", 1),
-    ("blbangalore",                "Business Line", 1),
-    ("thehindubusinesslinebengaluru", "Business Line", 1),
-    ("thehindubusinesslinebangalore", "Business Line", 1),
-    ("businesslinedelhi",          "Business Line", 2),
-    ("bldelhi",                    "Business Line", 2),
-    ("businessline",               "Business Line", 3),
-    ("thehindubusinessline",       "Business Line", 3),
+    # Observed patterns: "BL Bangalore DD-MM-YYYY", "BL - Bangalore  - DD-MM-YYYY",
+    # "BL- Bangalore DD-MM", "BL_Bangalore_DD-MM-YYYY", "Bangalore_BL_DD-MM-YYYY",
+    # "BL Bengaluru DD.MM.YYYY", "TH BL HD Bangalore DD~MM~YYYY" (combo file)
+    ("th bl hd bangalore",        "Business Line", 1),   # combo file; also triggers The Hindu
+    ("bl bangalore",              "Business Line", 1),
+    ("bl  bangalore",             "Business Line", 1),
+    ("bl - bangalore",            "Business Line", 1),
+    ("bangalore bl",              "Business Line", 1),
+    ("bl bengaluru",              "Business Line", 1),
+    ("bl  bengaluru",             "Business Line", 1),
+    ("th bl hd delhi",            "Business Line", 2),
+    ("bl delhi",                  "Business Line", 2),
+    ("bl  delhi",                 "Business Line", 2),
+    ("bl - delhi",                "Business Line", 2),
+    ("bl mumbai",                 "Business Line", 3),
+    ("bl  mumbai",                "Business Line", 3),
 
     # ── Business Standard ─────────────────────────────────────────────────────
-    ("businessstandardbengaluru",  "Business Standard", 1),
-    ("businessstandardbangalore",  "Business Standard", 1),
-    ("bsbengaluru",                "Business Standard", 1),
-    ("bsbangalore",                "Business Standard", 1),
-    ("businessstandarddelhi",      "Business Standard", 2),
-    ("bsdelhi",                    "Business Standard", 2),
-    ("businessstandard",           "Business Standard", 3),
+    # No Bangalore/Bengaluru edition observed in group.
+    # Observed patterns: "BS_Delhi_DD-MM-YYYY", "BS_Delhi_H_DD-MM-YYYY" (HD variant),
+    # "BS_Mumbai_DD-MM-YYYY"
+    ("bs delhi",                  "Business Standard", 2),
+    ("bs  delhi",                 "Business Standard", 2),
+    ("bs mumbai",                 "Business Standard", 3),
+    ("bs  mumbai",                "Business Standard", 3),
+    ("bs ahmedabad",              "Business Standard", 3),
 
     # ── Mint ──────────────────────────────────────────────────────────────────
-    ("mintbengaluru",              "Mint", 1),
-    ("mintbangalore",              "Mint", 1),
-    ("bengalurumint",              "Mint", 1),
-    ("bangaloremint",              "Mint", 1),
-    ("mintdelhi",                  "Mint", 2),
-    ("delhimint",                  "Mint", 2),
-    ("livemintdelhi",              "Mint", 2),
-    ("livemint",                   "Mint", 3),
-    ("mint",                       "Mint", 3),
+    # Observed patterns: "Bengaluru_Mint_DD-MM-YYYY", "BENGALURU_Mint_DD-MM-YYYY",
+    # "Mint - Bengaluru DD-MM-YYYY", "Mint Bengaluru DD-MM-YYYY",
+    # "cleaned_Mint - Bengaluru DD-MM-YYYY", "cleaned_Bengaluru_Mint_DD-MM-YYYY",
+    # "Mint Bangalore DD-MM", "Mint New Delhi DD-MM"
+    ("bengaluru mint",            "Mint", 1),
+    ("bengaluru  mint",           "Mint", 1),
+    ("mint bengaluru",            "Mint", 1),
+    ("mint  bengaluru",           "Mint", 1),
+    ("mint - bengaluru",          "Mint", 1),
+    ("mint bangalore",            "Mint", 1),
+    ("mint  bangalore",           "Mint", 1),
+    ("mint delhi",                "Mint", 2),
+    ("mint  delhi",               "Mint", 2),
+    ("mint - delhi",              "Mint", 2),
+    ("mint new delhi",            "Mint", 2),
+    ("delhi mint",                "Mint", 2),
+    ("mint mumbai",               "Mint", 3),
+    ("mint  mumbai",              "Mint", 3),
+    ("mint - mumbai",             "Mint", 3),
 ]
 
 
 def normalise(text: str) -> str:
-    return text.lower().replace(" ", "").replace("-", "").replace("_", "")
+    """
+    Lowercase and replace separators with spaces so keyword matching works
+    against the real filenames (e.g. 'TH_Bangalore' → 'th bangalore',
+    'TH -Bangalore' → 'th  bangalore', 'TH~Bangalore' → 'th bangalore').
+    Dots are also replaced so 'th.th_bangalore' → 'th th bangalore'.
+    """
+    return (
+        text.lower()
+        .replace("_", " ")
+        .replace("-", " ")
+        .replace("~", " ")
+        .replace(".", " ")
+    )
 
 
 def get_newspaper_name(filename: str) -> tuple[str, int] | None:
@@ -152,8 +216,22 @@ def get_newspaper_name(filename: str) -> tuple[str, int] | None:
     """
     norm = normalise(filename)
 
-    # Skip supplements / inserts
-    if any(skip in norm for skip in ("indulge", "magazine", "epaper_ad", "advertis")):
+    # Skip supplements / inserts / non-newspaper files
+    skip_tokens = (
+        "indulge", "magazine", "epaper ad", "advertis",
+        "school", "combo edit",           # TH School editions, UPSC combo files
+        "all english editorial",          # editorial compilations
+        "all hindi editorial",
+        "daily vocabulary",
+        "hindi ",                          # Hindi-language papers
+        "times supplement",
+        "bombay times", "pune times", "madras times",
+        "kolkata times", "hyderabad times",
+        "chandigarh times", "ahmedabad times",
+        "bengaluru times",                 # TOIBe supplement — remove this line
+                                           # if you DO want the Bengaluru Times supplement
+    )
+    if any(skip in norm for skip in skip_tokens):
         return None
 
     best: tuple[str, int] | None = None
@@ -194,9 +272,9 @@ async def download_todays_pdfs() -> dict[str, dict]:
     Returns dict:
     {
       "Times of India": {
-          "path":             Path("pdfs/BangaloreTOI.pdf"),
-          "telegram_url":     "https://t.me/c/1234567890/4321",
-          "filename":         "BangaloreTOI.pdf",
+          "path":             Path("pdfs/TOI_Bangalore_28-02-2026.pdf"),
+          "telegram_url":     "https://t.me/c/1877410077/4321",
+          "filename":         "TOI_Bangalore_28-02-2026.pdf",
           "edition_priority": 1,
       }, ...
     }
@@ -237,7 +315,10 @@ async def download_todays_pdfs() -> dict[str, dict]:
             # Only download if this is a better edition than what we already have
             existing = best_found.get(newspaper)
             if existing and existing["edition_priority"] <= priority:
-                log.debug(f"Already have better edition of {newspaper} (priority {existing['edition_priority']})")
+                log.debug(
+                    f"Already have better edition of {newspaper} "
+                    f"(priority {existing['edition_priority']})"
+                )
                 continue
 
             save_path = PDF_DIR / filename
