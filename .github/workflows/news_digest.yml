@@ -7,18 +7,40 @@ name: 📰 Daily News Digest
 #   Stops early once all expected papers are present for the day
 #   Sunday: 7 papers expected (Mint and Business Standard not published)
 #
+# How the gate works (no Telegram calls in the workflow):
+#   The progress check reads only docs/digest_state.json (committed to repo).
+#   If is_complete=true for today → skip immediately (~10 seconds, no Python).
+#   Otherwise → always proceed to digest.py, which handles the Telegram scan
+#   internally and exits cleanly on its own if nothing new has arrived.
+#   This avoids the secret-masking bug that breaks inline Telegram calls.
+#
 # ── Minutes budget ────────────────────────────────────────────────────────────
 # 7 schedule triggers/day × 31 days = 217 potential runs/month
 #
 # Run types:
-#   (A) Early exit   — papers already complete, check only (~1 min)
-#   (B) Skip exit    — no new papers since last run, check only (~1 min)
-#   (C) Partial run  — 1-3 new papers, OCR + extract + build (~10 min)
-#   (D) Full run     — 7-9 papers on first trigger of the day (~18 min)
+#   (A) Complete skip  — state says done today, shell check only   →  ~0.1 min
+#   (B) No-op run      — digest.py finds nothing new, exits early  →  ~3 min
+#   (C) Partial update — 1–3 new papers, extract + build + deploy  → ~10 min
+#   (D) Full first run — 7–9 papers at once                        → ~18 min
 #
-# Best case  (~390 mins/month): papers arrive before 9am every day
-#   31 × (1×D=18 + 6×A=6) = 31 × 24 = 744 ... see detailed table below
-# See full analysis in README or bottom of this file.
+# BEST CASE  — all papers arrive before 9am every day (31 days)
+#   09:00 → 1 full run (D=18)  +  6 complete skips (A=0.1×6=0.6)
+#   Daily: ~19 min  →  19 × 31 = 589 min/month  ✅
+#
+# AVERAGE CASE — papers trickle over 2–3 runs/day (31 days)
+#   09:00 → partial (C=10)  09:30 → partial (C=10)  10:00 → partial (C=10)
+#   10:30–12:00 → 4 complete skips (A≈0)
+#   Daily: ~30 min  →  30 × 31 = 930 min/month  ✅
+#
+# WORST CASE — papers arrive late, one per slot (31 days)
+#   09:00 → no-op (B=3)  then 5 × partial (C=10)  then 1 complete skip (A≈0)
+#   Daily: ~53 min  →  53 × 31 = 1643 min/month  ⚠️  (only if EVERY day is worst)
+#
+# REALISTIC WORST — based on observed data (Feb): 1 late day in 7
+#   6 average days (30 min) + 1 worst day (53 min) per week
+#   Monthly: ~(26×30 + 5×53) = 1045 min/month  ✅
+#
+# Safe cap: remove the 11:30 + 12:00 crons → worst case ~40 min/day = 1240/month
 
 on:
   schedule:
@@ -47,16 +69,55 @@ jobs:
     timeout-minutes: 45
 
     steps:
-      # ── Setup ──────────────────────────────────────────────────────────────
+      # ── Checkout first — needed to read state file ───────────────────────────
       - name: 📥 Checkout repo
         uses: actions/checkout@v4
 
+      # ── Fast gate: pure shell, reads state file only ─────────────────────────
+      # No Python, no Telegram. Reads docs/digest_state.json which was committed
+      # by the previous run. If today is already marked complete, bail in ~5 sec.
+      # All Telegram interaction happens inside digest.py where secrets work fine.
+      - name: 🔍 Check if today is already complete
+        id: gate
+        run: |
+          TODAY=$(TZ='Asia/Kolkata' date +'%Y-%m-%d')
+          STATE_FILE="docs/digest_state.json"
+          EVENT="${{ github.event_name }}"
+
+          if [ "$EVENT" = "workflow_dispatch" ]; then
+            echo "Manual trigger — always proceed."
+            echo "proceed=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          if [ ! -f "$STATE_FILE" ]; then
+            echo "No state file — first run ever, proceeding."
+            echo "proceed=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          FILE_DATE=$(python3 -c "import json; d=json.load(open('$STATE_FILE')); print(d.get('date',''))" 2>/dev/null || echo "")
+          IS_COMPLETE=$(python3 -c "import json; d=json.load(open('$STATE_FILE')); print(str(d.get('is_complete',False)).lower())" 2>/dev/null || echo "false")
+
+          echo "State file: date=$FILE_DATE  is_complete=$IS_COMPLETE  today=$TODAY"
+
+          if [ "$FILE_DATE" = "$TODAY" ] && [ "$IS_COMPLETE" = "true" ]; then
+            echo "All papers already processed today — skipping."
+            echo "proceed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "Not yet complete — proceeding to pipeline."
+            echo "proceed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # ── Python + heavy deps only when we're actually going to run ────────────
       - name: 🐍 Set up Python 3.11
+        if: steps.gate.outputs.proceed == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: 📦 Cache pip dependencies
+        if: steps.gate.outputs.proceed == 'true'
         uses: actions/cache@v4
         with:
           path: ~/.cache/pip
@@ -64,88 +125,24 @@ jobs:
           restore-keys: ${{ runner.os }}-pip-
 
       - name: 📦 Install Python dependencies
+        if: steps.gate.outputs.proceed == 'true'
         run: pip install -r requirements.txt
 
-      # ── Progress gate — exit early if nothing new to do ────────────────────
-      # Reads docs/digest_state.json to see what was already processed today,
-      # then does a lightweight Telegram metadata scan (no PDF download) to
-      # check if any new papers have arrived since. Costs ~1 min if skipping.
-      - name: 🔍 Check for new papers since last run
-        id: progress_check
-        env:
-          TELEGRAM_API_ID:   ${{ secrets.TELEGRAM_API_ID }}
-          TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
-          TELEGRAM_CHANNEL:  ${{ secrets.TELEGRAM_CHANNEL }}
-        run: |
-          python3 - >> "$GITHUB_OUTPUT" <<'EOF'
-          import json, os, sys
-          from datetime import datetime, timezone, timedelta
-          from telegram_downloader import scan_available, EXPECTED_NEWSPAPERS
-
-          IST       = timezone(timedelta(hours=5, minutes=30))
-          today     = datetime.now(IST)
-          today_str = today.strftime("%Y-%m-%d")
-          is_sunday = today.weekday() == 6
-
-          SUNDAY_SKIP    = {"Mint", "Business Standard"}
-          expected       = [p for p in EXPECTED_NEWSPAPERS if p not in SUNDAY_SKIP] if is_sunday else list(EXPECTED_NEWSPAPERS)
-          total_expected = len(expected)
-
-          # Load state written by previous run today (committed to repo)
-          state_file   = "docs/digest_state.json"
-          already_done = set()
-          is_complete  = False
-          if os.path.exists(state_file):
-              try:
-                  state = json.loads(open(state_file).read())
-                  if state.get("date") == today_str:
-                      already_done = set(state.get("downloaded", []))
-                      is_complete  = state.get("is_complete", False)
-              except Exception:
-                  pass
-
-          trigger = os.environ.get("GITHUB_EVENT_NAME", "")
-
-          # If already complete today, skip (unless manually triggered)
-          if is_complete and trigger != "workflow_dispatch":
-              print(f"is_complete=true")
-              print(f"proceed=false")
-              print(f"already_done={','.join(sorted(already_done))}")
-              print(f"total_expected={total_expected}")
-              print(f"is_sunday={'true' if is_sunday else 'false'}")
-              sys.exit(0)
-
-          # Lightweight scan — reads only message metadata, no PDF download
-          available  = scan_available()
-          new_papers = {k: v for k, v in available.items() if k not in already_done}
-
-          print(f"already_done={','.join(sorted(already_done))}")
-          print(f"newly_available={','.join(sorted(new_papers.keys()))}")
-          print(f"total_expected={total_expected}")
-          print(f"is_sunday={'true' if is_sunday else 'false'}")
-          print(f"is_complete={'true' if is_complete else 'false'}")
-
-          if trigger == "workflow_dispatch":
-              print("proceed=true")
-          elif new_papers or not already_done:
-              # Proceed if new papers found, OR if this is the very first run
-              # today (nothing downloaded yet — always attempt even if Telegram
-              # scan returned nothing, as some papers may not be scannable yet)
-              print("proceed=true")
-          else:
-              print("proceed=false")
-          EOF
-
-      # ── Only install heavy system deps if we're actually going to run ───────
       - name: 🛠 Install system dependencies (OCR)
-        if: steps.progress_check.outputs.proceed == 'true'
+        if: steps.gate.outputs.proceed == 'true'
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y poppler-utils tesseract-ocr libtesseract-dev
 
-      # ── Main pipeline ───────────────────────────────────────────────────────
+      # ── Main pipeline ────────────────────────────────────────────────────────
+      # digest.py handles all intelligence internally:
+      #   1. Reads digest_state.json → knows what's already done today
+      #   2. Scans Telegram for newly arrived papers (secrets work fine here)
+      #   3. If nothing new → exits cleanly with code 0, no site rebuild
+      #   4. If new papers → downloads, extracts, deduplicates, rebuilds site
+      #   5. Writes updated digest_state.json (is_complete=true when all done)
       - name: 🤖 Run digest pipeline
-        if: steps.progress_check.outputs.proceed == 'true'
+        if: steps.gate.outputs.proceed == 'true'
         env:
           GEMINI_API_KEY:    ${{ secrets.GEMINI_API_KEY }}
           TELEGRAM_API_ID:   ${{ secrets.TELEGRAM_API_ID }}
@@ -156,11 +153,11 @@ jobs:
           SITE_URL:          ${{ secrets.SITE_URL }}
         run: python3 digest.py
 
-      # ── Commit state + site files ───────────────────────────────────────────
-      # digest_state.json is committed so the next scheduled run can read it
-      # without needing to re-scan all of Telegram.
+      # ── Commit only if digest.py actually changed something ──────────────────
+      # git diff --staged --quiet short-circuits the commit when digest.py
+      # exited early (nothing new found) so Pages isn't redeployed needlessly.
       - name: 💾 Commit site files + state
-        if: steps.progress_check.outputs.proceed == 'true'
+        if: steps.gate.outputs.proceed == 'true'
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -169,13 +166,13 @@ jobs:
           git push
 
       - name: 📤 Upload docs/ as Pages artifact
-        if: steps.progress_check.outputs.proceed == 'true'
+        if: steps.gate.outputs.proceed == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs/
 
       - name: 🚀 Deploy to GitHub Pages
-        if: steps.progress_check.outputs.proceed == 'true'
+        if: steps.gate.outputs.proceed == 'true'
         uses: actions/deploy-pages@v4
         id: deployment
 
