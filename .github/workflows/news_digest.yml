@@ -109,6 +109,19 @@ jobs:
             echo "proceed=true" >> "$GITHUB_OUTPUT"
           fi
 
+      # ── Restore Telegram session from secret ────────────────────────────────
+      # The session file authorises Telethon to access the private group.
+      # It is stored base64-encoded in TELEGRAM_SESSION secret because binary
+      # files cannot be committed to the repo safely.
+      # To generate: on your local machine (PowerShell):
+      #   [Convert]::ToBase64String([IO.File]::ReadAllBytes((Resolve-Path "news_session.session"))) | Out-File -NoNewline session_b64.txt
+      # Then add the contents of session_b64.txt as the TELEGRAM_SESSION secret.
+      - name: 🔑 Restore Telegram session
+        if: steps.gate.outputs.proceed == 'true'
+        run: |
+          echo "${{ secrets.TELEGRAM_SESSION }}" | base64 -d > news_session.session
+          echo "Session restored: $(wc -c < news_session.session) bytes"
+
       # ── Python + heavy deps only when we're actually going to run ────────────
       - name: 🐍 Set up Python 3.11
         if: steps.gate.outputs.proceed == 'true'
