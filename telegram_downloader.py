@@ -22,8 +22,11 @@ from telethon.tl.types import DocumentAttributeFilename
 
 log = logging.getLogger(__name__)
 
-PDF_DIR = Path("pdfs")
-IST     = timezone(timedelta(hours=5, minutes=30))
+PDF_DIR      = Path("pdfs")
+IST          = timezone(timedelta(hours=5, minutes=30))
+# Session file is resolved relative to this source file so it is found
+# regardless of the working directory the runner uses.
+SESSION_PATH = str(Path(__file__).parent / "news_session")
 
 # Credentials are read lazily inside functions (not at import time) so that
 # GitHub Actions secret injection is complete before they are accessed.
@@ -286,7 +289,7 @@ async def download_todays_pdfs() -> dict[str, dict]:
     best_found: dict[str, dict] = {}
     today = datetime.now(IST).date()
 
-    client = TelegramClient("news_session", _api_id(), _api_hash())
+    client = TelegramClient(SESSION_PATH, _api_id(), _api_hash())
 
     async with client:
         channel = _channel()
@@ -361,7 +364,7 @@ async def _scan_available_async() -> dict[str, str]:
     found: dict[str, str] = {}
     today = datetime.now(IST).date()
 
-    client = TelegramClient("news_session", _api_id(), _api_hash())
+    client = TelegramClient(SESSION_PATH, _api_id(), _api_hash())
     async with client:
         channel = _channel()
         entity = await client.get_entity(channel)
