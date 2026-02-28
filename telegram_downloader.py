@@ -18,7 +18,7 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 from telethon import TelegramClient
-from telethon.tl.types import DocumentAttributeFilename
+from telethon.tl.types import DocumentAttributeFilename, PeerChannel
 
 log = logging.getLogger(__name__)
 
@@ -300,7 +300,12 @@ async def download_todays_pdfs() -> dict[str, dict]:
             return best_found
         log.info(f"Authorised as: {getattr(me, 'username', None) or getattr(me, 'phone', 'unknown')}")
 
-        entity = await client.get_entity(channel)
+        # Use PeerChannel directly to avoid get_entity cache lookup failures
+        # for private groups that were never accessed in the original session.
+        raw_id = int(channel)
+        if raw_id < 0:
+            raw_id = int(str(abs(raw_id))[3:])  # strip the -100 prefix
+        entity = await client.get_input_entity(PeerChannel(raw_id))
 
         async for message in client.iter_messages(entity, limit=300):
             if message.date.astimezone(IST).date() < today:
@@ -377,7 +382,10 @@ async def _scan_available_async() -> dict[str, str]:
         if me is None:
             log.error("Telegram session is not authorised.")
             return found
-        entity = await client.get_entity(channel)
+        raw_id = int(channel)
+        if raw_id < 0:
+            raw_id = int(str(abs(raw_id))[3:])
+        entity = await client.get_input_entity(PeerChannel(raw_id))
         async for message in client.iter_messages(entity, limit=300):
             if message.date.astimezone(IST).date() < today:
                 break
