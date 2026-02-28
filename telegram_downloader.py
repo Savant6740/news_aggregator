@@ -28,12 +28,6 @@ IST          = timezone(timedelta(hours=5, minutes=30))
 # regardless of the working directory the runner uses.
 SESSION_PATH = str(Path(__file__).parent / "news_session")
 
-# Startup diagnostic — printed when the module is imported
-import sys as _sys
-print(f"[SESSION] SESSION_PATH={SESSION_PATH}", file=_sys.stderr)
-print(f"[SESSION] .session exists={Path(SESSION_PATH + '.session').exists()}", file=_sys.stderr)
-print(f"[SESSION] cwd={Path.cwd()}", file=_sys.stderr)
-
 # Credentials are read lazily inside functions (not at import time) so that
 # GitHub Actions secret injection is complete before they are accessed.
 def _api_id()   -> int: return int(os.environ["TELEGRAM_API_ID"])
@@ -208,9 +202,9 @@ NEWSPAPER_KEYWORDS: list[tuple[str, str, int]] = [
 def normalise(text: str) -> str:
     """
     Lowercase and replace separators with spaces so keyword matching works
-    against the real filenames (e.g. 'TH_Bangalore' → 'th bangalore',
-    'TH -Bangalore' → 'th  bangalore', 'TH~Bangalore' → 'th bangalore').
-    Dots are also replaced so 'th.th_bangalore' → 'th th bangalore'.
+    against the real filenames (e.g. 'TH_Bangalore' -> 'th bangalore',
+    'TH -Bangalore' -> 'th  bangalore', 'TH~Bangalore' -> 'th bangalore').
+    Dots are also replaced so 'th.th_bangalore' -> 'th th bangalore'.
     """
     return (
         text.lower()
@@ -231,17 +225,16 @@ def get_newspaper_name(filename: str) -> tuple[str, int] | None:
     # Skip supplements / inserts / non-newspaper files
     skip_tokens = (
         "indulge", "magazine", "epaper ad", "advertis",
-        "school", "combo edit",           # TH School editions, UPSC combo files
-        "all english editorial",          # editorial compilations
+        "school", "combo edit",
+        "all english editorial",
         "all hindi editorial",
         "daily vocabulary",
-        "hindi ",                          # Hindi-language papers
+        "hindi ",
         "times supplement",
         "bombay times", "pune times", "madras times",
         "kolkata times", "hyderabad times",
         "chandigarh times", "ahmedabad times",
-        "bengaluru times",                 # TOIBe supplement — remove this line
-                                           # if you DO want the Bengaluru Times supplement
+        "bengaluru times",   # TOIBe supplement — remove if you want it included
     )
     if any(skip in norm for skip in skip_tokens):
         return None
@@ -298,15 +291,15 @@ async def download_todays_pdfs() -> dict[str, dict]:
     client = TelegramClient(SESSION_PATH, _api_id(), _api_hash())
 
     async with client:
-       me = await client.get_me()
-    log.info(f"Authorised as: {me.username or me.phone if me else 'NOT AUTHORISED'}")
-    if me is None:
-        log.error("Session is not authorised — Telegram rejected the session file.")
-        return best_found
-    channel = _channel()
-    ...
         channel = _channel()
         log.info(f"Connected. Scanning: {channel}")
+        log.info(f"Session path: {SESSION_PATH}.session  exists={Path(SESSION_PATH + '.session').exists()}")
+        me = await client.get_me()
+        if me is None:
+            log.error("Telegram session is not authorised — re-generate news_session.session locally and update the TELEGRAM_SESSION secret.")
+            return best_found
+        log.info(f"Authorised as: {getattr(me, 'username', None) or getattr(me, 'phone', 'unknown')}")
+
         entity = await client.get_entity(channel)
 
         async for message in client.iter_messages(entity, limit=300):
@@ -367,7 +360,7 @@ def run() -> dict[str, dict]:
     return asyncio.run(download_todays_pdfs())
 
 
-# ── Lightweight scan (no download) — used by the workflow's early-exit check ──
+# ── Lightweight scan (no download) ────────────────────────────────────────────
 
 async def _scan_available_async() -> dict[str, str]:
     """
@@ -380,6 +373,10 @@ async def _scan_available_async() -> dict[str, str]:
     client = TelegramClient(SESSION_PATH, _api_id(), _api_hash())
     async with client:
         channel = _channel()
+        me = await client.get_me()
+        if me is None:
+            log.error("Telegram session is not authorised.")
+            return found
         entity = await client.get_entity(channel)
         async for message in client.iter_messages(entity, limit=300):
             if message.date.astimezone(IST).date() < today:
@@ -399,7 +396,7 @@ async def _scan_available_async() -> dict[str, str]:
                 if newspaper not in found:
                     found[newspaper] = filename
                     log.info(f"  First paper detected: {newspaper} -> {filename}")
-                    break   # stop after first detection
+                    break
 
     return found
 
