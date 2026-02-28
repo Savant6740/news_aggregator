@@ -1,19 +1,38 @@
 name: 📰 Daily News Digest
 
-# ── Manual trigger only ────────────────────────────────────────────────────────
-# Trigger from your phone after confirming newspapers are posted in Telegram:
-#   - GitHub mobile app: Repo → Actions → "Daily News Digest" → Run workflow
-#   - Browser: github.com/USERNAME/REPO/actions → Run workflow
-#   - Android widget: tap the big button in daily_brief_widget.html
+# Progressive update strategy:
+#   09:00 IST — first run, publish whatever papers have already arrived
+#   09:30–12:00 IST — every 30 min, check for newly arrived papers and update
+#                     site only if something new was found
+#   Stops early once all expected papers are present for the day
+#   Sunday: 7 papers expected (Mint and Business Standard not published)
 #
-# Minutes budget (1,200 available = 2,000 total − 800 other repo):
-#   ~15 mins/run × 31 days max = 465 mins/month → 735 mins buffer (61% unused) ✅
+# ── Minutes budget ────────────────────────────────────────────────────────────
+# 7 schedule triggers/day × 31 days = 217 potential runs/month
+#
+# Run types:
+#   (A) Early exit   — papers already complete, check only (~1 min)
+#   (B) Skip exit    — no new papers since last run, check only (~1 min)
+#   (C) Partial run  — 1-3 new papers, OCR + extract + build (~10 min)
+#   (D) Full run     — 7-9 papers on first trigger of the day (~18 min)
+#
+# Best case  (~390 mins/month): papers arrive before 9am every day
+#   31 × (1×D=18 + 6×A=6) = 31 × 24 = 744 ... see detailed table below
+# See full analysis in README or bottom of this file.
 
 on:
+  schedule:
+    - cron: '30 3 * * *'   # 09:00 IST = 03:30 UTC  ← first run of the day
+    - cron: '0 4 * * *'    # 09:30 IST = 04:00 UTC
+    - cron: '30 4 * * *'   # 10:00 IST = 04:30 UTC
+    - cron: '0 5 * * *'    # 10:30 IST = 05:00 UTC
+    - cron: '30 5 * * *'   # 11:00 IST = 05:30 UTC
+    - cron: '0 6 * * *'    # 11:30 IST = 06:00 UTC
+    - cron: '30 6 * * *'   # 12:00 IST = 06:30 UTC
   workflow_dispatch:
     inputs:
       note:
-        description: 'Optional note (e.g. "all 7 papers confirmed")'
+        description: 'Optional note (e.g. "all 9 papers confirmed")'
         required: false
         default: ''
 
@@ -28,6 +47,7 @@ jobs:
     timeout-minutes: 45
 
     steps:
+      # ── Setup ──────────────────────────────────────────────────────────────
       - name: 📥 Checkout repo
         uses: actions/checkout@v4
 
@@ -46,12 +66,86 @@ jobs:
       - name: 📦 Install Python dependencies
         run: pip install -r requirements.txt
 
+      # ── Progress gate — exit early if nothing new to do ────────────────────
+      # Reads docs/digest_state.json to see what was already processed today,
+      # then does a lightweight Telegram metadata scan (no PDF download) to
+      # check if any new papers have arrived since. Costs ~1 min if skipping.
+      - name: 🔍 Check for new papers since last run
+        id: progress_check
+        env:
+          TELEGRAM_API_ID:   ${{ secrets.TELEGRAM_API_ID }}
+          TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
+          TELEGRAM_CHANNEL:  ${{ secrets.TELEGRAM_CHANNEL }}
+        run: |
+          python3 - >> "$GITHUB_OUTPUT" <<'EOF'
+          import json, os, sys
+          from datetime import datetime, timezone, timedelta
+          from telegram_downloader import scan_available, EXPECTED_NEWSPAPERS
+
+          IST       = timezone(timedelta(hours=5, minutes=30))
+          today     = datetime.now(IST)
+          today_str = today.strftime("%Y-%m-%d")
+          is_sunday = today.weekday() == 6
+
+          SUNDAY_SKIP    = {"Mint", "Business Standard"}
+          expected       = [p for p in EXPECTED_NEWSPAPERS if p not in SUNDAY_SKIP] if is_sunday else list(EXPECTED_NEWSPAPERS)
+          total_expected = len(expected)
+
+          # Load state written by previous run today (committed to repo)
+          state_file   = "docs/digest_state.json"
+          already_done = set()
+          is_complete  = False
+          if os.path.exists(state_file):
+              try:
+                  state = json.loads(open(state_file).read())
+                  if state.get("date") == today_str:
+                      already_done = set(state.get("downloaded", []))
+                      is_complete  = state.get("is_complete", False)
+              except Exception:
+                  pass
+
+          trigger = os.environ.get("GITHUB_EVENT_NAME", "")
+
+          # If already complete today, skip (unless manually triggered)
+          if is_complete and trigger != "workflow_dispatch":
+              print(f"is_complete=true")
+              print(f"proceed=false")
+              print(f"already_done={','.join(sorted(already_done))}")
+              print(f"total_expected={total_expected}")
+              print(f"is_sunday={'true' if is_sunday else 'false'}")
+              sys.exit(0)
+
+          # Lightweight scan — reads only message metadata, no PDF download
+          available  = scan_available()
+          new_papers = {k: v for k, v in available.items() if k not in already_done}
+
+          print(f"already_done={','.join(sorted(already_done))}")
+          print(f"newly_available={','.join(sorted(new_papers.keys()))}")
+          print(f"total_expected={total_expected}")
+          print(f"is_sunday={'true' if is_sunday else 'false'}")
+          print(f"is_complete={'true' if is_complete else 'false'}")
+
+          if trigger == "workflow_dispatch":
+              print("proceed=true")
+          elif new_papers or not already_done:
+              # Proceed if new papers found, OR if this is the very first run
+              # today (nothing downloaded yet — always attempt even if Telegram
+              # scan returned nothing, as some papers may not be scannable yet)
+              print("proceed=true")
+          else:
+              print("proceed=false")
+          EOF
+
+      # ── Only install heavy system deps if we're actually going to run ───────
       - name: 🛠 Install system dependencies (OCR)
+        if: steps.progress_check.outputs.proceed == 'true'
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y poppler-utils tesseract-ocr libtesseract-dev
 
+      # ── Main pipeline ───────────────────────────────────────────────────────
       - name: 🤖 Run digest pipeline
+        if: steps.progress_check.outputs.proceed == 'true'
         env:
           GEMINI_API_KEY:    ${{ secrets.GEMINI_API_KEY }}
           TELEGRAM_API_ID:   ${{ secrets.TELEGRAM_API_ID }}
@@ -61,23 +155,27 @@ jobs:
           NOTIFY_CHAT_ID:    ${{ secrets.NOTIFY_CHAT_ID }}
           SITE_URL:          ${{ secrets.SITE_URL }}
         run: python3 digest.py
-        # digest.py calls notify.py at the end — sends Telegram message when site is ready.
-        # If notification fails, the workflow still succeeds (non-fatal).
 
-      - name: 💾 Commit site files (no PDFs)
+      # ── Commit state + site files ───────────────────────────────────────────
+      # digest_state.json is committed so the next scheduled run can read it
+      # without needing to re-scan all of Telegram.
+      - name: 💾 Commit site files + state
+        if: steps.progress_check.outputs.proceed == 'true'
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/index.html docs/digest.json
-          git diff --staged --quiet || git commit -m "📰 Digest: $(TZ='Asia/Kolkata' date +'%d %b %Y')"
+          git add docs/index.html docs/digest.json docs/digest_state.json
+          git diff --staged --quiet || git commit -m "📰 Digest update: $(TZ='Asia/Kolkata' date +'%d %b %Y %H:%M IST')"
           git push
 
-      - name: 📤 Upload docs/ as Pages artifact (includes PDFs)
+      - name: 📤 Upload docs/ as Pages artifact
+        if: steps.progress_check.outputs.proceed == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs/
 
       - name: 🚀 Deploy to GitHub Pages
+        if: steps.progress_check.outputs.proceed == 'true'
         uses: actions/deploy-pages@v4
         id: deployment
 
