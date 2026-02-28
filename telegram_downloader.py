@@ -28,6 +28,12 @@ IST          = timezone(timedelta(hours=5, minutes=30))
 # regardless of the working directory the runner uses.
 SESSION_PATH = str(Path(__file__).parent / "news_session")
 
+# Startup diagnostic — printed when the module is imported
+import sys as _sys
+print(f"[SESSION] SESSION_PATH={SESSION_PATH}", file=_sys.stderr)
+print(f"[SESSION] .session exists={Path(SESSION_PATH + '.session').exists()}", file=_sys.stderr)
+print(f"[SESSION] cwd={Path.cwd()}", file=_sys.stderr)
+
 # Credentials are read lazily inside functions (not at import time) so that
 # GitHub Actions secret injection is complete before they are accessed.
 def _api_id()   -> int: return int(os.environ["TELEGRAM_API_ID"])
@@ -292,6 +298,13 @@ async def download_todays_pdfs() -> dict[str, dict]:
     client = TelegramClient(SESSION_PATH, _api_id(), _api_hash())
 
     async with client:
+       me = await client.get_me()
+    log.info(f"Authorised as: {me.username or me.phone if me else 'NOT AUTHORISED'}")
+    if me is None:
+        log.error("Session is not authorised — Telegram rejected the session file.")
+        return best_found
+    channel = _channel()
+    ...
         channel = _channel()
         log.info(f"Connected. Scanning: {channel}")
         entity = await client.get_entity(channel)
