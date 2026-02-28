@@ -22,11 +22,14 @@ from telethon.tl.types import DocumentAttributeFilename
 
 log = logging.getLogger(__name__)
 
-API_ID   = int(os.environ["TELEGRAM_API_ID"])
-API_HASH = os.environ["TELEGRAM_API_HASH"]
-CHANNEL  = os.environ["TELEGRAM_CHANNEL"]   # numeric ID or @username
-PDF_DIR  = Path("pdfs")
-IST      = timezone(timedelta(hours=5, minutes=30))
+PDF_DIR = Path("pdfs")
+IST     = timezone(timedelta(hours=5, minutes=30))
+
+# Credentials are read lazily inside functions (not at import time) so that
+# GitHub Actions secret injection is complete before they are accessed.
+def _api_id()   -> int: return int(os.environ["TELEGRAM_API_ID"])
+def _api_hash() -> str: return os.environ["TELEGRAM_API_HASH"]
+def _channel()  -> str: return os.environ["TELEGRAM_CHANNEL"]
 
 # Full list of newspapers we expect each day
 EXPECTED_NEWSPAPERS = [
@@ -283,11 +286,12 @@ async def download_todays_pdfs() -> dict[str, dict]:
     best_found: dict[str, dict] = {}
     today = datetime.now(IST).date()
 
-    client = TelegramClient("news_session", API_ID, API_HASH)
+    client = TelegramClient("news_session", _api_id(), _api_hash())
 
     async with client:
-        log.info(f"Connected. Scanning: {CHANNEL}")
-        entity = await client.get_entity(CHANNEL)
+        channel = _channel()
+        log.info(f"Connected. Scanning: {channel}")
+        entity = await client.get_entity(channel)
 
         async for message in client.iter_messages(entity, limit=300):
             if message.date.astimezone(IST).date() < today:
@@ -325,7 +329,7 @@ async def download_todays_pdfs() -> dict[str, dict]:
             log.info(f"Downloading {filename}  [{newspaper}, priority={priority}]...")
             await client.download_media(message, file=str(save_path))
 
-            telegram_url = build_telegram_url(CHANNEL, message.id)
+            telegram_url = build_telegram_url(channel, message.id)
             best_found[newspaper] = {
                 "path":             save_path,
                 "telegram_url":     telegram_url,
@@ -357,9 +361,10 @@ async def _scan_available_async() -> dict[str, str]:
     found: dict[str, str] = {}
     today = datetime.now(IST).date()
 
-    client = TelegramClient("news_session", API_ID, API_HASH)
+    client = TelegramClient("news_session", _api_id(), _api_hash())
     async with client:
-        entity = await client.get_entity(CHANNEL)
+        channel = _channel()
+        entity = await client.get_entity(channel)
         async for message in client.iter_messages(entity, limit=300):
             if message.date.astimezone(IST).date() < today:
                 break
