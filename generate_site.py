@@ -28,19 +28,34 @@ CATEGORY_META = {
     "Infrastructure": {"color": "#7f8c8d", "icon": "🏗"},
 }
 
-# Filled background color for each newspaper pill when active
 PAPER_COLORS = {
-    "Economic Times":     {"bg": "#c0392b", "fg": "#ffffff"},
-    "Times of India":     {"bg": "#c0392b", "fg": "#ffffff"},
-    "Mint":               {"bg": "#c9a000", "fg": "#111111"},
+    "The Hindu":          {"bg": "#b71c1c", "fg": "#ffffff"},
+    "Indian Express":     {"bg": "#1a237e", "fg": "#ffffff"},
     "Financial Express":  {"bg": "#1a5276", "fg": "#ffffff"},
-    "Deccan Herald":      {"bg": "#6c3483", "fg": "#ffffff"},
+    "Times of India":     {"bg": "#c0392b", "fg": "#ffffff"},
+    "Hindustan Times":    {"bg": "#0d47a1", "fg": "#ffffff"},
+    "Economic Times":     {"bg": "#bf360c", "fg": "#ffffff"},
+    "Business Line":      {"bg": "#4a148c", "fg": "#ffffff"},
     "Business Standard":  {"bg": "#1e8449", "fg": "#ffffff"},
-    "New Indian Express": {"bg": "#d35400", "fg": "#ffffff"},
+    "Mint":               {"bg": "#c9a000", "fg": "#111111"},
 }
 PAPER_DEFAULT = {"bg": "#444444", "fg": "#ffffff"}
 
 DEFAULT_META = {"color": "#636e72", "icon": "📰"}
+
+# SVG newspaper icon for favicon (inline data URI)
+FAVICON_SVG = (
+    "data:image/svg+xml,"
+    "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E"
+    "%3Crect width='32' height='32' rx='6' fill='%230c0b0b'/%3E"
+    "%3Crect x='4' y='5' width='24' height='22' rx='2' fill='none' stroke='%23c9a66b' stroke-width='1.5'/%3E"
+    "%3Crect x='7' y='8' width='18' height='3' rx='1' fill='%23c9a66b'/%3E"
+    "%3Crect x='7' y='13' width='10' height='1.5' rx='0.75' fill='%23888'/%3E"
+    "%3Crect x='7' y='16' width='10' height='1.5' rx='0.75' fill='%23888'/%3E"
+    "%3Crect x='7' y='19' width='7' height='1.5' rx='0.75' fill='%23888'/%3E"
+    "%3Crect x='19' y='13' width='6' height='8' rx='1' fill='%23c9a66b' opacity='0.4'/%3E"
+    "%3C/svg%3E"
+)
 
 
 def build_site(data: dict, output_dir: Path):
@@ -66,7 +81,7 @@ def generate_html(data: dict) -> str:
         by_category[art.get("category", "India")].append(art)
     sorted_cats = sorted(by_category.keys(), key=lambda c: -len(by_category[c]))
 
-    # ── Category tabs (filled when active) ───────────────────────────────────
+    # ── Category tabs ─────────────────────────────────────────────────────────
     nav_tabs = ""
     for cat in sorted_cats:
         meta  = CATEGORY_META.get(cat, DEFAULT_META)
@@ -80,7 +95,7 @@ def generate_html(data: dict) -> str:
             <span class="tab-count">{count}</span>
         </button>"""
 
-    # ── Newspaper pills (filled with brand color when active) ─────────────────
+    # ── Newspaper pills ───────────────────────────────────────────────────────
     paper_pills = ""
     for paper in all_newspapers:
         pc = PAPER_COLORS.get(paper, PAPER_DEFAULT)
@@ -91,8 +106,7 @@ def generate_html(data: dict) -> str:
             {paper}
         </button>"""
 
-    # ── All cards in a single flat grid (no per-category sections) ───────────
-    # Each card carries data-cat and data-papers for client-side filtering.
+    # ── Cards ─────────────────────────────────────────────────────────────────
     all_cards = ""
     for j, art in enumerate(articles):
         headline    = art.get("headline", "")
@@ -140,6 +154,7 @@ def generate_html(data: dict) -> str:
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Daily Brief — {date_str}</title>
+<link rel="icon" type="image/svg+xml" href="{FAVICON_SVG}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -152,17 +167,20 @@ html{{scroll-behavior:smooth}}
 body{{background:var(--bg);color:var(--text);font-family:'Source Serif 4',Georgia,serif;min-height:100vh}}
 
 /* ── Masthead ── */
-.masthead{{background:var(--surface);border-bottom:1px solid var(--border);padding:24px 48px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:300}}
-.logo{{font-family:'Playfair Display',serif;font-size:clamp(20px,3vw,34px);font-weight:900;color:var(--ink);letter-spacing:-0.02em}}
+.masthead{{background:var(--surface);border-bottom:1px solid var(--border);padding:18px 48px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:300}}
+.masthead-left{{display:flex;align-items:center;gap:14px}}
+.masthead-logo-icon{{display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:rgba(201,166,107,0.12);border:1px solid rgba(201,166,107,0.25);border-radius:8px;flex-shrink:0}}
+.masthead-logo-icon svg{{width:22px;height:22px}}
+.logo{{font-family:'Playfair Display',serif;font-size:clamp(18px,2.8vw,30px);font-weight:900;color:var(--ink);letter-spacing:-0.02em}}
 .logo em{{color:#c9a66b;font-style:normal}}
 .masthead-right{{text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);line-height:1.8;letter-spacing:0.06em}}
 
 /* ── Stats ── */
-.stats-bar{{background:var(--surface);border-bottom:1px solid var(--border);padding:10px 48px;display:flex;gap:32px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;flex-wrap:wrap}}
+.stats-bar{{background:var(--surface);border-bottom:1px solid var(--border);padding:8px 48px;display:flex;gap:32px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;flex-wrap:wrap}}
 .stats-bar b{{color:#c9a66b;font-weight:500}}
 
 /* ── Search ── */
-.search-bar{{background:var(--surface);border-bottom:1px solid var(--border);padding:10px 48px;display:flex;align-items:center;gap:12px}}
+.search-bar{{background:var(--surface);border-bottom:1px solid var(--border);padding:8px 48px;display:flex;align-items:center;gap:12px}}
 .search-wrap{{position:relative;flex:1;max-width:480px}}
 .search-icon{{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:13px;pointer-events:none}}
 .search-input{{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:8px 34px 8px 36px;color:var(--ink);font-family:'Source Serif 4',serif;font-size:13px;outline:none;transition:border-color 0.2s}}
@@ -171,13 +189,12 @@ body{{background:var(--bg);color:var(--text);font-family:'Source Serif 4',Georgi
 .search-clear{{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--muted);cursor:pointer;font-size:14px;display:none}}
 .search-label{{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:0.08em;white-space:nowrap}}
 
-/* ── Category tabs — FILLED background when active ── */
+/* ── Category tabs — wrap to 2 lines, NO overflow scroll ── */
 .cat-bar{{
   background:var(--surface);border-bottom:1px solid var(--border);
-  padding:10px 48px;display:flex;gap:6px;overflow-x:auto;
-  scrollbar-width:none;position:sticky;top:73px;z-index:200
+  padding:10px 48px;display:flex;gap:6px;flex-wrap:wrap;
+  position:sticky;top:71px;z-index:200
 }}
-.cat-bar::-webkit-scrollbar{{display:none}}
 .cat-bar-label{{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:0.15em;text-transform:uppercase;white-space:nowrap;align-self:center;flex-shrink:0;margin-right:4px}}
 
 .cat-tab{{
@@ -196,17 +213,23 @@ body{{background:var(--bg);color:var(--text);font-family:'Source Serif 4',Georgi
   font-size:8px;padding:1px 5px;border-radius:8px;
   background:rgba(255,255,255,0.08);
 }}
-/* Active = filled with category color */
 .cat-tab.active{{
   background:var(--cc);
   border-color:var(--cc);
   color:#fff;
 }}
 .cat-tab.active .tab-count{{background:rgba(0,0,0,0.2);color:rgba(255,255,255,0.85)}}
-.reset-cats{{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.08em;padding:6px 12px;border-radius:20px;border:1px solid var(--border);background:none;color:var(--muted);cursor:pointer;white-space:nowrap;flex-shrink:0;transition:color 0.15s,border-color 0.15s}}
-.reset-cats:hover{{color:var(--ink);border-color:var(--muted)}}
+.reset-btn{{
+  font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.08em;
+  padding:6px 12px;border-radius:20px;border:1px solid var(--border);
+  background:none;color:var(--muted);cursor:pointer;white-space:nowrap;flex-shrink:0;
+  transition:color 0.15s,border-color 0.15s,background 0.15s;
+}}
+.reset-btn:hover{{color:var(--ink);border-color:var(--muted)}}
+.reset-btn.deselect{{border-color:#c0392b33}}
+.reset-btn.deselect:hover{{color:#e74c3c;border-color:#e74c3c}}
 
-/* ── Newspaper pills — FILLED with brand color when active ── */
+/* ── Newspaper pills ── */
 .paper-bar{{background:var(--surface);border-bottom:1px solid var(--border);padding:10px 48px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}}
 .paper-bar-label{{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:0.15em;text-transform:uppercase;white-space:nowrap;flex-shrink:0;margin-right:4px}}
 .paper-pill{{
@@ -218,14 +241,11 @@ body{{background:var(--bg);color:var(--text);font-family:'Source Serif 4',Georgi
   cursor:pointer;white-space:nowrap;flex-shrink:0;
   transition:background 0.15s,border-color 0.15s,color 0.15s;
 }}
-/* Active = filled with brand color */
 .paper-pill.active{{
   background:var(--pb);
   border-color:var(--pb);
   color:var(--pf);
 }}
-.reset-papers{{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.08em;padding:5px 12px;border-radius:20px;border:1px solid var(--border);background:none;color:var(--muted);cursor:pointer;flex-shrink:0;transition:color 0.15s,border-color 0.15s}}
-.reset-papers:hover{{color:var(--ink);border-color:var(--muted)}}
 
 /* ── Empty state ── */
 .empty-state{{padding:80px 48px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.12em;line-height:2.2;display:none}}
@@ -239,7 +259,6 @@ body{{background:var(--bg);color:var(--text);font-family:'Source Serif 4',Georgi
 .card.hidden{{display:none!important}}
 @keyframes fadeIn{{from{{opacity:0;transform:translateY(7px)}}to{{opacity:1;transform:translateY(0)}}}}
 
-/* Left accent strip */
 .card-accent{{width:3px;flex-shrink:0}}
 .card-body{{flex:1;padding:22px 26px;display:flex;flex-direction:column;gap:10px;min-width:0}}
 .card-cat-label{{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.18em;text-transform:uppercase;font-weight:500}}
@@ -257,19 +276,32 @@ body{{background:var(--bg);color:var(--text);font-family:'Source Serif 4',Georgi
 .footer{{padding:32px 48px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;margin-top:48px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:0.08em;flex-wrap:wrap;gap:8px}}
 
 @media(max-width:700px){{
-  .masthead,.stats-bar,.search-bar,.cat-bar,.paper-bar{{padding-left:20px;padding-right:20px}}
+  .masthead,.stats-bar,.search-bar,.cat-bar,.paper-bar{{padding-left:16px;padding-right:16px}}
   .masthead{{flex-direction:column;align-items:flex-start;gap:6px}}
-  .cat-bar{{top:88px}}
+  .cat-bar{{top:82px}}
   .cards-grid{{grid-template-columns:1fr}}
   .card-body{{padding:18px 20px}}
-  .footer{{padding:24px 20px;flex-direction:column;text-align:center}}
+  .footer{{padding:24px 16px;flex-direction:column;text-align:center}}
 }}
 </style>
 </head>
 <body>
 
 <header class="masthead">
-  <div class="logo">The Daily <em>Brief</em></div>
+  <div class="masthead-left">
+    <!-- Newspaper logo icon -->
+    <div class="masthead-logo-icon">
+      <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="1" width="20" height="20" rx="3" stroke="#c9a66b" stroke-width="1.2"/>
+        <rect x="4" y="4" width="14" height="3" rx="1" fill="#c9a66b"/>
+        <rect x="4" y="9"  width="8" height="1.2" rx="0.6" fill="#7a736c"/>
+        <rect x="4" y="11.5" width="8" height="1.2" rx="0.6" fill="#7a736c"/>
+        <rect x="4" y="14" width="5" height="1.2" rx="0.6" fill="#7a736c"/>
+        <rect x="14" y="9" width="4" height="6.5" rx="1" fill="#c9a66b" opacity="0.45"/>
+      </svg>
+    </div>
+    <div class="logo">The Daily <em>Brief</em></div>
+  </div>
   <div class="masthead-right">{date_str}<br>Bengaluru Edition</div>
 </header>
 
@@ -277,7 +309,7 @@ body{{background:var(--bg);color:var(--text);font-family:'Source Serif 4',Georgi
   <div><b id="vis-count">{total}</b> articles</div>
   <div><b>{len(sorted_cats)}</b> categories</div>
   <div><b id="read-count">0</b> read</div>
-  <div>duplicates merged · AI summarised</div>
+  <div>AI summarised</div>
 </div>
 
 <div class="search-bar">
@@ -291,18 +323,20 @@ body{{background:var(--bg);color:var(--text);font-family:'Source Serif 4',Georgi
   <span class="search-label" id="searchLabel"></span>
 </div>
 
-<!-- Category tabs — independent toggle, filled when active -->
+<!-- Category tabs — wrap to 2 lines -->
 <div class="cat-bar">
   <span class="cat-bar-label">Category</span>
   {nav_tabs}
-  <button class="reset-cats" onclick="resetCats()">All</button>
+  <button class="reset-btn" onclick="resetCats()">All</button>
+  <button class="reset-btn deselect" onclick="deselectCats()">None</button>
 </div>
 
-<!-- Newspaper pills — independent toggle, filled with brand color when active -->
+<!-- Newspaper pills -->
 <div class="paper-bar">
   <span class="paper-bar-label">Newspaper</span>
   {paper_pills}
-  <button class="reset-papers" onclick="resetPapers()">All</button>
+  <button class="reset-btn" onclick="resetPapers()">All</button>
+  <button class="reset-btn deselect" onclick="deselectPapers()">None</button>
 </div>
 
 <div class="empty-state" id="emptyState">
@@ -362,6 +396,10 @@ function resetCats() {{
   document.querySelectorAll('.cat-tab').forEach(t => {{ t.classList.add('active'); activeCats.add(t.dataset.cat); }});
   applyFilters();
 }}
+function deselectCats() {{
+  document.querySelectorAll('.cat-tab').forEach(t => {{ t.classList.remove('active'); activeCats.delete(t.dataset.cat); }});
+  applyFilters();
+}}
 
 // ── Newspaper toggle ──────────────────────────────────────────────────────────
 function togglePaper(btn) {{
@@ -372,6 +410,10 @@ function togglePaper(btn) {{
 }}
 function resetPapers() {{
   document.querySelectorAll('.paper-pill').forEach(p => {{ p.classList.add('active'); activePapers.add(p.dataset.paper); }});
+  applyFilters();
+}}
+function deselectPapers() {{
+  document.querySelectorAll('.paper-pill').forEach(p => {{ p.classList.remove('active'); activePapers.delete(p.dataset.paper); }});
   applyFilters();
 }}
 
@@ -388,11 +430,7 @@ function clearSearch() {{
   applyFilters();
 }}
 
-// ── Core filter — intersection of ALL three ───────────────────────────────────
-// Card is visible when:
-//   1. Its category is in activeCats
-//   2. At least one of its source papers is in activePapers (or it has no paper tags)
-//   3. Headline/summary match searchQ (if non-empty)
+// ── Core filter ───────────────────────────────────────────────────────────────
 function applyFilters() {{
   let visible = 0;
   document.querySelectorAll('#cardsGrid .card').forEach(card => {{
@@ -427,20 +465,20 @@ init();
 
 if __name__ == "__main__":
     sample = {
-        "date": "27 February 2026",
+        "date": "28 February 2026",
         "articles": [
             {"headline": "Bengaluru Metro Phase 3 gets cabinet nod", "summary": "The Union Cabinet approved Phase 3 of Namma Metro adding 44.65 km across six new corridors. Estimated at Rs 15,611 crore, commissioning expected by December 2027.", "category": "Infrastructure",
-              "sources": [{"newspaper": "Times of India", "pdf_filename": "TOI.pdf", "page": 1, "telegram_url": ""}, {"newspaper": "Deccan Herald", "pdf_filename": "DH.pdf", "page": 1, "telegram_url": ""}]},
+              "sources": [{"newspaper": "Times of India", "pdf_filename": "TOI.pdf", "page": 1, "telegram_url": ""}, {"newspaper": "The Hindu", "pdf_filename": "TH.pdf", "page": 1, "telegram_url": ""}]},
             {"headline": "RBI holds repo rate at 6.25%", "summary": "The Reserve Bank kept the repo rate at 6.25% citing food inflation. The MPC voted 4-2; markets expect a cut in April.", "category": "Economy",
               "sources": [{"newspaper": "Economic Times", "pdf_filename": "ET.pdf", "page": 1, "telegram_url": ""}, {"newspaper": "Mint", "pdf_filename": "Mint.pdf", "page": 1, "telegram_url": ""}]},
-            {"headline": "Karnataka tops ease of doing business", "summary": "Karnataka retained DPIIT top rank for the second consecutive year. Rs 2.3 lakh crore pledged at Invest Karnataka 2025.", "category": "Business",
+            {"headline": "Karnataka tops ease of doing business", "summary": "Karnataka retained DPIIT top rank for the second consecutive year.", "category": "Business",
               "sources": [{"newspaper": "Times of India", "pdf_filename": "TOI.pdf", "page": 5, "telegram_url": ""}]},
             {"headline": "SEBI tightens F&O trading rules", "summary": "SEBI raised minimum contract sizes and mandated risk disclosures for F&O trades from April 1.", "category": "Economy",
-              "sources": [{"newspaper": "Mint", "pdf_filename": "Mint.pdf", "page": 2, "telegram_url": ""}, {"newspaper": "Economic Times", "pdf_filename": "ET.pdf", "page": 3, "telegram_url": ""}]},
+              "sources": [{"newspaper": "Mint", "pdf_filename": "Mint.pdf", "page": 2, "telegram_url": ""}, {"newspaper": "Business Standard", "pdf_filename": "BS.pdf", "page": 3, "telegram_url": ""}]},
             {"headline": "India wins SA test series 3-1", "summary": "India clinched the series with an innings win in Johannesburg. Jaiswal was player of the series.", "category": "Sports",
               "sources": [{"newspaper": "Times of India", "pdf_filename": "TOI.pdf", "page": 17, "telegram_url": ""}]},
             {"headline": "HAL delivers 12 Tejas Mk1A jets to IAF", "summary": "HAL handed over 12 Tejas Mk1A jets at Bengaluru. HAL has a total order of 83 aircraft.", "category": "India",
-              "sources": [{"newspaper": "Deccan Herald", "pdf_filename": "DH.pdf", "page": 4, "telegram_url": ""}, {"newspaper": "New Indian Express", "pdf_filename": "NIE.pdf", "page": 2, "telegram_url": ""}]},
+              "sources": [{"newspaper": "Hindustan Times", "pdf_filename": "HT.pdf", "page": 4, "telegram_url": ""}, {"newspaper": "Indian Express", "pdf_filename": "IE.pdf", "page": 2, "telegram_url": ""}]},
         ]
     }
     from pathlib import Path
