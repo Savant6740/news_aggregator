@@ -2,11 +2,22 @@
 digest.py — Main orchestration
 Flow: Telegram → PDF (temp) → Extract ALL → Deduplicate → Build Site → Notify
 
+Incremental update mode:
+  On the first run of the day, all available papers are downloaded and the site
+  is built from scratch. On subsequent runs, only newly arrived papers are
+  downloaded and processed; their articles are merged into the existing
+  digest.json and the site is rebuilt. A state file (docs/digest_state.json)
+  tracks which papers have already been processed today so the workflow can
+  skip runs where nothing new has arrived.
+
+Sunday mode:
+  Mint and Business Standard are not published on Sundays. The state tracker
+  treats 7 papers as "complete" on Sundays rather than 9.
+
 API call budget (free tier = 20 RPD):
-  - 1 test call on startup
-  - 7 calls for extraction (1 per newspaper)
-  - 1 call for batch deduplication
-  = 9 total calls per day — well within 20 RPD limit
+  First run : 1 test + N extraction calls (1/paper) + 1 dedup = N+2 calls
+  Later runs: N_new extraction calls + 1 dedup = N_new+1 calls
+  Worst case across all runs in a day: still ≤ 11 calls (9 papers + 2 overhead)
 """
 
 import os
@@ -18,7 +29,7 @@ from pathlib import Path
 
 import google.generativeai as genai
 
-from telegram_downloader import run as download_pdfs
+from telegram_downloader import run as download_pdfs, EXPECTED_NEWSPAPERS
 from extractor import extract_all_articles
 from deduplicator import deduplicate
 from generate_site import build_site
@@ -32,13 +43,14 @@ logging.basicConfig(
 log = logging.getLogger(__name__)
 
 GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
-IST = timezone(timedelta(hours=5, minutes=30))
+IST            = timezone(timedelta(hours=5, minutes=30))
+DOCS_DIR       = Path("docs")
+STATE_FILE     = DOCS_DIR / "digest_state.json"
+
+# Papers not published on Sundays
+SUNDAY_SKIP = {"Mint", "Business Standard"}
 
 # ── Model selection ───────────────────────────────────────────────────────────
-# gemini-3-flash-preview: latest gen, no shutdown date, listed replacement for
-# gemini-2.5-flash (shutting down Jun 17 2026). Free: 5 RPM, 250K TPM, 20 RPD.
-# Fallback: gemini-2.5-flash-lite (free, 10 RPM, 20 RPD).
-# AVOID: gemini-2.0-flash (shuts down Mar 31 2026), gemini-1.5-flash (retired).
 genai.configure(api_key=GEMINI_API_KEY)
 try:
     model = genai.GenerativeModel("gemini-3-flash-preview")
@@ -48,54 +60,115 @@ except Exception:
     log.warning("gemini-3-flash-preview unavailable, falling back to gemini-2.5-flash-lite")
     model = genai.GenerativeModel("gemini-2.5-flash-lite")
 
-DOCS_DIR = Path("docs")
-DOCS_DIR.mkdir(exist_ok=True)
 
+# ── State helpers ─────────────────────────────────────────────────────────────
+
+def load_state(today_str: str) -> dict:
+    """
+    Load today's state from docs/digest_state.json.
+    Returns a fresh state dict if the file is missing or from a previous day.
+    """
+    if STATE_FILE.exists():
+        try:
+            state = json.loads(STATE_FILE.read_text(encoding="utf-8"))
+            if state.get("date") == today_str:
+                return state
+        except Exception:
+            pass
+    return {
+        "date":        today_str,
+        "downloaded":  [],          # papers fully processed this run-day
+        "articles":    [],          # accumulated article list across all runs
+        "newspapers":  [],          # accumulated newspaper list across all runs
+        "is_complete": False,       # True once all expected papers are done
+    }
+
+
+def save_state(state: dict) -> None:
+    DOCS_DIR.mkdir(exist_ok=True)
+    STATE_FILE.write_text(json.dumps(state, indent=2, ensure_ascii=False), encoding="utf-8")
+    log.info(f"State saved — processed so far today: {state['downloaded']}")
+
+
+# ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
-    today = datetime.now(IST)
-    date_str = today.strftime("%d %B %Y")
-    log.info(f"=== News Digest — {date_str} ===")
+    DOCS_DIR.mkdir(exist_ok=True)
 
-    # Step 1: Download PDFs from Telegram
-    log.info("Downloading from Telegram...")
-    newspaper_map = download_pdfs()
+    today       = datetime.now(IST)
+    today_str   = today.strftime("%Y-%m-%d")
+    date_str    = today.strftime("%d %B %Y")
+    is_sunday   = today.weekday() == 6   # Monday=0 … Sunday=6
 
-    if not newspaper_map:
-        log.error("No PDFs downloaded. Check Telegram config and channel keywords.")
-        raise SystemExit(1)
+    expected_papers = (
+        [p for p in EXPECTED_NEWSPAPERS if p not in SUNDAY_SKIP]
+        if is_sunday else list(EXPECTED_NEWSPAPERS)
+    )
 
-    # Step 2: Extract ALL articles (1 API call per newspaper)
-    all_articles = []
-    for newspaper, info in newspaper_map.items():
+    log.info(f"=== News Digest — {date_str} {'(Sunday mode)' if is_sunday else ''} ===")
+    log.info(f"Expected papers ({len(expected_papers)}): {expected_papers}")
+
+    # ── Load state from previous runs today ───────────────────────────────────
+    state        = load_state(today_str)
+    already_done = set(state["downloaded"])
+
+    if state["is_complete"] and os.environ.get("GITHUB_EVENT_NAME") != "workflow_dispatch":
+        log.info("All papers already processed today — nothing to do.")
+        return
+
+    log.info(f"Already processed today: {sorted(already_done) or 'none'}")
+
+    # ── Step 1: Download only papers not yet processed ────────────────────────
+    log.info("Downloading new papers from Telegram...")
+    newspaper_map = download_pdfs()          # downloads best edition of each paper
+
+    # Filter to only papers we haven't processed yet
+    new_papers = {k: v for k, v in newspaper_map.items() if k not in already_done}
+
+    if not new_papers:
+        log.info("No new papers available since last run — exiting.")
+        return
+
+    log.info(f"New papers this run: {list(new_papers.keys())}")
+
+    # ── Step 2: Extract articles from new papers only ─────────────────────────
+    new_articles = []
+    for newspaper, info in new_papers.items():
         log.info(f"Extracting: {newspaper}")
         articles = extract_all_articles(newspaper, Path(info["path"]), model)
         for art in articles:
             art["telegram_url"] = info["telegram_url"]
-        all_articles.extend(articles)
-        log.info(f"  {len(articles)} articles extracted")
+        new_articles.extend(articles)
+        log.info(f"  {len(articles)} articles extracted from {newspaper}")
 
-    log.info(f"Total raw articles: {len(all_articles)}")
+    log.info(f"New raw articles this run: {len(new_articles)}")
 
-    # Step 3: Deduplicate & merge (1 API call total)
-    merged_articles = deduplicate(all_articles, model)
-    log.info(f"Final unique articles: {len(merged_articles)}")
+    # ── Step 3: Merge with existing articles from earlier runs today ──────────
+    combined_articles = state["articles"] + new_articles
+    combined_newspapers = state["newspapers"] + [
+        n for n in new_papers.keys() if n not in state["newspapers"]
+    ]
+    log.info(f"Combined article pool: {len(combined_articles)} articles from {combined_newspapers}")
 
-    # Step 4: Save JSON + Build site
+    # ── Step 4: Deduplicate the full combined pool ────────────────────────────
+    merged_articles = deduplicate(combined_articles, model)
+    log.info(f"Final unique articles after dedup: {len(merged_articles)}")
+
+    # ── Step 5: Save digest JSON + build site ─────────────────────────────────
     digest_data = {
         "date":           date_str,
         "generated_at":   today.isoformat(),
         "total_articles": len(merged_articles),
-        "newspapers":     list(newspaper_map.keys()),
+        "newspapers":     combined_newspapers,
         "articles":       merged_articles,
     }
     (DOCS_DIR / "digest.json").write_text(
         json.dumps(digest_data, indent=2, ensure_ascii=False), encoding="utf-8"
     )
     build_site(digest_data, DOCS_DIR)
-    log.info("Site built at docs/index.html")
+    log.info("Site rebuilt at docs/index.html")
 
-    # Step 5: Stage PDFs for GitHub Pages artifact (not committed to git)
+    # ── Step 6: Stage PDFs for GitHub Pages artifact ──────────────────────────
     pdfs_dest = DOCS_DIR / "pdfs"
     pdfs_dest.mkdir(exist_ok=True)
     pdf_dir = Path("pdfs")
@@ -105,11 +178,34 @@ def main():
             log.info(f"  Staged: {pdf.name}")
         shutil.rmtree(pdf_dir)
 
-    # Step 6: Send Telegram notification (non-fatal)
+    # ── Step 7: Update and persist state ──────────────────────────────────────
+    updated_done = sorted(already_done | set(new_papers.keys()))
+    is_complete  = set(updated_done) >= set(expected_papers)
+
+    state.update({
+        "downloaded":  updated_done,
+        "articles":    merged_articles,   # store deduped list for next merge
+        "newspapers":  combined_newspapers,
+        "is_complete": is_complete,
+    })
+    save_state(state)
+
+    if is_complete:
+        log.info(f"🎉 All {len(expected_papers)} expected papers processed — "
+                 "workflow will skip remaining schedule triggers today.")
+    else:
+        remaining = [p for p in expected_papers if p not in updated_done]
+        log.info(f"Still waiting for: {remaining}")
+
+    # ── Step 8: Send Telegram notification (non-fatal) ────────────────────────
     notify(digest_data)
 
-    papers = len(newspaper_map)
-    log.info(f"Done! {len(merged_articles)} articles, {papers} newspapers, {papers + 2}/20 API calls used.")
+    api_calls_used = len(new_papers) + 2   # extractions + 1 dedup + 1 test (first run)
+    log.info(
+        f"Done! {len(merged_articles)} articles, "
+        f"{len(combined_newspapers)} newspapers so far today, "
+        f"~{api_calls_used} API calls this run."
+    )
 
 
 if __name__ == "__main__":
