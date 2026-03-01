@@ -1,12 +1,10 @@
 {
-  "date": "01 March 2026",
-  "generated_at": "2026-03-01T10:36:19.725756+05:30",
-  "total_articles": 130,
-  "newspapers": [
-    "The Hindu",
+  "date": "2026-03-01",
+  "downloaded": [
+    "Economic Times",
     "Hindustan Times",
-    "Times of India",
-    "Economic Times"
+    "The Hindu",
+    "Times of India"
   ],
   "articles": [
     {
@@ -2116,5 +2114,12 @@
         }
       ]
     }
-  ]
+  ],
+  "newspapers": [
+    "The Hindu",
+    "Hindustan Times",
+    "Times of India",
+    "Economic Times"
+  ],
+  "is_complete": false
 }
