@@ -63,24 +63,27 @@ except Exception:
 
 # ── State helpers ─────────────────────────────────────────────────────────────
 
-def load_state(today_str: str) -> dict:
+def load_state(today_str: str, force_reset: bool = False) -> dict:
     """
     Load today's state from docs/digest_state.json.
-    Returns a fresh state dict if the file is missing or from a previous day.
+    Returns a fresh state dict if the file is missing, from a previous day,
+    or if force_reset is True.
     """
-    if STATE_FILE.exists():
+    if not force_reset and STATE_FILE.exists():
         try:
             state = json.loads(STATE_FILE.read_text(encoding="utf-8"))
             if state.get("date") == today_str:
                 return state
         except Exception:
             pass
+    if force_reset:
+        log.info("FORCE_RESET: clearing all state for today.")
     return {
         "date":        today_str,
-        "downloaded":  [],          # papers fully processed this run-day
-        "articles":    [],          # accumulated article list across all runs
-        "newspapers":  [],          # accumulated newspaper list across all runs
-        "is_complete": False,       # True once all expected papers are done
+        "downloaded":  [],
+        "articles":    [],
+        "newspapers":  [],
+        "is_complete": False,
     }
 
 
@@ -109,10 +112,11 @@ def main():
     log.info(f"Expected papers ({len(expected_papers)}): {expected_papers}")
 
     # ── Load state from previous runs today ───────────────────────────────────
-    state        = load_state(today_str)
+    force_reset  = os.environ.get("FORCE_RESET", "no").lower() in ("yes", "true", "1")
+    state        = load_state(today_str, force_reset=force_reset)
     already_done = set(state["downloaded"])
 
-    if state["is_complete"] and os.environ.get("GITHUB_EVENT_NAME") != "workflow_dispatch":
+    if state["is_complete"] and not force_reset and os.environ.get("GITHUB_EVENT_NAME") != "workflow_dispatch":
         log.info("All papers already processed today — nothing to do.")
         return
 
