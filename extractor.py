@@ -113,7 +113,14 @@ Return ONLY the JSON array. No markdown fences, no explanation, no preamble."""
     try:
         response = model.generate_content(prompt)
         raw = response.text.strip()
-        raw = raw.lstrip("```json").lstrip("```").rstrip("```").strip()
+
+        # Strip markdown fences robustly (handles ```json, ```, and trailing ```)
+        if raw.startswith("```"):
+            raw = raw.split("\n", 1)[-1]  # remove first line (```json or ```)
+        if raw.endswith("```"):
+            raw = raw.rsplit("```", 1)[0]  # remove trailing ```
+        raw = raw.strip()
+
         articles = json.loads(raw)
 
         for art in articles:
@@ -125,7 +132,8 @@ Return ONLY the JSON array. No markdown fences, no explanation, no preamble."""
 
     except json.JSONDecodeError as e:
         log.error(f"  [{newspaper}] JSON parse error: {e}")
-        log.debug(f"Raw response snippet: {response.text[:300]}")
+        log.error(f"  [{newspaper}] Response start: {response.text[:300]}")
+        log.error(f"  [{newspaper}] Response end:   {response.text[-300:]}")
         return []
     except Exception as e:
         log.error(f"  [{newspaper}] Gemini error: {e}")
