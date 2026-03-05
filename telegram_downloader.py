@@ -286,6 +286,9 @@ async def download_todays_pdfs() -> dict[str, dict]:
     """
     PDF_DIR.mkdir(exist_ok=True)
     best_found: dict[str, dict] = {}
+    # first_seen tracks the very first message for each newspaper name,
+    # used as a last-resort fallback if no Bengaluru/Delhi edition is found.
+    first_seen: dict[str, dict] = {}
     today = datetime.now(IST).date()
 
     client = TelegramClient(SESSION_PATH, _api_id(), _api_hash())
@@ -306,6 +309,11 @@ async def download_todays_pdfs() -> dict[str, dict]:
         if raw_id < 0:
             raw_id = int(str(abs(raw_id))[3:])  # strip the -100 prefix
         entity = await client.get_input_entity(PeerChannel(raw_id))
+
+        # ── Pass 1: collect all today's PDFs, pick best edition per paper ─────
+        # Also record the very first PDF message seen for each newspaper name,
+        # regardless of edition — used as fallback in Pass 2.
+        all_today_messages: list[tuple] = []   # (message, filename, newspaper, priority)
 
         async for message in client.iter_messages(entity, limit=300):
             if message.date.astimezone(IST).date() < today:
@@ -329,8 +337,17 @@ async def download_todays_pdfs() -> dict[str, dict]:
                 continue
 
             newspaper, priority = result
+            all_today_messages.append((message, filename, newspaper, priority))
 
-            # Only download if this is a better edition than what we already have
+            # Track first-ever message seen per newspaper (messages are newest-first)
+            # so we overwrite each time — last write = oldest = first posted.
+            first_seen[newspaper] = {
+                "message":  message,
+                "filename": filename,
+                "priority": priority,
+            }
+
+            # Keep best edition (lowest priority number)
             existing = best_found.get(newspaper)
             if existing and existing["edition_priority"] <= priority:
                 log.debug(
@@ -339,18 +356,38 @@ async def download_todays_pdfs() -> dict[str, dict]:
                 )
                 continue
 
-            save_path = PDF_DIR / filename
-            log.info(f"Downloading {filename}  [{newspaper}, priority={priority}]...")
-            await client.download_media(message, file=str(save_path))
-
             telegram_url = build_telegram_url(channel, message.id)
             best_found[newspaper] = {
-                "path":             save_path,
-                "telegram_url":     telegram_url,
-                "filename":         filename,
+                "message":        message,          # stored for download below
+                "telegram_url":   telegram_url,
+                "filename":       filename,
                 "edition_priority": priority,
             }
-            log.info(f"  {newspaper} (edition {priority}) -> {telegram_url}")
+
+        # ── Pass 2: for any paper with no match at all, use its first message ─
+        for newspaper in EXPECTED_NEWSPAPERS:
+            if newspaper not in best_found and newspaper in first_seen:
+                entry = first_seen[newspaper]
+                telegram_url = build_telegram_url(channel, entry["message"].id)
+                best_found[newspaper] = {
+                    "message":          entry["message"],
+                    "telegram_url":     telegram_url,
+                    "filename":         entry["filename"],
+                    "edition_priority": entry["priority"],
+                }
+                log.info(
+                    f"  {newspaper}: no Bengaluru/Delhi edition found — "
+                    f"falling back to first available: {entry['filename']}"
+                )
+
+        # ── Pass 3: download all selected PDFs ────────────────────────────────
+        for newspaper, info in best_found.items():
+            save_path = PDF_DIR / info["filename"]
+            log.info(f"Downloading {info['filename']}  [{newspaper}, priority={info['edition_priority']}]...")
+            await client.download_media(info["message"], file=str(save_path))
+            info["path"] = save_path
+            del info["message"]   # remove non-serialisable Telethon object
+            log.info(f"  {newspaper} (edition {info['edition_priority']}) -> {info['telegram_url']}")
 
     found  = [n for n in EXPECTED_NEWSPAPERS if n in best_found]
     absent = [n for n in EXPECTED_NEWSPAPERS if n not in best_found]
