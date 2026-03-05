@@ -98,10 +98,17 @@ def save_state(state: dict) -> None:
 def main():
     DOCS_DIR.mkdir(exist_ok=True)
 
-    today       = datetime.now(IST)
+    today_override = os.environ.get("TARGET_DATE")
+    if today_override:
+        from datetime import date as _date
+        today = datetime.combine(datetime.strptime(today_override, "%Y-%m-%d").date(),
+                                 datetime.min.time()).replace(tzinfo=IST)
+        log.info(f"TARGET_DATE override: using {today_override}")
+    else:
+        today = datetime.now(IST)
     today_str   = today.strftime("%Y-%m-%d")
     date_str    = today.strftime("%d %B %Y")
-    is_sunday   = today.weekday() == 6   # Monday=0 … Sunday=6
+    is_sunday   = today.weekday() == 6
 
     expected_papers = (
         [p for p in EXPECTED_NEWSPAPERS if p not in SUNDAY_SKIP]
