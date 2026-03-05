@@ -132,14 +132,14 @@ def merge_all_clusters(clusters: list[dict], model) -> list[dict]:
 Below are {len(clusters)} groups of duplicate articles. Each group has articles from different newspapers about the same event.
 
 For EACH group, produce a single merged article that:
-- Combines unique facts from all sources into one richer summary (3-4 sentences)
+- Combines unique facts from all sources into one richer summary. HARD LIMIT: 400 characters maximum (including spaces)
 - Uses the best/most informative headline
 - Preserves the category
 
 Return ONLY a valid JSON array with exactly {len(clusters)} objects, one per group, in the same order.
 Each object must have:
 - "headline": best headline (max 12 words)
-- "summary": merged 3-4 sentence summary combining all unique facts
+- "summary": merged summary combining all unique facts, max 400 characters
 - "category": same category as the group
 
 Groups:
