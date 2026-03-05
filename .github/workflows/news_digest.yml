@@ -24,6 +24,10 @@ on:
         description: 'Clear state and re-download all papers (yes/no)'
         required: false
         default: 'no'
+      target_date:
+        description: 'Override date to fetch (YYYY-MM-DD). Leave blank for today.'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -75,8 +79,9 @@ jobs:
           NOTIFY_BOT_TOKEN:  ${{ secrets.NOTIFY_BOT_TOKEN }}
           NOTIFY_CHAT_ID:    ${{ secrets.NOTIFY_CHAT_ID }}
           SITE_URL:          ${{ secrets.SITE_URL }}
-          MORNING_NOTIFY:    "false"   # suppress notification at build time; morning job handles it
+          MORNING_NOTIFY:    "false"
           FORCE_RESET:       ${{ github.event.inputs.force_reset || 'no' }}
+          TARGET_DATE:       ${{ github.event.inputs.target_date || '' }}
         run: python3 digest.py
 
       - name: 💾 Commit site files + state
