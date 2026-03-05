@@ -18,12 +18,19 @@ API call budget (free tier = 20 RPD):
   First run : 1 test + N extraction calls (1/paper) + 1 dedup = N+2 calls
   Later runs: N_new extraction calls + 1 dedup = N_new+1 calls
   Worst case across all runs in a day: still ≤ 11 calls (9 papers + 2 overhead)
+
+Model fallback:
+  ModelManager tries models in priority order. If any call hits a quota / rate-
+  limit error it immediately switches to the next model and retries — even in
+  the middle of processing newspapers.  All free-tier models are tried before
+  giving up.
 """
 
 import os
 import json
 import logging
 import shutil
+import time
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
@@ -50,15 +57,96 @@ STATE_FILE     = DOCS_DIR / "digest_state.json"
 # Papers not published on Sundays
 SUNDAY_SKIP = {"Mint", "Business Standard"}
 
-# ── Model selection ───────────────────────────────────────────────────────────
-genai.configure(api_key=GEMINI_API_KEY)
-try:
-    model = genai.GenerativeModel("gemini-3-flash-preview")
-    model.generate_content("hi")
-    log.info("Using gemini-3-flash-preview (5 RPM, 250K TPM, 20 RPD)")
-except Exception:
-    log.warning("gemini-3-flash-preview unavailable, falling back to gemini-2.5-flash-lite")
-    model = genai.GenerativeModel("gemini-2.5-flash-lite")
+
+# ── Model Manager ─────────────────────────────────────────────────────────────
+
+class ModelManager:
+    """
+    Transparent wrapper around google.generativeai.GenerativeModel that
+    automatically falls back to the next available free-tier model whenever a
+    quota or rate-limit error is encountered.
+
+    Fallback happens immediately — mid-extraction, mid-dedup, any call —
+    so no newspaper is silently skipped due to quota exhaustion.
+
+    Priority order (best → last resort):
+      1. gemini-2.5-flash-preview-05-20   (Gemini 2.5 Flash)
+      2. gemini-2.5-flash-lite-preview-06-17
+      3. gemini-2.0-flash
+      4. gemini-1.5-flash
+    """
+
+    # (model_id, human-readable label)
+    MODEL_CHAIN = [
+        ("gemini-3-flash-preview",              "Gemini 3 Flash Preview  (5 RPM / 20 RPD)"),
+        ("gemini-2.5-flash",                    "Gemini 2.5 Flash        (5 RPM / 20 RPD)"),
+        ("gemini-2.5-flash-lite",               "Gemini 2.5 Flash Lite"),
+        ("gemini-2.0-flash",                    "Gemini 2.0 Flash"),
+        ("gemini-1.5-flash",                    "Gemini 1.5 Flash"),
+    ]
+
+    # Errors that indicate quota / rate-limit (not logic errors)
+    _QUOTA_SIGNALS = (
+        "quota", "resource_exhausted", "rate limit",
+        "too many requests", "429", "rateerror",
+    )
+
+    def __init__(self):
+        genai.configure(api_key=GEMINI_API_KEY)
+        self._index = 0
+        self._model = None
+        self._load_model(self._index)
+
+    # ── Internal helpers ──────────────────────────────────────────────────────
+
+    def _load_model(self, index: int) -> None:
+        model_id, label = self.MODEL_CHAIN[index]
+        self._model = genai.GenerativeModel(model_id)
+        log.info(f"[ModelManager] Active model: {label}")
+
+    def _is_quota_error(self, exc: Exception) -> bool:
+        msg = str(exc).lower()
+        return any(signal in msg for signal in self._QUOTA_SIGNALS)
+
+    def _advance(self) -> None:
+        """Switch to the next model in the chain. Raises if chain is exhausted."""
+        exhausted_id, _ = self.MODEL_CHAIN[self._index]
+        self._index += 1
+        if self._index >= len(self.MODEL_CHAIN):
+            raise RuntimeError(
+                "All Gemini free-tier models are quota-exhausted. "
+                "Cannot complete extraction today."
+            )
+        next_id, next_label = self.MODEL_CHAIN[self._index]
+        log.warning(
+            f"[ModelManager] Quota exceeded on '{exhausted_id}' — "
+            f"switching to '{next_id}' ({next_label})"
+        )
+        self._load_model(self._index)
+
+    # ── Public interface ──────────────────────────────────────────────────────
+
+    @property
+    def current_model_id(self) -> str:
+        return self.MODEL_CHAIN[self._index][0]
+
+    def generate_content(self, *args, **kwargs):
+        """
+        Drop-in replacement for GenerativeModel.generate_content().
+        Retries with the next model on any quota/rate-limit error.
+        All other exceptions propagate normally.
+        """
+        while True:
+            try:
+                return self._model.generate_content(*args, **kwargs)
+            except Exception as exc:
+                if self._is_quota_error(exc):
+                    log.warning(f"[ModelManager] Quota/rate error: {exc}")
+                    self._advance()
+                    # Brief pause before retrying to respect new model's RPM
+                    time.sleep(2)
+                else:
+                    raise
 
 
 # ── State helpers ─────────────────────────────────────────────────────────────
@@ -118,6 +206,10 @@ def main():
     log.info(f"=== News Digest — {date_str} {'(Sunday mode)' if is_sunday else ''} ===")
     log.info(f"Expected papers ({len(expected_papers)}): {expected_papers}")
 
+    # ── Initialise model manager (single shared instance for the whole run) ───
+    model = ModelManager()
+    log.info(f"Model manager ready — starting with '{model.current_model_id}'")
+
     # ── Load state from previous runs today ───────────────────────────────────
     force_reset  = os.environ.get("FORCE_RESET", "no").lower() in ("yes", "true", "1")
     state        = load_state(today_str, force_reset=force_reset)
@@ -131,9 +223,8 @@ def main():
 
     # ── Step 1: Download only papers not yet processed ────────────────────────
     log.info("Downloading new papers from Telegram...")
-    newspaper_map = download_pdfs()          # downloads best edition of each paper
+    newspaper_map = download_pdfs()
 
-    # Filter to only papers we haven't processed yet
     new_papers = {k: v for k, v in newspaper_map.items() if k not in already_done}
 
     if not new_papers:
@@ -143,9 +234,10 @@ def main():
     log.info(f"New papers this run: {list(new_papers.keys())}")
 
     # ── Step 2: Extract articles from new papers only ─────────────────────────
+    # ModelManager is passed directly; it handles mid-extraction fallbacks
     new_articles = []
     for newspaper, info in new_papers.items():
-        log.info(f"Extracting: {newspaper}")
+        log.info(f"Extracting: {newspaper}  [model: {model.current_model_id}]")
         articles = extract_all_articles(newspaper, Path(info["path"]), model)
         for art in articles:
             art["telegram_url"] = info["telegram_url"]
@@ -162,6 +254,7 @@ def main():
     log.info(f"Combined article pool: {len(combined_articles)} articles from {combined_newspapers}")
 
     # ── Step 4: Deduplicate the full combined pool ────────────────────────────
+    log.info(f"Deduplicating  [model: {model.current_model_id}]")
     merged_articles = deduplicate(combined_articles, model)
     log.info(f"Final unique articles after dedup: {len(merged_articles)}")
 
@@ -195,33 +288,31 @@ def main():
 
     state.update({
         "downloaded":  updated_done,
-        "articles":    merged_articles,   # store deduped list for next merge
+        "articles":    merged_articles,
         "newspapers":  combined_newspapers,
         "is_complete": is_complete,
     })
     save_state(state)
 
     if is_complete:
-        log.info(f"🎉 All {len(expected_papers)} expected papers processed — "
+        log.info(f"All {len(expected_papers)} expected papers processed — "
                  "workflow will skip remaining schedule triggers today.")
     else:
         remaining = [p for p in expected_papers if p not in updated_done]
         log.info(f"Still waiting for: {remaining}")
 
     # ── Step 8: Send Telegram notification ───────────────────────────────────
-    # By default, notification is suppressed at build time because the morning
-    # notify job (morning_notify.py at 9 AM IST) handles the daily message.
-    # Set MORNING_NOTIFY=false to send immediately instead (e.g. manual runs).
     if os.environ.get("MORNING_NOTIFY", "true").lower() == "false":
         notify(digest_data)
     else:
         log.info("Notification deferred to morning_notify job (9 AM IST)")
 
-    api_calls_used = len(new_papers) + 2   # extractions + 1 dedup + 1 test (first run)
+    api_calls_used = len(new_papers) + 2
     log.info(
         f"Done! {len(merged_articles)} articles, "
         f"{len(combined_newspapers)} newspapers so far today, "
-        f"~{api_calls_used} API calls this run."
+        f"~{api_calls_used} API calls this run. "
+        f"Final model used: {model.current_model_id}"
     )
 
 
