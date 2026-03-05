@@ -20,6 +20,10 @@ on:
         description: 'Optional note (e.g. "manual trigger")'
         required: false
         default: ''
+      force_reset:
+        description: 'Clear state and re-download all papers (yes/no)'
+        required: false
+        default: 'no'
 
 permissions:
   contents: write
@@ -72,6 +76,7 @@ jobs:
           NOTIFY_CHAT_ID:    ${{ secrets.NOTIFY_CHAT_ID }}
           SITE_URL:          ${{ secrets.SITE_URL }}
           MORNING_NOTIFY:    "false"   # suppress notification at build time; morning job handles it
+          FORCE_RESET:       ${{ github.event.inputs.force_reset || 'no' }}
         run: python3 digest.py
 
       - name: 💾 Commit site files + state
