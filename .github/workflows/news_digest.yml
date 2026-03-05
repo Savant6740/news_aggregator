@@ -1,60 +1,23 @@
 name: 📰 Daily News Digest
 
-# Progressive update strategy:
-#   09:00 IST — first run, publish whatever papers have already arrived
-#   09:30–12:00 IST — every 30 min, check for newly arrived papers and update
-#                     site only if something new was found
-#   Stops early once all expected papers are present for the day
-#   Sunday: 7 papers expected (Mint and Business Standard not published)
-#
-# How the gate works (no Telegram calls in the workflow):
-#   The progress check reads only docs/digest_state.json (committed to repo).
-#   If is_complete=true for today → skip immediately (~10 seconds, no Python).
-#   Otherwise → always proceed to digest.py, which handles the Telegram scan
-#   internally and exits cleanly on its own if nothing new has arrived.
-#   This avoids the secret-masking bug that breaks inline Telegram calls.
+# Single run at 9 PM IST every night.
+# A separate morning_notify job runs at 9 AM IST the next day
+# to send a Telegram message with the digest link.
 #
 # ── Minutes budget ────────────────────────────────────────────────────────────
-# 7 schedule triggers/day × 31 days = 217 potential runs/month
-#
-# Run types:
-#   (A) Complete skip  — state says done today, shell check only   →  ~0.1 min
-#   (B) No-op run      — digest.py finds nothing new, exits early  →  ~3 min
-#   (C) Partial update — 1–3 new papers, extract + build + deploy  → ~10 min
-#   (D) Full first run — 7–9 papers at once                        → ~18 min
-#
-# BEST CASE  — all papers arrive before 9am every day (31 days)
-#   09:00 → 1 full run (D=18)  +  6 complete skips (A=0.1×6=0.6)
-#   Daily: ~19 min  →  19 × 31 = 589 min/month  ✅
-#
-# AVERAGE CASE — papers trickle over 2–3 runs/day (31 days)
-#   09:00 → partial (C=10)  09:30 → partial (C=10)  10:00 → partial (C=10)
-#   10:30–12:00 → 4 complete skips (A≈0)
-#   Daily: ~30 min  →  30 × 31 = 930 min/month  ✅
-#
-# WORST CASE — papers arrive late, one per slot (31 days)
-#   09:00 → no-op (B=3)  then 5 × partial (C=10)  then 1 complete skip (A≈0)
-#   Daily: ~53 min  →  53 × 31 = 1643 min/month  ⚠️  (only if EVERY day is worst)
-#
-# REALISTIC WORST — based on observed data (Feb): 1 late day in 7
-#   6 average days (30 min) + 1 worst day (53 min) per week
-#   Monthly: ~(26×30 + 5×53) = 1045 min/month  ✅
-#
-# Safe cap: remove the 11:30 + 12:00 crons → worst case ~40 min/day = 1240/month
+# 1 run/day × 31 days = 31 runs/month
+# Each full run (download + extract + build + deploy): ~20-25 min
+# Morning notify job (just sends a message): ~1 min
+# Monthly: ~(25 × 31) + (1 × 31) = 806 min/month  ✅  (well within 1200/day spare)
 
 on:
   schedule:
-    - cron: '30 3 * * *'   # 09:00 IST = 03:30 UTC  ← first run of the day
-    - cron: '0 4 * * *'    # 09:30 IST = 04:00 UTC
-    - cron: '30 4 * * *'   # 10:00 IST = 04:30 UTC
-    - cron: '0 5 * * *'    # 10:30 IST = 05:00 UTC
-    - cron: '30 5 * * *'   # 11:00 IST = 05:30 UTC
-    - cron: '0 6 * * *'    # 11:30 IST = 06:00 UTC
-    - cron: '30 6 * * *'   # 12:00 IST = 06:30 UTC
+    - cron: '30 15 * * *'   # 21:00 IST = 15:30 UTC  ← nightly digest run
+    - cron: '30 3 * * *'    # 09:00 IST = 03:30 UTC  ← morning link notification
   workflow_dispatch:
     inputs:
       note:
-        description: 'Optional note (e.g. "all 9 papers confirmed")'
+        description: 'Optional note (e.g. "manual trigger")'
         required: false
         default: ''
 
@@ -64,73 +27,28 @@ permissions:
   id-token: write
 
 jobs:
+
+  # ── Nightly digest job (runs at 9 PM IST) ───────────────────────────────────
   digest:
     runs-on: ubuntu-latest
     timeout-minutes: 45
+    if: github.event_name == 'workflow_dispatch' || github.event.schedule == '30 15 * * *'
 
     steps:
-      # ── Checkout first — needed to read state file ───────────────────────────
       - name: 📥 Checkout repo
         uses: actions/checkout@v4
 
-      # ── Fast gate: pure shell, reads state file only ─────────────────────────
-      # No Python, no Telegram. Reads docs/digest_state.json which was committed
-      # by the previous run. If today is already marked complete, bail in ~5 sec.
-      # All Telegram interaction happens inside digest.py where secrets work fine.
-      - name: 🔍 Check if today is already complete
-        id: gate
-        run: |
-          TODAY=$(TZ='Asia/Kolkata' date +'%Y-%m-%d')
-          STATE_FILE="docs/digest_state.json"
-          EVENT="${{ github.event_name }}"
-
-          if [ "$EVENT" = "workflow_dispatch" ]; then
-            echo "Manual trigger — always proceed."
-            echo "proceed=true" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          if [ ! -f "$STATE_FILE" ]; then
-            echo "No state file — first run ever, proceeding."
-            echo "proceed=true" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          FILE_DATE=$(python3 -c "import json; d=json.load(open('$STATE_FILE')); print(d.get('date',''))" 2>/dev/null || echo "")
-          IS_COMPLETE=$(python3 -c "import json; d=json.load(open('$STATE_FILE')); print(str(d.get('is_complete',False)).lower())" 2>/dev/null || echo "false")
-
-          echo "State file: date=$FILE_DATE  is_complete=$IS_COMPLETE  today=$TODAY"
-
-          if [ "$FILE_DATE" = "$TODAY" ] && [ "$IS_COMPLETE" = "true" ]; then
-            echo "All papers already processed today — skipping."
-            echo "proceed=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "Not yet complete — proceeding to pipeline."
-            echo "proceed=true" >> "$GITHUB_OUTPUT"
-          fi
-
-      # ── Restore Telegram session from secret ────────────────────────────────
-      # The session file authorises Telethon to access the private group.
-      # It is stored base64-encoded in TELEGRAM_SESSION secret because binary
-      # files cannot be committed to the repo safely.
-      # To generate: on your local machine (PowerShell):
-      #   [Convert]::ToBase64String([IO.File]::ReadAllBytes((Resolve-Path "news_session.session"))) | Out-File -NoNewline session_b64.txt
-      # Then add the contents of session_b64.txt as the TELEGRAM_SESSION secret.
       - name: 🔑 Restore Telegram session
-        if: steps.gate.outputs.proceed == 'true'
         run: |
           echo "${{ secrets.TELEGRAM_SESSION }}" | base64 -d > news_session.session
           echo "Session restored: $(wc -c < news_session.session) bytes"
 
-      # ── Python + heavy deps only when we're actually going to run ────────────
       - name: 🐍 Set up Python 3.11
-        if: steps.gate.outputs.proceed == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: 📦 Cache pip dependencies
-        if: steps.gate.outputs.proceed == 'true'
         uses: actions/cache@v4
         with:
           path: ~/.cache/pip
@@ -138,39 +56,25 @@ jobs:
           restore-keys: ${{ runner.os }}-pip-
 
       - name: 📦 Install Python dependencies
-        if: steps.gate.outputs.proceed == 'true'
         run: pip install -r requirements.txt
 
       - name: 🛠 Install system dependencies (OCR)
-        if: steps.gate.outputs.proceed == 'true'
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y poppler-utils tesseract-ocr libtesseract-dev
 
-      # ── Main pipeline ────────────────────────────────────────────────────────
-      # digest.py handles all intelligence internally:
-      #   1. Reads digest_state.json → knows what's already done today
-      #   2. Scans Telegram for newly arrived papers (secrets work fine here)
-      #   3. If nothing new → exits cleanly with code 0, no site rebuild
-      #   4. If new papers → downloads, extracts, deduplicates, rebuilds site
-      #   5. Writes updated digest_state.json (is_complete=true when all done)
       - name: 🤖 Run digest pipeline
-        if: steps.gate.outputs.proceed == 'true'
         env:
           GEMINI_API_KEY:    ${{ secrets.GEMINI_API_KEY }}
           TELEGRAM_API_ID:   ${{ secrets.TELEGRAM_API_ID }}
           TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
-          # TELEGRAM_CHANNEL is hardcoded in telegram_downloader.py (not sensitive)
           NOTIFY_BOT_TOKEN:  ${{ secrets.NOTIFY_BOT_TOKEN }}
           NOTIFY_CHAT_ID:    ${{ secrets.NOTIFY_CHAT_ID }}
           SITE_URL:          ${{ secrets.SITE_URL }}
+          MORNING_NOTIFY:    "false"   # suppress notification at build time; morning job handles it
         run: python3 digest.py
 
-      # ── Commit only if digest.py actually changed something ──────────────────
-      # git diff --staged --quiet short-circuits the commit when digest.py
-      # exited early (nothing new found) so Pages isn't redeployed needlessly.
       - name: 💾 Commit site files + state
-        if: steps.gate.outputs.proceed == 'true'
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -179,13 +83,11 @@ jobs:
           git push
 
       - name: 📤 Upload docs/ as Pages artifact
-        if: steps.gate.outputs.proceed == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs/
 
       - name: 🚀 Deploy to GitHub Pages
-        if: steps.gate.outputs.proceed == 'true'
         uses: actions/deploy-pages@v4
         id: deployment
 
@@ -196,3 +98,28 @@ jobs:
           name: digest-logs
           path: "*.log"
           retention-days: 3
+
+  # ── Morning notification job (runs at 9 AM IST) ─────────────────────────────
+  morning_notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    if: github.event.schedule == '30 3 * * *'
+
+    steps:
+      - name: 📥 Checkout repo
+        uses: actions/checkout@v4
+
+      - name: 🐍 Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 📦 Install minimal dependencies
+        run: pip install requests
+
+      - name: 📬 Send morning digest link
+        env:
+          NOTIFY_BOT_TOKEN: ${{ secrets.NOTIFY_BOT_TOKEN }}
+          NOTIFY_CHAT_ID:   ${{ secrets.NOTIFY_CHAT_ID }}
+          SITE_URL:         ${{ secrets.SITE_URL }}
+        run: python3 morning_notify.py
