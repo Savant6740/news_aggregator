@@ -118,7 +118,7 @@ Rules:
 
 Return ONLY a valid JSON array. Each item must have exactly these fields:
 - "headline": clear factual headline, max 12 words
-- "summary": 5-6 sentences in neutral simple English with key facts and figures
+- "summary": factual summary in neutral simple English with key facts and figures. HARD LIMIT: 400 characters maximum (including spaces). Do NOT exceed this — the text must fit on a mobile screen without any clipping.
 - "category": one category from the list above
 - "page": integer page number where article starts
 - "importance": integer 1-10 rating of the article's significance
