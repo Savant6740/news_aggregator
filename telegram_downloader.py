@@ -289,7 +289,9 @@ async def download_todays_pdfs() -> dict[str, dict]:
     # first_seen tracks the very first message for each newspaper name,
     # used as a last-resort fallback if no Bengaluru/Delhi edition is found.
     first_seen: dict[str, dict] = {}
-    today = datetime.now(IST).date()
+    _target = os.environ.get("TARGET_DATE")  # e.g. "2026-03-05"
+    today = datetime.strptime(_target, "%Y-%m-%d").date() if _target else datetime.now(IST).date()
+    log.info(f"Targeting date: {today}{'  (from TARGET_DATE env)' if _target else ''}")
 
     client = TelegramClient(SESSION_PATH, _api_id(), _api_hash())
 
@@ -410,7 +412,8 @@ async def _scan_available_async() -> dict[str, str]:
     Returns as soon as the first matching newspaper is found.
     """
     found: dict[str, str] = {}
-    today = datetime.now(IST).date()
+    _target = os.environ.get("TARGET_DATE")
+    today = datetime.strptime(_target, "%Y-%m-%d").date() if _target else datetime.now(IST).date()
 
     client = TelegramClient(SESSION_PATH, _api_id(), _api_hash())
     async with client:
