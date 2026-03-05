@@ -1,7 +1,674 @@
 {
-  "date": "2000-01-01",
-  "downloaded": [],
-  "articles": [],
-  "newspapers": [],
-  "is_complete": false
+  "date": "05 March 2026",
+  "generated_at": "2026-03-05T00:00:00+05:30",
+  "total_articles": 41,
+  "newspapers": [
+    "Times of India",
+    "Hindustan Times",
+    "Financial Express",
+    "Business Line",
+    "Business Standard",
+    "Mint",
+    "Economic Times",
+    "The Hindu",
+    "Indian Express"
+  ],
+  "articles": [
+    {
+      "headline": "US submarine torpedoes and sinks Iranian frigate off Sri Lanka",
+      "summary": "A US submarine sank the Iranian frigate IRIS Dena in waters near Sri Lanka on Wednesday. Sri Lankan officials confirmed that at least 80 bodies were found while 32 sailors were rescued. US Defense Secretary Pete Hegseth stated the warship was targeted by a torpedo, marking a rare submarine attack in the region. The vessel had recently completed its participation in a multi-nation exercise hosted by New Delhi. The incident brings the West Asia conflict into India's strategic backyard. This is reportedly the first torpedo sinking of an enemy ship since World War II.",
+      "category": "World",
+      "page": 3,
+      "importance": 10,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Explosions rock Tehran and Jerusalem as US-Iran war intensifies",
+      "summary": "Intense bombings were reported in Tehran and sirens wailed in Jerusalem on the fifth day of the US-Iran war. Iranian state television confirmed multiple blasts at dawn, while Israel reported successful missile interceptions. Over 1,000 people have been killed in Iran since the conflict began following the death of Supreme Leader Khamenei. Global oil and gas supplies have been severely disrupted, causing shipping costs to skyrocket. Israeli forces have also struck over 250 Hezbollah targets in Lebanon in response to rocket fire. The conflict continues to expand as world leaders call for restraint and legal justification for military actions.",
+      "category": "World",
+      "page": 11,
+      "importance": 10,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 11,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Saudi Aramco's Ras Tanura refinery targeted by drone attack",
+      "summary": "Saudi Arabia's largest domestic refinery and export terminal, Ras Tanura, was targeted by a drone on Wednesday. A Saudi defense ministry spokesperson stated that the attack resulted in no damage or supply disruptions. This follows a previous drone strike that had temporarily shut down the complex earlier in the week. Major regional producers are currently unable to move oil through the Strait of Hormuz due to the ongoing war. Saudi Aramco is attempting to reroute some crude exports through the Red Sea to bypass the conflict zone. Global energy markets remain volatile as critical infrastructure in the Gulf faces repeated threats.",
+      "category": "World",
+      "page": 11,
+      "importance": 10,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 11,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Pakistan launches major airstrike on Bagram Air Base in Afghanistan",
+      "summary": "Pakistan conducted more than 50 airstrikes on military targets in Afghanistan, including the Bagram Air Base. The operation, titled 'Righteous Fury', follows alleged terrorist attacks from Afghan soil on 53 Pakistani border locations. Satellite images confirmed that a hangar and two warehouses at Bagram were destroyed in the strikes. Pakistan's Ministry of Defence stated the action was a response to Afghan Taliban aggression and use of US-left weapons. Afghan authorities have confirmed the airstrikes, which have caused heavy damage to the regime's infrastructure. The escalation marks a significant deterioration in relations between the two neighboring nations.",
+      "category": "World",
+      "page": 11,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 11,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Nitish Kumar likely to move to Rajya Sabha from Bihar",
+      "summary": "Bihar Chief Minister Nitish Kumar is expected to file nominations for the Rajya Sabha polls on Thursday. Speculation suggests his son, Nishant Kumar, may join the JD(U) and be inducted as a Deputy CM. Union Home Minister Amit Shah is scheduled to reach Patna for the nomination filing process. The move comes after Kumar led the NDA to a historic victory in the recent assembly polls. While no formal announcement has been made, party sources indicate the decision is almost final. The transition could significantly alter the political landscape in Bihar.",
+      "category": "Politics",
+      "page": 3,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "MVA coalition renominates Sharad Pawar for lone Rajya Sabha seat",
+      "summary": "The Maha Vikas Aghadi coalition has decided to renominate NCP (SP) chief Sharad Pawar for the Rajya Sabha. The decision followed protracted negotiations between the Shiv Sena (UBT), Congress, and the NCP. Pawar is currently recuperating from a hospital stay and may file his nomination through online options. The ruling Mahayuti alliance is set to contest the remaining six seats from Maharashtra. The Shiv Sena (UBT) offered conditional support after seeking clarity on future party mergers. All seven candidates for the state are expected to be elected unopposed.",
+      "category": "Politics",
+      "page": 3,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "State government to denotify 400 hectares of land in Panvel",
+      "summary": "Minister Uday Samant announced that more than 400 hectares of land in four Panvel villages will be denotified. The land was originally identified for the development of Navi Mumbai by CIDCO nearly 50 years ago. Landowners in Devicha Pada, Chal, Tondale, and Pale Khurd will now be able to sell their plots in the private market. Some of these land parcels are currently valued at ₹30-40 crore per acre. The decision follows grievances from farmers who were never compensated for land that was never fully possessed by CIDCO. A survey will be conducted to assess similar land parcels in other surrounding villages.",
+      "category": "Politics",
+      "page": 7,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 7,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Rohit Pawar alleges cover-up in Ajit Pawar plane crash report",
+      "summary": "NCP (SP) MLA Rohit Pawar has questioned the preliminary findings of the report on the plane crash that killed Ajit Pawar. He alleged that the black box appeared undamaged in photos, contradicting official claims of heat damage. Pawar also raised concerns about VSR Ventures, the aircraft operator, claiming they had a history of safety violations. He suggested that an aircraft operated by the same firm almost faced an international incident over Iran in 2023. The MLA called for a deeper investigation into whether influential individuals are being protected. The crash in Baramati on January 28 killed all five people on board the Learjet 45.",
+      "category": "Politics",
+      "page": 7,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 7,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "PM Modi welcomes Finland President Stubb to strengthen bilateral ties",
+      "summary": "Prime Minister Narendra Modi received Finland President Alexander Stubb in New Delhi for a state visit on Wednesday. President Stubb was accorded a ceremonial welcome and a Guard of Honour at the airport. He is scheduled to deliver a keynote address at the Raisina Dialogue 2026 and hold discussions on trade and regional security. The visit includes a high-level delegation of business leaders and senior officials aiming to expand cooperation across various sectors. Following his stay in the capital, Stubb will travel to Mumbai to interact with local students and business leaders. This marks Stubb's first visit to India in his current role as President.",
+      "category": "Politics",
+      "page": 8,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Srinagar MP Ruhullah Mehdi booked for misleading social media content",
+      "summary": "Jammu and Kashmir Police have registered an FIR against Srinagar MP Ruhullah Mehdi and former mayor Junaid Mattu. They are accused of circulating false and misleading content online related to the US-Israel attacks on Iran. Police claim the posts were intended to create fear, disturb public order, and incite unlawful activities. Mehdi had criticized the national leadership's silence on the killing of Iranian religious head Ayatollah Ali Khamenei. In response, the MP's office stated that his mandate to speak the truth does not expire with an FIR. The cases were registered under the Bharatiya Nyaya Sanhita at the Cyber Police Station in Srinagar.",
+      "category": "Politics",
+      "page": 8,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Tamil Nadu CM Stalin slams BJP over 'vile' Hindi imposition",
+      "summary": "Chief Minister MK Stalin has criticized the central government for naming a railway divisional office entrance in Hindi. The entrance arch in Tiruchirappalli was named 'Kartavya Dwar', which Stalin called a move that goes beyond limits. He accused the BJP of attempting to undermine the self-respect of Tamils under the guise of promoting 'one language'. Stalin demanded that proper Tamil names be restored immediately to avoid a political backlash in the state. He also referenced previous instances of Sanskrit naming for criminal laws and EPFO offices as part of a larger trend. The CM warned that the BJP would feel the 'heat of the Tamils' if the practice continues.",
+      "category": "Politics",
+      "page": 9,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 9,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Indian rupee hits record low of 92.15 against US dollar",
+      "summary": "The Indian rupee weakened to an all-time closing low of 92.15 against the US dollar on Wednesday. This decline was triggered by escalating hostilities in West Asia following US-Israel strikes on Iran. Traders reported that the Reserve Bank of India likely intervened through dollar sales to support the currency. The rupee breached the psychological 92-mark for the first time during the session. Benchmark indices Nifty and Sensex also fell sharply by 1.6% and 1.4% respectively. Investor sentiment remains dented as global oil supply concerns continue to mount.",
+      "category": "Business",
+      "page": 3,
+      "importance": 9,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Stock markets crash as West Asia turmoil drives investor panic",
+      "summary": "Indian benchmark indices Sensex and Nifty closed more than 1.4% lower on Wednesday due to the intensifying war. The Sensex plummeted over 1,100 points, while the Nifty dropped below the 24,500 mark. Investor anxiety was reflected in the Nifty India volatility index, which hit its highest level since May 2025. Massive selling was seen across sectors, with 15 of 16 major sector indices logging losses. Asian markets in South Korea, Japan, and Hong Kong also ended with significant declines. Analysts warn that high oil prices and potential supply chain disruptions will continue to pressure domestic equities.",
+      "category": "Business",
+      "page": 12,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 12,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "India scraps soybean oil import cargoes as costs surge",
+      "summary": "India, the world's largest edible oil importer, has cancelled approximately 25,000 tons of soybean oil booked from Russia. An additional 8,000 tons from South America were also axed as costs rose sharply compared to alternatives. The price hike is attributed to the rupee's slump and massive increases in shipping freight through the Strait of Hormuz. Importers are facing a disparity of $30 to $40 per ton between imported and local prices. Soybean oil currently holds a significant premium over palm oil, leading traders to wash out existing contracts. Global shipping traffic disruptions continue to impact the availability of essential commodities in India.",
+      "category": "Business",
+      "page": 12,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 12,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "India's services sector growth eases marginally in February",
+      "summary": "The HSBC India Services PMI dipped slightly to 58.1 in February from 58.5 in the previous month. While growth remains robust, new business expansion cooled to its slowest pace in over a year. Service providers noted a pick-up in international sales but cited rising competition as a drag on domestic orders. The finance and insurance sectors remained the standout performers during this period. Input costs rose at the sharpest rate in five months, driven by higher food and energy prices. Firms responded by increasing their selling prices to pass on the burden to clients.",
+      "category": "Business",
+      "page": 12,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 12,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Director of IVF centre arrested in human egg trafficking racket",
+      "summary": "The Badlapur police arrested Dr. Amol Patil, director of Malti IVF Centre, in connection with an illegal surrogacy racket. He is the sixth person arrested in a case involving the unauthorized extraction and sale of human eggs. Investigations suggest the centre was operating without legal permissions and may have international links. Previously, four women and one man were taken into custody for their roles as agents. Deputy Chairperson Neelam Gorhe has called for the cancellation of the accused doctor's registration. The state government plans to make Aadhaar cards mandatory for all egg donors.",
+      "category": "Law",
+      "page": 3,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Father of minor driver granted bail in Ghatkopar SUV crash",
+      "summary": "A Mumbai sessions court granted bail to Valaji Raja Bhushan, the father of a minor involved in a fatal crash. The February 5 accident in Ghatkopar killed businessman Dhrumil Patel and injured his wife. The court noted there was no evidence that the father knowingly allowed his unlicensed son to drive. The minor had allegedly taken the keys from a security guard without his father's direct permission. The victim's family opposed the bail, citing the minor's history of reckless driving and social media stunts. The case remains under investigation for charges including culpable homicide not amounting to murder.",
+      "category": "Law",
+      "page": 5,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 5,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Delivery partner arrested for raping minor and extorting fifty thousand rupees",
+      "summary": "Vartak Nagar police arrested 23-year-old Prathamesh Desai for sexually assaulting a 15-year-old schoolgirl over six months. The accused allegedly blackmailed the victim, threatening to reveal their relationship to her parents. He successfully extorted ₹50,000 from the girl, who borrowed money from friends to meet his demands. The ordeal ended when the victim confided in her parents after facing mounting financial and mental pressure. The suspect worked as a delivery partner and lived in the same neighborhood as the victim. Police have registered an FIR under various sections including the POCSO Act.",
+      "category": "Law",
+      "page": 5,
+      "importance": 3,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 5,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Court upholds conviction of SIMI member for terror-related activities",
+      "summary": "A Mumbai sessions court upheld the seven-year jail sentence of Ehtesham Siddiqui for his ties to the banned outfit SIMI. Siddiqui was accused of publishing and distributing literature intended to provoke terrorist acts. Although he was recently acquitted in the 2006 Mumbai train blasts case, this specific conviction remains valid. The court rejected his argument of 'double jeopardy', noting these were distinct offences from the blast trial. Siddiqui has already spent nine years in jail as an undertrial, exceeding the current sentence. His legal team plans to file a revision application in the High Court.",
+      "category": "Law",
+      "page": 6,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 6,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Antwerp court hears Mehul Choksi's extradition case amid torture claims",
+      "summary": "The Indian government's efforts to extradite fugitive Mehul Choksi faced a critical hearing in a Belgian court. Choksi's lawyers argued that he was kidnapped and tortured by Indian authorities in the Caribbean in 2021. A secret judgment on his extradition will be delivered by the Antwerp court on or after March 20. Choksi is wanted by the CBI for allegedly defrauding Punjab National Bank of thousands of crores. INTERPOL previously noted a 'credible possibility' that Choksi's abduction had the purpose of illegal deportation. If the court finds Indian involvement in the alleged torture, the extradition request could be jeopardized.",
+      "category": "Law",
+      "page": 9,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 9,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Biker decapitated in high-speed hit-and-run on Palm Beach Road",
+      "summary": "A 23-year-old motorcyclist, Prashant Vijay Jamdade, was killed in a hit-and-run accident in Navi Mumbai. The impact of the collision with an unidentified vehicle resulted in the victim being decapitated. A 17-year-old pillion rider, Harman Kaur, sustained critical injuries and is undergoing treatment at DY Patil Hospital. The accident occurred around 3 am on Tuesday near the Kesar Solitaire building in Sanpada. Police have registered an FIR and are scanning CCTV footage to identify the offending vehicle. This incident marks another fatal crash on the high-speed Palm Beach Road stretch.",
+      "category": "India",
+      "page": 3,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Mumbai University bars filmmaker Anand Patwardhan from meeting protestor",
+      "summary": "Documentary filmmaker Anand Patwardhan was stopped at the Kalina campus gate of Mumbai University on Saturday. He intended to express solidarity with research scholar Rajesh Bankhande, who has been protesting for six months. Patwardhan eventually met the protestor at the gate and offered a rose as a gesture of support. Social activists have criticized the university for suppressing freedom of expression and the right to protest. The university claimed it had no prior information about the visit and cited law-and-order concerns. This follows a similar incident where actor Naseeruddin Shah was uninvited from a campus event.",
+      "category": "India",
+      "page": 3,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Former HT Editor-in-Chief H K Dua passes away at 88",
+      "summary": "Veteran journalist H K Dua passed away on Wednesday at the age of 88. He was a distinguished editor who headed major newspapers including Hindustan Times, Indian Express, and The Times of India. Dua served as a media advisor to former Prime Ministers A B Vajpayee and H D Deve Gowda. He was also an ambassador to Denmark and a nominated member of the Rajya Sabha. Colleagues remember him for maintaining the unflinching objectivity and credibility of the publications he led. His career spanned several critical decades of Indian political and media history.",
+      "category": "India",
+      "page": 3,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Housekeeping worker stabbed to death in Kamothe over trivial dispute",
+      "summary": "A 23-year-old man, Rahul Jayvinder Bumbak, was stabbed to death in Kamothe on Tuesday afternoon. Two 19-year-old suspects were arrested shortly after the incident near Gavdevi Temple. The altercation reportedly began because the accused objected to the victim staring at them. One suspect allegedly restrained the victim while the other stabbed him in the abdomen with a knife. The victim was rushed to a hospital but succumbed to his injuries during treatment. Navi Mumbai police have seized the weapon used and registered a case of murder against the duo.",
+      "category": "India",
+      "page": 5,
+      "importance": 3,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 5,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Film director Avinash Jadhav booked for duping actresses of 47 lakhs",
+      "summary": "Shivaji Park police have booked director Avinash Jadhav for allegedly defrauding actresses Varsha Usgaonkar and Mrunalini Jambhale. Jadhav reportedly took money from them in 2019 and 2020, promising high returns from real estate investments. According to the complaint, Jambhale paid ₹23 lakh while Usgaonkar invested approximately ₹11 lakh. The director initially repaid small amounts but later changed his contact details and addresses to avoid the investors. Jadhav is a resident of Dombivli and was booked under relevant sections of the Indian Penal Code. Police are currently investigating the total extent of the fraud.",
+      "category": "India",
+      "page": 6,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 6,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "MEA establishes control room for Indians affected by West Asia crisis",
+      "summary": "The Ministry of External Affairs has set up a 24/7 control room to assist the nearly one crore Indians living in West Asia. The safety of Indian citizens is a 'top priority' as the conflict between the US, Israel, and Iran expands. Hundreds of Indian students have already been relocated from Tehran to safer areas by the Indian embassy. The MEA is closely monitoring the evolving situation and has provided multiple toll-free and international contact numbers. Returnees from Dubai have praised the local government's safety protocols during recent missile interceptions. New Delhi is prepared to take further relevant decisions in the national interest as the war continues.",
+      "category": "India",
+      "page": 8,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Oxford's Ashmolean Museum returns 16th-century bronze idol to India",
+      "summary": "The Ashmolean Museum has returned a bronze idol of Tamil poet-saint Thirumangai Alvar to the Indian government. The 16th-century statue was believed to have been stolen from a temple in Tamil Nadu before being auctioned in 1967. This marks the first such repatriation in the history of the Oxford University museum. The idol was formally handed over at India House in London following extensive verification with the ASI. Four other recovered antiquities were also returned during the same ceremony. The repatriation was facilitated by coordinated efforts between US and UK investigative agencies.",
+      "category": "Culture",
+      "page": 3,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Karan Aujla's Mumbai concert marred by overcrowding and mismanagement",
+      "summary": "Punjabi singer Karan Aujla's Holi-themed concert in Mumbai faced heavy backlash from attendees over poor organization. Fans reported a lack of drinking water and basic facilities, with some people allegedly fainting due to exhaustion. Videos on social media showed overcrowding and a lack of large screens for those in the back sections. Aujla hinted at adding a night concert in Mumbai to compensate for the issues faced during the daytime show. No fresh dates have been announced, but the singer acknowledged the need for a better-managed follow-up event. The concert was part of his ongoing P-Pop Culture World Tour.",
+      "category": "Culture",
+      "page": 15,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 15,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Actor Yash's film Toxic postponed due to Middle East war",
+      "summary": "The highly anticipated global release of the film Toxic, starring Yash, has been pushed back to June 4. Distribution partner Phars Films advised the delay due to disruptions in cinema operations across the Gulf region. The film was originally scheduled for a worldwide release on March 19. Regional instability and escalating conflict have made the Gulf a difficult market for multi-language rollouts. The producers decided to reschedule to ensure maximum reach in crucial international markets. This follows several other global entertainment events being impacted by the ongoing West Asia crisis.",
+      "category": "Culture",
+      "page": 15,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 15,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "BTS announces 14-song track list for upcoming comeback album",
+      "summary": "K-pop icons BTS have unveiled the track list for their new album Arirang, set for release on March 20. The album features collaborations with global producers like Flume, Diplo, and Mike WiLL Made-It. This marks the group's first full-group project in six years following their military service. The comeback will be supported by a massive 82-show world tour spanning Asia, North America, and Europe. A documentary titled 'BTS: The Return' is also planned to accompany the album's launch. Fans worldwide have shown immense excitement for the return of the seven-member group to collective activities.",
+      "category": "Culture",
+      "page": 20,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 20,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Finn Allen smashes fastest T20 World Cup century against South Africa",
+      "summary": "New Zealand's Finn Allen hit a record-breaking hundred off just 33 balls in the T20 World Cup semi-final. His performance helped the Black Caps crush South Africa by nine wickets at Eden Gardens. New Zealand chased down a target of 170 with 43 balls to spare, maintaining their reputation as a knockout specialist. Allen's century is now the fastest in the history of the T20 World Cup tournament. South Africa was restricted to 169/8 despite a late half-century from Marco Jansen. The victory secures New Zealand's spot in the final scheduled for Sunday.",
+      "category": "Sports",
+      "page": 3,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "ICC Chairman Jay Shah reports record 500 million World Cup viewership",
+      "summary": "Broadcasting records for the ongoing T20 World Cup have been shattered with viewership surpassing 500 million. ICC Chairman Jay Shah shared that the current edition is the most globally accessible in history. Digital consumption on JioHotstar reached a peak of 60.5 million concurrent viewers during high-stakes matches. These figures have already exceeded the numbers recorded during the 2024 edition and the 2025 Champions Trophy. The growth is attributed to high-stakes rivalry and expanded international interest in the T20 format. The tournament continues to drive massive engagement across both television and digital platforms.",
+      "category": "Sports",
+      "page": 4,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "India women's football team suffers heart-breaking loss to Vietnam",
+      "summary": "The Indian women's football team lost 1-2 to Vietnam in a critical AFC Women's Asian Cup match in Perth. Sanfida Nongrum scored a stunning equalizer for India in the 52nd minute to bridge a 30-place ranking gap. However, Vietnam secured the winning goal in the 94th minute of second-half stoppage time. Indian goalkeeper Elangbam made several heroic saves to keep the team in the hunt throughout the match. Despite the defeat, head coach Amelia Valverde praised the team's fighting spirit against a World Cup-playing nation. This was India's first time qualifying for the continental championship on merit.",
+      "category": "Sports",
+      "page": 13,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 13,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Mumbai road concreting project faces delays and citizen complaints",
+      "summary": "The BMC's massive road concretisation drive in Mumbai is facing severe criticism for haphazard execution and missed deadlines. In Borivali, a 500-metre stretch has been left excavated for three months, hindering emergency vehicle access. Residents in Sion report that garbage trucks cannot enter their lanes, leading to foul odours and unlit streets. At Sandhurst Road, late-night work until 4 am is causing sleep deprivation for local business owners and residents. The project is currently 62.5% complete, but the final deadline has been pushed to early 2027. Activists claim contractors are violating traffic NOC conditions by excavating both sides of roads simultaneously.",
+      "category": "Infrastructure",
+      "page": 6,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 6,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Death toll in Chembur construction site accident rises to three",
+      "summary": "A 22-year-old worker, Gunadhar Rai, died on Wednesday from injuries sustained in a fall at a Chembur construction site. Rai was one of six labourers who fell from the sixth floor on February 28 when a wooden plank gave way. He suffered severe spinal injuries and succumbed at Lokmanya Tilak Municipal General Hospital in Sion. The deceased was a native of Jharkhand and had been working in Mumbai for approximately one year. Two other workers had previously died in the same incident involving the Adityaraj Group building. The mishap has raised concerns about safety protocols at car lift construction sites.",
+      "category": "Infrastructure",
+      "page": 6,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 6,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "High Court orders MMRDA to reply on Metro safety audit plea",
+      "summary": "The Bombay High Court has directed the MMRDA to file a response regarding safety audits at all metro construction sites. The PIL was filed following a concrete slab collapse in Mulund that killed one person and injured three. Petitioner Ruju Thakkar is seeking a third-party safety audit and disclosure of compensation paid to victims. The court has given the authority two weeks to provide a detailed reply on their safety standards. Construction work at the Mulund site on LBS Marg has been questioned for potential structural flaws. MMRDA maintains that all structures are safe and necessary precautions are being followed.",
+      "category": "Infrastructure",
+      "page": 7,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 7,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Mumbai fuel stations see thirty percent surge in demand amid war",
+      "summary": "Escalating tensions in the Gulf region have sparked a rush at petrol pumps across Mumbai. Motorists are filling tanks to capacity fearing potential supply disruptions and price hikes following US-Israel strikes on Iran. Petrol pump owners reported a 30-35% increase in demand compared to typical business days. Some stations in the city have started running dry, forcing dealers to place additional orders with oil companies. Residents expressed concern that the geopolitical situation could worsen, leading to long queues in the coming days. The Union shipping ministry has set up a 24/7 monitoring centre for Indian vessels in the area.",
+      "category": "Economy",
+      "page": 6,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 6,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Qatar Energy declares force majeure on gas exports amid war",
+      "summary": "Qatar declared a state of force majeure on gas exports on Wednesday, halting production at its major facilities. The move is expected to cause global gas shortages for weeks as Qatar supplies 20% of the world's LNG. Sources indicate it may take at least a month to return to normal production volumes once the conflict ends. The state-run Qatar Energy fully shut down gas liquefaction following intensified military activity in the region. Global energy security is under threat as the Strait of Hormuz remains a high-risk zone for tanker traffic. Force majeure is typically invoked during uncontrollable events like war or natural disasters.",
+      "category": "Economy",
+      "page": 11,
+      "importance": 9,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 11,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Mumbai records 38.7 degrees Celsius as early heatwave hits city",
+      "summary": "Mumbai experienced a sharp temperature spike on Wednesday, with Santacruz recording 38.7°C, six degrees above normal. This is the earliest such temperature spike recorded in the month of March in the last decade. The India Meteorological Department has issued a yellow alert for Mumbai and neighboring districts like Thane and Palghar. Experts attribute the heat to easterly winds and an anticyclonic circulation over the region. Residents are advised to stay hydrated as minimum temperatures also remained nearly three degrees above normal. The alert for surrounding districts continues into Thursday, though Mumbai's status may change.",
+      "category": "Environment",
+      "page": 6,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 6,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Maharashtra tables bill to legalize Maratha quota in private colleges",
+      "summary": "The Maharashtra government has introduced an amendment to the 2015 Act to institutionalize the Maratha reservation in private professional colleges. The bill provides a legal framework for the quota, which was previously based on government resolutions. It also establishes an appellate authority allowing students to contest decisions regarding admissions and fee hikes. The Fee Regulating Authority (FRA) has been empowered to inspect unaided institutions to ensure reasonable fee structures. Additionally, the retirement age for the Admission Regulatory Authority chairman has been raised to 70 years. The bill aims to replace a recently issued ordinance regarding state education quotas.",
+      "category": "Education",
+      "page": 7,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 7,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    },
+    {
+      "headline": "Rajshri Deshpande reveals breast cancer diagnosis and successful surgery",
+      "summary": "Actor Rajshri Deshpande took to Instagram to share her diagnosis of Grade 1 breast cancer. She revealed she underwent surgery after being diagnosed with Infiltrating ductal carcinoma. The actor expressed gratitude to her family and medical team for their support during the 'rollercoaster ride'. She encouraged her followers to prioritize health screenings and maintain courage during medical challenges. Her post received widespread support from fans and colleagues in the film industry. Deshpande is well-known for her roles in acclaimed series like Sacred Games and Trial by Fire.",
+      "category": "Health",
+      "page": 20,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/115930",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Mumbai 05-03-2026.pdf",
+          "page": 20,
+          "telegram_url": "https://t.me/c/1877410077/115930"
+        }
+      ]
+    }
+  ]
 }
