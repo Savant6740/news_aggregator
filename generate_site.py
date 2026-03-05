@@ -70,16 +70,15 @@ html, body {{
 .outer {{ position: fixed; inset: 0; overflow: hidden; }}
 .h-track {{ display: flex; height: 100%; will-change: transform; }}
 .cat-panel {{ flex-shrink:0; width:100vw; height:100%; display:flex; flex-direction:column; overflow:hidden; }}
-.progress-row {{ flex-shrink:0; display:flex; gap:4px; padding:14px 16px 0; background:#0c0c0c; position:relative; z-index:5; }}
+.progress-row {{ flex-shrink:0; display:flex; gap:4px; padding:14px 16px 10px; background:#0c0c0c; position:relative; z-index:5; overflow:visible; }}
+.progress-row::after {{ content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:80%; height:120px; background:radial-gradient(ellipse at top,color-mix(in srgb,var(--cc) 30%,transparent) 0%,transparent 70%); pointer-events:none; z-index:-1; }}
 .pseg {{ flex:1; height:2px; border-radius:1px; background:rgba(255,255,255,0.12); position:relative; overflow:hidden; }}
 .pseg::after {{ content:''; position:absolute; inset:0; background:var(--cc,#e8334a); transform:scaleX(0); transform-origin:left; transition:transform 0.25s ease; }}
 .pseg.done::after, .pseg.active::after {{ transform:scaleX(1); }}
 .v-feed {{ flex:1; overflow:hidden; position:relative; clip-path:inset(0); }}
 .v-track {{ display:flex; flex-direction:column; will-change:transform; }}
 .card {{ width:100%; flex-shrink:0; background:#0c0c0c; display:flex; flex-direction:column; overflow:hidden; position:relative; }}
-.card-accent {{ flex-shrink:0; height:3px; background:var(--cc,#e8334a); position:relative; }}
-.card-accent::after {{ content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:80%; height:120px; background:radial-gradient(ellipse at top,color-mix(in srgb,var(--cc) 35%,transparent) 0%,transparent 70%); pointer-events:none; }}
-.card-content {{ flex:1; display:flex; flex-direction:column; padding:72px 20px 22px; min-height:0; position:relative; z-index:1; }}
+.card-content {{ flex:1; display:flex; flex-direction:column; padding:36px 20px 22px; min-height:0; position:relative; z-index:1; }}
 .card-toprow {{ display:flex; align-items:center; justify-content:space-between; margin-bottom:28px; flex-shrink:0; }}
 .cat-pill {{ display:inline-flex; align-items:center; gap:7px; background:#1c1c1e; border-radius:8px; padding:7px 12px 7px 10px; font-size:11.5px; font-weight:700; letter-spacing:0.07em; color:#d0d0d0; text-transform:uppercase; line-height:1; }}
 .pill-icon {{ width:16px; height:16px; background:#2e2e30; border-radius:3px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }}
@@ -173,7 +172,6 @@ function buildCard(art,h,m,cat) {{
   card.style.height=h+'px';
   card.style.setProperty('--cc',m.color);
   card.innerHTML=`
-    <div class="card-accent"></div>
     <div class="card-content">
       <div class="card-toprow">
         <div class="cat-pill">
