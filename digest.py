@@ -197,8 +197,14 @@ def main():
         remaining = [p for p in expected_papers if p not in updated_done]
         log.info(f"Still waiting for: {remaining}")
 
-    # ── Step 8: Send Telegram notification (non-fatal) ────────────────────────
-    notify(digest_data)
+    # ── Step 8: Send Telegram notification ───────────────────────────────────
+    # By default, notification is suppressed at build time because the morning
+    # notify job (morning_notify.py at 9 AM IST) handles the daily message.
+    # Set MORNING_NOTIFY=false to send immediately instead (e.g. manual runs).
+    if os.environ.get("MORNING_NOTIFY", "true").lower() == "false":
+        notify(digest_data)
+    else:
+        log.info("Notification deferred to morning_notify job (9 AM IST)")
 
     api_calls_used = len(new_papers) + 2   # extractions + 1 dedup + 1 test (first run)
     log.info(
