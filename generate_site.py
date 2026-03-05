@@ -1,49 +1,30 @@
 """
 generate_site.py
-Dual-filter card site for GitHub Pages.
-
-Category tabs and newspaper pills are INDEPENDENT toggles.
-Cards shown = article category is active AND at least one source paper is active.
-Both filters default to ALL selected; deselecting narrows results.
+Swipe-based (TikTok-style) daily brief for GitHub Pages.
+Horizontal swipe → change category | Vertical swipe → change article within category.
 """
 
 import json
 from pathlib import Path
-from collections import defaultdict
 
 CATEGORY_META = {
-    "Politics":       {"color": "#e74c3c", "icon": "🏛"},
-    "Economy":        {"color": "#f39c12", "icon": "📊"},
-    "Business":       {"color": "#3498db", "icon": "💼"},
-    "India":          {"color": "#e67e22", "icon": "🇮🇳"},
-    "World":          {"color": "#9b59b6", "icon": "🌍"},
-    "Sports":         {"color": "#1abc9c", "icon": "🏆"},
-    "Science":        {"color": "#00cec9", "icon": "🔬"},
-    "Technology":     {"color": "#6c5ce7", "icon": "💻"},
-    "Health":         {"color": "#fd79a8", "icon": "🏥"},
-    "Law":            {"color": "#d35400", "icon": "⚖️"},
-    "Environment":    {"color": "#27ae60", "icon": "🌿"},
-    "Education":      {"color": "#2980b9", "icon": "📚"},
-    "Culture":        {"color": "#8e44ad", "icon": "🎭"},
-    "Infrastructure": {"color": "#7f8c8d", "icon": "🏗"},
+    "Politics":       {"color": "#e8334a", "icon": "🏛️"},
+    "Economy":        {"color": "#f5a623", "icon": "📊"},
+    "Business":       {"color": "#f0c040", "icon": "💼"},
+    "India":          {"color": "#ff7043", "icon": "🇮🇳"},
+    "World":          {"color": "#5c9eff", "icon": "🌍"},
+    "Sports":         {"color": "#36c46f", "icon": "🏆"},
+    "Science":        {"color": "#a78bfa", "icon": "🔬"},
+    "Technology":     {"color": "#38bdf8", "icon": "💻"},
+    "Health":         {"color": "#34d399", "icon": "🏥"},
+    "Law":            {"color": "#fb923c", "icon": "⚖️"},
+    "Environment":    {"color": "#4ade80", "icon": "🌿"},
+    "Education":      {"color": "#e879f9", "icon": "📚"},
+    "Culture":        {"color": "#f472b6", "icon": "🎭"},
+    "Infrastructure": {"color": "#94a3b8", "icon": "🏗️"},
 }
-
-PAPER_COLORS = {
-    "The Hindu":          {"bg": "#b71c1c", "fg": "#ffffff"},
-    "Indian Express":     {"bg": "#1a237e", "fg": "#ffffff"},
-    "Financial Express":  {"bg": "#1a5276", "fg": "#ffffff"},
-    "Times of India":     {"bg": "#c0392b", "fg": "#ffffff"},
-    "Hindustan Times":    {"bg": "#0d47a1", "fg": "#ffffff"},
-    "Economic Times":     {"bg": "#bf360c", "fg": "#ffffff"},
-    "Business Line":      {"bg": "#4a148c", "fg": "#ffffff"},
-    "Business Standard":  {"bg": "#1e8449", "fg": "#ffffff"},
-    "Mint":               {"bg": "#c9a000", "fg": "#111111"},
-}
-PAPER_DEFAULT = {"bg": "#444444", "fg": "#ffffff"}
-
 DEFAULT_META = {"color": "#636e72", "icon": "📰"}
 
-# SVG newspaper icon for favicon (inline data URI)
 FAVICON_SVG = (
     "data:image/svg+xml,"
     "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E"
@@ -65,423 +46,287 @@ def build_site(data: dict, output_dir: Path):
 def generate_html(data: dict) -> str:
     date_str = data.get("date", "Today")
     articles = data.get("articles", [])
-    total    = len(articles)
 
-    # Unique newspapers
-    all_newspapers = sorted(set(
-        src.get("newspaper", "")
-        for art in articles
-        for src in art.get("sources", [])
-        if src.get("newspaper")
-    ))
-
-    # Group by category, sorted by count desc
-    by_category = defaultdict(list)
-    for art in articles:
-        by_category[art.get("category", "India")].append(art)
-    sorted_cats = sorted(by_category.keys(), key=lambda c: -len(by_category[c]))
-
-    # ── Category tabs ─────────────────────────────────────────────────────────
-    nav_tabs = ""
-    for cat in sorted_cats:
-        meta  = CATEGORY_META.get(cat, DEFAULT_META)
-        count = len(by_category[cat])
-        nav_tabs += f"""<button class="cat-tab active"
-            data-cat="{cat}"
-            onclick="toggleCat(this)"
-            style="--cc:{meta['color']}">
-            <span class="tab-icon">{meta['icon']}</span>
-            <span class="tab-label">{cat}</span>
-            <span class="tab-count">{count}</span>
-        </button>"""
-
-    # ── Newspaper pills ───────────────────────────────────────────────────────
-    paper_pills = ""
-    for paper in all_newspapers:
-        pc = PAPER_COLORS.get(paper, PAPER_DEFAULT)
-        paper_pills += f"""<button class="paper-pill active"
-            data-paper="{paper}"
-            onclick="togglePaper(this)"
-            style="--pb:{pc['bg']};--pf:{pc['fg']}">
-            {paper}
-        </button>"""
-
-    # ── Cards ─────────────────────────────────────────────────────────────────
-    all_cards = ""
-    for j, art in enumerate(articles):
-        headline    = art.get("headline", "")
-        summary     = art.get("summary", "")
-        sources     = art.get("sources", [])
-        cat         = art.get("category", "India")
-        meta        = CATEGORY_META.get(cat, DEFAULT_META)
-        card_papers = list(dict.fromkeys(
-            src.get("newspaper", "") for src in sources if src.get("newspaper")
-        ))
-        papers_attr = ",".join(card_papers)
-        card_id     = f"c{abs(hash(headline + cat)) % 10**9}"
-
-        source_links = ""
-        if sources:
-            source_links = '<div class="card-sources">'
-            for src in sources:
-                paper        = src.get("newspaper", "")
-                page         = src.get("page", 1)
-                pdf_filename = src.get("pdf_filename", "")
-                telegram_url = src.get("telegram_url", "")
-                href = f"pdfs/{pdf_filename}#page={page}" if pdf_filename else telegram_url
-                if href:
-                    source_links += f'<a class="source-link" href="{href}" target="_blank">📄 {paper} p.{page}</a>'
-            source_links += "</div>"
-
-        all_cards += f"""<article class="card"
-            id="{card_id}"
-            data-cat="{cat}"
-            data-papers="{papers_attr}"
-            style="animation-delay:{j * 0.03}s">
-            <div class="card-accent" style="background:{meta['color']}"></div>
-            <div class="card-body">
-                <div class="card-cat-label" style="color:{meta['color']}">{meta['icon']} {cat}</div>
-                <h3 class="card-headline">{headline}</h3>
-                <p class="card-summary">{summary}</p>
-                {source_links}
-            </div>
-            <button class="read-btn" onclick="toggleRead('{card_id}',this)" title="Mark as read">✓</button>
-        </article>"""
+    digest_json  = json.dumps({"date": date_str, "articles": articles}, ensure_ascii=False)
+    cat_meta_json = json.dumps(CATEGORY_META, ensure_ascii=False)
 
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Daily Brief — {date_str}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Daily Brief \u2014 {date_str}</title>
 <link rel="icon" type="image/svg+xml" href="{FAVICON_SVG}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{{box-sizing:border-box;margin:0;padding:0}}
-:root{{
-  --bg:#0c0b0b;--surface:#161414;--surface2:#1e1b1b;
-  --border:#272323;--text:#e0dbd5;--muted:#7a736c;--ink:#f5efe6;
+*, *::before, *::after {{ box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }}
+html, body {{
+  width: 100%; height: 100%;
+  overflow: hidden;
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: #0c0c0c; color: #fff; touch-action: none;
 }}
-html{{scroll-behavior:smooth}}
-body{{background:var(--bg);color:var(--text);font-family:'Source Serif 4',Georgia,serif;min-height:100vh}}
-
-/* ── Masthead ── */
-.masthead{{background:var(--surface);border-bottom:1px solid var(--border);padding:18px 48px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:300}}
-.masthead-left{{display:flex;align-items:center;gap:14px}}
-.masthead-logo-icon{{display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:rgba(201,166,107,0.12);border:1px solid rgba(201,166,107,0.25);border-radius:8px;flex-shrink:0}}
-.masthead-logo-icon svg{{width:22px;height:22px}}
-.logo{{font-family:'Playfair Display',serif;font-size:clamp(18px,2.8vw,30px);font-weight:900;color:var(--ink);letter-spacing:-0.02em}}
-.logo em{{color:#c9a66b;font-style:normal}}
-.masthead-right{{text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);line-height:1.8;letter-spacing:0.06em}}
-
-/* ── Stats ── */
-.stats-bar{{background:var(--surface);border-bottom:1px solid var(--border);padding:8px 48px;display:flex;gap:32px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;flex-wrap:wrap}}
-.stats-bar b{{color:#c9a66b;font-weight:500}}
-
-/* ── Search ── */
-.search-bar{{background:var(--surface);border-bottom:1px solid var(--border);padding:8px 48px;display:flex;align-items:center;gap:12px}}
-.search-wrap{{position:relative;flex:1;max-width:480px}}
-.search-icon{{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:13px;pointer-events:none}}
-.search-input{{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:8px 34px 8px 36px;color:var(--ink);font-family:'Source Serif 4',serif;font-size:13px;outline:none;transition:border-color 0.2s}}
-.search-input::placeholder{{color:var(--muted)}}
-.search-input:focus{{border-color:#c9a66b}}
-.search-clear{{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--muted);cursor:pointer;font-size:14px;display:none}}
-.search-label{{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:0.08em;white-space:nowrap}}
-
-/* ── Category tabs — wrap to 2 lines, NO overflow scroll ── */
-.cat-bar{{
-  background:var(--surface);border-bottom:1px solid var(--border);
-  padding:10px 48px;display:flex;gap:6px;flex-wrap:wrap;
-  position:sticky;top:71px;z-index:200
-}}
-.cat-bar-label{{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:0.15em;text-transform:uppercase;white-space:nowrap;align-self:center;flex-shrink:0;margin-right:4px}}
-
-.cat-tab{{
-  display:inline-flex;align-items:center;gap:5px;
-  padding:6px 13px;border-radius:20px;
-  border:1.5px solid var(--border);
-  background:var(--surface2);
-  color:var(--muted);
-  font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:500;
-  letter-spacing:0.1em;text-transform:uppercase;
-  cursor:pointer;white-space:nowrap;flex-shrink:0;
-  transition:background 0.15s,border-color 0.15s,color 0.15s;
-}}
-.cat-tab .tab-icon{{font-size:11px;line-height:1}}
-.cat-tab .tab-count{{
-  font-size:8px;padding:1px 5px;border-radius:8px;
-  background:rgba(255,255,255,0.08);
-}}
-.cat-tab.active{{
-  background:var(--cc);
-  border-color:var(--cc);
-  color:#fff;
-}}
-.cat-tab.active .tab-count{{background:rgba(0,0,0,0.2);color:rgba(255,255,255,0.85)}}
-.reset-btn{{
-  font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.08em;
-  padding:6px 12px;border-radius:20px;border:1px solid var(--border);
-  background:none;color:var(--muted);cursor:pointer;white-space:nowrap;flex-shrink:0;
-  transition:color 0.15s,border-color 0.15s,background 0.15s;
-}}
-.reset-btn:hover{{color:var(--ink);border-color:var(--muted)}}
-.reset-btn.deselect{{border-color:#c0392b33}}
-.reset-btn.deselect:hover{{color:#e74c3c;border-color:#e74c3c}}
-
-/* ── Newspaper pills ── */
-.paper-bar{{background:var(--surface);border-bottom:1px solid var(--border);padding:10px 48px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}}
-.paper-bar-label{{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:0.15em;text-transform:uppercase;white-space:nowrap;flex-shrink:0;margin-right:4px}}
-.paper-pill{{
-  display:inline-block;padding:5px 12px;border-radius:20px;
-  border:1.5px solid var(--border);
-  background:var(--surface2);color:var(--muted);
-  font-family:'JetBrains Mono',monospace;font-size:9px;
-  letter-spacing:0.06em;text-transform:uppercase;
-  cursor:pointer;white-space:nowrap;flex-shrink:0;
-  transition:background 0.15s,border-color 0.15s,color 0.15s;
-}}
-.paper-pill.active{{
-  background:var(--pb);
-  border-color:var(--pb);
-  color:var(--pf);
-}}
-
-/* ── Empty state ── */
-.empty-state{{padding:80px 48px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.12em;line-height:2.2;display:none}}
-
-/* ── Cards grid ── */
-.cards-grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1px;background:var(--border);margin-top:1px}}
-.card{{background:var(--surface);display:flex;align-items:stretch;opacity:0;animation:fadeIn 0.35s ease forwards;transition:background 0.15s;position:relative;overflow:hidden}}
-.card:hover{{background:var(--surface2)}}
-.card.is-read{{opacity:0.32;animation:none}}
-.card.is-read .card-headline{{text-decoration:line-through;color:var(--muted)}}
-.card.hidden{{display:none!important}}
-@keyframes fadeIn{{from{{opacity:0;transform:translateY(7px)}}to{{opacity:1;transform:translateY(0)}}}}
-
-.card-accent{{width:3px;flex-shrink:0}}
-.card-body{{flex:1;padding:22px 26px;display:flex;flex-direction:column;gap:10px;min-width:0}}
-.card-cat-label{{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.18em;text-transform:uppercase;font-weight:500}}
-.card-headline{{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--ink);line-height:1.4;letter-spacing:-0.01em}}
-.card-summary{{font-size:13.5px;font-weight:300;color:#a09890;line-height:1.75;font-style:italic;flex:1}}
-.card-sources{{display:flex;flex-wrap:wrap;gap:6px;padding-top:8px;border-top:1px solid var(--border);margin-top:2px}}
-.source-link{{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.08em;color:var(--muted);text-decoration:none;padding:3px 8px;border:1px solid var(--border);border-radius:3px;transition:color 0.15s,border-color 0.15s,background 0.15s;white-space:nowrap}}
-.source-link:hover{{color:var(--ink);border-color:var(--muted);background:var(--surface2)}}
-
-.read-btn{{position:absolute;top:12px;right:12px;background:none;border:1px solid var(--border);border-radius:4px;color:var(--muted);font-size:10px;padding:2px 6px;cursor:pointer;font-family:'JetBrains Mono',monospace;transition:all 0.15s;opacity:0}}
-.card:hover .read-btn{{opacity:1}}
-.card.is-read .read-btn{{opacity:1;background:rgba(201,166,107,0.15);border-color:rgba(201,166,107,0.4);color:#c9a66b}}
-
-/* ── Footer ── */
-.footer{{padding:32px 48px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;margin-top:48px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:0.08em;flex-wrap:wrap;gap:8px}}
-
-@media(max-width:700px){{
-  .masthead,.stats-bar,.search-bar,.cat-bar,.paper-bar{{padding-left:16px;padding-right:16px}}
-  .masthead{{flex-direction:column;align-items:flex-start;gap:6px}}
-  .cat-bar{{top:82px}}
-  .cards-grid{{grid-template-columns:1fr}}
-  .card-body{{padding:18px 20px}}
-  .footer{{padding:24px 16px;flex-direction:column;text-align:center}}
-}}
+.outer {{ position: fixed; inset: 0; overflow: hidden; }}
+.h-track {{ display: flex; height: 100%; will-change: transform; }}
+.cat-panel {{ flex-shrink:0; width:100vw; height:100%; display:flex; flex-direction:column; overflow:hidden; }}
+.progress-row {{ flex-shrink:0; display:flex; gap:4px; padding:14px 16px 0; background:#0c0c0c; position:relative; z-index:5; }}
+.pseg {{ flex:1; height:2px; border-radius:1px; background:rgba(255,255,255,0.12); position:relative; overflow:hidden; }}
+.pseg::after {{ content:''; position:absolute; inset:0; background:var(--cc,#e8334a); transform:scaleX(0); transform-origin:left; transition:transform 0.25s ease; }}
+.pseg.done::after, .pseg.active::after {{ transform:scaleX(1); }}
+.v-feed {{ flex:1; overflow:hidden; position:relative; clip-path:inset(0); }}
+.v-track {{ display:flex; flex-direction:column; will-change:transform; }}
+.card {{ width:100%; flex-shrink:0; background:#0c0c0c; display:flex; flex-direction:column; overflow:hidden; position:relative; }}
+.card-accent {{ flex-shrink:0; height:3px; background:var(--cc,#e8334a); position:relative; }}
+.card-accent::after {{ content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:80%; height:120px; background:radial-gradient(ellipse at top,color-mix(in srgb,var(--cc) 35%,transparent) 0%,transparent 70%); pointer-events:none; }}
+.card-content {{ flex:1; display:flex; flex-direction:column; padding:72px 20px 22px; min-height:0; position:relative; z-index:1; }}
+.card-toprow {{ display:flex; align-items:center; justify-content:space-between; margin-bottom:28px; flex-shrink:0; }}
+.cat-pill {{ display:inline-flex; align-items:center; gap:7px; background:#1c1c1e; border-radius:8px; padding:7px 12px 7px 10px; font-size:11.5px; font-weight:700; letter-spacing:0.07em; color:#d0d0d0; text-transform:uppercase; line-height:1; }}
+.pill-icon {{ width:16px; height:16px; background:#2e2e30; border-radius:3px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }}
+.pill-icon svg {{ display:block; }}
+.card-date {{ display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:500; color:#666; letter-spacing:0.01em; }}
+.card-headline {{ font-size:28px; font-weight:800; line-height:1.18; color:#fff; letter-spacing:-0.03em; margin-bottom:20px; flex-shrink:0; }}
+.card-summary {{ font-size:15.5px; font-weight:400; line-height:1.62; color:#6b6b6b; flex:1; overflow:hidden; display:-webkit-box; -webkit-line-clamp:7; -webkit-box-orient:vertical; }}
+.card-divider {{ height:1px; background:#1e1e1e; margin:20px 0 16px; flex-shrink:0; }}
+.card-footer {{ display:flex; align-items:center; justify-content:space-between; flex-shrink:0; }}
+.src-chip {{ display:inline-flex; align-items:center; gap:6px; background:#181818; border:1px solid #282828; border-radius:9px; padding:8px 13px; font-size:12.5px; font-weight:600; color:#c0c0c0; text-decoration:none; letter-spacing:0.005em; line-height:1; }}
+.src-chip-sep {{ color:#3a3a3a; font-weight:400; }}
+.src-chip-pg {{ color:#555; font-weight:500; }}
+.src-chip-ext {{ margin-left:2px; }}
+.src-chip-ext svg {{ display:block; }}
+.info-btn {{ width:36px; height:36px; border-radius:50%; border:1.5px solid #252525; background:#141414; display:flex; align-items:center; justify-content:center; color:#555; cursor:pointer; flex-shrink:0; }}
+.cat-flash {{ position:fixed; inset:0; z-index:600; pointer-events:none; opacity:0; transition:opacity 0.12s; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px; }}
+.cat-flash.on {{ opacity:1; }}
+.cf-icon {{ font-size:34px; }}
+.cf-name {{ font-size:22px; font-weight:900; letter-spacing:-0.03em; text-transform:uppercase; }}
+.hint {{ position:fixed; display:flex; flex-direction:column; align-items:center; gap:5px; pointer-events:none; z-index:400; opacity:0; transition:opacity 0.6s ease; }}
+.hint.visible {{ opacity:1; }}
+.hint.gone {{ opacity:0 !important; transition:opacity 0.4s; }}
+.hint-pill {{ font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.55); background:rgba(255,255,255,0.07); backdrop-filter:blur(10px); padding:5px 13px; border-radius:100px; border:1px solid rgba(255,255,255,0.09); }}
+.hint-arr {{ font-size:16px; color:rgba(255,255,255,0.4); }}
+.h-up {{ bottom:28px; left:50%; transform:translateX(-50%); animation:bUp 2s ease-in-out infinite; }}
+.h-right {{ top:50%; right:14px; transform:translateY(-50%); animation:bRight 2s ease-in-out infinite 0.6s; }}
+@keyframes bUp {{ 0%,100% {{ bottom:28px; opacity:.65; }} 50% {{ bottom:36px; opacity:1; }} }}
+@keyframes bRight {{ 0%,100% {{ right:14px; opacity:.65; }} 50% {{ right:6px; opacity:1; }} }}
 </style>
 </head>
 <body>
-
-<header class="masthead">
-  <div class="masthead-left">
-    <!-- Newspaper logo icon -->
-    <div class="masthead-logo-icon">
-      <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="1" y="1" width="20" height="20" rx="3" stroke="#c9a66b" stroke-width="1.2"/>
-        <rect x="4" y="4" width="14" height="3" rx="1" fill="#c9a66b"/>
-        <rect x="4" y="9"  width="8" height="1.2" rx="0.6" fill="#7a736c"/>
-        <rect x="4" y="11.5" width="8" height="1.2" rx="0.6" fill="#7a736c"/>
-        <rect x="4" y="14" width="5" height="1.2" rx="0.6" fill="#7a736c"/>
-        <rect x="14" y="9" width="4" height="6.5" rx="1" fill="#c9a66b" opacity="0.45"/>
-      </svg>
-    </div>
-    <div class="logo">The Daily <em>Brief</em></div>
-  </div>
-  <div class="masthead-right">{date_str}<br>Bengaluru Edition</div>
-</header>
-
-<div class="stats-bar">
-  <div><b id="vis-count">{total}</b> articles</div>
-  <div><b>{len(sorted_cats)}</b> categories</div>
-  <div><b id="read-count">0</b> read</div>
-  <div>AI summarised</div>
-</div>
-
-<div class="search-bar">
-  <div class="search-wrap">
-    <span class="search-icon">🔍</span>
-    <input class="search-input" id="searchInput" type="text"
-      placeholder="Search headlines and summaries…"
-      oninput="onSearch(this.value)">
-    <button class="search-clear" id="searchClear" onclick="clearSearch()">✕</button>
-  </div>
-  <span class="search-label" id="searchLabel"></span>
-</div>
-
-<!-- Category tabs — wrap to 2 lines -->
-<div class="cat-bar">
-  <span class="cat-bar-label">Category</span>
-  {nav_tabs}
-  <button class="reset-btn" onclick="resetCats()">All</button>
-  <button class="reset-btn deselect" onclick="deselectCats()">None</button>
-</div>
-
-<!-- Newspaper pills -->
-<div class="paper-bar">
-  <span class="paper-bar-label">Newspaper</span>
-  {paper_pills}
-  <button class="reset-btn" onclick="resetPapers()">All</button>
-  <button class="reset-btn deselect" onclick="deselectPapers()">None</button>
-</div>
-
-<div class="empty-state" id="emptyState">
-  No articles match the selected filters.<br>
-  Try selecting more categories or newspapers.
-</div>
-
-<main>
-  <div class="cards-grid" id="cardsGrid">
-    {all_cards}
-  </div>
-</main>
-
-<footer class="footer">
-  <div>THE DAILY BRIEF · BENGALURU · GITHUB ACTIONS + GEMINI</div>
-  <div>AI summaries — verify with source before acting on news</div>
-</footer>
+<div class="outer" id="outer"><div class="h-track" id="hTrack"></div></div>
+<div class="hint h-up" id="hintUp"><span class="hint-arr">&#8593;</span><span class="hint-pill">Swipe up</span></div>
+<div class="hint h-right" id="hintRight"><span class="hint-arr">&#8594;</span><span class="hint-pill">Next category</span></div>
+<div class="cat-flash" id="catFlash"><span class="cf-icon" id="cfIcon"></span><span class="cf-name" id="cfName"></span></div>
 
 <script>
-const RKEY = 'brief-read-{date_str}'.replace(/ /g, '-');
-let readSet      = new Set(JSON.parse(localStorage.getItem(RKEY) || '[]'));
-let activeCats   = new Set([...document.querySelectorAll('.cat-tab')].map(t => t.dataset.cat));
-let activePapers = new Set([...document.querySelectorAll('.paper-pill')].map(p => p.dataset.paper));
-let searchQ      = '';
+const DIGEST   = {digest_json};
+const CAT_META = {cat_meta_json};
 
-// ── Init ──────────────────────────────────────────────────────────────────────
-function init() {{
-  readSet.forEach(id => {{
-    const el = document.getElementById(id);
-    if (el) el.classList.add('is-read');
+const allArts = [...DIGEST.articles].sort((a,b)=>(b.importance||0)-(a.importance||0));
+const byCategory = {{}};
+for (const art of allArts) {{
+  const c = art.category||"India";
+  if (!byCategory[c]) byCategory[c]=[];
+  byCategory[c].push(art);
+}}
+const sortedCats = Object.keys(byCategory).sort(
+  (a,b)=>(byCategory[b][0].importance||0)-(byCategory[a][0].importance||0)
+);
+
+let catIdx=0,vpW=0,vpH=0;
+const panels=[];
+const outer=document.getElementById('outer');
+const hTrack=document.getElementById('hTrack');
+const hintUp=document.getElementById('hintUp');
+const hintRight=document.getElementById('hintRight');
+const catFlash=document.getElementById('catFlash');
+const cfIcon=document.getElementById('cfIcon');
+const cfName=document.getElementById('cfName');
+
+function buildAll() {{
+  vpW=outer.offsetWidth; vpH=outer.offsetHeight;
+  hTrack.innerHTML=''; panels.length=0;
+  sortedCats.forEach((cat,ci)=>{{
+    const m=CAT_META[cat]||{{color:"#e8334a",icon:"📰"}};
+    const arts=byCategory[cat];
+    const panel=document.createElement('div');
+    panel.className='cat-panel';
+    panel.style.setProperty('--cc',m.color);
+    panel.innerHTML=`<div class="progress-row" id="prow-${{ci}}" style="--cc:${{m.color}}"></div><div class="v-feed" id="vfeed-${{ci}}"><div class="v-track" id="vtrack-${{ci}}"></div></div>`;
+    hTrack.appendChild(panel);
+    const pRow=panel.querySelector(`#prow-${{ci}}`);
+    const vFeed=panel.querySelector(`#vfeed-${{ci}}`);
+    const vTrack=panel.querySelector(`#vtrack-${{ci}}`);
+    const cardH=vFeed.getBoundingClientRect().height||vpH;
+    arts.forEach(art=>vTrack.appendChild(buildCard(art,cardH,m,cat)));
+    panels.push({{pRow,vFeed,vTrack,articles:arts,artIdx:0}});
+    buildPRow(ci);
   }});
-  updateReadCount();
-  applyFilters();
+  hTrack.style.transition='none';
+  hTrack.style.transform='translateX(0)';
+  syncV(0,false);
 }}
 
-// ── Read state ────────────────────────────────────────────────────────────────
-function toggleRead(id, btn) {{
-  const el = document.getElementById(id);
-  if (!el) return;
-  if (readSet.has(id)) {{ readSet.delete(id); el.classList.remove('is-read'); }}
-  else               {{ readSet.add(id);    el.classList.add('is-read');    }}
-  localStorage.setItem(RKEY, JSON.stringify([...readSet]));
-  updateReadCount();
-}}
-function updateReadCount() {{
-  document.getElementById('read-count').textContent = readSet.size;
-}}
-
-// ── Category toggle ───────────────────────────────────────────────────────────
-function toggleCat(btn) {{
-  const cat = btn.dataset.cat;
-  if (activeCats.has(cat)) {{ activeCats.delete(cat); btn.classList.remove('active'); }}
-  else                     {{ activeCats.add(cat);    btn.classList.add('active');    }}
-  applyFilters();
-}}
-function resetCats() {{
-  document.querySelectorAll('.cat-tab').forEach(t => {{ t.classList.add('active'); activeCats.add(t.dataset.cat); }});
-  applyFilters();
-}}
-function deselectCats() {{
-  document.querySelectorAll('.cat-tab').forEach(t => {{ t.classList.remove('active'); activeCats.delete(t.dataset.cat); }});
-  applyFilters();
-}}
-
-// ── Newspaper toggle ──────────────────────────────────────────────────────────
-function togglePaper(btn) {{
-  const p = btn.dataset.paper;
-  if (activePapers.has(p)) {{ activePapers.delete(p); btn.classList.remove('active'); }}
-  else                     {{ activePapers.add(p);    btn.classList.add('active');    }}
-  applyFilters();
-}}
-function resetPapers() {{
-  document.querySelectorAll('.paper-pill').forEach(p => {{ p.classList.add('active'); activePapers.add(p.dataset.paper); }});
-  applyFilters();
-}}
-function deselectPapers() {{
-  document.querySelectorAll('.paper-pill').forEach(p => {{ p.classList.remove('active'); activePapers.delete(p.dataset.paper); }});
-  applyFilters();
+function buildCard(art,h,m,cat) {{
+  const src=art.sources?.[0];
+  const href=src?.pdf_filename?`pdfs/${{src.pdf_filename}}#page=${{src.page}}`:(src?.telegram_url||'#');
+  const card=document.createElement('div');
+  card.className='card';
+  card.style.height=h+'px';
+  card.style.setProperty('--cc',m.color);
+  card.innerHTML=`
+    <div class="card-accent"></div>
+    <div class="card-content">
+      <div class="card-toprow">
+        <div class="cat-pill">
+          <div class="pill-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><rect x="1" y="1" width="8" height="2" rx="0.6" fill="#888"/><rect x="1" y="4.5" width="5" height="1.5" rx="0.6" fill="#666"/><rect x="1" y="7" width="6" height="1.5" rx="0.6" fill="#666"/></svg></div>
+          ${{cat.toUpperCase()}}
+        </div>
+        <div class="card-date">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="2.5" width="11" height="9.5" rx="1.8" stroke="#555" stroke-width="1.2"/><path d="M4.5 1v3M8.5 1v3" stroke="#555" stroke-width="1.2" stroke-linecap="round"/><path d="M1 6h11" stroke="#555" stroke-width="1.2"/></svg>
+          ${{DIGEST.date}}
+        </div>
+      </div>
+      <div class="card-headline">${{art.headline}}</div>
+      <div class="card-summary">${{art.summary}}</div>
+      <div class="card-divider"></div>
+      <div class="card-footer">
+        ${{src?`<a class="src-chip" href="${{href}}" target="_blank" onclick="event.stopPropagation()">${{src.newspaper}}<span class="src-chip-sep">&middot;</span><span class="src-chip-pg">Pg ${{src.page}}</span><span class="src-chip-ext"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M3.5 7.5L7.5 3.5M7.5 3.5H5M7.5 3.5V6" stroke="#555" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>`:'<div></div>'}}
+        <div class="info-btn"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><circle cx="7.5" cy="7.5" r="6.5" stroke="#444" stroke-width="1.3"/><circle cx="7.5" cy="4.5" r="0.8" fill="#555"/><path d="M7.5 7v4" stroke="#555" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+    </div>`;
+  return card;
 }}
 
-// ── Search ────────────────────────────────────────────────────────────────────
-function onSearch(val) {{
-  searchQ = val.trim().toLowerCase();
-  document.getElementById('searchClear').style.display = searchQ ? 'block' : 'none';
-  applyFilters();
-}}
-function clearSearch() {{
-  searchQ = '';
-  document.getElementById('searchInput').value = '';
-  document.getElementById('searchClear').style.display = 'none';
-  applyFilters();
-}}
-
-// ── Core filter ───────────────────────────────────────────────────────────────
-function applyFilters() {{
-  let visible = 0;
-  document.querySelectorAll('#cardsGrid .card').forEach(card => {{
-    const catOk = activeCats.has(card.dataset.cat);
-
-    const papers = (card.dataset.papers || '').split(',').filter(Boolean);
-    const paperOk = papers.length === 0 || papers.some(p => activePapers.has(p));
-
-    let searchOk = true;
-    if (searchQ) {{
-      const h = (card.querySelector('.card-headline')?.textContent || '').toLowerCase();
-      const s = (card.querySelector('.card-summary')?.textContent  || '').toLowerCase();
-      searchOk = h.includes(searchQ) || s.includes(searchQ);
-    }}
-
-    const show = catOk && paperOk && searchOk;
-    card.classList.toggle('hidden', !show);
-    if (show) visible++;
+function buildPRow(ci) {{
+  const p=panels[ci],ai=p.artIdx;
+  p.pRow.innerHTML='';
+  p.articles.forEach((_,i)=>{{
+    const seg=document.createElement('div');
+    seg.className='pseg'+(i<ai?' done':i===ai?' active':'');
+    p.pRow.appendChild(seg);
   }});
-
-  document.getElementById('vis-count').textContent = visible;
-  document.getElementById('emptyState').style.display = visible === 0 ? 'block' : 'none';
-  document.getElementById('searchLabel').textContent = searchQ
-    ? visible + ' result' + (visible !== 1 ? 's' : '') : '';
 }}
 
-init();
+function syncV(ci,animated) {{
+  const p=panels[ci],h=p.vFeed.getBoundingClientRect().height;
+  p.vTrack.style.transition=animated?'transform 0.35s cubic-bezier(0.4,0,0.2,1)':'none';
+  p.vTrack.style.transform=`translateY(${{-p.artIdx*h}}px)`;
+  buildPRow(ci);
+}}
+
+function goArt(d) {{
+  const p=panels[catIdx];
+  const n=Math.max(0,Math.min(p.artIdx+d,p.articles.length-1));
+  if(n===p.artIdx&&d!==0)return;
+  p.artIdx=n; syncV(catIdx,true); dismiss();
+}}
+
+function goCat(idx,animated=true) {{
+  idx=Math.max(0,Math.min(idx,sortedCats.length-1));
+  if(idx===catIdx&&animated)return;
+  const prev=catIdx; catIdx=idx;
+  hTrack.style.transition=animated?'transform 0.38s cubic-bezier(0.4,0,0.2,1)':'none';
+  hTrack.style.transform=`translateX(${{-catIdx*vpW}}px)`;
+  if(animated&&idx!==prev) {{
+    const m=CAT_META[sortedCats[idx]]||{{color:"#e8334a",icon:"📰"}};
+    catFlash.style.background=m.color+'18';
+    cfIcon.textContent=m.icon; cfName.textContent=sortedCats[idx]; cfName.style.color=m.color;
+    catFlash.classList.add('on'); setTimeout(()=>catFlash.classList.remove('on'),500);
+  }}
+  dismiss();
+}}
+
+let dismissed=false;
+function dismiss() {{
+  if(dismissed)return; dismissed=true;
+  hintUp.classList.remove('visible'); hintRight.classList.remove('visible');
+  hintUp.classList.add('gone'); hintRight.classList.add('gone');
+}}
+
+(function initHints() {{
+  const KEY='dailyBriefHintSeen';
+  if(!localStorage.getItem(KEY)) {{
+    localStorage.setItem(KEY,'1');
+    setTimeout(()=>{{ if(!dismissed){{ hintUp.classList.add('visible'); hintRight.classList.add('visible'); }} }},2500);
+  }}
+}})();
+
+let tsX=0,tsY=0,tcX=0,tcY=0,axis=null,drag=false;
+outer.addEventListener('touchstart',e=>{{
+  tsX=e.touches[0].clientX; tsY=e.touches[0].clientY;
+  tcX=0; tcY=0; axis=null; drag=true;
+  hTrack.style.transition='none';
+  const p=panels[catIdx]; if(p)p.vTrack.style.transition='none';
+}},{{passive:true}});
+outer.addEventListener('touchmove',e=>{{
+  if(!drag)return;
+  const dx=e.touches[0].clientX-tsX,dy=e.touches[0].clientY-tsY;
+  tcX=dx; tcY=dy;
+  if(!axis&&(Math.abs(dx)>8||Math.abs(dy)>8))axis=Math.abs(dx)>Math.abs(dy)?'h':'v';
+  if(!axis)return;
+  e.preventDefault();
+  if(axis==='h'){{
+    const edge=(catIdx===0&&dx>0)||(catIdx===sortedCats.length-1&&dx<0);
+    hTrack.style.transform=`translateX(${{-catIdx*vpW+dx*(edge?.14:1)}}px)`;
+  }}else{{
+    const p=panels[catIdx],h=p.vFeed.getBoundingClientRect().height;
+    const edge=(p.artIdx===0&&dy>0)||(p.artIdx===p.articles.length-1&&dy<0);
+    p.vTrack.style.transform=`translateY(${{-p.artIdx*h+dy*(edge?.14:1)}}px)`;
+  }}
+}},{{passive:false}});
+outer.addEventListener('touchend',()=>{{
+  if(!drag)return; drag=false;
+  if(axis==='h'){{
+    const t=vpW*.2;
+    if(tcX<-t)goCat(catIdx+1);
+    else if(tcX>t)goCat(catIdx-1);
+    else{{hTrack.style.transition='transform 0.3s cubic-bezier(.4,0,.2,1)';hTrack.style.transform=`translateX(${{-catIdx*vpW}}px)`;}}
+  }}else if(axis==='v'){{
+    const t=vpH*.2;
+    if(tcY<-t)goArt(1);
+    else if(tcY>t)goArt(-1);
+    else{{const p=panels[catIdx],h=p.vFeed.getBoundingClientRect().height;p.vTrack.style.transition='transform 0.3s cubic-bezier(.4,0,.2,1)';p.vTrack.style.transform=`translateY(${{-p.artIdx*h}}px)`;}}
+  }}
+  axis=null;
+}},{{passive:true}});
+
+document.addEventListener('keydown',e=>{{
+  if(e.key==='ArrowDown'||e.key===' '){{e.preventDefault();goArt(1);}}
+  if(e.key==='ArrowUp'){{e.preventDefault();goArt(-1);}}
+  if(e.key==='ArrowRight'){{e.preventDefault();goCat(catIdx+1);}}
+  if(e.key==='ArrowLeft'){{e.preventDefault();goCat(catIdx-1);}}
+}});
+let wl=false;
+outer.addEventListener('wheel',e=>{{
+  e.preventDefault();if(wl)return;wl=true;
+  Math.abs(e.deltaX)>Math.abs(e.deltaY)?goCat(catIdx+(e.deltaX>0?1:-1)):goArt(e.deltaY>0?1:-1);
+  setTimeout(()=>wl=false,500);
+}},{{passive:false}});
+window.addEventListener('resize',()=>{{
+  vpW=outer.offsetWidth;vpH=outer.offsetHeight;
+  hTrack.style.transition='none';
+  hTrack.style.transform=`translateX(${{-catIdx*vpW}}px)`;
+  panels.forEach(p=>{{
+    const h=p.vFeed.getBoundingClientRect().height;
+    p.vTrack.querySelectorAll('.card').forEach(c=>c.style.height=h+'px');
+    p.vTrack.style.transition='none';
+    p.vTrack.style.transform=`translateY(${{-p.artIdx*h}}px)`;
+  }});
+}});
+
+buildAll();
 </script>
 </body>
 </html>"""
 
 
 if __name__ == "__main__":
-    sample = {
-        "date": "28 February 2026",
-        "articles": [
-            {"headline": "Bengaluru Metro Phase 3 gets cabinet nod", "summary": "The Union Cabinet approved Phase 3 of Namma Metro adding 44.65 km across six new corridors. Estimated at Rs 15,611 crore, commissioning expected by December 2027.", "category": "Infrastructure",
-              "sources": [{"newspaper": "Times of India", "pdf_filename": "TOI.pdf", "page": 1, "telegram_url": ""}, {"newspaper": "The Hindu", "pdf_filename": "TH.pdf", "page": 1, "telegram_url": ""}]},
-            {"headline": "RBI holds repo rate at 6.25%", "summary": "The Reserve Bank kept the repo rate at 6.25% citing food inflation. The MPC voted 4-2; markets expect a cut in April.", "category": "Economy",
-              "sources": [{"newspaper": "Economic Times", "pdf_filename": "ET.pdf", "page": 1, "telegram_url": ""}, {"newspaper": "Mint", "pdf_filename": "Mint.pdf", "page": 1, "telegram_url": ""}]},
-            {"headline": "Karnataka tops ease of doing business", "summary": "Karnataka retained DPIIT top rank for the second consecutive year.", "category": "Business",
-              "sources": [{"newspaper": "Times of India", "pdf_filename": "TOI.pdf", "page": 5, "telegram_url": ""}]},
-            {"headline": "SEBI tightens F&O trading rules", "summary": "SEBI raised minimum contract sizes and mandated risk disclosures for F&O trades from April 1.", "category": "Economy",
-              "sources": [{"newspaper": "Mint", "pdf_filename": "Mint.pdf", "page": 2, "telegram_url": ""}, {"newspaper": "Business Standard", "pdf_filename": "BS.pdf", "page": 3, "telegram_url": ""}]},
-            {"headline": "India wins SA test series 3-1", "summary": "India clinched the series with an innings win in Johannesburg. Jaiswal was player of the series.", "category": "Sports",
-              "sources": [{"newspaper": "Times of India", "pdf_filename": "TOI.pdf", "page": 17, "telegram_url": ""}]},
-            {"headline": "HAL delivers 12 Tejas Mk1A jets to IAF", "summary": "HAL handed over 12 Tejas Mk1A jets at Bengaluru. HAL has a total order of 83 aircraft.", "category": "India",
-              "sources": [{"newspaper": "Hindustan Times", "pdf_filename": "HT.pdf", "page": 4, "telegram_url": ""}, {"newspaper": "Indian Express", "pdf_filename": "IE.pdf", "page": 2, "telegram_url": ""}]},
-        ]
-    }
-    from pathlib import Path
-    Path("docs").mkdir(exist_ok=True)
-    build_site(sample, Path("docs"))
-    print("Preview at docs/index.html")
+    import sys
+    src = Path("docs/digest.json")
+    if not src.exists():
+        print("docs/digest.json not found", file=sys.stderr)
+        sys.exit(1)
+    data = json.loads(src.read_text(encoding="utf-8"))
+    out = Path("docs")
+    out.mkdir(exist_ok=True)
+    build_site(data, out)
+    print(f"Generated docs/index.html  ({len(data.get('articles', []))} articles, {data.get('date', '')})")
