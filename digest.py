@@ -85,10 +85,18 @@ class ModelManager:
         ("gemini-1.5-flash",                    "Gemini 1.5 Flash"),
     ]
 
-    # Errors that indicate quota / rate-limit (not logic errors)
-    _QUOTA_SIGNALS = (
+    # Errors that warrant switching to the next model.
+    # Quota/rate-limit: switch model immediately.
+    # Timeout/cancellation on text mode: also switch (next model may be faster).
+    # Note: image-mode timeouts are handled inside extractor.py via DPI reduction first.
+    _FALLBACK_SIGNALS = (
+        # quota / rate-limit
         "quota", "resource_exhausted", "rate limit",
         "too many requests", "429", "rateerror",
+        # timeout / cancellation
+        "canceled", "cancelled", "timeout",
+        "deadline exceeded", "timed out",
+        "operation was canceled",
     )
 
     def __init__(self):
@@ -104,9 +112,9 @@ class ModelManager:
         self._model = genai.GenerativeModel(model_id)
         log.info(f"[ModelManager] Active model: {label}")
 
-    def _is_quota_error(self, exc: Exception) -> bool:
+    def _is_fallback_error(self, exc: Exception) -> bool:
         msg = str(exc).lower()
-        return any(signal in msg for signal in self._QUOTA_SIGNALS)
+        return any(signal in msg for signal in self._FALLBACK_SIGNALS)
 
     def _advance(self) -> None:
         """Switch to the next model in the chain. Raises if chain is exhausted."""
@@ -140,7 +148,7 @@ class ModelManager:
             try:
                 return self._model.generate_content(*args, **kwargs)
             except Exception as exc:
-                if self._is_quota_error(exc):
+                if self._is_fallback_error(exc):
                     log.warning(f"[ModelManager] Quota/rate error: {exc}")
                     self._advance()
                     # Brief pause before retrying to respect new model's RPM
