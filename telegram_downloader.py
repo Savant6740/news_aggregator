@@ -151,20 +151,25 @@ NEWSPAPER_KEYWORDS: list[tuple[str, str, int]] = [
     # ── Business Line (The Hindu Business Line) ───────────────────────────────
     # Observed patterns: "BL Bangalore DD-MM-YYYY", "BL - Bangalore  - DD-MM-YYYY",
     # "BL- Bangalore DD-MM", "BL_Bangalore_DD-MM-YYYY", "Bangalore_BL_DD-MM-YYYY",
-    # "BL Bengaluru DD.MM.YYYY", "TH BL HD Bangalore DD~MM~YYYY" (combo file)
+    # "BL Bengaluru DD.MM.YYYY", "TH BL HD Bangalore DD~MM~YYYY" (combo file),
+    # "BL - Bangalore - DD-MM-YYYY" (normalises to "bl   bangalore", 3 spaces)
     ("th bl hd bangalore",        "Business Line", 1),   # combo file; also triggers The Hindu
     ("bl bangalore",              "Business Line", 1),
     ("bl  bangalore",             "Business Line", 1),
+    ("bl   bangalore",            "Business Line", 1),   # "BL - Bangalore - ..." → 3 spaces after normalise
     ("bl - bangalore",            "Business Line", 1),
     ("bangalore bl",              "Business Line", 1),
     ("bl bengaluru",              "Business Line", 1),
     ("bl  bengaluru",             "Business Line", 1),
+    ("bl   bengaluru",            "Business Line", 1),   # "BL - Bengaluru - ..." → 3 spaces after normalise
     ("th bl hd delhi",            "Business Line", 2),
     ("bl delhi",                  "Business Line", 2),
     ("bl  delhi",                 "Business Line", 2),
+    ("bl   delhi",                "Business Line", 2),   # "BL - Delhi - ..." → 3 spaces after normalise
     ("bl - delhi",                "Business Line", 2),
     ("bl mumbai",                 "Business Line", 3),
     ("bl  mumbai",                "Business Line", 3),
+    ("bl   mumbai",               "Business Line", 3),   # "BL - Mumbai - ..." → 3 spaces after normalise
 
     # ── Business Standard ─────────────────────────────────────────────────────
     # No Bangalore/Bengaluru edition observed in group.
