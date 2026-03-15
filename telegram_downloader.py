@@ -387,14 +387,16 @@ async def download_todays_pdfs() -> dict[str, dict]:
                     f"falling back to first available: {entry['filename']}"
                 )
 
-        # ── Pass 3: download all selected PDFs ────────────────────────────────
-        for newspaper, info in best_found.items():
+        # ── Pass 3: download all selected PDFs concurrently ───────────────────
+        async def _dl(newspaper: str, info: dict) -> None:
             save_path = PDF_DIR / info["filename"]
             log.info(f"Downloading {info['filename']}  [{newspaper}, priority={info['edition_priority']}]...")
             await client.download_media(info["message"], file=str(save_path))
             info["path"] = save_path
             del info["message"]   # remove non-serialisable Telethon object
             log.info(f"  {newspaper} (edition {info['edition_priority']}) -> {info['telegram_url']}")
+
+        await asyncio.gather(*[_dl(np, info) for np, info in best_found.items()])
 
     found  = [n for n in EXPECTED_NEWSPAPERS if n in best_found]
     absent = [n for n in EXPECTED_NEWSPAPERS if n not in best_found]
