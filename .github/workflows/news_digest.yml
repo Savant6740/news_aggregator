@@ -1,18 +1,23 @@
 name: 📰 Daily News Digest
 
-# Single run at 9 PM IST every night.
-# A separate morning_notify job runs at 9 AM IST the next day
-# to send a Telegram message with the digest link.
+# Digest runs at 8 AM IST every morning (papers are posted to Telegram overnight).
+# A morning_notify job runs at 9 AM IST (after the digest finishes) to send the link.
+#
+# ── Speed optimisations ───────────────────────────────────────────────────────
+# • Gemini extraction runs in parallel (up to 5 papers at once, within 5 RPM limit)
+# • PDF downloads from Telegram run concurrently via asyncio.gather()
+# • Tesseract / pytesseract removed — image PDFs go directly to Gemini Vision
+# • pip dependencies cached between runs
 #
 # ── Minutes budget ────────────────────────────────────────────────────────────
 # 1 run/day × 31 days = 31 runs/month
-# Each full run (download + extract + build + deploy): ~20-25 min
+# Each full run (download + extract + build + deploy): ~15-20 min
 # Morning notify job (just sends a message): ~1 min
-# Monthly: ~(25 × 31) + (1 × 31) = 806 min/month  ✅  (well within 1200/day spare)
+# Monthly: ~(20 × 31) + (1 × 31) = 651 min/month  ✅  (well within free tier)
 
 on:
   schedule:
-    - cron: '30 15 * * *'   # 21:00 IST = 15:30 UTC  ← nightly digest run
+    - cron: '30 2 * * *'    # 08:00 IST = 02:30 UTC  ← morning digest run
     - cron: '30 3 * * *'    # 09:00 IST = 03:30 UTC  ← morning link notification
   workflow_dispatch:
     inputs:
@@ -40,7 +45,7 @@ jobs:
   digest:
     runs-on: ubuntu-latest
     timeout-minutes: 45
-    if: github.event_name == 'workflow_dispatch' || github.event.schedule == '30 15 * * *'
+    if: github.event_name == 'workflow_dispatch' || github.event.schedule == '30 2 * * *'
 
     steps:
       - name: 📥 Checkout repo
@@ -66,10 +71,10 @@ jobs:
       - name: 📦 Install Python dependencies
         run: pip install -r requirements.txt
 
-      - name: 🛠 Install system dependencies (OCR)
+      - name: 🛠 Install system dependencies
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y poppler-utils tesseract-ocr libtesseract-dev
+          sudo apt-get install -y poppler-utils
 
       - name: 🤖 Run digest pipeline
         env:
