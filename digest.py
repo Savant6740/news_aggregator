@@ -30,7 +30,9 @@ import os
 import json
 import logging
 import shutil
+import threading
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
@@ -103,6 +105,7 @@ class ModelManager:
         genai.configure(api_key=GEMINI_API_KEY)
         self._index = 0
         self._model = None
+        self._lock = threading.Lock()   # guards _index and _model for parallel extraction
         self._load_model(self._index)
 
     # ── Internal helpers ──────────────────────────────────────────────────────
@@ -142,15 +145,19 @@ class ModelManager:
         """
         Drop-in replacement for GenerativeModel.generate_content().
         Retries with the next model on any quota/rate-limit error.
+        Thread-safe: multiple newspapers can call this concurrently.
         All other exceptions propagate normally.
         """
         while True:
+            with self._lock:
+                current_model = self._model
             try:
-                return self._model.generate_content(*args, **kwargs)
+                return current_model.generate_content(*args, **kwargs)
             except Exception as exc:
                 if self._is_fallback_error(exc):
                     log.warning(f"[ModelManager] Quota/rate error: {exc}")
-                    self._advance()
+                    with self._lock:
+                        self._advance()
                     # Brief pause before retrying to respect new model's RPM
                     time.sleep(2)
                 else:
@@ -241,16 +248,27 @@ def main():
 
     log.info(f"New papers this run: {list(new_papers.keys())}")
 
-    # ── Step 2: Extract articles from new papers only ─────────────────────────
-    # ModelManager is passed directly; it handles mid-extraction fallbacks
-    new_articles = []
-    for newspaper, info in new_papers.items():
+    # ── Step 2: Extract articles from new papers in parallel ──────────────────
+    # Up to 5 papers run concurrently (matches Gemini's 5 RPM free-tier limit).
+    # Each extraction call takes 1–5 min, so 5 parallel calls stay well within RPM.
+    # ModelManager is thread-safe and shared across all workers.
+    def _extract_one(newspaper: str, info: dict) -> tuple[str, list[dict]]:
         log.info(f"Extracting: {newspaper}  [model: {model.current_model_id}]")
         articles = extract_all_articles(newspaper, Path(info["path"]), model)
         for art in articles:
             art["telegram_url"] = info["telegram_url"]
-        new_articles.extend(articles)
         log.info(f"  {len(articles)} articles extracted from {newspaper}")
+        return newspaper, articles
+
+    new_articles: list[dict] = []
+    with ThreadPoolExecutor(max_workers=5) as pool:
+        futures = {pool.submit(_extract_one, np, info): np for np, info in new_papers.items()}
+        for future in as_completed(futures):
+            try:
+                _, articles = future.result()
+                new_articles.extend(articles)
+            except Exception as exc:
+                log.error(f"Extraction failed for {futures[future]}: {exc}")
 
     log.info(f"New raw articles this run: {len(new_articles)}")
 
