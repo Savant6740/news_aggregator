@@ -1,1521 +1,1993 @@
 {
-  "date": "29 March 2026",
-  "generated_at": "2026-03-29T10:30:00.885928+05:30",
-  "total_articles": 94,
+  "date": "30 March 2026",
+  "generated_at": "2026-03-30T10:41:49.228963+05:30",
+  "total_articles": 123,
   "newspapers": [
-    "Indian Express",
-    "Business Line",
+    "Mint",
+    "Business Standard",
     "Hindustan Times",
-    "Times of India",
+    "Financial Express",
     "Economic Times",
-    "The Hindu"
+    "Times of India",
+    "The Hindu",
+    "Indian Express"
   ],
   "articles": [
     {
-      "headline": "Are consistent compounders in for a lost decade?",
-      "summary": "Analysis of blue-chip stocks like Asian Paints and HDFC Bank shows high valuations despite slowing earnings growth. Future returns may be more modest compared to the previous decade's stellar performance as valuation excesses recede and margin of safety becomes critical for investors in these core portfolio holdings.",
-      "category": "Business",
+      "headline": "DMK promises ₹8,000 electronics coupons and higher doles in manifesto",
+      "summary": "Tamil Nadu CM MK Stalin released the DMK manifesto promising ₹8,000 coupons for women in non-taxpaying families to purchase household appliances. The party also pledged to double grants for women under the Urumai Thogai scheme, increase elderly pensions to ₹2,000, and provide free laptops to 3.5 million college students to promote the 'Dravidian model 2.0'.",
+      "category": "Politics",
       "page": 1,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/118569",
+      "importance": 9,
+      "telegram_url": "https://t.me/c/1877410077/118682",
       "sources": [
         {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
           "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/118569"
+          "telegram_url": "https://t.me/c/1877410077/118682"
         }
       ]
     },
     {
-      "headline": "Weak returns may push up SIP stoppages",
-      "summary": "Negative returns from small-cap and multi-cap mutual fund schemes over the last year may lead to an increase in SIP stoppages. Experts suggest that while some investors might pull out due to volatility, long-term investors should view market dips as opportunities to accumulate units at lower costs.",
-      "category": "Business",
+      "headline": "Congress pledges financial aid and land rights in Assam poll manifesto",
+      "summary": "Congress president Mallikarjun Kharge released the party's Assam manifesto featuring five key guarantees. These include unconditional monthly cash transfers to women, ₹50,000 for women-led business ventures, and permanent land ownership for indigenous inhabitants. The party also promised to provide justice in the Zubeen Garg death case and expand family health insurance.",
+      "category": "Politics",
       "page": 1,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/118569",
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/118682",
       "sources": [
         {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
           "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/118569"
+          "telegram_url": "https://t.me/c/1877410077/118682"
         }
       ]
     },
     {
-      "headline": "NPS and bond funds show steady performance in correcting market",
-      "summary": "NPS equity funds, corporate bond schemes, and government bond offerings have performed relatively well during recent market volatility. While equity schemes saw a decline, corporate bond and government bond funds delivered positive double-digit returns, highlighting the benefit of a diversified portfolio for retirement.",
-      "category": "Business",
+      "headline": "PM Modi labels BJP as state's only 'A-team' in Kerala rally",
+      "summary": "Addressing a rally in Palakkad, PM Narendra Modi criticized the ruling LDF and opposition UDF, alleging they have looted Kerala for decades through a mutual understanding. He claimed the Congress and communists are allies in the INDIA bloc elsewhere but feign rivalry in Kerala. Modi asserted that the BJP-led NDA is the only genuine force focused on the state's development.",
+      "category": "Politics",
+      "page": 1,
+      "importance": 9,
+      "telegram_url": "https://t.me/c/1877410077/118682",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/118682"
+        }
+      ]
+    },
+    {
+      "headline": "Mamata Banerjee questions Amit Shah over victim card and conspiracy remarks",
+      "summary": "West Bengal CM Mamata Banerjee hit back at Union home minister Amit Shah for his comments dismissing her previous leg injury as a 'victim card' tactic. Banerjee suggested Shah's statements hint at a conspiracy against her life and criticized the BJP for threatening to stop state welfare schemes like Lakshmir Bhandar and imposing dietary restrictions if they come to power.",
+      "category": "Politics",
+      "page": 1,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/118682",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/118682"
+        }
+      ]
+    },
+    {
+      "headline": "PM Modi warns that recurring global conflicts are stalling post-pandemic recovery",
+      "summary": "In his monthly Mann Ki Baat address, PM Narendra Modi noted that the world is struggling to reach a stable path of progress due to continuous wars and conflicts. He specifically highlighted the war in West Asia, which impacts over one crore Indians living in the region and threatens global energy security. He urged for national unity and community-led water conservation efforts.",
+      "category": "Politics",
       "page": 3,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/118569",
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/118682",
       "sources": [
         {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
           "page": 3,
-          "telegram_url": "https://t.me/c/1877410077/118569"
+          "telegram_url": "https://t.me/c/1877410077/118682"
         }
       ]
     },
     {
-      "headline": "Essential factors to consider before buying an ETF",
-      "summary": "Exchange Traded Funds (ETFs) are growing in popularity, but investors must consider liquidity, impact cost, and tracking error. The article advises focusing on funds with high trading volumes and low bid-ask spreads to ensure efficient price discovery and lower total expense ratios for better long-term returns.",
-      "category": "Business",
-      "page": 3,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/118569",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
-          "page": 3,
-          "telegram_url": "https://t.me/c/1877410077/118569"
-        }
-      ]
-    },
-    {
-      "headline": "PNB launches Digi MSME Prime for quick lending",
-      "summary": "Punjab National Bank has launched Digi MSME Prime, an enhanced digital lending solution for micro, small, and medium enterprises. The platform offers straight-through processing for loans up to ₹10 crore, reducing manual intervention and speeding up credit access for businesses.",
-      "category": "Business",
-      "page": 3,
-      "importance": 4,
-      "telegram_url": "https://t.me/c/1877410077/118569",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
-          "page": 3,
-          "telegram_url": "https://t.me/c/1877410077/118569"
-        }
-      ]
-    },
-    {
-      "headline": "Safe play: Healthcare funds resilient during high market volatility",
-      "summary": "The healthcare sector has outperformed the broader market during recent global conflicts. Funds like DSP Healthcare and BSE Healthcare have shown resilience. With domestic growth in pharma and expansion in diagnostics, the sector is viewed as a defensive bet for investors seeking stability during geopolitical uncertainty.",
-      "category": "Business",
-      "page": 4,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/118569",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
-          "page": 4,
-          "telegram_url": "https://t.me/c/1877410077/118569"
-        }
-      ]
-    },
-    {
-      "headline": "Big size doesn't necessarily kill mutual fund performance",
-      "summary": "A study of large mutual fund schemes across categories like large-cap and flexi-cap shows that high AUM does not necessarily lead to underperformance. Consistent strategy, strong research, and stock selection remain key drivers of returns regardless of the fund's size, suggesting that AUM is not a red flag.",
-      "category": "Business",
-      "page": 4,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/118569",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
-          "page": 4,
-          "telegram_url": "https://t.me/c/1877410077/118569"
-        }
-      ]
-    },
-    {
-      "headline": "L&T engineered to tide through disrupting times",
-      "summary": "Larsen & Toubro (L&T) remains a solid bet due to its strong order book and execution capabilities across infra, energy, and hi-tech manufacturing. Despite geopolitical risks in West Asia, its diversified global presence and focus on new-age sectors like green hydrogen provide long-term growth visibility.",
-      "category": "Business",
-      "page": 5,
+      "headline": "AIADMK releases final candidate list for Tamil Nadu assembly elections",
+      "summary": "AIADMK General Secretary Edappadi K Palaniswami released the party's third and final list of 17 candidates for the April 23 polls. Notable candidates include Porkodi Armstrong from Thiru Vi Ka Nagar and Aadhi Rajaram from Chepauk-Thiruvallikeni. The party is contesting 167 seats directly, while its allies, including the BJP and PMK, will contest the remaining seats under the NDA banner.",
+      "category": "Politics",
+      "page": 6,
       "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/118569",
+      "telegram_url": "https://t.me/c/1877410077/118682",
       "sources": [
         {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
-          "page": 5,
-          "telegram_url": "https://t.me/c/1877410077/118569"
-        }
-      ]
-    },
-    {
-      "headline": "New India Assurance: Value on offer as repair work continues",
-      "summary": "New India Assurance (NIACL) has seen significant correction in its share price. While underwriting losses and international risks remain, the company's strong balance sheet and focus on retail segments like health and motor insurance suggest potential for a turnaround as valuations become more attractive for long-term investors.",
-      "category": "Business",
-      "page": 5,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/118569",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
-          "page": 5,
-          "telegram_url": "https://t.me/c/1877410077/118569"
-        }
-      ]
-    },
-    {
-      "headline": "Downfall: Derivatives tracker shows bearish bias for benchmark indices",
-      "summary": "The Nifty 50 and Nifty Bank indices witnessed a decline recently, with F&O data suggesting a sell-on-rise bias. High call writing at key resistance levels and fresh short build-up by institutional investors indicate further downside potential for the indices in the near term.",
-      "category": "Business",
-      "page": 6,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/118569",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
           "page": 6,
-          "telegram_url": "https://t.me/c/1877410077/118569"
+          "telegram_url": "https://t.me/c/1877410077/118682"
         }
       ]
     },
     {
-      "headline": "Trigger orders for options: Managing volatility and time decay",
-      "summary": "Using trigger orders or One-Cancels-the-Other (OCO) orders can help options traders enter or exit positions at predefined price levels. This strategy is useful for managing time decay and volatility, though traders must be mindful of gap-up or gap-down openings which could lead to mispricing.",
-      "category": "Business",
+      "headline": "Sabarimala temple traditions and gold pilferage emerge as Kerala poll flashpoints",
+      "summary": "Opposition parties in Kerala are leveraging the Sabarimala temple issue and a recent gold pilferage case to target the LDF government. The UDF and BJP are highlighting the alleged misappropriation of 4.5kg of gold from temple guardians and the government's previous stance on women's entry. The LDF has recently moderated its position, suggesting further consultations with religious scholars.",
+      "category": "Politics",
       "page": 6,
-      "importance": 4,
-      "telegram_url": "https://t.me/c/1877410077/118569",
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/118682",
       "sources": [
         {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
           "page": 6,
-          "telegram_url": "https://t.me/c/1877410077/118569"
+          "telegram_url": "https://t.me/c/1877410077/118682"
         }
       ]
     },
     {
-      "headline": "Gold and silver futures show weak recovery; outlook bearish",
-      "summary": "Gold and silver prices remained under pressure last week despite a minor recovery. The overall outlook remains bearish as long as key resistance levels are not breached. Technical charts suggest a sell-on-rise strategy for precious metals as the current bounce lacks strong conviction.",
-      "category": "Business",
-      "page": 6,
-      "importance": 3,
-      "telegram_url": "https://t.me/c/1877410077/118569",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
-          "page": 6,
-          "telegram_url": "https://t.me/c/1877410077/118569"
-        }
-      ]
-    },
-    {
-      "headline": "Crude oil prices volatile but firm on supply concerns",
-      "summary": "Brent crude oil prices saw significant volatility, dropping below $95 before recovering. Supply concerns and geopolitical tensions continue to support prices. Technical charts suggest a bullish bias as long as support levels around $100 per barrel hold, with potential to retest $124.",
-      "category": "Business",
-      "page": 6,
-      "importance": 4,
-      "telegram_url": "https://t.me/c/1877410077/118569",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
-          "page": 6,
-          "telegram_url": "https://t.me/c/1877410077/118569"
-        }
-      ]
-    },
-    {
-      "headline": "On a precipice: Benchmark indices show weak follow-through buying",
-      "summary": "Indian benchmark indices Nifty 50 and Sensex have fallen for several consecutive weeks. Persistent FPI outflows and lack of follow-through buying at lower levels suggest a cautious outlook. Key support levels for Nifty are at 22,200, with further downside risk if these levels are broken during the next week.",
-      "category": "Business",
+      "headline": "Three CAPF personnel suspended for playing carrom in Trinamool office",
+      "summary": "The Election Commission of India suspended three CAPF jawans in West Bengal's Birbhum district after a video surfaced showing them playing carrom inside a Trinamool Congress office. The CEO of West Bengal ordered the suspension for a breach of discipline during poll duty. While the TMC called for a 'humane' approach to the incident, the BJP supported the commission's strict action.",
+      "category": "Politics",
       "page": 7,
       "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/118569",
+      "telegram_url": "https://t.me/c/1877410077/118682",
       "sources": [
         {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
           "page": 7,
-          "telegram_url": "https://t.me/c/1877410077/118569"
+          "telegram_url": "https://t.me/c/1877410077/118682"
         }
       ]
     },
     {
-      "headline": "Alkem Laboratories outlook remains negative after technical breakdown",
-      "summary": "Alkem Laboratories' stock price has been in a steady downtrend, facing resistance at psychological levels. Technical analysis suggests further weakness, with potential price targets around ₹5,000. Investors are advised to remain cautious as the near-term outlook remains bearish according to chart patterns.",
-      "category": "Business",
+      "headline": "Amit Shah vows to deport illegal infiltrators and ensure peace in Assam",
+      "summary": "During a rally in Dhekiajuli, Union home minister Amit Shah promised that a return to power for the BJP would lead to the total removal of illegal infiltrators from Assam. He highlighted that the state has seen no bomb blasts since 2016 and credited the Modi government with providing ₹9,00,000 crore for development. Shah challenged the Congress to clarify its stance on illegal immigration.",
+      "category": "Politics",
       "page": 7,
-      "importance": 4,
-      "telegram_url": "https://t.me/c/1877410077/118569",
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/118682",
       "sources": [
         {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
           "page": 7,
-          "telegram_url": "https://t.me/c/1877410077/118569"
+          "telegram_url": "https://t.me/c/1877410077/118682"
         }
       ]
     },
     {
-      "headline": "Reviewing life insurance needs essential as lifestyle changes",
-      "summary": "Increasing liabilities like home loans and higher living costs necessitate a periodic review of life insurance coverage. Financial experts suggest recalculating the sum assured based on income replacement needs, future milestones like children's education, and outstanding debts to ensure adequate family security.",
-      "category": "Business",
-      "page": 9,
+      "headline": "Election Commission releases third supplementary voter list in West Bengal",
+      "summary": "The Election Commission has published the third supplementary voter list for West Bengal following a Special Intensive Revision. The list includes inclusions and deletions based on factors like duplication, death, or shifting residence. The update comes amid political focus on electoral roll revisions in the state as it prepares for upcoming assembly polls.",
+      "category": "Politics",
+      "page": 4,
       "importance": 4,
-      "telegram_url": "https://t.me/c/1877410077/118569",
+      "telegram_url": "https://t.me/c/1877410077/118695",
       "sources": [
         {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
-          "page": 9,
-          "telegram_url": "https://t.me/c/1877410077/118569"
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/118695"
         }
       ]
     },
     {
-      "headline": "Tata AIA Life launches three new innovation-led funds",
-      "summary": "Tata AIA Life Insurance has launched three new investment funds: Large Mid Cap Innovation, Global AI & Technology Leaders, and Mid Cap Innovation. These funds aim to provide policyholders with exposure to innovation-led growth and global technology advancements in insurance-linked products.",
-      "category": "Business",
+      "headline": "Congress announces five welfare guarantees for poll-bound Assam",
+      "summary": "Congress President Mallikarjun Kharge has announced 'five guarantees' for Assam, including monthly cash transfers to women and ₹50,000 in business aid for female entrepreneurs. The party's promises also cover healthcare, land rights, and a commitment to justice in the Zubeen Garg death case. Kharge accused the current BJP-led state government of corruption and self-serving policies.",
+      "category": "Politics",
+      "page": 4,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/118695",
+      "sources": [
+        {
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        }
+      ]
+    },
+    {
+      "headline": "Nitish Kumar set to quit Bihar CM office for Rajya Sabha",
+      "summary": "Nitish Kumar, Bihar's longest-serving Chief Minister, is expected to resign on March 30 and take oath as a member of the Rajya Sabha. The move marks the end of a 20-year era that saw significant social empowerment for women and backward castes in the state. BJP leader and Deputy CM Samrat Choudhary is being discussed as a potential successor as the power center shifts within the JD(U).",
+      "category": "Politics",
+      "page": 7,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/118695",
+      "sources": [
+        {
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 7,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        }
+      ]
+    },
+    {
+      "headline": "DMK manifesto promises ₹8,000 electronic goods coupon for women",
+      "summary": "Tamil Nadu CM and DMK President M K Stalin has released the party's manifesto, featuring the 'Illatharasi' scheme. The program promises a one-time ₹8,000 coupon for women in families below the income tax bracket to purchase or replace household appliances like refrigerators or washing machines. The party described the set of welfare promises as a cornerstone of its assembly election campaign.",
+      "category": "Politics",
+      "page": 18,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/118695",
+      "sources": [
+        {
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 18,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        }
+      ]
+    },
+    {
+      "headline": "PM Modi urges unity to overcome challenging West Asia situation",
+      "summary": "Prime Minister Narendra Modi addressed the nation via 'Mann Ki Baat,' urging citizens to remain vigilant and avoid rumors during the 'challenging' West Asia conflict. He highlighted the impact on energy needs and the safety of over 1 crore Indians living in Gulf countries. Modi emphasized that the nation must stay united to navigate the economic and humanitarian crises emerging from the war.",
+      "category": "Politics",
+      "page": 5,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/118703",
+      "sources": [
+        {
+          "newspaper": "Mint",
+          "pdf_filename": "Mint Bengaluru 30-03.pdf",
+          "page": 5,
+          "telegram_url": "https://t.me/c/1877410077/118703"
+        }
+      ]
+    },
+    {
+      "headline": "Piyush Goyal seeks WTO rules to protect small fisherfolk",
+      "summary": "Commerce Minister Piyush Goyal advocated for equitable global rules at the WTO's 14th Ministerial Conference in Cameroon. He argued that India’s small-scale, artisanal fishing communities should not be targeted by subsidy disciplines aimed at industrial fleets. India proposed a 25-year transition period and permanent carve-outs for small fishers to ensure livelihood security and food safety.",
+      "category": "Politics",
+      "page": 13,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/118703",
+      "sources": [
+        {
+          "newspaper": "Mint",
+          "pdf_filename": "Mint Bengaluru 30-03.pdf",
+          "page": 13,
+          "telegram_url": "https://t.me/c/1877410077/118703"
+        }
+      ]
+    },
+    {
+      "headline": "DMK manifesto promises higher welfare cash transfers in Tamil Nadu",
+      "summary": "Tamil Nadu CM MK Stalin has unveiled the DMK's election manifesto, promising to double monthly cash transfers for women from Rs 1,000 to Rs 2,000. Other key pledges include providing free electricity for 20 lakh beneficiaries, interest-free loans for students up to Rs 20 lakh, and an 'Illathu Arasi' scheme offering Rs 8,000 coupons for household appliances.",
+      "category": "Politics",
+      "page": 2,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/118664",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "ET_Bangalore_30-03-2026.pdf",
+          "page": 2,
+          "telegram_url": "https://t.me/c/1877410077/118664"
+        }
+      ]
+    },
+    {
+      "headline": "PM Modi vows to probe corruption and recover funds in Kerala",
+      "summary": "During election rallies in Kerala, Prime Minister Narendra Modi promised that a BJP government would investigate alleged graft by the ruling LDF and the previous UDF administrations. He emphasized the recovery of public money and criticized the state's rising debt. Modi positioned the BJP as a credible alternative to the 'B-team' partnership of the Congress and Left parties.",
+      "category": "Politics",
+      "page": 2,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/118664",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "ET_Bangalore_30-03-2026.pdf",
+          "page": 2,
+          "telegram_url": "https://t.me/c/1877410077/118664"
+        }
+      ]
+    },
+    {
+      "headline": "Noida high-rise death: Punjab university student allegedly jumps from 28th floor",
+      "summary": "A 21-year-old BTech student from a university in Punjab died by suicide after jumping from the 28th-floor balcony of a high-rise in Noida Sector 32. Police reports indicate the woman was originally from Basti, Uttar Pradesh, and had recently been scolded by her parents. No suicide note was recovered from the scene, and an investigation into the incident is ongoing.",
+      "category": "India",
+      "page": 1,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/118682",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/118682"
+        }
+      ]
+    },
+    {
+      "headline": "Passenger attempts to open Indigo emergency exit claiming ghost influence",
+      "summary": "A 26-year-old passenger on an IndiGo flight from Bengaluru to Varanasi attempted to open the emergency exit door shortly before landing. The pilot aborted the touchdown and circled back for a safe landing minutes later. The passenger claimed he was under the 'influence of a ghost.' He was handed over to the CISF and later released to his parents with a legal notice.",
+      "category": "India",
+      "page": 1,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/118682",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/118682"
+        }
+      ]
+    },
+    {
+      "headline": "Four killed in gunfight between rival Naga insurgent groups in Manipur",
+      "summary": "At least four members of the NSCN Eastern Flank were killed during an ambush allegedly carried out by the rival NSCN-IM faction in Manipur's Kamjong district. The incident occurred near Hongbei village on Saturday night. The NSCN Eastern Flank claimed its members were on an operational mission regarding timber monitoring. Tensions remain high in the Ukhrul region following the clash.",
+      "category": "India",
+      "page": 1,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/118682",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/118682"
+        }
+      ]
+    },
+    {
+      "headline": "Bastar IG reports Naxalism target nearly achieved ahead of March 31 deadline",
+      "summary": "In an interview, Bastar IG Sundarraj Pattilingam stated that the goal to eliminate Naxalism by March 31, 2026, has almost been achieved. He noted that the CPI (Maoist) military strength has dwindled to double digits and top leadership is isolated. While demining IEDs will take more time, security forces are now being reoriented toward core policing and maintaining order in recovered villages.",
+      "category": "India",
       "page": 9,
-      "importance": 3,
-      "telegram_url": "https://t.me/c/1877410077/118569",
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/118682",
       "sources": [
         {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
           "page": 9,
-          "telegram_url": "https://t.me/c/1877410077/118569"
+          "telegram_url": "https://t.me/c/1877410077/118682"
         }
       ]
     },
     {
-      "headline": "Start-ups include RSUs and SARs in senior executive pay",
-      "summary": "Indian start-ups are increasingly using Restricted Stock Units (RSUs) and Stock Appreciation Rights (SARs) to attract and retain senior talent. Recent amendments to the Companies Act formally recognize these instruments, helping companies align executive compensation with long-term performance and growth targets.",
-      "category": "Business",
-      "page": 12,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/118569",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
-          "page": 12,
-          "telegram_url": "https://t.me/c/1877410077/118569"
-        }
-      ]
-    },
-    {
-      "headline": "Smartphone PLI Surpasses Targets, Turns Out to be Right Call",
-      "summary": "India's production-linked incentive (PLI) scheme for smartphones has produced handsets worth ₹24 lakh crore since 2021. The scheme, ending March 31, has seen production and exports exceed initial targets. Major beneficiaries include Foxconn and Tata Electronics, marking a significant success for India's electronics manufacturing goals.",
-      "category": "Business",
-      "page": 1,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/118512",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/118512"
-        }
-      ]
-    },
-    {
-      "headline": "Traffic in Middle Lane Revving Up E-car Growth",
-      "summary": "The electric vehicle market in India is seeing high growth in the ₹10-30 lakh price segment. While luxury EV sales are slowing, mid-market models are driving adoption. Year-end discounts and new product launches from Tata and MG are helping maintain momentum despite infrastructure challenges and limited model availability in other segments.",
-      "category": "Business",
-      "page": 1,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/118512",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/118512"
-        }
-      ]
-    },
-    {
-      "headline": "Spacetech Co Bellatrix Raises $20m in Funding Round",
-      "summary": "Bengaluru-based spacetech startup Bellatrix has raised $20 million in a funding round led by Cactus Partners. The funds will be used to scale the production of the company's satellite propulsion systems. The startup is a key player in India's growing private space sector, looking to provide green propulsion solutions globally.",
-      "category": "Business",
-      "page": 1,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/118512",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/118512"
-        }
-      ]
-    },
-    {
-      "headline": "Ecomm, Delivery Cos Take EV Rides to Cut Costs",
-      "summary": "Leading e-commerce and delivery companies are accelerating their shift to electric vehicles for last-mile logistics. Rising fuel costs and energy situation are driving this transition. Companies like Swiggy and Zomato are increasingly using EV fleets to manage delivery costs and reduce their carbon footprint in urban areas.",
-      "category": "Business",
-      "page": 1,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/118512",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/118512"
-        }
-      ]
-    },
-    {
-      "headline": "Rentomojo Files Draft Papers for 1,200-cr IPO",
-      "summary": "Furniture and appliance rental startup Rentomojo has filed its draft red herring prospectus for a ₹1,200-crore initial public offering. The IPO will include a fresh issue of shares worth ₹150 crore and an offer for sale. Proceeds will be used for debt repayment, lease rentals for warehouses, and general corporate purposes.",
-      "category": "Business",
-      "page": 3,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/118512",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
-          "page": 3,
-          "telegram_url": "https://t.me/c/1877410077/118512"
-        }
-      ]
-    },
-    {
-      "headline": "Govt Extends EV Subsidies, Raises e2w Targets",
-      "summary": "The Indian government has extended the PM E-DRIVE scheme for electric two-wheelers until July 2026. The adoption target for e-rickshaws and e-carts has been revised upward to 39,034 units. The subsidy extension aims to support the industry amidst rising production costs and maintain the pace of green mobility adoption.",
-      "category": "Business",
-      "page": 3,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/118512",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
-          "page": 3,
-          "telegram_url": "https://t.me/c/1877410077/118512"
-        }
-      ]
-    },
-    {
-      "headline": "Bank of America to pay seventy-two million dollars in Epstein settlement",
-      "summary": "Bank of America has agreed to pay $72.5 million to settle a class-action lawsuit alleging it facilitated Jeffrey Epstein’s sex trafficking ring by ignoring suspicious transactions. The bank stated that while it denies any wrongdoing, the settlement allows it to avoid a lengthy trial. This is the latest in a series of settlements by major banks linked to Epstein's finances.",
-      "category": "Business",
-      "page": 20,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/118525",
-      "sources": [
-        {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
-          "page": 20,
-          "telegram_url": "https://t.me/c/1877410077/118525"
-        }
-      ]
-    },
-    {
-      "headline": "RBI caps lenders' net rupee FX positions at $100 million",
-      "summary": "The Reserve Bank of India has directed banks to maintain their net open position in the onshore rupee-dollar market within a $100-million limit. The move aims to curb large speculative bets against the Indian currency and prevent sharp movements amidst rising crude oil prices and FPI outflows.",
-      "category": "Economy",
-      "page": 1,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/118569",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/118569"
-        }
-      ]
-    },
-    {
-      "headline": "Considerable downside risk to India's 7-7.4% growth estimates",
-      "summary": "Chief Economic Advisor V Anantha Nageswaran warned of downside risks to India's GDP forecast for FY27 due to global conflicts. High oil prices, supply chain disruptions, and slowing exports pose challenges. However, resilient tax collections and digital payment volumes provide some stability to the domestic economic outlook.",
-      "category": "Economy",
-      "page": 1,
-      "importance": 9,
-      "telegram_url": "https://t.me/c/1877410077/118569",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/118569"
-        }
-      ]
-    },
-    {
-      "headline": "Two more India-bound LPG tankers exit Gulf through Hormuz",
-      "summary": "Two additional India-bound tankers carrying liquefied petroleum gas have exited the Persian Gulf via the Strait of Hormuz. This comes amid regional tensions and supply concerns. India remains heavily dependent on LPG imports from the Gulf region to meet domestic demand for cooking fuel.",
-      "category": "Economy",
-      "page": 1,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/118569",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/118569"
-        }
-      ]
-    },
-    {
-      "headline": "Farmers urge WTO to permanently renew TRIPS moratorium",
-      "summary": "Indian farmers' bodies have written to WTO members seeking a permanent renewal of the TRIPS Non-Violation Complaint moratorium. They argue this is crucial to ensure the availability of affordable agrochemicals and generic medicines, supporting the livelihoods of small-scale farmers and national food security.",
-      "category": "Economy",
-      "page": 12,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/118569",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
-          "page": 12,
-          "telegram_url": "https://t.me/c/1877410077/118569"
-        }
-      ]
-    },
-    {
-      "headline": "IBSA nations hold firm against permanent e-comm moratorium at WTO",
-      "summary": "India, Brazil, and South Africa (IBSA) have resisted US-led efforts for a permanent moratorium on customs duties for electronic transmissions at the WTO. They argue that a permanent ban would lead to significant revenue losses for developing nations and limit their policy space for digital development.",
-      "category": "Economy",
-      "page": 12,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/118569",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
-          "page": 12,
-          "telegram_url": "https://t.me/c/1877410077/118569"
-        }
-      ]
-    },
-    {
-      "headline": "Centre extends EV incentives under PM E-DRIVE scheme",
-      "summary": "The central government has extended incentives for electric two-wheelers and three-wheelers under the PM E-DRIVE scheme until March 2028. The move aims to support the industry's transition to sustainable mobility and help manufacturers scale up production and localization efforts to reach self-sufficiency.",
-      "category": "Economy",
-      "page": 12,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/118569",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
-          "page": 12,
-          "telegram_url": "https://t.me/c/1877410077/118569"
-        }
-      ]
-    },
-    {
-      "headline": "W Asia Conflict may take Pace Off India's Growth",
-      "summary": "CEA Anantha Nageswaran warns that conflict in West Asia could impact India's projected growth of 7-7.4% for 2026-27. Key concerns include inflation, fiscal deficit, and external balances. Higher oil prices, supply disruptions, and reduced remittances from the Gulf are potential risks to the economy's stability and near-term outlook.",
-      "category": "Economy",
-      "page": 1,
-      "importance": 10,
-      "telegram_url": "https://t.me/c/1877410077/118512",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/118512"
-        }
-      ]
-    },
-    {
-      "headline": "India Seeks Safeguards in WTO Plurilateral Pacts",
-      "summary": "India has asked the World Trade Organization (WTO) to include safeguards in plurilateral agreements. New Delhi emphasized the need for permanent solutions on public stockholding for food security. The government maintains that these pacts should not bypass the multilateral framework and must prioritize developmental issues of global south.",
-      "category": "Economy",
-      "page": 3,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/118512",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
-          "page": 3,
-          "telegram_url": "https://t.me/c/1877410077/118512"
-        }
-      ]
-    },
-    {
-      "headline": "Economic Ties With Azerbaijan Improve Despite Political Drift",
-      "summary": "India's trade with Azerbaijan reached $56.047 million in early 2025, a 29.8% increase from previous years. Despite diplomatic differences over regional conflicts, economic cooperation in energy and infrastructure remains strong. Azerbaijan has also facilitated investments in Indian projects and reconstruction in war-torn areas.",
-      "category": "Economy",
-      "page": 2,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/118512",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
-          "page": 2,
-          "telegram_url": "https://t.me/c/1877410077/118512"
-        }
-      ]
-    },
-    {
-      "headline": "Finance Ministry report urges quick relief for businesses amid global conflict",
-      "summary": "A Finance Ministry report suggests that the Indian government needs to provide immediate relief to businesses and vulnerable households impacted by rising import prices and logistics costs from the West Asia conflict. The report emphasizes fiscal space for strategic long-term investments while monitoring potential declines in remittances and spikes in energy disruption.",
-      "category": "Economy",
-      "page": 1,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/118525",
-      "sources": [
-        {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/118525"
-        }
-      ]
-    },
-    {
-      "headline": "PM Modi inaugurates Noida International Airport, highlights ethanol blending targets",
-      "summary": "Prime Minister Modi inaugurated the Noida International Airport and emphasized ethanol blending as a key strategy to reduce crude oil imports. The government aims to increase blending to curb dependency on West Asian supplies. Modi noted that India has already achieved 20% ethanol blending with petrol, saving approximately Rs 1.5 lakh crore in foreign exchange.",
-      "category": "Economy",
-      "page": 1,
-      "importance": 9,
-      "telegram_url": "https://t.me/c/1877410077/118525",
-      "sources": [
-        {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/118525"
-        }
-      ]
-    },
-    {
-      "headline": "Noida International Airport to boost NCR aviation capacity",
-      "summary": "Prime Minister Narendra Modi inaugurated Phase 1 of the Noida International Airport at Jewar. The project aims to establish the NCR as a multi-airport hub, enhancing logistics and connectivity for Western Uttar Pradesh. It is expected to drive economic growth and job creation in the region through an aerotropolis model.",
-      "category": "Infrastructure",
-      "page": 1,
-      "importance": 9,
-      "telegram_url": "https://t.me/c/1877410077/118569",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/118569"
-        }
-      ]
-    },
-    {
-      "headline": "PM Modi: Noida Airport to be catalyst for North India",
-      "summary": "Prime Minister Narendra Modi inaugurated Phase 1 of the Noida International Airport at Jewar, Uttar Pradesh. He described it as a catalyst for connectivity and logistics in North India. The airport is expected to boost local businesses, MSMEs, and create significant employment opportunities for the region's youth.",
-      "category": "Infrastructure",
-      "page": 12,
-      "importance": 9,
-      "telegram_url": "https://t.me/c/1877410077/118569",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
-          "page": 12,
-          "telegram_url": "https://t.me/c/1877410077/118569"
-        }
-      ]
-    },
-    {
-      "headline": "After 25-year Wait, NCR Gets a New Airport in Jewar",
-      "summary": "Prime Minister Narendra Modi inaugurated the first phase of the Noida International Airport at Jewar. The project, conceptualized 25 years ago, will serve the National Capital Region and decongest Delhi's IGI airport. Phase 1 is designed to handle 12 million passengers annually with eventual capacity expansion to 70 million.",
-      "category": "Infrastructure",
-      "page": 3,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/118512",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
-          "page": 3,
-          "telegram_url": "https://t.me/c/1877410077/118512"
-        }
-      ]
-    },
-    {
-      "headline": "Rewriting Guwahati Travel: Setu Cuts Distance, Links Lives",
-      "summary": "The 1.24-km Kumar Bhaskar Varma Setu across the Brahmaputra River has significantly reduced travel time in Guwahati. The bridge connects the city's financial hub with North Guwahati, benefiting thousands of commuters. The project is seen as a major boost to Assam's urban infrastructure, turning a 60-minute journey into a 10-minute trip.",
-      "category": "Infrastructure",
+      "headline": "Airlines must offer 60% of seats without extra charges from April",
+      "summary": "Aviation regulator DGCA has directed airlines to offer at least 60% of seats on any flight without additional charges starting April 20. The amended Air Transport Circular aims to ensure fair access for passengers and requires airlines to maintain a transparent seat allocation policy. The move follows directions from the civil aviation ministry issued earlier this month.",
+      "category": "India",
       "page": 2,
       "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/118512",
+      "telegram_url": "https://t.me/c/1877410077/118695",
       "sources": [
         {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
           "page": 2,
-          "telegram_url": "https://t.me/c/1877410077/118512"
+          "telegram_url": "https://t.me/c/1877410077/118695"
         }
       ]
     },
     {
-      "headline": "IndiGo flight makes emergency landing in Delhi after engine failure",
-      "summary": "An IndiGo flight from Visakhapatnam to Delhi with 170 passengers on board made an emergency landing at IGI airport after one of its engines failed mid-air. The pilot reported high vibrations before the engine shut down. The aircraft landed safely, and all passengers were unharmed. Technical teams are currently inspecting the engine for the cause of the failure.",
-      "category": "Infrastructure",
-      "page": 1,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/118525",
+      "headline": "Lok Sabha to discuss efforts to end Maoist extremism on Monday",
+      "summary": "The Lok Sabha is scheduled to discuss the government's efforts to eliminate left-wing extremism ahead of a March 31 deadline set by Home Minister Amit Shah. The discussion, listed under Rule 193, focuses on security operations to neutralize remaining armed Maoist cadres. The government previously announced a goal to completely eliminate the Maoist issue by March 2026.",
+      "category": "India",
+      "page": 4,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/118695",
       "sources": [
         {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/118525"
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/118695"
         }
       ]
     },
     {
-      "headline": "Vadodara bridge where 22 people died restored in seventy-five days",
-      "summary": "The Gambhira bridge in Vadodara, which collapsed in 2024 killing 22 people, has been restored and reopened to traffic within 75 days. Engineers used high-precision engineering and a new 47m-long steel girder to repair the structure under difficult conditions. The rapid restoration aimed to reconnect crucial transport links for the region's commuters.",
-      "category": "Infrastructure",
+      "headline": "PM Modi urges national unity amid West Asia conflict challenges",
+      "summary": "Addressing his 'Mann Ki Baat' radio program, Prime Minister Narendra Modi called on citizens to stay united to overcome economic challenges posed by the West Asia war. He warned against the politicization of the crisis and rumors. Modi acknowledged that the region is a major center for India's energy needs and noted that global support is helping India navigate the situation.",
+      "category": "India",
+      "page": 4,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/118695",
+      "sources": [
+        {
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        }
+      ]
+    },
+    {
+      "headline": "Indian LPG vessels transit Hormuz Strait safely for domestic delivery",
+      "summary": "Two Indian liquefied petroleum gas vessels, BW TYR and BW ELM, carrying 94,000 tonnes of cargo, have safely passed the Strait of Hormuz. The ships are headed to Mumbai and Mangaluru to bolster domestic supply. The Ministry of Petroleum and Natural Gas is actively monitoring 18 other Indian-flagged vessels in the region to ensure maritime safety amid the West Asia conflict.",
+      "category": "India",
+      "page": 4,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/118695",
+      "sources": [
+        {
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        }
+      ]
+    },
+    {
+      "headline": "Government extends SIM-binding compliance deadline for messaging apps to December",
+      "summary": "The Department of Telecommunications is set to delay the mandatory SIM-binding deadline for platforms like WhatsApp and Telegram until the end of December 2026. The extension follows technical challenges reported by companies in linking services to physical SIM cards. The directive aims to curb cyber fraud by requiring mobile authentication and periodic logouts for web versions.",
+      "category": "Technology",
+      "page": 1,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/118682",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/118682"
+        }
+      ]
+    },
+    {
+      "headline": "DigiHaat launches AI toolkit to empower small producers in ecommerce",
+      "summary": "Digital infrastructure platform DigiHaat has introduced an indigenous AI toolkit to help small-town producers compete in the ecommerce ecosystem. The suite includes Indian language cataloguing, automated listing technology from photos, and logistics intelligence. The initiative aims to bridge the digital divide for micro-sellers by automating backend tasks and reducing commissions to 2-5%.",
+      "category": "Technology",
       "page": 14,
       "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/118525",
+      "telegram_url": "https://t.me/c/1877410077/118695",
       "sources": [
         {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
           "page": 14,
-          "telegram_url": "https://t.me/c/1877410077/118525"
+          "telegram_url": "https://t.me/c/1877410077/118695"
         }
       ]
     },
     {
-      "headline": "How AI tools can lead to investment success",
-      "summary": "Investors can use AI tools like Perplexity and Google Finance to build perspectives and perform basic stock analyses. The article highlights use cases like screening stocks, analyzing earnings transcripts, and simulating DCF models, while also warning about pitfalls like AI hallucinations and data discrepancies.",
+      "headline": "Survey shows 95% of Indian women in tech eyeing AI-focused roles",
+      "summary": "A report by ANSR and Talent500 indicates that 95% of women in India's technology sector are prepared to pivot to AI-focused roles in 2026. Roughly 64% of respondents view AI as a bridge to senior leadership and career advancement. While 65% are optimistic about AI opportunities, a significant minority still report feeling underrepresented in high-impact AI assignments.",
       "category": "Technology",
-      "page": 2,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/118569",
+      "page": 14,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/118695",
       "sources": [
         {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
-          "page": 2,
-          "telegram_url": "https://t.me/c/1877410077/118569"
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 14,
+          "telegram_url": "https://t.me/c/1877410077/118695"
         }
       ]
     },
     {
-      "headline": "RNFI Services introduces cardless cash withdrawals via UPI QR",
-      "summary": "RNFI Services has launched Relipay to enable cardless cash withdrawals at its BC network using a UPI QR code. Customers can withdraw up to ₹10,000 per transaction with a daily limit of ₹50,000, facilitating easy access to cash in rural and semi-urban areas without a physical card.",
+      "headline": "SoftBank secures $40 billion loan to expand OpenAI investment",
+      "summary": "SoftBank Group has signed a $40 billion loan agreement to increase its stake in OpenAI, the developer of ChatGPT. The funding, involving major global banks like JPMorgan Chase and Goldman Sachs, will be used to support OpenAI's ambitious AI infrastructure projects. This deal potentially doubles OpenAI's valuation to over $11 billion as it competes in the global generative AI race.",
       "category": "Technology",
-      "page": 3,
-      "importance": 4,
-      "telegram_url": "https://t.me/c/1877410077/118569",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
-          "page": 3,
-          "telegram_url": "https://t.me/c/1877410077/118569"
-        }
-      ]
-    },
-    {
-      "headline": "Where is the Defining Gadget of AI Age?",
-      "summary": "Tech experts are debating what device will eventually replace the smartphone as the defining gadget of the AI era. Candidates include smart glasses, wearable pins, and AI-powered home devices. While current iterations like the Humane Pin have faced criticism, the search for a seamless, screenless post-phone interface continues.",
-      "category": "Technology",
-      "page": 5,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/118512",
+      "page": 13,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/118664",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
-          "page": 5,
-          "telegram_url": "https://t.me/c/1877410077/118512"
+          "pdf_filename": "ET_Bangalore_30-03-2026.pdf",
+          "page": 13,
+          "telegram_url": "https://t.me/c/1877410077/118664"
         }
       ]
     },
     {
-      "headline": "The Great Scrape: AI Companies Mine User Data",
-      "summary": "Research indicates that AI companies are systematically scraping public social media data to train large language models. Experts warn that users often unaware their posts, photos, and clicks are being harvested for training. Individuals are advised to adjust privacy settings and use tools to protect their digital footprint from unauthorized mining.",
-      "category": "Technology",
+      "headline": "Telangana passes bill to deduct salary for neglecting elderly parents",
+      "summary": "The Telangana assembly passed the 'Parental Support Bill, 2026,' making it mandatory for government and private employees, as well as public representatives, to care for their parents. Failure to comply will lead to a 15% salary deduction or a ₹10,000 fine, whichever is lower, to be paid to the parents. CM Revanth Reddy emphasized the bill's role in reinforcing moral family values.",
+      "category": "Law",
+      "page": 1,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/118682",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/118682"
+        }
+      ]
+    },
+    {
+      "headline": "Telangana government introduces Hate Speech bill with 10-year prison term",
+      "summary": "The Telangana government introduced the 'Hate Speech and Hate Crimes (Prevention) Bill, 2026' in the assembly. The proposed law seeks to penalize speeches that incite riots or communal conflict with a maximum jail term of 10 years and fines up to ₹1 lakh. If passed, Telangana will be the second state after Karnataka to implement specific legislation targeting hate-motivated conduct.",
+      "category": "Law",
+      "page": 6,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/118682",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 6,
+          "telegram_url": "https://t.me/c/1877410077/118682"
+        }
+      ]
+    },
+    {
+      "headline": "NCLAT affirms NCLT power to defreeze demat accounts during insolvency",
+      "summary": "The National Company Law Appellate Tribunal has dismissed appeals by BSE challenging the NCLT's power to defreeze demat accounts of firms undergoing insolvency. The tribunal ruled that the NCLT has jurisdiction under the IBC to pass directions for defreezing accounts. The case involved Future Corporate Resources and Liz Traders, whose accounts were frozen due to unpaid listing fees.",
+      "category": "Law",
+      "page": 2,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/118695",
+      "sources": [
+        {
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 2,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        }
+      ]
+    },
+    {
+      "headline": "Government accepts all select committee suggestions for proposed IBC Bill",
+      "summary": "The Centre has incorporated all suggestions from a select committee into the proposed Insolvency and Bankruptcy Code Bill. Key changes include setting statutory timelines for the NCLAT to dispose of appeals and clarifying the priority of claims by state authorities. The Bill aims to overhaul the code to introduce reforms for group, cross-border, and prepackaged insolvency.",
+      "category": "Law",
+      "page": 6,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/118695",
+      "sources": [
+        {
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 6,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        }
+      ]
+    },
+    {
+      "headline": "Dr Reddy’s allowed to sell ‘Olymviq’ inventory for 30 days",
+      "summary": "The Delhi High Court has permitted Dr Reddy’s Laboratories to exhaust its existing stock of the semaglutide drug ‘Olymviq’ within 30 days. The order comes following a trademark dispute with Novo Nordisk, which alleged similarity to its 'Ozempic' brand. After the deadline, Dr Reddy’s will transition the product to the new brand name ‘OLYMRA’ and cease all use of the contested mark.",
+      "category": "Law",
+      "page": 5,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/118703",
+      "sources": [
+        {
+          "newspaper": "Mint",
+          "pdf_filename": "Mint Bengaluru 30-03.pdf",
+          "page": 5,
+          "telegram_url": "https://t.me/c/1877410077/118703"
+        }
+      ]
+    },
+    {
+      "headline": "SFIO summons former IndusInd Bank executives in accounting probe",
+      "summary": "The Serious Fraud Investigation Office (SFIO) has summoned former top executives of IndusInd Bank, including former CFO Gobind Jain, regarding an investigation into alleged accounting irregularities. The probe follows a whistleblower complaint and an FIR by the Mumbai Police Economic Offences Wing. Investigators are examining the diversion of funds and misclassification of asset quality.",
+      "category": "Law",
+      "page": 10,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/118664",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "ET_Bangalore_30-03-2026.pdf",
+          "page": 10,
+          "telegram_url": "https://t.me/c/1877410077/118664"
+        }
+      ]
+    },
+    {
+      "headline": "IMD issues yellow alert for Delhi as western disturbance brings rain",
+      "summary": "The India Meteorological Department has issued a yellow alert for Delhi, forecasting light showers and gusty winds on Monday and Tuesday. A western disturbance led to rain across northwestern India on Sunday, though Delhi remained dry with a maximum temperature of 36.2°C. Further light rain is expected between April 3 and 4 as a second disturbance moves through the region.",
+      "category": "Environment",
+      "page": 1,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/118682",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/118682"
+        }
+      ]
+    },
+    {
+      "headline": "Wildlife board shifts focus to coexistence between forest dwellers and tigers",
+      "summary": "The National Board for Wildlife (NBWL) has recommended promoting coexistence between local communities and wildlife in tiger reserve core areas. This marks a shift from the previous 'relocation-first' policy of the NTCA. The board noted that tiger populations have increased in areas where communities remained, and called for site-specific assessments and scientific evidence for future moves.",
+      "category": "Environment",
+      "page": 9,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/118682",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 9,
+          "telegram_url": "https://t.me/c/1877410077/118682"
+        }
+      ]
+    },
+    {
+      "headline": "Government revises PM E-DRIVE scheme deadlines and caps for EVs",
+      "summary": "The Centre has revised guidelines for the ₹10,900 crore PM E-DRIVE scheme, setting new deadlines for electric vehicle incentives. E-scooters registered until July 31, 2026, and e-rickshaws registered until March 31, 2028, will be eligible for subsidies. The revision aims to streamline the adoption of electric two- and three-wheelers by establishing clearer unit caps and timeframes.",
+      "category": "Environment",
+      "page": 6,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/118695",
+      "sources": [
+        {
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 6,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        }
+      ]
+    },
+    {
+      "headline": "Unseasonal April rain and hailstorms predicted to impact North India crops",
+      "summary": "Weather officials expect unseasonal rain and hailstorms in North and Central India to continue into April due to back-to-back western disturbances. While providing relief from heat, the wet spell could damage standing wheat crops, particularly those sown late. Farmers have been advised to harvest standing crops quickly to avoid losses from predicted severe thunderstorms in early April.",
+      "category": "Environment",
+      "page": 6,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/118695",
+      "sources": [
+        {
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 6,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        }
+      ]
+    },
+    {
+      "headline": "Renewable energy firms diversify to boost margins and valuations",
+      "summary": "Indian solar and wind energy companies like Waaree Energies, Premier Energies, and Suzlon are expanding beyond core businesses into manufacturing and project development. This trend of backward and forward integration aims to capture a larger share of the value chain and improve profitability. Solar module capacity in India has surged to 109.5GW, prompting firms to seek turnkey solutions.",
+      "category": "Environment",
+      "page": 7,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/118703",
+      "sources": [
+        {
+          "newspaper": "Mint",
+          "pdf_filename": "Mint Bengaluru 30-03.pdf",
+          "page": 7,
+          "telegram_url": "https://t.me/c/1877410077/118703"
+        }
+      ]
+    },
+    {
+      "headline": "Report shows youth unemployment falls with age but salaried jobs remain rare",
+      "summary": "Data from the Periodic Labour Force Survey highlights that while open unemployment among men in their 20s falls as they age, only 6.7% of college graduates secure permanent salaried jobs within a year. For women, the trend differs as many withdraw from the labor force due to domestic expectations. The study emphasizes the urgent need for creating more aspirational salaried employment.",
+      "category": "Economy",
+      "page": 2,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/118682",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 2,
+          "telegram_url": "https://t.me/c/1877410077/118682"
+        }
+      ]
+    },
+    {
+      "headline": "Centre maintains stable fuel and LPG supplies despite West Asia crisis",
+      "summary": "The Ministry of Petroleum and Natural Gas stated that fuel and LPG supplies remain normal across India despite geopolitical disruptions. Oil marketing companies supplied 5.5 million cylinders on Saturday. Panic buying was reported in some states due to rumors, prompting the government to reiterate that proactive measures are in place to ensure uninterrupted availability of petroleum products.",
+      "category": "Economy",
+      "page": 3,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/118682",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/118682"
+        }
+      ]
+    },
+    {
+      "headline": "Two Indian LPG tankers safely cross the strategic Strait of Hormuz",
+      "summary": "Two Indian-flagged tankers, BW Tyr and BW Elm, carrying roughly 94,000 tonnes of LPG, have crossed the Strait of Hormuz despite the ongoing conflict. The ships, escorted by the Indian Navy, are expected to reach Mumbai and New Mangalore by early April. The move is part of India's efforts to secure its cooking gas supply as the Iran war disrupts major maritime trade routes.",
+      "category": "Economy",
+      "page": 3,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/118682",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/118682"
+        }
+      ]
+    },
+    {
+      "headline": "India to add 97,000 MW coal capacity to meet rising electricity demand",
+      "summary": "The Ministry of Power informed the Rajya Sabha that India plans to add approximately 97,000 MW of new coal and lignite capacity by 2034-35 to meet a projected peak demand of 459 GW. While the government remains committed to its 500 GW non-fossil fuel target by 2030, it emphasized that thermal expansion is necessary for grid stability and to avoid energy shortages during peak periods.",
+      "category": "Economy",
+      "page": 8,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/118682",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/118682"
+        }
+      ]
+    },
+    {
+      "headline": "Indian energy firms seek Angola gas deal to bypass Hormuz blockade",
+      "summary": "Indian state-run oil companies, including IOCL and GAIL, are in talks with Angola's Sonangol to secure term contracts for LPG and LNG. The move aims to diversify energy sources as the Strait of Hormuz closure disrupts supplies from West Asia. Angola is seen as a key alternative, with shipments taking 10-15 days less than those from North America, helping mitigate domestic fuel shortages.",
+      "category": "Economy",
+      "page": 14,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/118682",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 14,
+          "telegram_url": "https://t.me/c/1877410077/118682"
+        }
+      ]
+    },
+    {
+      "headline": "India demands 25-year fisheries subsidy transition at WTO conference",
+      "summary": "Commerce Minister Piyush Goyal demanded a 25-year transition period for developing nations at the WTO Ministerial Conference. India emphasized the need to protect the livelihoods of nine million small-scale fisher families while curbing subsidies for distant-water industrial fleets. Goyal argued that India's per-capita fisheries subsidy is among the lowest globally at $15 per year.",
+      "category": "Economy",
+      "page": 14,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/118682",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 14,
+          "telegram_url": "https://t.me/c/1877410077/118682"
+        }
+      ]
+    },
+    {
+      "headline": "Banks flag MTM losses, urge RBI to reconsider foreign exchange cap",
+      "summary": "Banks have requested the Reserve Bank of India to reconsider its decision to cap net open foreign-exchange positions at $100 million. Lenders warn the directive, due for compliance by April 10, could result in significant mark-to-market losses. Market estimates suggest nearly $40 billion in large long-dollar positions would need to be squared off in the near term to comply with the new rules.",
+      "category": "Economy",
+      "page": 1,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/118695",
+      "sources": [
+        {
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        }
+      ]
+    },
+    {
+      "headline": "Sensex trailing price-to-earnings valuations hit five-year low during selloff",
+      "summary": "The benchmark BSE Sensex's trailing 12-month price-to-earnings multiple declined to 20.2x, its lowest level since May 2020. The drop follows a sharp decline in equity valuations triggered by the West Asia conflict and foreign portfolio investors offloading a record $42 billion since September 2024. The index has fallen 13.7% since the start of the calendar year.",
+      "category": "Economy",
+      "page": 1,
+      "importance": 9,
+      "telegram_url": "https://t.me/c/1877410077/118695",
+      "sources": [
+        {
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        }
+      ]
+    },
+    {
+      "headline": "WTO members consider five-year extension of ecommerce duty moratorium",
+      "summary": "Member nations at the World Trade Organization are discussing a five-year extension of the global ban on ecommerce tariffs. While developed countries like the US seek a permanent moratorium to provide business certainty, India is resisting a long-term commitment. India argues that the moratorium on cross-border electronic transmissions has negatively impacted its national revenue collections.",
+      "category": "Economy",
+      "page": 1,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/118695",
+      "sources": [
+        {
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        }
+      ]
+    },
+    {
+      "headline": "Coal India e-auction premiums rise to 35% amid natural gas shortage",
+      "summary": "Coal India's e-auction premiums rose to approximately 35% over notified prices in February. The price surge is driven by industrial consumers switching from gas to coal due to LNG and LPG shortages linked to West Asia tensions. Mjunction Services reports that while demand is tightening, panic buying is currently in check as power plants maintain coal stocks for 18 to 20 days.",
+      "category": "Economy",
+      "page": 1,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/118695",
+      "sources": [
+        {
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        }
+      ]
+    },
+    {
+      "headline": "CII lauds government response to West Asia crisis, sets industry agenda",
+      "summary": "The Confederation of Indian Industry has commended the government for its swift and well-calibrated response to the West Asia conflict. The industry body laid out a 12-point agenda to help maintain production continuity and support supply chains. CII emphasized that timely policy measures have helped contain inflationary pressures and sustained industrial activity during global uncertainty.",
+      "category": "Economy",
+      "page": 4,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/118695",
+      "sources": [
+        {
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        }
+      ]
+    },
+    {
+      "headline": "US-India partnership set for win-win economic growth, says Ambassador Gor",
+      "summary": "US Ambassador Sergio Gor stated that India’s economic growth and infrastructure needs align perfectly with American expertise in energy, manufacturing, and digital infrastructure. He highlighted the vision to transform the US-India relationship into the defining strategic partnership of the 21st century. Gor noted that both nations are prioritizing resilient supply chains for semiconductors.",
+      "category": "Economy",
+      "page": 4,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/118695",
+      "sources": [
+        {
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        }
+      ]
+    },
+    {
+      "headline": "West Asia conflict impact on India's economy likely to be significant",
+      "summary": "Chief Economic Advisor V Anantha Nageswaran warned that the combined impact of the West Asia war on India’s growth, inflation, and fiscal balances is likely to be significant. The monthly economic review noted early signs of moderation in economic momentum for March 2026. The review highlighted vulnerabilities in supply chains, import prices, and logistics costs due to the conflict.",
+      "category": "Economy",
+      "page": 6,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/118695",
+      "sources": [
+        {
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 6,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        }
+      ]
+    },
+    {
+      "headline": "Parliamentary panel concerned over MEA's shrinking share in Union Budget",
+      "summary": "A parliamentary standing committee has noted that the Ministry of External Affairs' allocation has dropped to 0.41% of the total budget, down from 0.69% in FY18. Despite an absolute increase to ₹22,118.97 crore, the panel expressed concern that the funding is insufficient for India’s expanding global ambitions and diplomatic footprint compared to global benchmarks like the US and UK.",
+      "category": "Economy",
+      "page": 7,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/118695",
+      "sources": [
+        {
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 7,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        }
+      ]
+    },
+    {
+      "headline": "Global fund outflows from India match total EM basket: Elara Securities",
+      "summary": "Global funds pulled $3.7 billion from Indian equities over the past three weeks, matching total outflows from the entire emerging market basket. India has emerged as the most impacted market within EMs as geopolitical tensions weigh on investor sentiment. While long-only flows remain weak, exchange-traded funds (ETFs) have become the primary source of incremental selling in India.",
+      "category": "Economy",
+      "page": 11,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/118695",
+      "sources": [
+        {
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 11,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        }
+      ]
+    },
+    {
+      "headline": "IPO pipeline stalls as West Asia conflict volatility impacts investor appetite",
+      "summary": "India's primary market activity is expected to remain subdued with no new IPO issues opening this week due to heightened volatility from the Iran conflict. Listings for Central Mine Planning and Powerica will proceed, but grey market premiums remain muted. Several firms are racing against the March 31 expiry of their financials, leaving little room for further deferrals.",
+      "category": "Economy",
+      "page": 11,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/118695",
+      "sources": [
+        {
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 11,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        }
+      ]
+    },
+    {
+      "headline": "India eyes cooking and natural gas from Angola amid war",
+      "summary": "Four state-run Indian oil firms are in talks with Angola's Sonangol to secure LPG and LNG term contracts. The move follows a 90% cut in India’s LPG imports due to the Strait of Hormuz blockade during the Iran war. The government is seeking to diversify energy sources as domestic cooking gas shortages persist, with negotiations occurring at a government-to-government level.",
+      "category": "Economy",
+      "page": 5,
+      "importance": 9,
+      "telegram_url": "https://t.me/c/1877410077/118703",
+      "sources": [
+        {
+          "newspaper": "Mint",
+          "pdf_filename": "Mint Bengaluru 30-03.pdf",
+          "page": 5,
+          "telegram_url": "https://t.me/c/1877410077/118703"
+        }
+      ]
+    },
+    {
+      "headline": "Ethanol makers push for higher blending as war spikes crude",
+      "summary": "Indian ethanol manufacturers are lobbying for a hike in the fuel blending ratio to 27% and a mandate for flex-fuel vehicles following oil price surges. India currently blends 20% ethanol into petrol, saving ₹1.44 trillion in imports since 2014. However, concerns remain regarding food security as farmers shift from oilseeds and pulses to water-intensive sugarcane and maize for biofuel.",
+      "category": "Economy",
+      "page": 3,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/118703",
+      "sources": [
+        {
+          "newspaper": "Mint",
+          "pdf_filename": "Mint Bengaluru 30-03.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/118703"
+        }
+      ]
+    },
+    {
+      "headline": "Govt to address shipping bottlenecks and rising freight rates",
+      "summary": "The Ministry of Ports, Shipping and Waterways will meet major shipping lines to tackle container shortages and surging freight costs caused by the West Asia war. Basmati rice exporters report that shipments worth ₹4,000 crore are stuck at ports. Freight rates for London-bound containers have spiked from $800 to $2,000, making many Indian exports unviable in the global market.",
+      "category": "Economy",
+      "page": 6,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/118703",
+      "sources": [
+        {
+          "newspaper": "Mint",
+          "pdf_filename": "Mint Bengaluru 30-03.pdf",
+          "page": 6,
+          "telegram_url": "https://t.me/c/1877410077/118703"
+        }
+      ]
+    },
+    {
+      "headline": "Oil ministry steps up measures to ensure domestic fuel supply",
+      "summary": "The Indian government has intensified efforts to secure fuel and LPG supplies following the closure of the Strait of Hormuz. Measures include operating refineries at high capacity and cutting excise duties on petrol and diesel by ₹10 per litre. While rumors triggered panic buying at some stations, the ministry assured citizens that national stocks of petroleum products remain sufficient.",
+      "category": "Economy",
+      "page": 6,
+      "importance": 9,
+      "telegram_url": "https://t.me/c/1877410077/118703",
+      "sources": [
+        {
+          "newspaper": "Mint",
+          "pdf_filename": "Mint Bengaluru 30-03.pdf",
+          "page": 6,
+          "telegram_url": "https://t.me/c/1877410077/118703"
+        }
+      ]
+    },
+    {
+      "headline": "Banks request RBI for more time on FX rule compliance",
+      "summary": "Indian lenders have asked the central bank for a three-month extension to comply with new foreign exchange position limits. The RBI recently directed banks to ensure net open rupee positions in the onshore market do not exceed $100 million daily by 10 April. Bankers warn that a quick implementation could lead to disorderly unwinding and losses amid heavy foreign portfolio outflows.",
+      "category": "Economy",
+      "page": 13,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/118703",
+      "sources": [
+        {
+          "newspaper": "Mint",
+          "pdf_filename": "Mint Bengaluru 30-03.pdf",
+          "page": 13,
+          "telegram_url": "https://t.me/c/1877410077/118703"
+        }
+      ]
+    },
+    {
+      "headline": "RBI limits bank rupee positions to bolster currency value",
+      "summary": "The Reserve Bank of India has directed banks to cap net open positions in the rupee at $100 million at the end of each business day, effective April 10. The move is expected to trigger a large-scale position unwinding, potentially appreciating the rupee by 70-100 paise to a range of 93.50-94.50 per dollar. This intervention aims to provide a safety net amid recent volatility.",
+      "category": "Economy",
+      "page": 1,
+      "importance": 9,
+      "telegram_url": "https://t.me/c/1877410077/118664",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "ET_Bangalore_30-03-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/118664"
+        }
+      ]
+    },
+    {
+      "headline": "Factories resume full operations as LPG supply constraints ease",
+      "summary": "Industrial production is returning to normal levels as the supply of commercial liquefied petroleum gas (LPG) improves. Many manufacturers had faced disruptions due to shortages linked to the West Asia conflict, with some switching to alternative fuels. Supply levels have reached 75-80% of normal requirements, allowing workers to return to duty and stabilizing output across key sectors.",
+      "category": "Economy",
+      "page": 1,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/118664",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "ET_Bangalore_30-03-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/118664"
+        }
+      ]
+    },
+    {
+      "headline": "Microfinance sector recovers with focus on higher-value loans",
+      "summary": "The microfinance market recorded month-on-month growth in gross loan portfolios for February, with the total book size reaching Rs 3.29 lakh crore. Lenders are increasingly focusing on higher-value loans for borrowers with robust track records. Asset quality has also improved, with the 30-179 day overdue loan ratio declining after a period of stress in the industry.",
+      "category": "Economy",
+      "page": 1,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/118664",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "ET_Bangalore_30-03-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/118664"
+        }
+      ]
+    },
+    {
+      "headline": "Nifty breaks 23,000 mark amid escalating West Asia tensions",
+      "summary": "The Nifty 50 index fell below the critical 23,000 level on Friday as geopolitical tensions in West Asia sparked market volatility. Analysts suggest the index could face further pressure, potentially dragging toward the 22,400-22,500 zone if clarity on a resolution does not emerge. Global crude oil price concerns and foreign fund outflows continue to weigh on domestic investor sentiment.",
+      "category": "Economy",
+      "page": 11,
+      "importance": 9,
+      "telegram_url": "https://t.me/c/1877410077/118664",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "ET_Bangalore_30-03-2026.pdf",
+          "page": 11,
+          "telegram_url": "https://t.me/c/1877410077/118664"
+        }
+      ]
+    },
+    {
+      "headline": "Pakistan to host US and Iran talks to de-escalate regional conflict",
+      "summary": "Pakistan's Foreign Minister Ishaq Dar announced that Islamabad will host upcoming talks between the US and Iran to discuss ending the month-long war. While Washington and Tehran have not officially confirmed the direct nature of the talks, diplomats from Saudi Arabia, Egypt, and Turkey have gathered in Pakistan to facilitate meaningful negotiations and stable energy conditions.",
+      "category": "World",
+      "page": 3,
+      "importance": 10,
+      "telegram_url": "https://t.me/c/1877410077/118682",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/118682"
+        }
+      ]
+    },
+    {
+      "headline": "Infographic: Key Iranian leaders killed as 30-day war roils markets",
+      "summary": "The conflict in West Asia has reached the 30-day mark following the killing of top Iranian leaders including Ali Khamenei and Ali Larijani. The war has led to a 'selective blockade' of the Strait of Hormuz, causing Brent crude to peak near $120. Over 30,000 flights have been cancelled, and global supply chains face volatility as the US and Israel target Iranian nuclear and military sites.",
+      "category": "World",
+      "page": 4,
+      "importance": 9,
+      "telegram_url": "https://t.me/c/1877410077/118682",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/118682"
+        }
+      ]
+    },
+    {
+      "headline": "Bangladesh at crossroads as Tarique Rahman's BNP returns to power",
+      "summary": "Following the fall of Sheikh Hasina's 15-year rule, Bangladesh's recent elections have returned the BNP to power under Tarique Rahman. Analysts suggest the country is at a democratic crossroads, testing whether institutional reforms can provide stability. The new government faces significant economic headwinds and high food inflation, with the Jamaat-e-Islami party also emerging as a major force.",
+      "category": "World",
+      "page": 8,
+      "importance": 9,
+      "telegram_url": "https://t.me/c/1877410077/118682",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/118682"
+        }
+      ]
+    },
+    {
+      "headline": "Iran war enters 30th day with total internet blackout and energy risks",
+      "summary": "The war in West Asia has entered its 30th day with Iran under a nationwide internet blackout. US and Israeli strikes have targeted Iranian missile production and nuclear research facilities, while Hezbollah and Houthi rebels continue retaliatory attacks. Global energy markets remain under strain as the Strait of Hormuz blockade persists, threatening to drive oil prices toward $200.",
+      "category": "World",
+      "page": 11,
+      "importance": 10,
+      "telegram_url": "https://t.me/c/1877410077/118682",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 11,
+          "telegram_url": "https://t.me/c/1877410077/118682"
+        }
+      ]
+    },
+    {
+      "headline": "Indira Gandhi assassin's nephew lost legal bid for name suppression in NZ",
+      "summary": "Baltej Singh, a businessman and nephew of one of Indira Gandhi's assassins, lost a legal battle to keep his name secret in a massive New Zealand methamphetamine case. Singh is serving 22 years for masterminding drug imports concealed in beer and kombucha shipments. Courts ruled that the public interest in justice outweighed fears of retaliatory harm related to his family's history.",
+      "category": "World",
+      "page": 11,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/118682",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 11,
+          "telegram_url": "https://t.me/c/1877410077/118682"
+        }
+      ]
+    },
+    {
+      "headline": "Regional powers meet in Pakistan to de-escalate West Asia conflict",
+      "summary": "Foreign ministers from Türkiye, Egypt, and Saudi Arabia met in Islamabad to discuss proposals to end the Iran war and reopen the Strait of Hormuz. The talks focused on the severe economic impact of military escalation on global supply chains and energy security. The meeting comes as Iran warns the US against ground operations and global oil prices continue to surge.",
+      "category": "World",
       "page": 8,
       "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/118512",
+      "telegram_url": "https://t.me/c/1877410077/118695",
       "sources": [
         {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
           "page": 8,
-          "telegram_url": "https://t.me/c/1877410077/118512"
+          "telegram_url": "https://t.me/c/1877410077/118695"
         }
       ]
     },
     {
-      "headline": "US benchmark indices Dow and S&P can fall further",
-      "summary": "The Dow Jones, S&P 500, and NASDAQ have all seen significant weekly declines. Weakness in tech stocks and rising Treasury yields are weighing on global sentiment. Analysts expect further correction in US markets as inflation concerns persist and benchmark indices approach critical support levels.",
+      "headline": "Israel to widen military invasion of southern Lebanon targeting Hezbollah",
+      "summary": "Prime Minister Benjamin Netanyahu announced that Israel will expand its invasion and 'security strip' in southern Lebanon. The move aims to fundamentally change the security situation on Israel's northern border as forces continue to target Hezbollah's rocket capabilities. Over 1,100 people have reportedly been killed in Lebanon since the start of the conflict.",
       "category": "World",
-      "page": 7,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/118569",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
-          "page": 7,
-          "telegram_url": "https://t.me/c/1877410077/118569"
-        }
-      ]
-    },
-    {
-      "headline": "Yemen's Houthis Join Iran War, Fire Missiles at Israel",
-      "summary": "Yemen's Houthi rebels have launched ballistic missiles towards Israel, escalating regional tensions. The group claimed the attack is in solidarity with the people of Gaza. The intervention draws Yemen further into the conflict, threatening vital shipping lanes through the Gulf of Aden and the Red Sea, impacting global trade routes.",
-      "category": "World",
-      "page": 1,
+      "page": 8,
       "importance": 9,
-      "telegram_url": "https://t.me/c/1877410077/118512",
+      "telegram_url": "https://t.me/c/1877410077/118695",
       "sources": [
         {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/118512"
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/118695"
         }
       ]
     },
     {
-      "headline": "Indonesia Starts First Social Media Ban for Kids",
-      "summary": "Indonesia has implemented a ban on social media accounts for children under 16, a first in Southeast Asia. The policy aims to protect minors from online harm, cyberbullying, and excessive screen time. The government plans to monitor platforms strictly to ensure compliance with the new age restrictions and safeguard youth mental health.",
+      "headline": "US military suffers first combat loss of E-3 early warning jet",
+      "summary": "An Iranian missile strike on a base in Saudi Arabia destroyed a US E-3 Sentry AWACS aircraft, marking the first combat loss for the $300 million type. The plane is critical for directing combat aircraft and spotting distant threats. The loss comes as the US Pentagon reportedly considers military options, including ground forces, for the conflict in West Asia.",
       "category": "World",
-      "page": 7,
+      "page": 8,
       "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/118512",
+      "telegram_url": "https://t.me/c/1877410077/118695",
       "sources": [
         {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
-          "page": 7,
-          "telegram_url": "https://t.me/c/1877410077/118512"
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/118695"
         }
       ]
     },
     {
-      "headline": "Russian Strikes Kill 4 in Ukraine, Damage Hospital",
-      "summary": "Russian missile strikes in the Ukrainian city of Odesa have killed at least four people and damaged a maternity hospital. The attack is part of an ongoing aerial campaign targeting critical infrastructure and residential areas. Local authorities reported that dozens more were injured in the latest barrage, which hit civilian residential areas.",
+      "headline": "Houthi entry into West Asia conflict threatens global shipping routes",
+      "summary": "Iranian-backed Houthi rebels have entered the West Asia war, raising fears of increased attacks on commercial vessels in the Red Sea and Bab el-Mandeb Strait. Such disruptions could further destabilize maritime security and push up global oil prices. The strait is a crucial corridor for 12% of world trade, including millions of barrels of crude oil shipped by Saudi Arabia.",
       "category": "World",
-      "page": 7,
+      "page": 8,
       "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/118512",
+      "telegram_url": "https://t.me/c/1877410077/118695",
       "sources": [
         {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
-          "page": 7,
-          "telegram_url": "https://t.me/c/1877410077/118512"
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/118695"
         }
       ]
     },
     {
-      "headline": "US, Israel Hit Civilian Areas: Iran Media Report",
-      "summary": "Iranian state media reported that US-Israeli airstrikes hit multiple residential areas in Iran, causing civilian casualties. The strikes reportedly hit Borujerd and Zanjan, killing over a dozen people. The incident marks a severe escalation in regional hostilities, with Iran vowing a response to the attacks amid high geopolitical tension.",
+      "headline": "Former Nepal energy minister arrested in money-laundering investigation",
+      "summary": "Nepal police have arrested Deepak Khadka, a former energy minister and Nepali Congress leader, in connection with a money laundering case. The arrest by the Central Investigation Bureau follows the recent detention of other high-profile politicians, including former Prime Minister K P Sharma Oli, on charges related to suppressing Gen Z protest movements last year.",
       "category": "World",
-      "page": 7,
-      "importance": 10,
-      "telegram_url": "https://t.me/c/1877410077/118512",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
-          "page": 7,
-          "telegram_url": "https://t.me/c/1877410077/118512"
-        }
-      ]
-    },
-    {
-      "headline": "Iran hits Saudi airbase as Houthi rebels join war against Israel",
-      "summary": "Iran launched missile strikes against a major airbase in Saudi Arabia, while Yemen's Houthi rebels officially declared war on Israel. The escalation has heightened regional tensions, with US reports of 12 soldiers injured at a base. Prime Minister Modi has communicated with regional leaders, including the Saudi Crown Prince, to discuss maritime security and the impact on energy supplies.",
-      "category": "World",
-      "page": 1,
-      "importance": 10,
-      "telegram_url": "https://t.me/c/1877410077/118525",
-      "sources": [
-        {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/118525"
-        }
-      ]
-    },
-    {
-      "headline": "Reported Israeli strikes hit Bushehr nuclear plant for third time",
-      "summary": "Satellite imagery and local reports suggest that the Bushehr nuclear power plant in Iran was targeted by Israeli strikes for the third time in ten days. While Iran has not officially confirmed the damage, international monitoring agencies reported a fire in the vicinity. The US has stated it will not provide military support for direct offensive strikes on Iranian soil.",
-      "category": "World",
-      "page": 20,
-      "importance": 10,
-      "telegram_url": "https://t.me/c/1877410077/118525",
-      "sources": [
-        {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
-          "page": 20,
-          "telegram_url": "https://t.me/c/1877410077/118525"
-        }
-      ]
-    },
-    {
-      "headline": "Sugar-safe health insurance cover now available for diabetics",
-      "summary": "IRDAI changes in 2024-25 have made it easier for people with pre-existing conditions like diabetes to get health insurance. New plans from insurers like Star Health and Aditya Birla offer coverage with reduced waiting periods, providing a vital financial safety net for chronic ailment management.",
-      "category": "Health",
-      "page": 9,
+      "page": 8,
       "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/118569",
+      "telegram_url": "https://t.me/c/1877410077/118695",
       "sources": [
         {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
-          "page": 9,
-          "telegram_url": "https://t.me/c/1877410077/118569"
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/118695"
         }
       ]
     },
     {
-      "headline": "Study finds 80 percent of Indian heart attack victims pass tests",
-      "summary": "Research indicates that traditional Western heart risk models fail for many Indians, as 80% of those who suffered heart attacks had been cleared by standard tests. The study suggests Indian patients show unique risk factors like hidden abdominal fat and insulin resistance despite normal BMI. Experts urge the development of India-specific risk scores for better screening.",
-      "category": "Health",
+      "headline": "US proposes H-1B wage reset increasing pay by $14,000 annually",
+      "summary": "The Trump administration has proposed a new wage structure for H-1B visa workers, potentially raising annual pay by $14,000 across wage levels. The plan aims to bring foreign worker pay in line with similarly employed Americans to curb program abuse. These proposed changes have already contributed to a sharp decline in H-1B registration volumes compared to last year.",
+      "category": "World",
+      "page": 18,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/118695",
+      "sources": [
+        {
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 18,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        }
+      ]
+    },
+    {
+      "headline": "Pakistan hosts regional peace meeting to end West Asia war",
+      "summary": "Foreign ministers from Saudi Arabia, Egypt, Turkey, and Pakistan met in Islamabad to broker an end to the month-long Iran war. The meeting excluded US and Israeli participation as regional powers seek a diplomatic exit. During the talks, Iran eased some restrictions on commercial ships in the Strait of Hormuz, though it warned the US against any potential ground invasion of Iranian soil.",
+      "category": "World",
+      "page": 12,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/118703",
+      "sources": [
+        {
+          "newspaper": "Mint",
+          "pdf_filename": "Mint Bengaluru 30-03.pdf",
+          "page": 12,
+          "telegram_url": "https://t.me/c/1877410077/118703"
+        }
+      ]
+    },
+    {
+      "headline": "US airborne troops arrive in West Asia as conflict escalates",
+      "summary": "Approximately 3,500 additional US marines and paratroopers have arrived in the region as the West Asia conflict enters its fifth week. The deployment follows Houthi missile launches at Israel and Iranian strikes on Bahrain and Saudi Arabia. Reports indicate the US Defense Department is preparing for potential ground operations to reopen the strategic Strait of Hormuz waterway.",
+      "category": "World",
+      "page": 12,
+      "importance": 10,
+      "telegram_url": "https://t.me/c/1877410077/118703",
+      "sources": [
+        {
+          "newspaper": "Mint",
+          "pdf_filename": "Mint Bengaluru 30-03.pdf",
+          "page": 12,
+          "telegram_url": "https://t.me/c/1877410077/118703"
+        }
+      ]
+    },
+    {
+      "headline": "Anti-Trump 'No Kings' rallies held across thousands of US cities",
+      "summary": "Protestors gathered in over 3,200 US locations to decry President Donald Trump’s immigration policies and the war in Iran. The 'No Kings' rallies, held in all 50 states, featured speeches from politicians like Bernie Sanders and Tim Walz. Demonstrators cited concerns over authoritarianism and federal crackdowns, with significant turnout in New York, Washington, and Minneapolis.",
+      "category": "World",
+      "page": 12,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/118703",
+      "sources": [
+        {
+          "newspaper": "Mint",
+          "pdf_filename": "Mint Bengaluru 30-03.pdf",
+          "page": 12,
+          "telegram_url": "https://t.me/c/1877410077/118703"
+        }
+      ]
+    },
+    {
+      "headline": "Pakistan hosts talks with Gulf nations to reopen Strait of Hormuz",
+      "summary": "Pakistan's Foreign Minister Ishaq Dar hosted high-level talks with counterparts from Turkey, Egypt, and Saudi Arabia to broker an end to the Iran war. A primary goal of the backchannel diplomacy is the reopening of the Strait of Hormuz to restore global oil and gas shipping. Proposals have been shared with the US and Iran to establish de-escalation zones and stabilize rising energy prices.",
+      "category": "World",
+      "page": 17,
+      "importance": 10,
+      "telegram_url": "https://t.me/c/1877410077/118664",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "ET_Bangalore_30-03-2026.pdf",
+          "page": 17,
+          "telegram_url": "https://t.me/c/1877410077/118664"
+        }
+      ]
+    },
+    {
+      "headline": "Bengaluru sees 30% jump in job postings and surge in startups",
+      "summary": "The Naukri JobSpeak Index for Bengaluru recorded a 30% increase in hiring activity for February. New company registrations remained above the 1,000 mark for the third consecutive month, driven largely by business services and trading sectors. Additionally, 2-wheeler and 4-wheeler registrations rose significantly, while domestic air traffic saw a modest 2% growth compared to last year.",
+      "category": "Business",
       "page": 5,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/118525",
-      "sources": [
-        {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
-          "page": 5,
-          "telegram_url": "https://t.me/c/1877410077/118525"
-        }
-      ]
-    },
-    {
-      "headline": "IndiGo flight makes emergency landing in Delhi after engine snag",
-      "summary": "An IndiGo flight from Visakhapatnam to Delhi made an emergency landing at Indira Gandhi International Airport due to a technical snag in one of its engines. All 160 passengers on board are reported safe. The airline and authorities are investigating the cause of the engine failure.",
-      "category": "India",
-      "page": 12,
-      "importance": 4,
-      "telegram_url": "https://t.me/c/1877410077/118569",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
-          "page": 12,
-          "telegram_url": "https://t.me/c/1877410077/118569"
-        }
-      ]
-    },
-    {
-      "headline": "Kishan Reddy denies reports of petrol and diesel shortage",
-      "summary": "Union Minister G. Kishan Reddy has dismissed rumors of petrol and diesel shortages in some parts of the country. He assured the public that there is sufficient stock and that oil companies are working to ensure a smooth supply chain across all regions, despite social media speculation.",
-      "category": "India",
-      "page": 12,
-      "importance": 4,
-      "telegram_url": "https://t.me/c/1877410077/118569",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
-          "page": 12,
-          "telegram_url": "https://t.me/c/1877410077/118569"
-        }
-      ]
-    },
-    {
-      "headline": "AP assembly passes resolution to recognize Amaravati as capital",
-      "summary": "The Andhra Pradesh Assembly has unanimously passed a resolution seeking the Centre to recognize Amaravati as the state's permanent capital. This move aims to provide legal clarity on the state's administrative center and facilitate long-term infrastructure development and investment in the region.",
-      "category": "India",
-      "page": 12,
       "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/118569",
+      "telegram_url": "https://t.me/c/1877410077/118682",
       "sources": [
         {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
-          "page": 12,
-          "telegram_url": "https://t.me/c/1877410077/118569"
-        }
-      ]
-    },
-    {
-      "headline": "Raymond Group former chairman Vijaypat Singhania passes away at age 87",
-      "summary": "Vijaypat Singhania, the man who built the Raymond brand and was known for the 'The Complete Man' tagline, died in Mumbai. A Padma Bhushan awardee and record-setting aviator, Singhania was also known for a high-profile legal battle with his son, Gautam Singhania, over the control of family assets in his final years.",
-      "category": "India",
-      "page": 1,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/118525",
-      "sources": [
-        {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/118525"
-        }
-      ]
-    },
-    {
-      "headline": "Speeding Thar SUV kills grandfather and two grandsons in Rajasthan",
-      "summary": "A 60-year-old man and his two grandsons, aged 8 and 10, were killed when a speeding Mahindra Thar rammed into them in Rajasthan’s Pali. The driver reportedly lost control at a turn while traveling at over 80kmph. CCTV footage showed the victims were walking back from a relative's house when the incident occurred. The driver fled the scene and is being tracked by police.",
-      "category": "India",
-      "page": 5,
-      "importance": 4,
-      "telegram_url": "https://t.me/c/1877410077/118525",
-      "sources": [
-        {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
           "page": 5,
-          "telegram_url": "https://t.me/c/1877410077/118525"
+          "telegram_url": "https://t.me/c/1877410077/118682"
         }
       ]
     },
     {
-      "headline": "Amit Shah links Bengal poll outcome to national security",
-      "summary": "Union Home Minister Amit Shah stated that the upcoming assembly elections in West Bengal are vital for national security. He highlighted concerns over illegal infiltration and political violence, urging voters to choose a government that will ensure \"peace and trust\" in the strategic border state.",
-      "category": "Politics",
-      "page": 12,
+      "headline": "Vedanta chief claims Jaypee asset bid was unfairly reversed after win",
+      "summary": "Billionaire Anil Agarwal claimed that Vedanta was officially declared the highest bidder for Jaiprakash Associates Ltd (JAL) assets before the decision was suddenly reversed in favor of the Adani Group. Agarwal stated he has written confirmation of the initial win but did not elaborate on why the decision changed. Lenders involved in the insolvency process have disputed Agarwal's claims.",
+      "category": "Business",
+      "page": 14,
       "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/118569",
+      "telegram_url": "https://t.me/c/1877410077/118682",
       "sources": [
         {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
-          "page": 12,
-          "telegram_url": "https://t.me/c/1877410077/118569"
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 14,
+          "telegram_url": "https://t.me/c/1877410077/118682"
         }
       ]
     },
     {
-      "headline": "DMK fields 60 new faces for Tamil Nadu local polls",
-      "summary": "The ruling DMK in Tamil Nadu has released its list of candidates for the upcoming local body elections, featuring 60 new faces. The list reflects a mix of experience and youth, with a focus on local governance. Several sitting ministers' family members were notably excluded from the candidate list.",
-      "category": "Politics",
-      "page": 12,
+      "headline": "FMCG companies monitor crude oil prices for potential product price hikes",
+      "summary": "Fast-moving consumer goods firms are tracking rising crude oil and palm oil prices before deciding on price adjustments. Some executives anticipate a 3-4% price hike in the immediate term if input costs remain high due to the West Asia conflict. Consumer durable companies have already raised prices for air conditioners by up to 15% to offset surging raw material and plastic costs.",
+      "category": "Business",
+      "page": 1,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/118695",
+      "sources": [
+        {
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        }
+      ]
+    },
+    {
+      "headline": "Wealthy Indians maintain Dubai luxury property holdings despite regional tensions",
+      "summary": "Industry experts report that Indian high-net-worth individuals are not liquidating their marquee real estate assets in Dubai despite ongoing geopolitical tensions. While the conflict has slowed new deal momentum, luxury markets like Palm Jumeirah remain stable. Investors are reportedly becoming more selective and waiting for potential distressed asset opportunities rather than exiting.",
+      "category": "Business",
+      "page": 1,
       "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/118569",
+      "telegram_url": "https://t.me/c/1877410077/118695",
       "sources": [
         {
-          "newspaper": "Business Line",
-          "pdf_filename": "BL Bengaluru 29.03.2026.pdf",
-          "page": 12,
-          "telegram_url": "https://t.me/c/1877410077/118569"
-        }
-      ]
-    },
-    {
-      "headline": "Deepfake Ads Look to Derail Candidates on US Campaign Trail",
-      "summary": "AI-generated deepfake advertisements are increasingly being used in US political campaigns to spread misinformation. Experts warn that lacking federal regulation allows these tools to erode public trust by creating realistic but false portrayals of candidates. Social media platforms struggle to flag this content as the 2024 election approaches.",
-      "category": "Politics",
-      "page": 1,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/118512",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
           "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/118512"
+          "telegram_url": "https://t.me/c/1877410077/118695"
         }
       ]
     },
     {
-      "headline": "Shah Hits Out at Trinamool in Bengal with 'Chargesheet'",
-      "summary": "Home Minister Amit Shah released a white paper against the TMC government in West Bengal, alleging 15 years of misgovernance. He accused the ruling party of corruption, institutional collapse, and assault on democracy. Shah claimed the BJP aims to establish rule in the Ango-Bongo-Kalinga region to restore law and order.",
-      "category": "Politics",
-      "page": 1,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/118512",
+      "headline": "Jubilant Foodworks manages impact of commercial LPG shortage on store network",
+      "summary": "Jubilant Foodworks, operator of Domino’s Pizza in India, reported supply constraints for commercial LPG due to the West Asia conflict. The company is actively moving to alternate energy sources like electricity and piped natural gas to maintain operations. While the current operational impact is limited, the firm remains in close engagement with oil marketing companies.",
+      "category": "Business",
+      "page": 2,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/118695",
       "sources": [
         {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/118512"
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 2,
+          "telegram_url": "https://t.me/c/1877410077/118695"
         }
       ]
     },
     {
-      "headline": "Assam BJP Expels Nine Rebel Leaders for Anti-Party Activities",
-      "summary": "The Bharatiya Janata Party in Assam has expelled nine leaders for six years due to anti-party activities. The leaders were accused of contesting against official candidates or supporting rebels during the assembly election campaign. This follows similar disciplinary actions against 12 other workers to maintain party discipline.",
-      "category": "Politics",
+      "headline": "Quick commerce platforms see spike in ready-to-eat food demand",
+      "summary": "Quick commerce platforms like Bigbasket, Zepto, and Amazon are reporting a 10% uptick in sales of ready-to-eat items. The trend is attributed to disruptions in household cooking caused by the LPG shortage and the outflow of domestic help in urban centers. Categories like instant noodles, juices, and snacks are seeing the most growth as consumers seek low-effort meal options.",
+      "category": "Business",
       "page": 2,
       "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/118512",
+      "telegram_url": "https://t.me/c/1877410077/118695",
       "sources": [
         {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
           "page": 2,
-          "telegram_url": "https://t.me/c/1877410077/118512"
+          "telegram_url": "https://t.me/c/1877410077/118695"
         }
       ]
     },
     {
-      "headline": "DMK to Contest 164 Seats, Seals Alliance Pact in TN",
-      "summary": "The DMK has finalized its seat-sharing agreement with alliance partners for the Tamil Nadu assembly elections. The party will contest 164 seats, while the remaining seats have been distributed among allies like the Congress, CPI, and CPI(M). Chief Minister M.K. Stalin emphasized the strength of the Secular Progressive Alliance.",
-      "category": "Politics",
-      "page": 2,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/118512",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
-          "page": 2,
-          "telegram_url": "https://t.me/c/1877410077/118512"
-        }
-      ]
-    },
-    {
-      "headline": "AP Seeks Central Nod for Amaravati as Capital",
-      "summary": "The Andhra Pradesh assembly has passed a resolution urging the central government to recognize Amaravati as the state's permanent capital. The move follows years of legal and political battles over the capital's location. The state seeks financial support under Section 5 of the AP Reorganization Act to develop the city.",
-      "category": "Politics",
+      "headline": "Tier-II cities emerge as major hubs for Indian office leasing activity",
+      "summary": "Office leasing in Tier-II cities like Coimbatore, Kochi, and Ahmedabad nearly doubled year-on-year in FY25. Companies are increasingly adopting decentralised strategies to tap local talent and reduce operating costs, which are 30-50% lower than in metros. Flex space operators are following this trend, with Tier-II markets now accounting for nearly 29% of India's total flex centers.",
+      "category": "Business",
       "page": 2,
       "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/118512",
+      "telegram_url": "https://t.me/c/1877410077/118695",
       "sources": [
         {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
           "page": 2,
-          "telegram_url": "https://t.me/c/1877410077/118512"
+          "telegram_url": "https://t.me/c/1877410077/118695"
         }
       ]
     },
     {
-      "headline": "31 Lakh Names Added to Bengal Electoral Rolls",
-      "summary": "The Election Commission has added approximately 31 lakh names to the electoral rolls in West Bengal. The total number of voters in the state has now reached 7.76 crore. The revision comes ahead of the upcoming polls, though officials did not provide specific details on deletions. The process is part of a regular intensive summary revision.",
-      "category": "Politics",
-      "page": 2,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/118512",
+      "headline": "HFCL to invest ₹900 crore to expand fiber and defense capacity",
+      "summary": "Telecommunications equipment maker HFCL is investing up to ₹900 crore in promoter equity to set up new plants for fiber optics and defense products. The company aims to capitalize on data centre investments and high-value defense contracts. HFCL currently has an order book exceeding ₹10,000 crore and is developing advanced technologies like foliage-penetration radars.",
+      "category": "Business",
+      "page": 3,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/118695",
       "sources": [
         {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
-          "page": 2,
-          "telegram_url": "https://t.me/c/1877410077/118512"
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/118695"
         }
       ]
     },
     {
-      "headline": "MEA clarifies Elon Musk was not part of Modi-Trump phone call",
-      "summary": "The Ministry of External Affairs denied reports that billionaire Elon Musk participated in a recent phone conversation between Prime Minister Narendra Modi and US President Donald Trump. Officials stated the call focused on regional tensions, maritime safety in the Strait of Hormuz, and global economic well-being, involving only the two world leaders.",
-      "category": "Politics",
-      "page": 1,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/118525",
-      "sources": [
-        {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/118525"
-        }
-      ]
-    },
-    {
-      "headline": "Prime Minister Modi and Saudi Crown Prince discuss Red Sea shipping safety",
-      "summary": "PM Narendra Modi held a phone call with Saudi Crown Prince Mohammed bin Salman to discuss the safety of shipping lines in the Red Sea following Houthi attacks. Both leaders agreed on the need for global peace and stable energy markets. The Prince assured that Saudi Arabia is working to keep essential trade routes open to prevent a global fuel crisis.",
-      "category": "Politics",
-      "page": 10,
-      "importance": 9,
-      "telegram_url": "https://t.me/c/1877410077/118525",
-      "sources": [
-        {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
-          "page": 10,
-          "telegram_url": "https://t.me/c/1877410077/118525"
-        }
-      ]
-    },
-    {
-      "headline": "Congress expels Palakkad councillor following rape charges by a survivor",
-      "summary": "The Kerala Pradesh Congress Committee has expelled Palakkad municipal councillor Prabhash C Valsan after a woman filed a police complaint accusing him of rape. The survivor alleged the councillor exploited her and forced her to terminate a pregnancy. The move comes as local political rivals, the LDF and BJP, demand further action against the accused.",
-      "category": "Politics",
-      "page": 10,
+      "headline": "Fujiyama Power considers solar cell investment following ALMM II implementation",
+      "summary": "Fujiyama Power Systems may invest in 1-2 GW of solar cell capacity depending on market demand following the implementation of the Approved List of Models and Manufacturers II. The company has already commissioned a 1 GW plant in Dadri with a ₹300 crore investment. The firm aims to address potential domestic content requirement shortages as rooftop solar demand increases in Tier-II cities.",
+      "category": "Business",
+      "page": 3,
       "importance": 4,
-      "telegram_url": "https://t.me/c/1877410077/118525",
+      "telegram_url": "https://t.me/c/1877410077/118695",
       "sources": [
         {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
-          "page": 10,
-          "telegram_url": "https://t.me/c/1877410077/118525"
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/118695"
         }
       ]
     },
     {
-      "headline": "DMK releases candidate list for 164 seats with sixty new faces",
-      "summary": "The DMK has released its list of 164 candidates for the upcoming elections, featuring 60 new faces and retaining 31 sitting MLAs. Party chief M K Stalin stated the selection was based on merit and the need for fresh representation. The list includes several young candidates and women, as the party prepares for a high-stakes battle against the AIADMK-BJP combine.",
-      "category": "Politics",
-      "page": 15,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/118525",
-      "sources": [
-        {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
-          "page": 15,
-          "telegram_url": "https://t.me/c/1877410077/118525"
-        }
-      ]
-    },
-    {
-      "headline": "Amit Shah unveils chargesheet against TMC over jobs and infiltration",
-      "summary": "Union Home Minister Amit Shah released a 'chargesheet' against the Trinamool Congress government in West Bengal, accusing it of corruption in job recruitment and failing to curb illegal infiltration. Shah alleged that the state's development has been hindered by 'syndicate raj' and promised that the BJP would restore law and order if voted to power in the state.",
-      "category": "Politics",
-      "page": 15,
+      "headline": "Jio Financial Services plans foray into general and life insurance businesses",
+      "summary": "Jio Financial Services expects to launch its general and life insurance operations in 2026, pending regulatory approvals. The company is partnering with French firm Allianz for these ventures and is currently building its internal teams. Promoting entities linked to Mukesh Ambani, JFS has already expanded into asset management, wealth management, and reinsurance.",
+      "category": "Business",
+      "page": 3,
       "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/118525",
+      "telegram_url": "https://t.me/c/1877410077/118695",
       "sources": [
         {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
-          "page": 15,
-          "telegram_url": "https://t.me/c/1877410077/118525"
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/118695"
         }
       ]
     },
     {
-      "headline": "India, Russia Sign MoU to Set Up UAV Lab",
-      "summary": "India and Russia have signed an agreement to establish a joint laboratory for unmanned aerial vehicles (UAVs) and satellite technology. The lab will be located at the Chhatrapati Shahu Ji Maharaj University in Kanpur. The collaboration aims to boost research, training, and development in the aerospace sector for both nations.",
-      "category": "Science",
-      "page": 2,
+      "headline": "EPL and Indovida to merge in $2 billion packaging sector deal",
+      "summary": "Packaging solutions leader EPL Ltd and Indovida India have signed a definitive agreement to merge, creating a $1 billion revenue entity with a combined valuation of $2 billion. The merger, backed by Blackstone, will create one of the largest emerging markets-focused packaging firms. The deal is subject to shareholder and regulatory approvals from the respective companies.",
+      "category": "Business",
+      "page": 3,
       "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/118512",
+      "telegram_url": "https://t.me/c/1877410077/118695",
       "sources": [
         {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
-          "page": 2,
-          "telegram_url": "https://t.me/c/1877410077/118512"
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/118695"
         }
       ]
     },
     {
-      "headline": "Latte to Talk About: Cafes Reclaim Status as Social Hubs",
-      "summary": "Indian cafes are transforming into vibrant social hubs by hosting curated cultural events like book readings, workshops, and music sessions. Brands like Blue Tokai and Araku are moving beyond just serving coffee to build communities. This trend targets younger audiences seeking meaningful social interaction and intellectual stimulation in physical spaces.",
-      "category": "Culture",
+      "headline": "Madhya Pradesh government revokes Bank of Baroda business ban within 24 hours",
+      "summary": "The Madhya Pradesh government withdrew an order banning Bank of Baroda from government business just one day after issuing it. The initial five-year ban was imposed over alleged non-compliance in fund transfers for a state welfare scheme. The revocation followed a representation from the bank. The bank was accused of failing to transfer the full amount of ₹1,751 crore as directed.",
+      "category": "Business",
       "page": 4,
       "importance": 4,
-      "telegram_url": "https://t.me/c/1877410077/118512",
+      "telegram_url": "https://t.me/c/1877410077/118695",
       "sources": [
         {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
           "page": 4,
-          "telegram_url": "https://t.me/c/1877410077/118512"
+          "telegram_url": "https://t.me/c/1877410077/118695"
         }
       ]
     },
     {
-      "headline": "Phubbing is Killing Pubbing Social Life, With Silence",
-      "summary": "The practice of 'phubbing'—ignoring companions in favor of smartphones—is transforming the social atmosphere of traditional pubs. In London and beyond, patrons are increasingly silent, focused on screens rather than conversation. This shift is challenging the historical role of pubs as hubs of verbal social interaction and community building.",
-      "category": "Culture",
+      "headline": "Reliance Industries market cap slips below $200 billion threshold during selloff",
+      "summary": "Reliance Industries saw its market capitalization fall 5% on Friday to ₹18.24 trillion ($192 billion), marking its steepest single-day decline in two years. With the slip, India no longer has a company in the $200-billion club. The selloff, triggered by West Asia tensions, also saw Tata Consultancy Services, ICICI Bank, and State Bank of India drop out of the global $100-billion club.",
+      "category": "Business",
+      "page": 11,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/118695",
+      "sources": [
+        {
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 11,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        }
+      ]
+    },
+    {
+      "headline": "Bank-backed brokers set to regain edge amid regulatory tightening in derivatives",
+      "summary": "Traditional bank-backed brokerages may see a resurgence as new regulations and an upcoming hike in securities transaction tax impact discount platforms. Analysts suggest that the high-volume, low-margin model of discount brokers will face pressure, forcing them to increase fees. Bank-backed firms are expected to benefit as traders seek more stable and diversified revenue streams.",
+      "category": "Business",
+      "page": 11,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/118695",
+      "sources": [
+        {
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 11,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        }
+      ]
+    },
+    {
+      "headline": "Blackstone and Indorama merge packaging units into $2 billion giant",
+      "summary": "Blackstone and Indorama Ventures will combine their Indian packaging businesses via a share swap merger involving EPL Ltd and Indovida India. The new entity, valued at $2 billion with $1 billion in annual sales, will focus on emerging markets and rigid plastics. Post-merger, Indorama will hold 51.8% of the listed entity EPL, while Blackstone's holding will stand at 16.6%.",
+      "category": "Business",
+      "page": 5,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/118703",
+      "sources": [
+        {
+          "newspaper": "Mint",
+          "pdf_filename": "Mint Bengaluru 30-03.pdf",
+          "page": 5,
+          "telegram_url": "https://t.me/c/1877410077/118703"
+        }
+      ]
+    },
+    {
+      "headline": "Advent International in talks for 25% stake in Iscon Balaji",
+      "summary": "Private equity firm Advent International is in early discussions to acquire a 25% stake in potato processor Iscon Balaji Foods at a valuation of ₹5,000 crore. The potential deal highlights rising investor interest in India's frozen foods and QSR supply chain ecosystem. Iscon Balaji produces frozen snacks like French fries and patties for industrial and retail use.",
+      "category": "Business",
+      "page": 5,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/118703",
+      "sources": [
+        {
+          "newspaper": "Mint",
+          "pdf_filename": "Mint Bengaluru 30-03.pdf",
+          "page": 5,
+          "telegram_url": "https://t.me/c/1877410077/118703"
+        }
+      ]
+    },
+    {
+      "headline": "SBI Mutual Fund prepares for 2026 public stock listing",
+      "summary": "SBI Funds Management Ltd has filed papers with regulators for an initial public offering expected in late 2026. As India's largest mutual fund with ₹12.5 trillion in AUM, the listing would see all top four Indian fund houses on the stock market. While SBI leads in assets, it faces challenges in revenue margins due to a high share of passive exchange-traded funds compared to peers.",
+      "category": "Business",
+      "page": 4,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/118703",
+      "sources": [
+        {
+          "newspaper": "Mint",
+          "pdf_filename": "Mint Bengaluru 30-03.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/118703"
+        }
+      ]
+    },
+    {
+      "headline": "IFC to increase India investments to $7 billion this fiscal",
+      "summary": "The International Finance Corporation (IFC) aims to scale its India investments by 30% to $7 billion this fiscal year. Regional vice-president Sarvesh Suri stated the focus will be on private sector job creation, energy transition, and infrastructure. The agency is also expanding sub-sovereign lending to Indian cities for water and sanitation projects, following a successful pilot in Vizag.",
+      "category": "Business",
       "page": 6,
-      "importance": 4,
-      "telegram_url": "https://t.me/c/1877410077/118512",
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/118703",
       "sources": [
         {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
+          "newspaper": "Mint",
+          "pdf_filename": "Mint Bengaluru 30-03.pdf",
           "page": 6,
-          "telegram_url": "https://t.me/c/1877410077/118512"
+          "telegram_url": "https://t.me/c/1877410077/118703"
         }
       ]
     },
     {
-      "headline": "A New Chapter Begins in Bastar: Education Replaces Maoist Doctrines",
-      "summary": "Children in Chhattisgarh's Bastar region who once attended Maoist-run schools are now being integrated into the government education system. Teachers are assessing learning levels to place students in appropriate classes. The government aims to steer children away from old ideologies and into the mainstream through improved schools and infrastructure.",
-      "category": "Education",
-      "page": 5,
+      "headline": "Monday’s F&O expiry to test Indian market support levels",
+      "summary": "Equity derivatives are set to expire on Monday, a day earlier than usual due to a holiday, testing investor conviction amid the West Asia conflict. Analysts are watching the extent of physical settlements, where traders take delivery of shares, to see if Nifty 50 finds support at 22,500. The market has fallen over 9% since the conflict began on 28 February, driven by rising crude prices.",
+      "category": "Business",
+      "page": 8,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/118703",
+      "sources": [
+        {
+          "newspaper": "Mint",
+          "pdf_filename": "Mint Bengaluru 30-03.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/118703"
+        }
+      ]
+    },
+    {
+      "headline": "Raymond patriarch Vijaypat Singhania passes away at 87",
+      "summary": "Vijaypat Singhania, the former chairman of Raymond who built the brand into a global textile giant, died Saturday at age 87. An adventurous aviator, he held world records for hot-air ballooning and solo flights. His later years were marked by a public legal battle with his son Gautam over family assets after he gifted his entire stake in the company to him in 2015.",
+      "category": "Business",
+      "page": 11,
       "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/118512",
+      "telegram_url": "https://t.me/c/1877410077/118703",
+      "sources": [
+        {
+          "newspaper": "Mint",
+          "pdf_filename": "Mint Bengaluru 30-03.pdf",
+          "page": 11,
+          "telegram_url": "https://t.me/c/1877410077/118703"
+        }
+      ]
+    },
+    {
+      "headline": "NSE to launch Brent crude oil futures on 13 April",
+      "summary": "The National Stock Exchange will introduce dated Brent crude oil futures contracts starting 13 April to provide a hedging tool aligned with global benchmarks. The cash-settled contracts will be based on S&P Global Energy (Platts) assessments and converted to rupees. Trading will occur Monday through Friday, expanding NSE's commodity derivatives portfolio during a period of high oil volatility.",
+      "category": "Business",
+      "page": 13,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/118703",
+      "sources": [
+        {
+          "newspaper": "Mint",
+          "pdf_filename": "Mint Bengaluru 30-03.pdf",
+          "page": 13,
+          "telegram_url": "https://t.me/c/1877410077/118703"
+        }
+      ]
+    },
+    {
+      "headline": "Venture capital funding fuels corporatization of Indian petcare sector",
+      "summary": "A new breed of organized veterinary chains like Vetic, Supertails, and Dr. Paws is transforming India's $3.5 billion petcare market. Backed by millions in VC funding, these clinics offer 24/7 service, advanced diagnostics, and standardized care. While providing convenience, the shift poses challenges to independent neighborhood vets and raises concerns about rising costs for pet owners.",
+      "category": "Business",
+      "page": 14,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/118703",
+      "sources": [
+        {
+          "newspaper": "Mint",
+          "pdf_filename": "Mint Bengaluru 30-03.pdf",
+          "page": 14,
+          "telegram_url": "https://t.me/c/1877410077/118703"
+        }
+      ]
+    },
+    {
+      "headline": "Sebi proposes mutual fund gift cards to attract new investors",
+      "summary": "The Securities and Exchange Board of India has proposed 'Gift PPIs'—prepaid cards or digital vouchers capped at ₹10,000—that can be redeemed for mutual fund investments. The initiative aims to simplify onboarding for first-time investors. Recipients can choose direct plans or consult distributors for regular plans, with redemption proceeds credited only to the recipient's verified bank account.",
+      "category": "Business",
+      "page": 15,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/118703",
+      "sources": [
+        {
+          "newspaper": "Mint",
+          "pdf_filename": "Mint Bengaluru 30-03.pdf",
+          "page": 15,
+          "telegram_url": "https://t.me/c/1877410077/118703"
+        }
+      ]
+    },
+    {
+      "headline": "Zetwerk seeks Rs 500 crore in pre-IPO funding round",
+      "summary": "Manufacturing marketplace Zetwerk is in talks to secure approximately Rs 500 crore in a pre-IPO funding round. Investors including Bharat Value Fund are participating. The company is aiming for a valuation of around $3 billion. This move comes as several tech startups prepare for public market debuts in the next 12-15 months following a period of valuation corrections.",
+      "category": "Business",
+      "page": 13,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/118664",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
-          "page": 5,
-          "telegram_url": "https://t.me/c/1877410077/118512"
+          "pdf_filename": "ET_Bangalore_30-03-2026.pdf",
+          "page": 13,
+          "telegram_url": "https://t.me/c/1877410077/118664"
         }
       ]
     },
     {
-      "headline": "Bengaluru professor suspended for calling student a terrorist thirteen times",
-      "summary": "A professor at a private university in Bengaluru has been suspended after a video of him calling a student a 'terrorist' 13 times went viral. The university management stated they do not uphold such classroom conduct. Police have filed a suo motu criminal case against the faculty member for deliberate acts intended to outrage religious sentiments.",
-      "category": "Education",
-      "page": 1,
+      "headline": "Thirteen-year-old girl dies in Raichur after treatment by unqualified quack",
+      "summary": "A Class 9 student in Karnataka's Raichur district died after receiving an injection for a fever from a man posing as a registered medical practitioner. The girl developed severe rashes and pain shortly after the treatment. Health officials confirmed the accused, Uttam Kumar Sarkar, was not a qualified doctor. Police have filed a case of death by negligence as the accused remains at large.",
+      "category": "Health",
+      "page": 6,
       "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/118525",
+      "telegram_url": "https://t.me/c/1877410077/118682",
       "sources": [
         {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/118525"
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 6,
+          "telegram_url": "https://t.me/c/1877410077/118682"
         }
       ]
     },
     {
-      "headline": "Great concern as 3000 schools in J&K record under ten students",
-      "summary": "Data from Jammu and Kashmir reveals that over 3,000 government schools have a student enrollment of fewer than 10 children. Education officials stated that many of these schools are in rural areas where parents are increasingly choosing private education for better facilities. The government is considering merging these low-enrollment schools to improve resource efficiency.",
-      "category": "Education",
-      "page": 17,
+      "headline": "Aiims Delhi alumna Nisha Mehta appointed Health Minister of Nepal",
+      "summary": "Nisha Mehta, a 2010 graduate of the College of Nursing at Aiims Delhi, has been appointed as the Health Minister of Nepal. Aiims Delhi expressed pride in Mehta's journey from bedside nursing to a key policy-making role. Mehta took her oath on March 5 following a landslide victory by the Rastriya Swatantra Party, which secured 182 seats in the House of Representatives.",
+      "category": "Health",
+      "page": 8,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/118695",
+      "sources": [
+        {
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        }
+      ]
+    },
+    {
+      "headline": "Smaller cities nashik and warangal lead access to Urban Challenge Fund",
+      "summary": "The Centre's ₹4 lakh crore Urban Challenge Fund is set to roll out in April, with Nashik, Warangal, and Bhubaneswar expected to be early beneficiaries. Nashik is proposing over ₹1,000 crore in projects for the 2027 Kumbh Mela, including water supply and sewer upgrades. The scheme requires at least 50% market-based financing, with the Centre providing 25% of the total project costs.",
+      "category": "Infrastructure",
+      "page": 9,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/118682",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 9,
+          "telegram_url": "https://t.me/c/1877410077/118682"
+        }
+      ]
+    },
+    {
+      "headline": "Prime Minister Narendra Modi inaugurates Phase-I of Noida International Airport",
+      "summary": "PM Modi has inaugurated the first phase of the Noida International Airport in Jewar, developed at a cost of ₹11,200 crore. The airport is designed to be a multimodal transport hub with seamless connectivity to road, rail, and metro systems. The project is expected to significantly boost regional infrastructure and provide a second major aviation gateway for the Delhi-NCR region.",
+      "category": "Infrastructure",
+      "page": 6,
+      "importance": 10,
+      "telegram_url": "https://t.me/c/1877410077/118695",
+      "sources": [
+        {
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 6,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        }
+      ]
+    },
+    {
+      "headline": "Indian MALE drone program delayed due to West Asia conflict",
+      "summary": "The war in West Asia has impacted India's defense procurement, delaying the plan for new Medium Altitude Long Endurance (MALE) drones. Two Israeli companies, Elbit and IAI, requested a two-month extension for bid submissions, citing the ongoing regional conflict. The deal for 87 drones, estimated to exceed Rs 30,000 crore, is now expected to see a split between the two lowest bidders.",
+      "category": "Infrastructure",
+      "page": 3,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/118664",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "ET_Bangalore_30-03-2026.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/118664"
+        }
+      ]
+    },
+    {
+      "headline": "Coal India secures Rs 1,057 crore battery storage project",
+      "summary": "Coal India Limited has been awarded a contract to set up a 750 MWh battery energy storage system in Telangana by the state's power generation corporation. The project at Choutuppal involves a 187.5 MW capacity with four hours of backup. This marks a significant move by the coal major into the green energy storage space to support grid stability and renewable energy integration.",
+      "category": "Infrastructure",
+      "page": 10,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/118664",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "ET_Bangalore_30-03-2026.pdf",
+          "page": 10,
+          "telegram_url": "https://t.me/c/1877410077/118664"
+        }
+      ]
+    },
+    {
+      "headline": "Rohit Sharma and Rickelton power Mumbai Indians to first season-opening win",
+      "summary": "Mumbai Indians broke a 13-season streak of opening-match losses by defeating Kolkata Knight Riders at the Wankhede Stadium. Chasing 221, openers Rohit Sharma (78) and Ryan Rickelton (81) shared a 148-run stand to guide MI to a 6-wicket victory. Despite early heroics from KKR's Rahane and Raghuvanshi, MI's Shardul Thakur claimed 3 wickets to restrict the visitors in the death overs.",
+      "category": "Sports",
+      "page": 16,
       "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/118525",
+      "telegram_url": "https://t.me/c/1877410077/118682",
       "sources": [
         {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
-          "page": 17,
-          "telegram_url": "https://t.me/c/1877410077/118525"
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 16,
+          "telegram_url": "https://t.me/c/1877410077/118682"
         }
       ]
     },
     {
-      "headline": "Canada's new immigration law raises concerns for international students and workers",
-      "summary": "Canada’s new C-12 law has sparked concerns among international students and workers as it grants the government broader powers to cancel visas and work permits for 'public interest' reasons. Immigration advocates argue the law lacks transparency and could lead to arbitrary deportations. India is currently the largest source country for international students in Canada.",
-      "category": "Education",
-      "page": 20,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/118525",
-      "sources": [
-        {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
-          "page": 20,
-          "telegram_url": "https://t.me/c/1877410077/118525"
-        }
-      ]
-    },
-    {
-      "headline": "Dhoni to Miss Start of IPL With Calf Strain",
-      "summary": "Chennai Super Kings captain MS Dhoni will miss the first two weeks of the IPL 2026 season due to a calf strain. The 44-year-old cricketer picked up the injury during a training session. Ruturaj Gaikwad is expected to lead the side in his absence as Dhoni undergoes rehabilitation. Fans wait for his return to the field later in the season.",
+      "headline": "Virat Kohli credits breaks for maintaining rhythm and avoiding mental burnout",
+      "summary": "Following his unbeaten 69 in RCB's tournament opener, Virat Kohli highlighted the importance of mental resets at this stage of his career. Having retired from T20Is, Kohli noted that selective scheduling helps him stay excited and '120%' committed. He emphasized that physical fitness and mental clarity allow him to adapt his game, even when younger partners take the lead in scoring.",
       "category": "Sports",
-      "page": 10,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/118512",
+      "page": 16,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/118682",
       "sources": [
         {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
-          "page": 10,
-          "telegram_url": "https://t.me/c/1877410077/118512"
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 16,
+          "telegram_url": "https://t.me/c/1877410077/118682"
         }
       ]
     },
     {
-      "headline": "Kimi Antonelli Takes Japanese GP Pole for Mercedes",
-      "summary": "Young driver Kimi Antonelli has secured the pole position for the Japanese Grand Prix, ending Max Verstappen's consecutive streak. The Mercedes driver delivered a stunning lap to beat teammate George Russell and Verstappen in qualifying. The result marks a major milestone for Antonelli, signaling a shift in the current F1 season's competitive balance.",
+      "headline": "Alex Fitzpatrick wins first DP World Tour title at Hero Indian Open",
+      "summary": "England's Alex Fitzpatrick carded a 3-under 69 in the final round to clinch the Hero Indian Open title by two shots. Fitzpatrick's back-nine charge featured five birdies, allowing him to overtake defending champion Eugenio Chacarra. The victory comes just a week after his brother Matt won on the PGA Tour, marking a historic fortnight for the Fitzpatrick family in professional golf.",
       "category": "Sports",
-      "page": 10,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/118512",
+      "page": 16,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/118682",
       "sources": [
         {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
-          "page": 10,
-          "telegram_url": "https://t.me/c/1877410077/118512"
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 16,
+          "telegram_url": "https://t.me/c/1877410077/118682"
         }
       ]
     },
     {
-      "headline": "RCB begins IPL campaign with six-wicket victory over Sunrisers Hyderabad",
-      "summary": "Royal Challengers Bengaluru secured a win in their IPL 2026 opener, defeating Sunrisers Hyderabad by six wickets. Chasing a target of 202, Virat Kohli scored 69 while Devdutt Padikkal contributed 61. The match at Chinnaswamy Stadium was preceded by a tribute to those who lost their lives during the previous year's victory celebrations.",
+      "headline": "Praggnanandhaa and Sindarov secure big wins on day 1 of Candidates",
+      "summary": "India's R Praggnanandhaa defeated Dutch GM Anish Giri with white pieces to start his Candidates tournament campaign on a winning note. The 20-year-old used the Grand Prix Attack to pressure Giri into a time scramble. In other matches, 20-year-old Javokhir Sindarov defeated Andrey Esipenko, while Fabiano Caruana beat Hikaru Nakamura in a high-stakes American duel.",
       "category": "Sports",
-      "page": 1,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/118525",
+      "page": 16,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/118682",
       "sources": [
         {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/118525"
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 16,
+          "telegram_url": "https://t.me/c/1877410077/118682"
         }
       ]
     },
     {
-      "headline": "Jannik Sinner to face Jiri Lehecka in Miami Open final",
-      "summary": "Jannik Sinner secured his place in the Miami Open final with a straight-sets victory over Alexander Zverev. He will face world number 28 Jiri Lehecka, who upset second-seeded Daniil Medvedev in his semifinal match. Sinner is aiming for his second Masters 1000 title of the season, while Lehecka is looking for the biggest win of his career.",
-      "category": "Sports",
-      "page": 22,
+      "headline": "North Korea tests upgraded high-thrust engine for strategic missile capability",
+      "summary": "Leader Kim Jong Un observed a test of an upgraded solid-fuel engine designed for strategic missiles targeting the United States and its allies. State media reported the engine uses composite carbon fiber and has a maximum thrust of 2,500 kilotons. Kim hailed the development as a significant step in boosting the country’s nuclear strike capabilities and agile weaponry.",
+      "category": "Science",
+      "page": 8,
       "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/118525",
+      "telegram_url": "https://t.me/c/1877410077/118695",
       "sources": [
         {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
-          "page": 22,
-          "telegram_url": "https://t.me/c/1877410077/118525"
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/118695"
         }
       ]
     },
     {
-      "headline": "New road safety laws propose no jail for first-time offenders",
-      "summary": "The Union government has proposed amendments to 79 central laws, including the Jan Vishwas Bill, to decriminalize first-time violations of road safety and noise pollution norms. Instead of jail terms, offenders will face increased fines. For instance, first-time noise pollution violations will draw a warning, while repeat offenses will attract fines up to Rs 10,000.",
-      "category": "Law",
-      "page": 1,
+      "headline": "Eli Lilly signs $2.75 billion AI drug development deal with Insilico",
+      "summary": "Eli Lilly & Co has partnered with Hong Kong-listed Insilico Medicine in an AI-powered drug development deal worth up to $2.75 billion. Insilico will receive $115 million upfront, with the remainder tied to milestones. Lilly gains exclusive worldwide rights to commercialize potential medicines discovered through Insilico’s AI platforms, targeting unspecified disease areas.",
+      "category": "Science",
+      "page": 8,
       "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/118525",
+      "telegram_url": "https://t.me/c/1877410077/118695",
       "sources": [
         {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/118525"
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/118695"
         }
       ]
     },
     {
-      "headline": "Court orders couple and insurer to pay 1 crore for hit-and-run",
-      "summary": "A Motor Accident Claims Tribunal in Mumbai has ordered a couple and an insurance company to pay nearly Rs 1 crore in compensation to the family of a dental student killed in a 2018 hit-and-run. The tribunal rejected the driver's claim that the victim was distracted by her phone, citing witness testimony that the car was speeding and jumped a red light.",
-      "category": "Law",
+      "headline": "Celebrity weddings evolve into complex brand monetization ecosystems",
+      "summary": "The celebrity wedding economy has shifted from simple endorsements to layered commercial models involving content rights, social media amplification, and brand storytelling. High-profile couples now enter partnerships across fashion, beauty, and hospitality, using their weddings as cultural IP. Recent examples include curated buzz around actors Vijay Deverakonda and Rashmika Mandanna.",
+      "category": "Culture",
       "page": 5,
       "importance": 4,
-      "telegram_url": "https://t.me/c/1877410077/118525",
+      "telegram_url": "https://t.me/c/1877410077/118703",
       "sources": [
         {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
+          "newspaper": "Mint",
+          "pdf_filename": "Mint Bengaluru 30-03.pdf",
           "page": 5,
-          "telegram_url": "https://t.me/c/1877410077/118525"
+          "telegram_url": "https://t.me/c/1877410077/118703"
         }
       ]
     },
     {
-      "headline": "Freezing bank accounts without cause violates fundamental rights, rules Telangana High Court",
-      "summary": "The Telangana High Court ruled that freezing a citizen's bank account without an identified cognizable offense or a prima facie link to a crime is a violation of fundamental rights. The court ordered the restoration of an account that had been frozen on the instructions of cybercrime police without proper notice or evidence of the account holder's involvement in illegal activity.",
-      "category": "Law",
-      "page": 10,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/118525",
-      "sources": [
-        {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
-          "page": 10,
-          "telegram_url": "https://t.me/c/1877410077/118525"
-        }
-      ]
-    },
-    {
-      "headline": "Bishnoi gang recce expert shot in leg and arrested after police chase",
-      "summary": "A 25-year-old alleged member of the Lawrence Bishnoi gang was arrested in Rajasthan after a gunfight with police. The suspect, identified as Akash Nigam, was reportedly conducting a recce of the area for potential targets. Police fired at his leg after he opened fire during a checkpoint stop. He is suspected of involvement in recent threats against high-profile individuals.",
-      "category": "Law",
-      "page": 14,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/118525",
-      "sources": [
-        {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
-          "page": 14,
-          "telegram_url": "https://t.me/c/1877410077/118525"
-        }
-      ]
-    },
-    {
-      "headline": "Telangana Bill proposes pay cut for children who neglect elderly parents",
-      "summary": "The Telangana government has introduced a new bill that mandates a 15% salary cut for government and private sector employees who neglect their elderly parents. The deducted amount will be directly credited to the parents' accounts to ensure their financial security and welfare. The legislation aims to promote social responsibility and protect the rights of senior citizens.",
-      "category": "Law",
-      "page": 17,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/118525",
-      "sources": [
-        {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
-          "page": 17,
-          "telegram_url": "https://t.me/c/1877410077/118525"
-        }
-      ]
-    },
-    {
-      "headline": "India’s largest wildlife overpass opens on Ranthambore stretch of expressway",
-      "summary": "The Delhi-Mumbai Expressway now features India's largest wildlife overpass at the Ranthambore stretch to ensure safe passage for animals. The 3.5km stretch includes five segmented overpasses designed to look like natural landscape, allowing wildlife to cross without encountering traffic. The project, costing Rs 900 crore, aims to reduce man-animal conflict.",
-      "category": "Environment",
+      "headline": "Indian students abroad turn to online gig work amid costs",
+      "summary": "Indian students in international universities are increasingly adopting online gig work to offset rising living costs and a weakening rupee. Popular roles include AI-training, content writing, and digital design. This shift follows tighter traditional work-study rules in countries like the UK, Canada, and Australia, where students seek flexible remote income options to sustain their education.",
+      "category": "Education",
       "page": 1,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/118525",
-      "sources": [
-        {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/118525"
-        }
-      ]
-    },
-    {
-      "headline": "NGT issues notice to Uttarakhand over environmental inaction in Mussoorie",
-      "summary": "The National Green Tribunal has issued a notice to the Uttarakhand chief secretary regarding 'continued inaction' on environmental concerns in Mussoorie. This follows warnings after the 2023 Joshimath crisis. The tribunal highlighted issues with unregulated construction, poor drainage, and lack of a response to reports on the town’s fragile geological state.",
-      "category": "Environment",
-      "page": 5,
       "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/118525",
-      "sources": [
-        {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
-          "page": 5,
-          "telegram_url": "https://t.me/c/1877410077/118525"
-        }
-      ]
-    },
-    {
-      "headline": "Great Indian Bustard chick born in wild for first time in decade",
-      "summary": "In a major conservation victory, a Great Indian Bustard chick has been born in the wild in Gujarat’s Kutch district, the first such birth in a decade. The chick was hatched from an egg brought from a breeding center in Rajasthan and fostered by a wild mother. This success marks a significant milestone for the survival of this critically endangered species.",
-      "category": "Environment",
-      "page": 5,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/118525",
-      "sources": [
-        {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
-          "page": 5,
-          "telegram_url": "https://t.me/c/1877410077/118525"
-        }
-      ]
-    },
-    {
-      "headline": "Former Nepal PM KP Sharma Oli arrested over protest-related deaths",
-      "summary": "Nepal's former Prime Minister KP Sharma Oli has been arrested following a probe into the deaths of 76 people during Gen Z-led protests last year. The current government, led by PM Balendra Shah, acted on a commission report recommending criminal proceedings for the violent crackdown. Supporters of Oli have condemned the move as politically motivated.",
+      "telegram_url": "https://t.me/c/1877410077/118664",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
-          "page": 7,
-          "telegram_url": "https://t.me/c/1877410077/118512"
-        },
-        {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
+          "pdf_filename": "ET_Bangalore_30-03-2026.pdf",
           "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/118525"
+          "telegram_url": "https://t.me/c/1877410077/118664"
         }
       ]
     },
     {
-      "headline": "Tiger Woods arrested for driving under the influence in Florida",
-      "summary": "Golf legend Tiger Woods was arrested in Florida for driving under the influence after police found him asleep at the wheel of his car. Woods passed a breathalyzer test but failed field sobriety tests, later attributing the incident to an unexpected reaction to prescribed medications. He has expressed regret and stated he is seeking professional help for pain management.",
+      "headline": "TVK chief Vijay to contest two seats in Tamil Nadu elections",
+      "summary": "Tamilaga Vettri Kazhagam chief and actor Vijay has announced he will contest from two seats, Perambur and Tiruchirappalli (East), in the April 23 assembly elections. The party has named candidates for all 234 constituencies in Tamil Nadu. This marks the actor-turned-politician's maiden electoral battle as he looks to challenge established political strongholds in the state.",
       "sources": [
         {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET_Bangalore_29-03-2026.pdf",
-          "page": 10,
-          "telegram_url": "https://t.me/c/1877410077/118512"
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT-Bangalore - 30-03-2026.pdf",
+          "page": 6,
+          "telegram_url": "https://t.me/c/1877410077/118682"
         },
         {
-          "newspaper": "Times of India",
-          "pdf_filename": "TOI_Bangalore_29-03-2026.pdf",
-          "page": 22,
-          "telegram_url": "https://t.me/c/1877410077/118525"
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        }
+      ]
+    },
+    {
+      "headline": "AMD to deploy Helios high-performance computing platform in India in 2026",
+      "summary": "Chipset firm AMD expects to rollout its latest GPU-based platform, Helios, in the second half of 2026. The platform aims to meet the demand for AI and data centre capacity from global technology giants. A single Helios rack integrates 72 MI455X accelerators, delivering up to 2.9 exaflops of compute performance, positioning it to compete with Nvidia’s upcoming architectures.",
+      "sources": [
+        {
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 2,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        },
+        {
+          "newspaper": "Mint",
+          "pdf_filename": "Mint Bengaluru 30-03.pdf",
+          "page": 7,
+          "telegram_url": "https://t.me/c/1877410077/118703"
+        }
+      ]
+    },
+    {
+      "headline": "Ukraine drone strike targets Russia's Ust-Luga fuel port",
+      "summary": "A Ukrainian long-range drone strike has caused a major fire at Russia's Ust-Luga oil terminal on the Baltic Sea. The facility is a critical hub for Russian fuel exports. The attack follows a series of strikes aimed at disrupting Moscow's energy infrastructure. Global oil prices surged following the news, as the port handles roughly 700,000 barrels of oil and petroleum products per day.",
+      "sources": [
+        {
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        },
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "ET_Bangalore_30-03-2026.pdf",
+          "page": 16,
+          "telegram_url": "https://t.me/c/1877410077/118664"
+        }
+      ]
+    },
+    {
+      "headline": "CMS Info Systems acquires FSS ATM management business for ₹115 crore",
+      "summary": "CMS Info Systems has announced the ₹115 crore acquisition of the ATM Managed Services business from Financial Software and Systems Private Limited. The deal, expected to close in Q1 FY27, will add 8,000 units to CMS's portfolio, taking it to 39,000 units. The acquisition aligns with CMS’s strategy to consolidate private-sector banking relationships and expand its service platforms.",
+      "sources": [
+        {
+          "newspaper": "Business Standard",
+          "pdf_filename": "cleaned_BS Delhi 30-03-2026.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/118695"
+        },
+        {
+          "newspaper": "Mint",
+          "pdf_filename": "Mint Bengaluru 30-03.pdf",
+          "page": 13,
+          "telegram_url": "https://t.me/c/1877410077/118703"
+        }
+      ]
+    },
+    {
+      "headline": "Airtel and Tata Teleservices must pay Rs 10,000cr AGR dues",
+      "summary": "The Department of Telecommunications has directed Bharti Airtel and Tata Teleservices to pay nearly Rs 10,000 crore in remaining Adjusted Gross Revenue (AGR) dues by March 31. Officials stated that failure to comply would be treated as contempt of court. While Airtel has requested a reassessment of dues, the government maintains there is no relief for telcos on the established payment schedule.",
+      "sources": [
+        {
+          "newspaper": "Mint",
+          "pdf_filename": "Mint Bengaluru 30-03.pdf",
+          "page": 5,
+          "telegram_url": "https://t.me/c/1877410077/118703"
+        },
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "ET_Bangalore_30-03-2026.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/118664"
         }
       ]
     }
