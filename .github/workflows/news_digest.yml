@@ -1,24 +1,21 @@
 name: 📰 Daily News Digest
 
-# Digest runs at 8 AM IST every morning (papers are posted to Telegram overnight).
-# A morning_notify job runs at 9 AM IST (after the digest finishes) to send the link.
-#
-# ── Speed optimisations ───────────────────────────────────────────────────────
-# • Gemini extraction runs in parallel (up to 5 papers at once, within 5 RPM limit)
-# • PDF downloads from Telegram run concurrently via asyncio.gather()
-# • Tesseract / pytesseract removed — image PDFs go directly to Gemini Vision
-# • pip dependencies cached between runs
+# ── Schedule ──────────────────────────────────────────────────────────────────
+# 08:00 IST  Digest pipeline (download, extract, dedup, build, deploy)
+# 09:00 IST  Morning Telegram summary notification
+# 09:00–22:00 IST  Inshorts-style push notifications every 30 min via ntfy.sh
 #
 # ── Minutes budget ────────────────────────────────────────────────────────────
-# 1 run/day × 31 days = 31 runs/month
-# Each full run (download + extract + build + deploy): ~15-20 min
-# Morning notify job (just sends a message): ~1 min
-# Monthly: ~(20 × 31) + (1 × 31) = 651 min/month  ✅  (well within free tier)
+# Digest:              ~20 min × 31       = 620  min
+# Morning notify:      ~1  min × 31       =  31  min
+# Notify dispatcher:   ~1  min × 26 × 31  = 806  min
+# Total:                                   1,457 min/month ✅ (<2,000 free tier)
 
 on:
   schedule:
-    - cron: '30 2 * * *'    # 08:00 IST = 02:30 UTC  ← morning digest run
-    - cron: '30 3 * * *'    # 09:00 IST = 03:30 UTC  ← morning link notification
+    - cron: '30 2 * * *'      # 08:00 IST = 02:30 UTC  ← digest
+    - cron: '30 3 * * *'      # 09:00 IST = 03:30 UTC  ← morning Telegram link
+    - cron: '0,30 3-16 * * *' # Every 30 min, 03:00–16:59 UTC = 08:30–22:29 IST
   workflow_dispatch:
     inputs:
       note:
@@ -41,7 +38,7 @@ permissions:
 
 jobs:
 
-  # ── Nightly digest job (runs at 9 PM IST) ───────────────────────────────────
+  # ── Digest ───────────────────────────────────────────────────────────────────
   digest:
     runs-on: ubuntu-latest
     timeout-minutes: 45
@@ -114,7 +111,7 @@ jobs:
           path: "*.log"
           retention-days: 3
 
-  # ── Morning notification job (runs at 9 AM IST) ─────────────────────────────
+  # ── Morning Telegram link (09:00 IST) ────────────────────────────────────────
   morning_notify:
     runs-on: ubuntu-latest
     timeout-minutes: 5
@@ -138,3 +135,39 @@ jobs:
           NOTIFY_CHAT_ID:   ${{ secrets.NOTIFY_CHAT_ID }}
           SITE_URL:         ${{ secrets.SITE_URL }}
         run: python3 morning_notify.py
+
+  # ── Push notification dispatcher (every 30 min, 08:30–22:30 IST) ─────────────
+  #
+  # Algorithm:
+  #   1. Reads docs/digest.json (committed by digest job)
+  #   2. Sorts articles round-robin across categories (Politics→Economy→India→…)
+  #   3. Assigns each a deterministic send_at time spread from 09:00→22:00 IST
+  #   4. Sends only the article(s) whose window falls in [now-35min, now+5min]
+  #
+  # Android notification UX:
+  #   ▸ Collapsed bar:    HEADLINE
+  #   ▸ Expanded (swipe): category emoji + full SUMMARY (up to 400 chars)
+  #   ▸ Tap:              opens the Telegram PDF at the article page
+  #
+  # One-time setup:
+  #   1. Choose a secret topic, e.g. "prajay-dailybrief-xyz"
+  #   2. Add NTFY_TOPIC as a GitHub Secret
+  #   3. Install ntfy app on Android → Subscribe → enter your topic name
+  notify_dispatcher:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    if: github.event.schedule == '0,30 3-16 * * *'
+
+    steps:
+      - name: 📥 Checkout repo
+        uses: actions/checkout@v4
+
+      - name: 🐍 Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 📲 Send due article notifications
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python3 notify_scheduler.py
