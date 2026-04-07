@@ -13,6 +13,7 @@ Usage: Update GitHub cron to '*/5 3-17 * * *' for precision
 
 import os
 import json
+import hashlib
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from urllib import request as urlreq
