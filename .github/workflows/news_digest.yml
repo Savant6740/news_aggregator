@@ -15,7 +15,7 @@ on:
   schedule:
     - cron: '30 2 * * *'      # 08:00 IST = 02:30 UTC  ← digest
     - cron: '30 3 * * *'      # 09:00 IST = 03:30 UTC  ← morning Telegram link
-    - cron: '0,30 3-16 * * *' # Every 30 min, 03:00–16:59 UTC = 08:30–22:29 IST
+    - cron: '*/5 3-17 * * *'  # Every 5 minutes (GitHub minimum)
   workflow_dispatch:
     inputs:
       note:
