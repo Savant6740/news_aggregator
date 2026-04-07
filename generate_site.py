@@ -1,10 +1,9 @@
 """
-generate_site.py
-Swipe-based (TikTok-style) daily brief for GitHub Pages.
-Horizontal swipe → change category | Vertical swipe → change article within category.
+generate_site.py - FIXED with ARTICLE IDs for deep linking
+Swipe-based TikTok-style daily brief + GitHub Pages deep links.
 """
-
 import json
+import hashlib
 from pathlib import Path
 
 CATEGORY_META = {
@@ -38,14 +37,23 @@ FAVICON_SVG = (
     "%3C/svg%3E"
 )
 
+def generate_article_id(article):
+    """Generate stable 8-char ID from headline + date for deep linking."""
+    date = article.get('date', '2026-04-07')
+    headline = article.get('headline', '')
+    content = f"{date}:{headline}".encode('utf-8')
+    return hashlib.md5(content).hexdigest()[:8]
 
 def build_site(data: dict, output_dir: Path):
     (output_dir / "index.html").write_text(generate_html(data), encoding="utf-8")
 
-
 def generate_html(data: dict) -> str:
     date_str = data.get("date", "Today")
     articles = data.get("articles", [])
+    
+    # ✅ ADD ARTICLE IDs TO DIGEST for notify_scheduler.py
+    for article in articles:
+        article['article_id'] = generate_article_id(article)
 
     digest_json  = json.dumps({"date": date_str, "articles": articles}, ensure_ascii=False)
     cat_meta_json = json.dumps(CATEGORY_META, ensure_ascii=False)
@@ -55,7 +63,7 @@ def generate_html(data: dict) -> str:
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Daily Brief \u2014 {date_str}</title>
+<title>Daily Brief — {date_str}</title>
 <link rel="icon" type="image/svg+xml" href="{FAVICON_SVG}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
@@ -77,7 +85,22 @@ html, body {{
 .pseg.done::after, .pseg.active::after {{ transform:scaleX(1); }}
 .v-feed {{ flex:1; overflow:hidden; position:relative; clip-path:inset(0); }}
 .v-track {{ display:flex; flex-direction:column; will-change:transform; }}
-.card {{ width:100%; flex-shrink:0; background:#0c0c0c; display:flex; flex-direction:column; overflow:hidden; position:relative; }}
+.card {{ 
+  width:100%; flex-shrink:0; background:#0c0c0c; display:flex; flex-direction:column; 
+  overflow:hidden; position:relative; 
+  scroll-margin-top: 80px;  /* Smooth scroll offset */
+}}
+/* 🔗 DEEP LINK HIGHLIGHTING */
+.card:target {{
+  background: linear-gradient(135deg, #fff3cd22 0%, #ffeaa722 100%) !important;
+  box-shadow: 0 0 30px rgba(255, 193, 7, 0.4);
+  border: 2px solid #f39c12;
+  animation: pulse-highlight 2s ease-in-out;
+}}
+@keyframes pulse-highlight {{
+  0%, 100% {{ box-shadow: 0 0 30px rgba(255, 193, 7, 0.4); }}
+  50% {{ box-shadow: 0 0 50px rgba(255, 193, 7, 0.6); }}
+}}
 .card-content {{ flex:1; display:flex; flex-direction:column; padding:36px 20px 22px; min-height:0; position:relative; z-index:1; }}
 .card-toprow {{ display:flex; align-items:center; justify-content:space-between; margin-bottom:28px; flex-shrink:0; }}
 .cat-pill {{ display:inline-flex; align-items:center; gap:7px; background:#1c1c1e; border-radius:8px; padding:7px 12px 7px 10px; font-size:11.5px; font-weight:700; letter-spacing:0.07em; color:#d0d0d0; text-transform:uppercase; line-height:1; }}
@@ -111,13 +134,52 @@ html, body {{
 </head>
 <body>
 <div class="outer" id="outer"><div class="h-track" id="hTrack"></div></div>
-<div class="hint h-up" id="hintUp"><span class="hint-arr">&#8593;</span><span class="hint-pill">Swipe up</span></div>
-<div class="hint h-right" id="hintRight"><span class="hint-arr">&#8594;</span><span class="hint-pill">Next category</span></div>
+<div class="hint h-up" id="hintUp"><span class="hint-arr">↑</span><span class="hint-pill">Swipe up</span></div>
+<div class="hint h-right" id="hintRight"><span class="hint-arr">→</span><span class="hint-pill">Next category</span></div>
 <div class="cat-flash" id="catFlash"><span class="cf-icon" id="cfIcon"></span><span class="cf-name" id="cfName"></span></div>
 
 <script>
 const DIGEST   = {digest_json};
 const CAT_META = {cat_meta_json};
+
+// 🔗 DEEP LINK SUPPORT (ntfy notifications)
+document.addEventListener('DOMContentLoaded', function() {{
+  const hash = window.location.hash;
+  if (hash) {{
+    // Find article by ID (supports both #article-{id} and #{id})
+    const cleanHash = hash.startsWith('#article-') ? hash.slice(9) : hash.slice(1);
+    const targetArticle = DIGEST.articles.find(art => art.article_id === cleanHash);
+    
+    if (targetArticle) {{
+      // Find category containing this article
+      for (let ci = 0; ci < sortedCats.length; ci++) {{
+        const cat = sortedCats[ci];
+        const catArts = byCategory[cat];
+        const artIdx = catArts.findIndex(art => art.article_id === cleanHash);
+        if (artIdx !== -1) {{
+          // Switch to correct category + article
+          catIdx = ci;
+          panels[ci].artIdx = artIdx;
+          
+          // Animate to position
+          hTrack.style.transition = 'transform 0.5s cubic-bezier(0.4,0,0.2,1)';
+          hTrack.style.transform = `translateX(${{-catIdx * vpW}}px)`;
+          
+          syncV(ci, true);
+          
+          // Visual feedback
+          const targetCard = panels[ci].vTrack.children[artIdx];
+          if (targetCard) {{
+            targetCard.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
+            targetCard.style.background = 'rgba(255, 193, 7, 0.2)';
+            setTimeout(() => targetCard.style.background = '', 3000);
+          }}
+          break;
+        }}
+      }}
+    }}
+  }}
+}});
 
 const allArts = [...DIGEST.articles].sort((a,b)=>(b.importance||0)-(a.importance||0));
 const byCategory = {{}};
@@ -143,11 +205,12 @@ const cfName=document.getElementById('cfName');
 function buildAll() {{
   vpW=outer.offsetWidth; vpH=outer.offsetHeight;
   hTrack.innerHTML=''; panels.length=0;
-  sortedCats.forEach((cat,ci)=>{{
+  sortedCats.forEach((cat,ci)=>{
     const m=CAT_META[cat]||{{color:"#e8334a",icon:"📰"}};
     const arts=byCategory[cat];
     const panel=document.createElement('div');
     panel.className='cat-panel';
+    panel.id=`cat-panel-${{ci}}`;  // Category ID for deep linking
     panel.style.setProperty('--cc',m.color);
     panel.innerHTML=`<div class="progress-row" id="prow-${{ci}}" style="--cc:${{m.color}}"></div><div class="v-feed" id="vfeed-${{ci}}"><div class="v-track" id="vtrack-${{ci}}"></div></div>`;
     hTrack.appendChild(panel);
@@ -155,20 +218,28 @@ function buildAll() {{
     const vFeed=panel.querySelector(`#vfeed-${{ci}}`);
     const vTrack=panel.querySelector(`#vtrack-${{ci}}`);
     const cardH=vFeed.getBoundingClientRect().height||vpH;
-    arts.forEach(art=>vTrack.appendChild(buildCard(art,cardH,m,cat)));
+    
+    // ✅ ADD ARTICLE IDs TO CARDS
+    arts.forEach((art,ai)=>{
+      const card = buildCard(art, cardH, m, cat, ai);
+      card.id = `article-${{art.article_id}}`;  // DEEP LINK TARGET
+      vTrack.appendChild(card);
+    });
+    
     panels.push({{pRow,vFeed,vTrack,articles:arts,artIdx:0}});
     buildPRow(ci);
-  }});
+  });
   hTrack.style.transition='none';
   hTrack.style.transform='translateX(0)';
   syncV(0,false);
 }}
 
-function buildCard(art,h,m,cat) {{
+function buildCard(art,h,m,cat,articleIndex) {{
   const src=art.sources?.[0];
   const href=src?.pdf_filename?`pdfs/${{src.pdf_filename}}#page=${{src.page}}`:(src?.telegram_url||'#');
   const card=document.createElement('div');
   card.className='card';
+  card.dataset.articleId = art.article_id;  // For JS lookup
   card.style.height=h+'px';
   card.style.setProperty('--cc',m.color);
   card.innerHTML=`
@@ -197,11 +268,11 @@ function buildCard(art,h,m,cat) {{
 function buildPRow(ci) {{
   const p=panels[ci],ai=p.artIdx;
   p.pRow.innerHTML='';
-  p.articles.forEach((_,i)=>{{
+  p.articles.forEach((_,i)=>{
     const seg=document.createElement('div');
     seg.className='pseg'+(i<ai?' done':i===ai?' active':'');
     p.pRow.appendChild(seg);
-  }});
+  });
 }}
 
 function syncV(ci,animated) {{
@@ -244,78 +315,77 @@ function dismiss() {{
   const KEY='dailyBriefHintSeen';
   if(!localStorage.getItem(KEY)) {{
     localStorage.setItem(KEY,'1');
-    setTimeout(()=>{{ if(!dismissed){{ hintUp.classList.add('visible'); hintRight.classList.add('visible'); }} }},2500);
+    setTimeout(()=>{ if(!dismissed){ hintUp.classList.add('visible'); hintRight.classList.add('visible'); } },2500);
   }}
 }})();
 
 let tsX=0,tsY=0,tcX=0,tcY=0,axis=null,drag=false;
-outer.addEventListener('touchstart',e=>{{
+outer.addEventListener('touchstart',e=>{
   tsX=e.touches[0].clientX; tsY=e.touches[0].clientY;
   tcX=0; tcY=0; axis=null; drag=true;
   hTrack.style.transition='none';
   const p=panels[catIdx]; if(p)p.vTrack.style.transition='none';
-}},{{passive:true}});
-outer.addEventListener('touchmove',e=>{{
+}, {passive:true});
+outer.addEventListener('touchmove',e=>{
   if(!drag)return;
   const dx=e.touches[0].clientX-tsX,dy=e.touches[0].clientY-tsY;
   tcX=dx; tcY=dy;
   if(!axis&&(Math.abs(dx)>8||Math.abs(dy)>8))axis=Math.abs(dx)>Math.abs(dy)?'h':'v';
   if(!axis)return;
   e.preventDefault();
-  if(axis==='h'){{
+  if(axis==='h'){
     const edge=(catIdx===0&&dx>0)||(catIdx===sortedCats.length-1&&dx<0);
     hTrack.style.transform=`translateX(${{-catIdx*vpW+dx*(edge?.14:1)}}px)`;
-  }}else{{
+  }else{
     const p=panels[catIdx],h=p.vFeed.getBoundingClientRect().height;
     const edge=(p.artIdx===0&&dy>0)||(p.artIdx===p.articles.length-1&&dy<0);
     p.vTrack.style.transform=`translateY(${{-p.artIdx*h+dy*(edge?.14:1)}}px)`;
-  }}
-}},{{passive:false}});
-outer.addEventListener('touchend',()=>{{
+  }
+}, {passive:false});
+outer.addEventListener('touchend',()=>{
   if(!drag)return; drag=false;
-  if(axis==='h'){{
+  if(axis==='h'){
     const t=vpW*.2;
     if(tcX<-t)goCat(catIdx+1);
     else if(tcX>t)goCat(catIdx-1);
-    else{{hTrack.style.transition='transform 0.3s cubic-bezier(.4,0,.2,1)';hTrack.style.transform=`translateX(${{-catIdx*vpW}}px)`;}}
-  }}else if(axis==='v'){{
+    else{hTrack.style.transition='transform 0.3s cubic-bezier(.4,0,.2,1)';hTrack.style.transform=`translateX(${{-catIdx*vpW}}px)`;}
+  }else if(axis==='v'){
     const t=vpH*.2;
     if(tcY<-t)goArt(1);
     else if(tcY>t)goArt(-1);
-    else{{const p=panels[catIdx],h=p.vFeed.getBoundingClientRect().height;p.vTrack.style.transition='transform 0.3s cubic-bezier(.4,0,.2,1)';p.vTrack.style.transform=`translateY(${{-p.artIdx*h}}px)`;}}
-  }}
+    else{const p=panels[catIdx],h=p.vFeed.getBoundingClientRect().height;p.vTrack.style.transition='transform 0.3s cubic-bezier(.4,0,.2,1)';p.vTrack.style.transform=`translateY(${{-p.artIdx*h}}px)`;}
+  }
   axis=null;
-}},{{passive:true}});
+}, {passive:true});
 
-document.addEventListener('keydown',e=>{{
-  if(e.key==='ArrowDown'||e.key===' '){{e.preventDefault();goArt(1);}}
-  if(e.key==='ArrowUp'){{e.preventDefault();goArt(-1);}}
-  if(e.key==='ArrowRight'){{e.preventDefault();goCat(catIdx+1);}}
-  if(e.key==='ArrowLeft'){{e.preventDefault();goCat(catIdx-1);}}
-}});
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowDown'||e.key===' ') {e.preventDefault();goArt(1);}
+  if(e.key==='ArrowUp') {e.preventDefault();goArt(-1);}
+  if(e.key==='ArrowRight') {e.preventDefault();goCat(catIdx+1);}
+  if(e.key==='ArrowLeft') {e.preventDefault();goCat(catIdx-1);}
+});
 let wl=false;
-outer.addEventListener('wheel',e=>{{
+outer.addEventListener('wheel',e=>{
   e.preventDefault();if(wl)return;wl=true;
   Math.abs(e.deltaX)>Math.abs(e.deltaY)?goCat(catIdx+(e.deltaX>0?1:-1)):goArt(e.deltaY>0?1:-1);
   setTimeout(()=>wl=false,500);
-}},{{passive:false}});
-window.addEventListener('resize',()=>{{
+}, {passive:false});
+window.addEventListener('resize',()=>{
   vpW=outer.offsetWidth;vpH=outer.offsetHeight;
   hTrack.style.transition='none';
   hTrack.style.transform=`translateX(${{-catIdx*vpW}}px)`;
-  panels.forEach(p=>{{
+  panels.forEach(p=>{
     const h=p.vFeed.getBoundingClientRect().height;
     p.vTrack.querySelectorAll('.card').forEach(c=>c.style.height=h+'px');
     p.vTrack.style.transition='none';
     p.vTrack.style.transform=`translateY(${{-p.artIdx*h}}px)`;
-  }});
-}});
+  });
+});
 
 buildAll();
 </script>
 </body>
 </html>"""
-
 
 if __name__ == "__main__":
     import sys
@@ -327,4 +397,4 @@ if __name__ == "__main__":
     out = Path("docs")
     out.mkdir(exist_ok=True)
     build_site(data, out)
-    print(f"Generated docs/index.html  ({len(data.get('articles', []))} articles, {data.get('date', '')})")
+    print(f"✅ Generated docs/index.html with DEEP LINKS ({len(data.get('articles', []))} articles, {data.get('date', '')})")
