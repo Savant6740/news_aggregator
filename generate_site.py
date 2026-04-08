@@ -88,10 +88,10 @@ html, body {{
 .card {{ 
   width:100%; flex-shrink:0; background:#0c0c0c; display:flex; flex-direction:column; 
   overflow:hidden; position:relative; 
-  scroll-margin-top: 80px;  /* Smooth scroll offset */
+  scroll-margin-top: 80px;
 }}
-/* 🔗 DEEP LINK HIGHLIGHTING */
-.card:target {{
+/* 🔗 FIXED DEEP LINK HIGHLIGHTING - Class-based */
+.card.target-highlight {{
   background: linear-gradient(135deg, #fff3cd22 0%, #ffeaa722 100%) !important;
   box-shadow: 0 0 30px rgba(255, 193, 7, 0.4);
   border: 2px solid #f39c12;
@@ -142,45 +142,7 @@ html, body {{
 const DIGEST   = {digest_json};
 const CAT_META = {cat_meta_json};
 
-// 🔗 DEEP LINK SUPPORT (ntfy notifications)
-document.addEventListener('DOMContentLoaded', function() {{
-  const hash = window.location.hash;
-  if (hash) {{
-    // Find article by ID (supports both #article-{id} and #{id})
-    const cleanHash = hash.startsWith('#article-') ? hash.slice(9) : hash.slice(1);
-    const targetArticle = DIGEST.articles.find(art => art.article_id === cleanHash);
-    
-    if (targetArticle) {{
-      // Find category containing this article
-      for (let ci = 0; ci < sortedCats.length; ci++) {{
-        const cat = sortedCats[ci];
-        const catArts = byCategory[cat];
-        const artIdx = catArts.findIndex(art => art.article_id === cleanHash);
-        if (artIdx !== -1) {{
-          // Switch to correct category + article
-          catIdx = ci;
-          panels[ci].artIdx = artIdx;
-          
-          // Animate to position
-          hTrack.style.transition = 'transform 0.5s cubic-bezier(0.4,0,0.2,1)';
-          hTrack.style.transform = `translateX(${{-catIdx * vpW}}px)`;
-          
-          syncV(ci, true);
-          
-          // Visual feedback
-          const targetCard = panels[ci].vTrack.children[artIdx];
-          if (targetCard) {{
-            targetCard.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
-            targetCard.style.background = 'rgba(255, 193, 7, 0.2)';
-            setTimeout(() => targetCard.style.background = '', 3000);
-          }}
-          break;
-        }}
-      }}
-    }}
-  }}
-}});
-
+// 🔗 FIXED: Pre-build data structures IMMEDIATELY for deep linking
 const allArts = [...DIGEST.articles].sort((a,b)=>(b.importance||0)-(a.importance||0));
 const byCategory = {{}};
 for (const art of allArts) {{
@@ -191,6 +153,21 @@ for (const art of allArts) {{
 const sortedCats = Object.keys(byCategory).sort(
   (a,b)=>(byCategory[b][0].importance||0)-(byCategory[a][0].importance||0)
 );
+
+// 🔗 FIXED DEEP LINK HANDLER - Runs IMMEDIATELY
+let deepLinkTarget = null;
+function handleDeepLink() {{
+  const hash = window.location.hash;
+  if (!hash || !sortedCats.length) return;
+  
+  const cleanHash = hash.startsWith('#article-') ? hash.slice(9) : hash.slice(1);
+  const targetArticle = DIGEST.articles.find(art => art.article_id === cleanHash);
+  
+  if (targetArticle) {{
+    deepLinkTarget = {{article: targetArticle, hash: cleanHash}};
+  }}
+}}
+handleDeepLink();
 
 let catIdx=0,vpW=0,vpH=0;
 const panels=[];
@@ -205,12 +182,12 @@ const cfName=document.getElementById('cfName');
 function buildAll() {{
   vpW=outer.offsetWidth; vpH=outer.offsetHeight;
   hTrack.innerHTML=''; panels.length=0;
-  sortedCats.forEach((cat,ci)=>{
+  sortedCats.forEach((cat,ci)=>{{
     const m=CAT_META[cat]||{{color:"#e8334a",icon:"📰"}};
     const arts=byCategory[cat];
     const panel=document.createElement('div');
     panel.className='cat-panel';
-    panel.id=`cat-panel-${{ci}}`;  // Category ID for deep linking
+    panel.id=`cat-panel-${{ci}}`;
     panel.style.setProperty('--cc',m.color);
     panel.innerHTML=`<div class="progress-row" id="prow-${{ci}}" style="--cc:${{m.color}}"></div><div class="v-feed" id="vfeed-${{ci}}"><div class="v-track" id="vtrack-${{ci}}"></div></div>`;
     hTrack.appendChild(panel);
@@ -219,19 +196,25 @@ function buildAll() {{
     const vTrack=panel.querySelector(`#vtrack-${{ci}}`);
     const cardH=vFeed.getBoundingClientRect().height||vpH;
     
-    // ✅ ADD ARTICLE IDs TO CARDS
-    arts.forEach((art,ai)=>{
+    arts.forEach((art,ai)=>{{
       const card = buildCard(art, cardH, m, cat, ai);
-      card.id = `article-${{art.article_id}}`;  // DEEP LINK TARGET
+      card.id = `article-${{art.article_id}}`;
+      card.dataset.articleId = art.article_id;
       vTrack.appendChild(card);
-    });
+    }});
     
     panels.push({{pRow,vFeed,vTrack,articles:arts,artIdx:0}});
     buildPRow(ci);
-  });
+  }});
+  
   hTrack.style.transition='none';
   hTrack.style.transform='translateX(0)';
   syncV(0,false);
+  
+  // 🔗 FIXED: Apply deep link after build
+  if (deepLinkTarget) {{
+    setTimeout(() => applyDeepLink(deepLinkTarget), 100);
+  }}
 }}
 
 function buildCard(art,h,m,cat,articleIndex) {{
@@ -239,7 +222,7 @@ function buildCard(art,h,m,cat,articleIndex) {{
   const href=src?.pdf_filename?`pdfs/${{src.pdf_filename}}#page=${{src.page}}`:(src?.telegram_url||'#');
   const card=document.createElement('div');
   card.className='card';
-  card.dataset.articleId = art.article_id;  // For JS lookup
+  card.dataset.articleId = art.article_id;
   card.style.height=h+'px';
   card.style.setProperty('--cc',m.color);
   card.innerHTML=`
@@ -268,11 +251,11 @@ function buildCard(art,h,m,cat,articleIndex) {{
 function buildPRow(ci) {{
   const p=panels[ci],ai=p.artIdx;
   p.pRow.innerHTML='';
-  p.articles.forEach((_,i)=>{
+  p.articles.forEach((_,i)=>{{
     const seg=document.createElement('div');
     seg.className='pseg'+(i<ai?' done':i===ai?' active':'');
     p.pRow.appendChild(seg);
-  });
+  }});
 }}
 
 function syncV(ci,animated) {{
@@ -280,6 +263,35 @@ function syncV(ci,animated) {{
   p.vTrack.style.transition=animated?'transform 0.35s cubic-bezier(0.4,0,0.2,1)':'none';
   p.vTrack.style.transform=`translateY(${{-p.artIdx*h}}px)`;
   buildPRow(ci);
+}}
+
+// 🔗 NEW: Apply deep link after panels are built
+function applyDeepLink(target) {{
+  for (let ci = 0; ci < sortedCats.length; ci++) {{
+    const cat = sortedCats[ci];
+    const catArts = byCategory[cat];
+    const artIdx = catArts.findIndex(art => art.article_id === target.hash);
+    
+    if (artIdx !== -1) {{
+      catIdx = ci;
+      panels[ci].artIdx = artIdx;
+      
+      // Animate to category
+      hTrack.style.transition = 'transform 0.5s cubic-bezier(0.4,0,0.2,1)';
+      hTrack.style.transform = `translateX(${{-catIdx * vpW}}px)`;
+      
+      syncV(ci, true);
+      
+      // Highlight target article
+      const targetCard = panels[ci].vTrack.children[artIdx];
+      if (targetCard) {{
+        targetCard.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
+        targetCard.classList.add('target-highlight');
+        setTimeout(() => targetCard.classList.remove('target-highlight'), 3000);
+      }}
+      break;
+    }}
+  }}
 }}
 
 function goArt(d) {{
@@ -320,69 +332,70 @@ function dismiss() {{
 }})();
 
 let tsX=0,tsY=0,tcX=0,tcY=0,axis=null,drag=false;
-outer.addEventListener('touchstart',e=>{
+outer.addEventListener('touchstart',e=>{{
   tsX=e.touches[0].clientX; tsY=e.touches[0].clientY;
   tcX=0; tcY=0; axis=null; drag=true;
   hTrack.style.transition='none';
   const p=panels[catIdx]; if(p)p.vTrack.style.transition='none';
-}, {passive:true});
-outer.addEventListener('touchmove',e=>{
+}}, {{passive:true}});
+outer.addEventListener('touchmove',e=>{{
   if(!drag)return;
   const dx=e.touches[0].clientX-tsX,dy=e.touches[0].clientY-tsY;
   tcX=dx; tcY=dy;
   if(!axis&&(Math.abs(dx)>8||Math.abs(dy)>8))axis=Math.abs(dx)>Math.abs(dy)?'h':'v';
   if(!axis)return;
   e.preventDefault();
-  if(axis==='h'){
+  if(axis==='h'){{
     const edge=(catIdx===0&&dx>0)||(catIdx===sortedCats.length-1&&dx<0);
     hTrack.style.transform=`translateX(${{-catIdx*vpW+dx*(edge?.14:1)}}px)`;
-  }else{
+  }}else{{
     const p=panels[catIdx],h=p.vFeed.getBoundingClientRect().height;
     const edge=(p.artIdx===0&&dy>0)||(p.artIdx===p.articles.length-1&&dy<0);
     p.vTrack.style.transform=`translateY(${{-p.artIdx*h+dy*(edge?.14:1)}}px)`;
-  }
-}, {passive:false});
-outer.addEventListener('touchend',()=>{
+  }}
+}}, {{passive:false}});
+outer.addEventListener('touchend',()=>{{
   if(!drag)return; drag=false;
-  if(axis==='h'){
+  if(axis==='h'){{
     const t=vpW*.2;
     if(tcX<-t)goCat(catIdx+1);
     else if(tcX>t)goCat(catIdx-1);
-    else{hTrack.style.transition='transform 0.3s cubic-bezier(.4,0,.2,1)';hTrack.style.transform=`translateX(${{-catIdx*vpW}}px)`;}
-  }else if(axis==='v'){
+    else{{hTrack.style.transition='transform 0.3s cubic-bezier(.4,0,.2,1)';hTrack.style.transform=`translateX(${{-catIdx*vpW}}px)`;}}
+  }}else if(axis==='v'){{
     const t=vpH*.2;
     if(tcY<-t)goArt(1);
     else if(tcY>t)goArt(-1);
-    else{const p=panels[catIdx],h=p.vFeed.getBoundingClientRect().height;p.vTrack.style.transition='transform 0.3s cubic-bezier(.4,0,.2,1)';p.vTrack.style.transform=`translateY(${{-p.artIdx*h}}px)`;}
-  }
+    else{{const p=panels[catIdx],h=p.vFeed.getBoundingClientRect().height;p.vTrack.style.transition='transform 0.3s cubic-bezier(.4,0,.2,1)';p.vTrack.style.transform=`translateY(${{-p.artIdx*h}}px)`;}}
+  }}
   axis=null;
-}, {passive:true});
+}}, {{passive:true}});
 
-document.addEventListener('keydown',e=>{
-  if(e.key==='ArrowDown'||e.key===' ') {e.preventDefault();goArt(1);}
-  if(e.key==='ArrowUp') {e.preventDefault();goArt(-1);}
-  if(e.key==='ArrowRight') {e.preventDefault();goCat(catIdx+1);}
-  if(e.key==='ArrowLeft') {e.preventDefault();goCat(catIdx-1);}
-});
+document.addEventListener('keydown',e=>{{
+  if(e.key==='ArrowDown'||e.key===' ') {{e.preventDefault();goArt(1);}}
+  if(e.key==='ArrowUp') {{e.preventDefault();goArt(-1);}}
+  if(e.key==='ArrowRight') {{e.preventDefault();goCat(catIdx+1);}}
+  if(e.key==='ArrowLeft') {{e.preventDefault();goCat(catIdx-1);}}
+}});
 let wl=false;
-outer.addEventListener('wheel',e=>{
+outer.addEventListener('wheel',e=>{{
   e.preventDefault();if(wl)return;wl=true;
   Math.abs(e.deltaX)>Math.abs(e.deltaY)?goCat(catIdx+(e.deltaX>0?1:-1)):goArt(e.deltaY>0?1:-1);
   setTimeout(()=>wl=false,500);
-}, {passive:false});
-window.addEventListener('resize',()=>{
+}}, {{passive:false}});
+window.addEventListener('resize',()=>{{
   vpW=outer.offsetWidth;vpH=outer.offsetHeight;
   hTrack.style.transition='none';
   hTrack.style.transform=`translateX(${{-catIdx*vpW}}px)`;
-  panels.forEach(p=>{
+  panels.forEach(p=>{{
     const h=p.vFeed.getBoundingClientRect().height;
     p.vTrack.querySelectorAll('.card').forEach(c=>c.style.height=h+'px');
     p.vTrack.style.transition='none';
     p.vTrack.style.transform=`translateY(${{-p.artIdx*h}}px)`;
-  });
-});
+  }});
+}});
 
-buildAll();
+// 🔗 FIXED: Initialize after DOM ready
+document.addEventListener('DOMContentLoaded', buildAll);
 </script>
 </body>
 </html>"""
@@ -397,4 +410,4 @@ if __name__ == "__main__":
     out = Path("docs")
     out.mkdir(exist_ok=True)
     build_site(data, out)
-    print(f"✅ Generated docs/index.html with DEEP LINKS ({len(data.get('articles', []))} articles, {data.get('date', '')})")
+    print(f"✅ Generated docs/index.html with FIXED DEEP LINKS ({len(data.get('articles', []))} articles, {data.get('date', '')})")
