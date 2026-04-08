@@ -58,7 +58,7 @@ def generate_html(data: dict) -> str:
     digest_json  = json.dumps({"date": date_str, "articles": articles}, ensure_ascii=False)
     cat_meta_json = json.dumps(CATEGORY_META, ensure_ascii=False)
 
-    return f"""<!DOCTYPE html>
+    return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -90,7 +90,6 @@ html, body {{
   overflow:hidden; position:relative; 
   scroll-margin-top: 80px;
 }}
-/* 🔗 FIXED DEEP LINK HIGHLIGHTING - Class-based */
 .card.target-highlight {{
   background: linear-gradient(135deg, #fff3cd22 0%, #ffeaa722 100%) !important;
   box-shadow: 0 0 30px rgba(255, 193, 7, 0.4);
@@ -142,7 +141,7 @@ html, body {{
 const DIGEST   = {digest_json};
 const CAT_META = {cat_meta_json};
 
-// 🔗 FIXED: Pre-build data structures IMMEDIATELY for deep linking
+// FIXED: Pre-build data structures IMMEDIATELY for deep linking
 const allArts = [...DIGEST.articles].sort((a,b)=>(b.importance||0)-(a.importance||0));
 const byCategory = {{}};
 for (const art of allArts) {{
@@ -154,7 +153,7 @@ const sortedCats = Object.keys(byCategory).sort(
   (a,b)=>(byCategory[b][0].importance||0)-(byCategory[a][0].importance||0)
 );
 
-// 🔗 FIXED DEEP LINK HANDLER - Runs IMMEDIATELY
+// FIXED DEEP LINK HANDLER - Runs IMMEDIATELY
 let deepLinkTarget = null;
 function handleDeepLink() {{
   const hash = window.location.hash;
@@ -211,7 +210,7 @@ function buildAll() {{
   hTrack.style.transform='translateX(0)';
   syncV(0,false);
   
-  // 🔗 FIXED: Apply deep link after build
+  // FIXED: Apply deep link after build
   if (deepLinkTarget) {{
     setTimeout(() => applyDeepLink(deepLinkTarget), 100);
   }}
@@ -260,154 +259,4 @@ function buildPRow(ci) {{
 
 function syncV(ci,animated) {{
   const p=panels[ci],h=p.vFeed.getBoundingClientRect().height;
-  p.vTrack.style.transition=animated?'transform 0.35s cubic-bezier(0.4,0,0.2,1)':'none';
-  p.vTrack.style.transform=`translateY(${{-p.artIdx*h}}px)`;
-  buildPRow(ci);
-}}
-
-// 🔗 NEW: Apply deep link after panels are built
-function applyDeepLink(target) {{
-  for (let ci = 0; ci < sortedCats.length; ci++) {{
-    const cat = sortedCats[ci];
-    const catArts = byCategory[cat];
-    const artIdx = catArts.findIndex(art => art.article_id === target.hash);
-    
-    if (artIdx !== -1) {{
-      catIdx = ci;
-      panels[ci].artIdx = artIdx;
-      
-      // Animate to category
-      hTrack.style.transition = 'transform 0.5s cubic-bezier(0.4,0,0.2,1)';
-      hTrack.style.transform = `translateX(${{-catIdx * vpW}}px)`;
-      
-      syncV(ci, true);
-      
-      // Highlight target article
-      const targetCard = panels[ci].vTrack.children[artIdx];
-      if (targetCard) {{
-        targetCard.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
-        targetCard.classList.add('target-highlight');
-        setTimeout(() => targetCard.classList.remove('target-highlight'), 3000);
-      }}
-      break;
-    }}
-  }}
-}}
-
-function goArt(d) {{
-  const p=panels[catIdx];
-  const n=Math.max(0,Math.min(p.artIdx+d,p.articles.length-1));
-  if(n===p.artIdx&&d!==0)return;
-  p.artIdx=n; syncV(catIdx,true); dismiss();
-}}
-
-function goCat(idx,animated=true) {{
-  idx=Math.max(0,Math.min(idx,sortedCats.length-1));
-  if(idx===catIdx&&animated)return;
-  const prev=catIdx; catIdx=idx;
-  hTrack.style.transition=animated?'transform 0.38s cubic-bezier(0.4,0,0.2,1)':'none';
-  hTrack.style.transform=`translateX(${{-catIdx*vpW}}px)`;
-  if(animated&&idx!==prev) {{
-    const m=CAT_META[sortedCats[idx]]||{{color:"#e8334a",icon:"📰"}};
-    catFlash.style.background=m.color+'18';
-    cfIcon.textContent=m.icon; cfName.textContent=sortedCats[idx]; cfName.style.color=m.color;
-    catFlash.classList.add('on'); setTimeout(()=>catFlash.classList.remove('on'),500);
-  }}
-  dismiss();
-}}
-
-let dismissed=false;
-function dismiss() {{
-  if(dismissed)return; dismissed=true;
-  hintUp.classList.remove('visible'); hintRight.classList.remove('visible');
-  hintUp.classList.add('gone'); hintRight.classList.add('gone');
-}}
-
-(function initHints() {{
-  const KEY='dailyBriefHintSeen';
-  if(!localStorage.getItem(KEY)) {{
-    localStorage.setItem(KEY,'1');
-    setTimeout(()=>{ if(!dismissed){ hintUp.classList.add('visible'); hintRight.classList.add('visible'); } },2500);
-  }}
-}})();
-
-let tsX=0,tsY=0,tcX=0,tcY=0,axis=null,drag=false;
-outer.addEventListener('touchstart',e=>{{
-  tsX=e.touches[0].clientX; tsY=e.touches[0].clientY;
-  tcX=0; tcY=0; axis=null; drag=true;
-  hTrack.style.transition='none';
-  const p=panels[catIdx]; if(p)p.vTrack.style.transition='none';
-}}, {{passive:true}});
-outer.addEventListener('touchmove',e=>{{
-  if(!drag)return;
-  const dx=e.touches[0].clientX-tsX,dy=e.touches[0].clientY-tsY;
-  tcX=dx; tcY=dy;
-  if(!axis&&(Math.abs(dx)>8||Math.abs(dy)>8))axis=Math.abs(dx)>Math.abs(dy)?'h':'v';
-  if(!axis)return;
-  e.preventDefault();
-  if(axis==='h'){{
-    const edge=(catIdx===0&&dx>0)||(catIdx===sortedCats.length-1&&dx<0);
-    hTrack.style.transform=`translateX(${{-catIdx*vpW+dx*(edge?.14:1)}}px)`;
-  }}else{{
-    const p=panels[catIdx],h=p.vFeed.getBoundingClientRect().height;
-    const edge=(p.artIdx===0&&dy>0)||(p.artIdx===p.articles.length-1&&dy<0);
-    p.vTrack.style.transform=`translateY(${{-p.artIdx*h+dy*(edge?.14:1)}}px)`;
-  }}
-}}, {{passive:false}});
-outer.addEventListener('touchend',()=>{{
-  if(!drag)return; drag=false;
-  if(axis==='h'){{
-    const t=vpW*.2;
-    if(tcX<-t)goCat(catIdx+1);
-    else if(tcX>t)goCat(catIdx-1);
-    else{{hTrack.style.transition='transform 0.3s cubic-bezier(.4,0,.2,1)';hTrack.style.transform=`translateX(${{-catIdx*vpW}}px)`;}}
-  }}else if(axis==='v'){{
-    const t=vpH*.2;
-    if(tcY<-t)goArt(1);
-    else if(tcY>t)goArt(-1);
-    else{{const p=panels[catIdx],h=p.vFeed.getBoundingClientRect().height;p.vTrack.style.transition='transform 0.3s cubic-bezier(.4,0,.2,1)';p.vTrack.style.transform=`translateY(${{-p.artIdx*h}}px)`;}}
-  }}
-  axis=null;
-}}, {{passive:true}});
-
-document.addEventListener('keydown',e=>{{
-  if(e.key==='ArrowDown'||e.key===' ') {{e.preventDefault();goArt(1);}}
-  if(e.key==='ArrowUp') {{e.preventDefault();goArt(-1);}}
-  if(e.key==='ArrowRight') {{e.preventDefault();goCat(catIdx+1);}}
-  if(e.key==='ArrowLeft') {{e.preventDefault();goCat(catIdx-1);}}
-}});
-let wl=false;
-outer.addEventListener('wheel',e=>{{
-  e.preventDefault();if(wl)return;wl=true;
-  Math.abs(e.deltaX)>Math.abs(e.deltaY)?goCat(catIdx+(e.deltaX>0?1:-1)):goArt(e.deltaY>0?1:-1);
-  setTimeout(()=>wl=false,500);
-}}, {{passive:false}});
-window.addEventListener('resize',()=>{{
-  vpW=outer.offsetWidth;vpH=outer.offsetHeight;
-  hTrack.style.transition='none';
-  hTrack.style.transform=`translateX(${{-catIdx*vpW}}px)`;
-  panels.forEach(p=>{{
-    const h=p.vFeed.getBoundingClientRect().height;
-    p.vTrack.querySelectorAll('.card').forEach(c=>c.style.height=h+'px');
-    p.vTrack.style.transition='none';
-    p.vTrack.style.transform=`translateY(${{-p.artIdx*h}}px)`;
-  }});
-}});
-
-// 🔗 FIXED: Initialize after DOM ready
-document.addEventListener('DOMContentLoaded', buildAll);
-</script>
-</body>
-</html>"""
-
-if __name__ == "__main__":
-    import sys
-    src = Path("docs/digest.json")
-    if not src.exists():
-        print("docs/digest.json not found", file=sys.stderr)
-        sys.exit(1)
-    data = json.loads(src.read_text(encoding="utf-8"))
-    out = Path("docs")
-    out.mkdir(exist_ok=True)
-    build_site(data, out)
-    print(f"✅ Generated docs/index.html with FIXED DEEP LINKS ({len(data.get('articles', []))} articles, {data.get('date', '')})")
+  p.vTrack.style.transition=animated?'transform 0.35s cubic-bezier(0.4,0,0.2,1)':'none
