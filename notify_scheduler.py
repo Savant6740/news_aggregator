@@ -61,12 +61,12 @@ def round_robin_articles(articles: list[dict]) -> list[dict]:
 def build_precise_schedule(articles: list[dict], date_str: str) -> list[dict]:
     """Assign EXACT send times: 09:00 + (i * interval_seconds)."""
     try:
-        base_date = datetime.strptime(date_str, "%d %b %Y").replace(tzinfo=IST)
+    base_date = IST.localize(datetime.strptime(date_str, "%d %b %Y"))
     except ValueError:
         try:
-            base_date = datetime.strptime(date_str, "%Y-%m-%d").replace(tzinfo=IST)
+          base_date = IST.localize(datetime.strptime(date_str, "%d %b %Y"))
         except ValueError:
-            base_date = datetime.now(IST).replace(hour=0, minute=0, second=0, microsecond=0)
+          base_date = IST.localize(datetime.strptime(date_str, "%d %b %Y"))
 
     start = base_date.replace(hour=SCHEDULE_START_HOUR, minute=0, second=0)
     end = base_date.replace(hour=SCHEDULE_END_HOUR, minute=0, second=0)
