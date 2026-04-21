@@ -260,3 +260,73 @@ function buildPRow(ci) {{
 function syncV(ci,animated) {{
   const p=panels[ci],h=p.vFeed.getBoundingClientRect().height;
   p.vTrack.style.transition=animated?'transform 0.35s cubic-bezier(0.4,0,0.2,1)':'none
+  ';
+  p.vTrack.style.transform=`translateY(${{-p.artIdx*h}}px)`;
+  buildPRow(ci);
+}}
+
+function applyDeepLink(target) {{
+  const ci = sortedCats.findIndex(cat =>
+    byCategory[cat].some(art => art.article_id === target.hash)
+  );
+  if (ci === -1) return;
+  goCat(ci, false);
+  const ai = byCategory[sortedCats[ci]].findIndex(art => art.article_id === target.hash);
+  if (ai === -1) return;
+  panels[ci].artIdx = ai;
+  syncV(ci, false);
+  const card = document.getElementById('article-' + target.hash);
+  if (card) {{ card.classList.add('target-highlight'); setTimeout(() => card.classList.remove('target-highlight'), 3000); }}
+}}
+
+function goArt(d) {{
+  const p=panels[catIdx];
+  const n=Math.max(0,Math.min(p.artIdx+d,p.articles.length-1));
+  if(n===p.artIdx&&d!==0)return;
+  p.artIdx=n; syncV(catIdx,true); dismiss();
+}}
+
+function goCat(idx,animated=true) {{
+  idx=Math.max(0,Math.min(idx,sortedCats.length-1));
+  if(idx===catIdx&&animated)return;
+  const prev=catIdx; catIdx=idx;
+  hTrack.style.transition=animated?'transform 0.38s cubic-bezier(0.4,0,0.2,1)':'none';
+  hTrack.style.transform=`translateX(${{-catIdx*vpW}}px)`;
+  if(animated&&idx!==prev) {{
+    const m=CAT_META[sortedCats[idx]]||{{color:"#e8334a",icon:"📰"}};
+    catFlash.style.background=m.color+'18';
+    cfIcon.textContent=m.icon; cfName.textContent=sortedCats[idx]; cfName.style.color=m.color;
+    catFlash.classList.add('on'); setTimeout(()=>catFlash.classList.remove('on'),500);
+  }}
+  dismiss();
+}}
+
+let dismissed=false;
+function dismiss() {{
+  if(dismissed)return; dismissed=true;
+  hintUp.classList.remove('visible'); hintRight.classList.remove('visible');
+  hintUp.classList.add('gone'); hintRight.classList.add('gone');
+}}
+
+(function initHints() {{
+  const KEY='dailyBriefHintSeen';
+  if(!localStorage.getItem(KEY)) {{
+    localStorage.setItem(KEY,'1');
+    setTimeout(()=>{{ if(!dismissed){{ hintUp.classList.add('visible'); hintRight.classList.add('visible'); }} }},2500);
+  }}
+}})();
+
+let tsX=0,tsY=0,tcX=0,tcY=0,axis=null,drag=false;
+outer.addEventListener('touchstart',e=>{{ tsX=e.touches[0].clientX; tsY=e.touches[0].clientY; tcX=0; tcY=0; axis=null; drag=true; hTrack.style.transition='none'; const p=panels[catIdx]; if(p)p.vTrack.style.transition='none'; }},{{passive:true}});
+outer.addEventListener('touchmove',e=>{{ if(!drag)return; const dx=e.touches[0].clientX-tsX,dy=e.touches[0].clientY-tsY; tcX=dx; tcY=dy; if(!axis&&(Math.abs(dx)>8||Math.abs(dy)>8))axis=Math.abs(dx)>Math.abs(dy)?'h':'v'; if(!axis)return; e.preventDefault(); if(axis==='h'){{ const edge=(catIdx===0&&dx>0)||(catIdx===sortedCats.length-1&&dx<0); hTrack.style.transform=`translateX(${{-catIdx*vpW+dx*(edge?.14:1)}}px)`; }}else{{ const p=panels[catIdx],h=p.vFeed.getBoundingClientRect().height; const edge=(p.artIdx===0&&dy>0)||(p.artIdx===p.articles.length-1&&dy<0); p.vTrack.style.transform=`translateY(${{-p.artIdx*h+dy*(edge?.14:1)}}px)`; }} }},{{passive:false}});
+outer.addEventListener('touchend',()=>{{ if(!drag)return; drag=false; if(axis==='h'){{ const t=vpW*.2; if(tcX<-t)goCat(catIdx+1); else if(tcX>t)goCat(catIdx-1); else{{hTrack.style.transition='transform 0.3s cubic-bezier(.4,0,.2,1)';hTrack.style.transform=`translateX(${{-catIdx*vpW}}px)`;}} }}else if(axis==='v'){{ const t=vpH*.2; if(tcY<-t)goArt(1); else if(tcY>t)goArt(-1); else{{const p=panels[catIdx],h=p.vFeed.getBoundingClientRect().height;p.vTrack.style.transition='transform 0.3s cubic-bezier(.4,0,.2,1)';p.vTrack.style.transform=`translateY(${{-p.artIdx*h}}px)`;}} }} axis=null; }},{{passive:true}});
+document.addEventListener('keydown',e=>{{ if(e.key==='ArrowDown'||e.key===' '){{e.preventDefault();goArt(1);}} if(e.key==='ArrowUp'){{e.preventDefault();goArt(-1);}} if(e.key==='ArrowRight'){{e.preventDefault();goCat(catIdx+1);}} if(e.key==='ArrowLeft'){{e.preventDefault();goCat(catIdx-1);}} }});
+let wl=false;
+outer.addEventListener('wheel',e=>{{ e.preventDefault();if(wl)return;wl=true; Math.abs(e.deltaX)>Math.abs(e.deltaY)?goCat(catIdx+(e.deltaX>0?1:-1)):goArt(e.deltaY>0?1:-1); setTimeout(()=>wl=false,500); }},{{passive:false}});
+window.addEventListener('resize',()=>{{ vpW=outer.offsetWidth;vpH=outer.offsetHeight; hTrack.style.transition='none'; hTrack.style.transform=`translateX(${{-catIdx*vpW}}px)`; panels.forEach(p=>{{ const h=p.vFeed.getBoundingClientRect().height; p.vTrack.querySelectorAll('.card').forEach(c=>c.style.height=h+'px'); p.vTrack.style.transition='none'; p.vTrack.style.transform=`translateY(${{-p.artIdx*h}}px)`; }}); }});
+
+buildAll();
+</script>
+</body>
+</html>
+'''
