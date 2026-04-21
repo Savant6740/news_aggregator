@@ -292,11 +292,11 @@ def main():
         "newspapers":     combined_newspapers,
         "articles":       merged_articles,
     }
-    (DOCS_DIR / "digest.json").write_text(
-        json.dumps(digest_data, indent=2, ensure_ascii=False), encoding="utf-8"
-    )
-    build_site(digest_data, DOCS_DIR)
-    log.info("Site rebuilt at docs/index.html")
+      build_site(digest_data, DOCS_DIR)
+    log.info("Site rebuilt at docs/index.html")  
+  (DOCS_DIR / "digest.json").write_text(
+        json.dumps(digest_data, indent=2, ensure_ascii=False), encoding="utf-8")
+
 
     # ── Step 6: Stage PDFs for GitHub Pages artifact ──────────────────────────
     pdfs_dest = DOCS_DIR / "pdfs"
