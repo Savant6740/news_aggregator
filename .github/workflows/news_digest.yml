@@ -124,7 +124,7 @@ jobs:
           git rm -r --cached docs/pdfs/ --ignore-unmatch -q 2>/dev/null || true
 
           git add docs/index.html docs/digest.json docs/digest_state.json
-          git add docs/pdfs/
+          [ -d docs/pdfs ] && git add docs/pdfs/ || true
           git diff --staged --quiet || git commit -m "📰 Digest update: $(TZ='Asia/Kolkata' date +'%d %b %Y %H:%M IST')"
           git push
 
