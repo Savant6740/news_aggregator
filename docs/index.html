@@ -158,7 +158,7 @@ function buildAll() {
 
 function buildCard(art,h,m,cat,articleIndex) {
   const src=art.sources?.[0];
-  const href=src?.pdf_filename?`pdfs/${src.pdf_filename}#page=${src.page}`:(src?.telegram_url||'#');
+  const href = src?.telegram_url || '#';
   const card=document.createElement('div');
   card.className='card';
   card.dataset.articleId = art.article_id;
