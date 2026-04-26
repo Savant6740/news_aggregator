@@ -73,6 +73,30 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y poppler-utils
 
+      - name: 🧹 Clear PDFs from previous day
+        # On a new day: wipe docs/pdfs/ so yesterday's blobs don't get
+        # recommitted.  On a same-day re-run: leave docs/pdfs/ intact so
+        # papers downloaded in earlier partial runs are not lost.
+        run: |
+          LAST_DATE=$(python3 - <<'PYEOF'
+          import json, sys
+          try:
+              d = json.load(open("docs/digest_state.json"))
+              print(d.get("date", ""))
+          except Exception:
+              print("")
+          PYEOF
+          )
+          TODAY=$(TZ='Asia/Kolkata' date +'%Y-%m-%d')
+          echo "State date : ${LAST_DATE:-<none>}"
+          echo "Today (IST): $TODAY"
+          if [ -z "$LAST_DATE" ] || [ "$LAST_DATE" != "$TODAY" ]; then
+            echo "New day — clearing docs/pdfs/"
+            rm -rf docs/pdfs/
+          else
+            echo "Same-day re-run — keeping docs/pdfs/ intact"
+          fi
+
       - name: 🤖 Run digest pipeline
         env:
           GEMINI_API_KEY:    ${{ secrets.GEMINI_API_KEY }}
@@ -86,11 +110,21 @@ jobs:
           TARGET_DATE:       ${{ github.event.inputs.target_date || '' }}
         run: python3 digest.py
 
-      - name: 💾 Commit site files + state
+      - name: 💾 Commit site + state + PDFs
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Allow pushes up to ~500 MB (9 full newspaper PDFs can be large)
+          git config http.postBuffer 524288000
+
+          # Drop all previously-tracked PDFs from the git index, then re-add
+          # whatever is on disk right now.  Net effect:
+          #   • PDFs from a previous day (cleared above) are removed from git.
+          #   • PDFs produced during today's run(s) are committed fresh.
+          git rm -r --cached docs/pdfs/ --ignore-unmatch -q 2>/dev/null || true
+
           git add docs/index.html docs/digest.json docs/digest_state.json
+          git add docs/pdfs/
           git diff --staged --quiet || git commit -m "📰 Digest update: $(TZ='Asia/Kolkata' date +'%d %b %Y %H:%M IST')"
           git push
 
