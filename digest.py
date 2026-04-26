@@ -231,7 +231,14 @@ def main():
     already_done = set(state["downloaded"])
 
     if state["is_complete"] and not force_reset and os.environ.get("GITHUB_EVENT_NAME") != "workflow_dispatch":
-        log.info("All papers already processed today — nothing to do.")
+        log.info("All papers already processed today — rebuilding site from existing data.")
+        # Always re-run build_site so changes to generate_site.py
+        # (e.g. updated link logic) are reflected in docs/index.html.
+        existing = DOCS_DIR / "digest.json"
+        if existing.exists():
+            digest_data = json.loads(existing.read_text(encoding="utf-8"))
+            build_site(digest_data, DOCS_DIR)
+            log.info("Site rebuilt at docs/index.html")
         return
 
     log.info(f"Already processed today: {sorted(already_done) or 'none'}")
