@@ -1,0 +1,3 @@
+# Treat newspaper PDFs as binary — git won't attempt text diffs on them,
+# keeping 'git log --stat' and clone times fast.
+docs/pdfs/*.pdf binary
