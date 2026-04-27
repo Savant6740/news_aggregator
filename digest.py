@@ -163,6 +163,13 @@ class ModelManager:
                 else:
                     raise
 
+    def __getattr__(self, name):
+        """Delegate all other method/attribute lookups to the active underlying model."""
+        with self._lock:
+            if self._model is None:
+                raise AttributeError("Model is not initialized.")
+            return getattr(self._model, name)
+
 
 # ── State helpers ─────────────────────────────────────────────────────────────
 
