@@ -259,8 +259,7 @@ function buildPRow(ci) {{
 
 function syncV(ci,animated) {{
   const p=panels[ci],h=p.vFeed.getBoundingClientRect().height;
-  p.vTrack.style.transition=animated?'transform 0.35s cubic-bezier(0.4,0,0.2,1)':'none
-  ';
+ p.vTrack.style.transition=animated?'transform 0.35s cubic-bezier(0.4,0,0.2,1)':'none';
   p.vTrack.style.transform=`translateY(${{-p.artIdx*h}}px)`;
   buildPRow(ci);
 }}
