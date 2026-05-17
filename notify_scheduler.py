@@ -82,13 +82,13 @@ def build_precise_schedule(articles: list[dict], date_str: str) -> list[dict]:
 
     scheduled = []
     for i, art in enumerate(articles):
-        send_at = start + timedelta(seconds=i * interval_seconds)  # ← 8 spaces ✅
-        article_id = art.get('article_id') or hashlib.md5(
+        send_at = start + timedelta(seconds=i * interval_seconds)      # 8 spaces
+        article_id = art.get('article_id') or hashlib.md5(             # 8 spaces
             f"{art.get('date', '')}:{art['headline']}".encode()
-        ).hexdigest()[:8]  
-        scheduled.append({
+        ).hexdigest()[:8]
+        scheduled.append({                                              # 8 spaces
             **art,
-            'article_id': article_id,  # Ensure ID exists for GitHub Pages
+            'article_id': article_id,
             '_send_at': send_at,
             '_send_at_epoch': int(send_at.timestamp()),
             '_send_at_ist': send_at.strftime("%H:%M:%S"),
