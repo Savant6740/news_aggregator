@@ -82,7 +82,7 @@ def build_precise_schedule(articles: list[dict], date_str: str) -> list[dict]:
 
     scheduled = []
     for i, art in enumerate(articles):
-      send_at = start + timedelta(seconds=i * interval_seconds)
+        send_at = start + timedelta(seconds=i * interval_seconds)  # ← 8 spaces ✅
         article_id = art.get('article_id') or hashlib.md5(
             f"{art.get('date', '')}:{art['headline']}".encode()
         ).hexdigest()[:8]  
