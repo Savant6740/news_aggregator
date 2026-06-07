@@ -2,20 +2,25 @@ name: 📰 Daily News Digest
 
 # ── Schedule ──────────────────────────────────────────────────────────────────
 # 08:00 IST  Digest pipeline (download, extract, dedup, build, deploy)
+#              └─ Batch 1 notifications fire immediately inside generate_site.py
 # 09:00 IST  Morning Telegram summary notification
-# 09:00–22:00 IST  Inshorts-style push notifications every 30 min via ntfy.sh
+# 08:00 IST  Batch 2 — 1:30 PM IST  = 08:00 UTC
+# 11:00 IST  Batch 3 — 4:30 PM IST  = 11:00 UTC
+# 14:00 IST  Batch 4 — 7:30 PM IST  = 14:00 UTC
 #
 # ── Minutes budget ────────────────────────────────────────────────────────────
 # Digest:              ~20 min × 31       = 620  min
 # Morning notify:      ~1  min × 31       =  31  min
-# Notify dispatcher:   ~1  min × 26 × 31  = 806  min
-# Total:                                   1,457 min/month ✅ (<2,000 free tier)
+# Notify dispatcher:   ~1  min ×  3 × 31  =  93  min
+# Total:                                    744  min/month ✅ (<2,000 free tier)
 
 on:
   schedule:
-    - cron: '30 2 * * *'      # 08:00 IST = 02:30 UTC  ← digest
-    - cron: '30 3 * * *'      # 09:00 IST = 03:30 UTC  ← morning Telegram link
-    - cron: '*/5 3-17 * * *'  # Every 5 minutes, 08:30–23:30 IST ← notify dispatcher
+    - cron: '30 2 * * *'   # 08:00 IST = 02:30 UTC  ← digest (fires Batch 1 internally)
+    - cron: '30 3 * * *'   # 09:00 IST = 03:30 UTC  ← morning Telegram link
+    - cron: '0 8 * * *'    # 1:30 PM IST = 08:00 UTC  ← Batch 2
+    - cron: '0 11 * * *'   # 4:30 PM IST = 11:00 UTC  ← Batch 3
+    - cron: '0 14 * * *'   # 7:30 PM IST = 14:00 UTC  ← Batch 4
   workflow_dispatch:
     inputs:
       note:
@@ -74,9 +79,6 @@ jobs:
           sudo apt-get install -y poppler-utils
 
       - name: 🧹 Clear PDFs from previous day
-        # On a new day: wipe docs/pdfs/ so yesterday's blobs don't get
-        # recommitted.  On a same-day re-run: leave docs/pdfs/ intact so
-        # papers downloaded in earlier partial runs are not lost.
         run: |
           LAST_DATE=$(python3 - <<'PYEOF'
           import json, sys
@@ -105,25 +107,22 @@ jobs:
           NOTIFY_BOT_TOKEN:  ${{ secrets.NOTIFY_BOT_TOKEN }}
           NOTIFY_CHAT_ID:    ${{ secrets.NOTIFY_CHAT_ID }}
           SITE_URL:          ${{ secrets.SITE_URL }}
+          NTFY_TOPIC:        ${{ secrets.NTFY_TOPIC }}   # ← needed for Batch 1
           MORNING_NOTIFY:    "false"
           FORCE_RESET:       ${{ github.event.inputs.force_reset || 'no' }}
           TARGET_DATE:       ${{ github.event.inputs.target_date || '' }}
         run: python3 digest.py
 
-      - name: 💾 Commit site + state + PDFs
+      - name: 💾 Commit site + state + PDFs + sent log
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # Allow pushes up to ~500 MB (9 full newspaper PDFs can be large)
           git config http.postBuffer 524288000
 
-          # Drop all previously-tracked PDFs from the git index, then re-add
-          # whatever is on disk right now.  Net effect:
-          #   • PDFs from a previous day (cleared above) are removed from git.
-          #   • PDFs produced during today's run(s) are committed fresh.
           git rm -r --cached docs/pdfs/ --ignore-unmatch -q 2>/dev/null || true
 
           git add docs/index.html docs/digest.json docs/digest_state.json
+          git add docs/.sent_today.json || true         # include Batch 1 sent log
           [ -d docs/pdfs ] && git add docs/pdfs/ || true
           git diff --staged --quiet || git commit -m "📰 Digest update: $(TZ='Asia/Kolkata' date +'%d %b %Y %H:%M IST')"
           git push
@@ -170,34 +169,29 @@ jobs:
           SITE_URL:         ${{ secrets.SITE_URL }}
         run: python3 morning_notify.py
 
-  # ── Push notification dispatcher (every 5 min, 08:30–23:30 IST) ──────────────
+  # ── Push notification batches (Batch 2 / 3 / 4) ──────────────────────────────
+  #
+  # Batch 1 fires inside the digest job via generate_site.py → notify_scheduler.py --batch 1
   #
   # Algorithm:
   #   1. Reads docs/digest.json (committed by digest job)
-  #   2. Sorts articles round-robin across categories (Politics→Economy→India→…)
-  #   3. Assigns each a deterministic send_at time spread from 09:00→22:00 IST
-  #   4. Sends only the article(s) whose window falls within ±3 min of now
-  #   5. Commits docs/.sent_today.json to prevent double-sends across runs
-  #      (log is keyed by digest date and resets automatically each day)
+  #   2. Splits articles into 4 equal batches drawn round-robin across categories
+  #   3. Detects which batch is due based on current IST time (±4 min window)
+  #   4. Sends that batch; skips articles already in docs/.sent_today.json
+  #   5. Commits the updated sent log [skip ci]
   #
-  # Dead-zone fix:
-  #   The send window is ±3 min (6 min total), wider than the 5-min cron gap,
-  #   so every scheduled article is guaranteed to be caught by at least one run.
-  #   The sent log ensures each article is delivered exactly once.
+  # Schedule:
+  #   Batch 2 — 1:30 PM IST  (08:00 UTC)
+  #   Batch 3 — 4:30 PM IST  (11:00 UTC)
+  #   Batch 4 — 7:30 PM IST  (14:00 UTC)
   #
-  # Android notification UX:
-  #   ▸ Collapsed bar:    HEADLINE
-  #   ▸ Expanded (swipe): category emoji + full SUMMARY (up to 350 chars)
-  #   ▸ Tap:              opens the GitHub Pages site at the article anchor
-  #
-  # One-time setup:
-  #   1. Choose a secret topic, e.g. "yourname-dailybrief-xyz"
-  #   2. Add NTFY_TOPIC as a GitHub Secret
-  #   3. Install ntfy app on Android → Subscribe → enter your topic name
   notify_dispatcher:
     runs-on: ubuntu-latest
-    timeout-minutes: 3
-    if: github.event.schedule == '*/5 3-17 * * *'
+    timeout-minutes: 5
+    if: >
+      github.event.schedule == '0 8 * * *' ||
+      github.event.schedule == '0 11 * * *' ||
+      github.event.schedule == '0 14 * * *'
 
     steps:
       - name: 📥 Checkout repo
@@ -208,16 +202,12 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: 📲 Send due article notifications
+      - name: 📲 Send batch notifications
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           SITE_URL:   ${{ secrets.SITE_URL }}
         run: python3 notify_scheduler.py
 
-      # Commit the sent log so the next run knows what was already delivered.
-      # git diff --staged --quiet exits 0 (no-op) when nothing was sent,
-      # so empty commits are never created.
-      # [skip ci] prevents this commit from re-triggering the workflow.
       - name: 💾 Commit sent log
         run: |
           git config user.name  "github-actions[bot]"
