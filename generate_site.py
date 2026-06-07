@@ -1,9 +1,17 @@
 """
 generate_site.py - FIXED with ARTICLE IDs for deep linking
 Swipe-based TikTok-style daily brief + GitHub Pages deep links.
+
+Notification schedule:
+  Batch 1 — Fired here, immediately after index.html is written
+  Batch 2 — 1:30 PM IST  (via cron → notify_scheduler.py)
+  Batch 3 — 4:30 PM IST  (via cron → notify_scheduler.py)
+  Batch 4 — 7:30 PM IST  (via cron → notify_scheduler.py)
 """
 import json
 import hashlib
+import subprocess
+import sys
 from pathlib import Path
 
 CATEGORY_META = {
@@ -46,6 +54,33 @@ def generate_article_id(article):
 
 def build_site(data: dict, output_dir: Path):
     (output_dir / "index.html").write_text(generate_html(data), encoding="utf-8")
+    _trigger_batch_1()
+
+
+def _trigger_batch_1():
+    """
+    Fire Batch 1 notifications immediately after the HTML is written.
+    Runs notify_scheduler.py --batch 1 as a subprocess so that any
+    import errors in the scheduler don't crash the site builder.
+    NTFY_TOPIC must be set in the environment (passed through by digest.py).
+    """
+    import os
+    ntfy_topic = os.environ.get("NTFY_TOPIC", "").strip()
+    if not ntfy_topic:
+        print("ℹ️  NTFY_TOPIC not set — skipping Batch 1 notifications")
+        return
+
+    print("📲 Triggering Batch 1 notifications (immediate)…")
+    try:
+        result = subprocess.run(
+            [sys.executable, "notify_scheduler.py", "--batch", "1"],
+            capture_output=False,   # let output stream to the parent's stdout
+            timeout=60,
+        )
+        if result.returncode != 0:
+            print(f"⚠️  notify_scheduler.py exited with code {result.returncode}")
+    except Exception as e:
+        print(f"⚠️  Failed to trigger Batch 1 notifications: {e}")
 
 def generate_html(data: dict) -> str:
     date_str = data.get("date", "Today")
