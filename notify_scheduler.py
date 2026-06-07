@@ -1,55 +1,54 @@
 """
-notify_scheduler.py - REVISED VERSION
-Inshorts-style scheduled push notifications via ntfy.sh with EVEN intervals + GitHub Pages links.
+notify_scheduler.py - BATCH SCHEDULE VERSION
+4 fixed batches delivered via ntfy.sh push notifications:
 
-FIXES vs previous version:
-✅ Dead zone eliminated: window widened to ±3 min (6 min total) to cover 5-min cron gaps
-✅ Double-send protection: sent log (docs/.sent_today.json) deduplicates within the day
-✅ Sent log auto-resets daily (keyed by digest date)
-✅ Dynamic intervals: interval = 13hrs / article_count
-✅ GitHub Pages deep links: https://your-site.github.io/#article-id
-✅ zoneinfo (stdlib) — no pip install needed
+  Batch 1 — Immediately after HTML is generated  (triggered by generate_site.py)
+  Batch 2 — 1:30 PM IST
+  Batch 3 — 4:30 PM IST
+  Batch 4 — 7:30 PM IST
 
-IMPORTANT — sent log persistence:
-  The sent log is written to docs/.sent_today.json.
-  For it to work across GitHub Actions runs, your workflow must commit it back
-  to the repo after this script runs. Add these steps to your workflow:
+Each batch delivers exactly 1/4 of the day's articles, drawn equally from
+all categories (round-robin). The sent log (docs/.sent_today.json) prevents
+double-sends if a cron run overlaps the window.
 
-    - name: Commit sent log
-      run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
-        git add docs/.sent_today.json
-        git diff --staged --quiet || git commit -m "chore: update sent log [skip ci]"
-        git push
+Cron schedule (UTC):
+  '*/5 8 * * *'    →  1:30 PM IST  (08:00–08:30 UTC)
+  '*/5 11 * * *'   →  4:30 PM IST  (11:00–11:30 UTC)
+  '*/5 14 * * *'   →  7:30 PM IST  (14:00–14:30 UTC)
 
-  The [skip ci] tag prevents the commit from re-triggering your workflow.
+Batch 1 is triggered by generate_site.py directly — NOT a cron job.
 
-Usage: GitHub cron should be '*/5 3-17 * * *' (every 5 min, 8:30 AM–11:30 PM IST)
+Usage:
+  python3 notify_scheduler.py           # normal cron dispatch
+  python3 notify_scheduler.py --batch 1 # force Batch 1 (called by generate_site.py)
 """
 
 import os
+import sys
 import json
 import hashlib
 from datetime import datetime, timedelta
 from pathlib import Path
 from urllib import request as urlreq
 from collections import defaultdict
-from zoneinfo import ZoneInfo  # stdlib since Python 3.9 — no pip install needed
+from zoneinfo import ZoneInfo
 
 IST         = ZoneInfo('Asia/Kolkata')
 DIGEST_FILE = Path("docs/digest.json")
 SENT_LOG    = Path("docs/.sent_today.json")
 SITE_URL    = os.environ.get('SITE_URL', '').rstrip('/')
 
-# Fixed schedule window: 9 AM to 10 PM IST (13 hours)
-SCHEDULE_START_HOUR = 9
-SCHEDULE_END_HOUR   = 22
+# ── Fixed batch schedule (IST) ──────────────────────────────────────────────
+# Batch 1 is fired immediately by generate_site.py (hour=None signals this).
+BATCH_TIMES = [
+    {"batch": 1, "hour": None, "minute": None, "label": "Immediate (on HTML generation)"},
+    {"batch": 2, "hour": 13,   "minute": 30,   "label": "1:30 PM IST"},
+    {"batch": 3, "hour": 16,   "minute": 30,   "label": "4:30 PM IST"},
+    {"batch": 4, "hour": 19,   "minute": 30,   "label": "7:30 PM IST"},
+]
 
-# Send window: ±3 min around each article's scheduled time.
-# Must be >= half the cron interval to eliminate dead zones.
-# With 5-min cron → use 3 min (covers the full 5-min gap with 1 min overlap each side).
-WINDOW_MINUTES = 3
+# Cron window: ±4 min around each batch time so a 5-min cron gap has no dead zone.
+WINDOW_MINUTES = 4
 
 CATEGORY_EMOJI = {
     "Politics":       "🏛️",
@@ -71,39 +70,50 @@ CATEGORY_EMOJI = {
 CATEGORY_ORDER = list(CATEGORY_EMOJI.keys())
 
 
-# ---------------------------------------------------------------------------
-# Sent-log helpers
-# ---------------------------------------------------------------------------
+# ── Sent-log helpers ─────────────────────────────────────────────────────────
 
-def load_sent_log(date_str: str) -> set:
+def load_sent_log(date_str: str) -> dict:
     """
-    Return the set of article_ids already sent today.
-    If the log is for a different date (new day), treat it as empty.
+    Return the sent-log dict for today:
+      {
+        "date": "07 June 2026",
+        "sent": ["id1", "id2", ...],
+        "batches_sent": [1, 2]          # which batch numbers have been dispatched
+      }
+    Resets automatically when the date changes.
     """
     if SENT_LOG.exists():
         try:
             data = json.loads(SENT_LOG.read_text(encoding="utf-8"))
             if data.get("date") == date_str:
-                return set(data.get("sent", []))
+                return data
         except (json.JSONDecodeError, KeyError):
-            pass  # Corrupt log — start fresh
-    return set()
+            pass
+    return {"date": date_str, "sent": [], "batches_sent": []}
 
 
-def save_sent_log(date_str: str, sent_ids: set) -> None:
-    """Persist the sent log for today."""
+def save_sent_log(log: dict) -> None:
     SENT_LOG.write_text(
-        json.dumps({"date": date_str, "sent": sorted(sent_ids)}, ensure_ascii=False),
+        json.dumps(log, ensure_ascii=False, indent=2),
         encoding="utf-8"
     )
 
 
-# ---------------------------------------------------------------------------
-# Scheduling helpers
-# ---------------------------------------------------------------------------
+# ── Article helpers ──────────────────────────────────────────────────────────
+
+def ensure_article_ids(articles: list[dict]) -> list[dict]:
+    for art in articles:
+        if not art.get("article_id"):
+            content = f"{art.get('date', '')}:{art.get('headline', '')}".encode()
+            art["article_id"] = hashlib.md5(content).hexdigest()[:8]
+    return articles
+
 
 def round_robin_articles(articles: list[dict]) -> list[dict]:
-    """Round-robin across categories by importance score."""
+    """
+    Sort articles into a round-robin order across categories,
+    highest importance first within each category.
+    """
     by_cat = defaultdict(list)
     for art in articles:
         cat = art.get("category", "India")
@@ -124,49 +134,48 @@ def round_robin_articles(articles: list[dict]) -> list[dict]:
     return result
 
 
-def build_precise_schedule(articles: list[dict], date_str: str) -> list[dict]:
-    """Assign EXACT send times: 09:00 + (i * interval_seconds)."""
-    try:
-        base_date = datetime.strptime(date_str, "%d %B %Y").replace(tzinfo=IST)
-    except ValueError:
-        try:
-            base_date = datetime.strptime(date_str, "%d %b %Y").replace(tzinfo=IST)
-        except ValueError:
-            base_date = datetime.now(IST).replace(hour=0, minute=0, second=0, microsecond=0)
-
-    start = base_date.replace(hour=SCHEDULE_START_HOUR, minute=0, second=0, microsecond=0)
-    end   = base_date.replace(hour=SCHEDULE_END_HOUR,   minute=0, second=0, microsecond=0)
-
+def split_into_batches(articles: list[dict]) -> dict[int, list[dict]]:
+    """
+    Split round-robin-ordered articles into 4 equal batches.
+    If len(articles) % 4 != 0, extra articles go to batch 1 first,
+    then batch 2, etc.
+    """
     n = len(articles)
-    if n == 0:
-        return []
+    base = n // 4
+    remainder = n % 4        # 0–3 extra articles
 
-    total_seconds    = int((end - start).total_seconds())
-    interval_seconds = total_seconds // n
-
-    scheduled = []
-    for i, art in enumerate(articles):
-        send_at    = start + timedelta(seconds=i * interval_seconds)
-        article_id = art.get('article_id') or hashlib.md5(
-            f"{art.get('date', '')}:{art['headline']}".encode()
-        ).hexdigest()[:8]
-        scheduled.append({
-            **art,
-            'article_id':     article_id,
-            '_send_at':       send_at,
-            '_send_at_epoch': int(send_at.timestamp()),
-            '_send_at_ist':   send_at.strftime("%H:%M:%S"),
-            '_interval_min':  f"{interval_seconds // 60}:{interval_seconds % 60:02d}",
-        })
-    return scheduled
+    batches = {}
+    idx = 0
+    for i, slot in enumerate(range(1, 5)):
+        size = base + (1 if i < remainder else 0)
+        batches[slot] = articles[idx: idx + size]
+        idx += size
+    return batches
 
 
-# ---------------------------------------------------------------------------
-# Notification sender
-# ---------------------------------------------------------------------------
+# ── Batch detection ──────────────────────────────────────────────────────────
+
+def detect_current_batch(now_ist: datetime) -> int | None:
+    """
+    Return which batch number (2, 3, or 4) is due right now,
+    based on a ±WINDOW_MINUTES window around the scheduled time.
+    Returns None if no batch is due.
+    Batch 1 is never detected here — it is triggered explicitly.
+    """
+    for slot in BATCH_TIMES[1:]:   # skip batch 1 (no fixed time)
+        target = now_ist.replace(
+            hour=slot["hour"], minute=slot["minute"],
+            second=0, microsecond=0
+        )
+        delta = abs((now_ist - target).total_seconds())
+        if delta <= WINDOW_MINUTES * 60:
+            return slot["batch"]
+    return None
+
+
+# ── ntfy sender ──────────────────────────────────────────────────────────────
 
 def send_ntfy(topic: str, title: str, body: str, click_url: str, tags: list[str]) -> bool:
-    """Send an ntfy notification with a GitHub Pages deep link."""
     headers = {
         "Title":        title[:200],
         "Priority":     "default",
@@ -188,9 +197,49 @@ def send_ntfy(topic: str, title: str, body: str, click_url: str, tags: list[str]
         return False
 
 
-# ---------------------------------------------------------------------------
-# Main
-# ---------------------------------------------------------------------------
+# ── Dispatch ─────────────────────────────────────────────────────────────────
+
+def dispatch_batch(batch_num: int, batch_articles: list[dict],
+                   ntfy_topic: str, sent_log: dict) -> int:
+    """Send all unsent articles in this batch. Returns count sent."""
+    sent_ids = set(sent_log.get("sent", []))
+    to_send  = [a for a in batch_articles if a["article_id"] not in sent_ids]
+
+    if not to_send:
+        print(f"  ⏭️  Batch {batch_num}: all articles already sent")
+        return 0
+
+    print(f"  📦 Batch {batch_num}: {len(to_send)} articles to send")
+    sent = 0
+    for art in to_send:
+        headline   = art["headline"]
+        summary    = art.get("summary", "")
+        category   = art.get("category", "News")
+        article_id = art["article_id"]
+
+        pages_url = f"{SITE_URL}/#article-{article_id}"
+        emoji     = CATEGORY_EMOJI.get(category, "📰")
+        body      = f"{emoji} {category}\n\n{summary[:350]}..."
+        tags      = [category.lower().replace(" ", "_"), "news", "daily"]
+
+        print(f"  📱 [{category}] {headline[:60]}")
+        if send_ntfy(ntfy_topic, headline, body, pages_url, tags):
+            sent += 1
+            sent_ids.add(article_id)
+            print(f"     ✅ Sent → {pages_url}")
+        else:
+            print(f"     ❌ Failed")
+
+    # Update sent log
+    sent_log["sent"] = sorted(sent_ids)
+    batches_sent = set(sent_log.get("batches_sent", []))
+    batches_sent.add(batch_num)
+    sent_log["batches_sent"] = sorted(batches_sent)
+    save_sent_log(sent_log)
+    return sent
+
+
+# ── Main ─────────────────────────────────────────────────────────────────────
 
 def main():
     ntfy_topic = os.environ.get("NTFY_TOPIC", "").strip()
@@ -203,87 +252,64 @@ def main():
         return
 
     digest   = json.loads(DIGEST_FILE.read_text(encoding="utf-8"))
-    articles = digest.get("articles", [])
+    articles = ensure_article_ids(digest.get("articles", []))
     date_str = digest.get("date", "")
 
     if not articles:
         print("No articles in digest")
         return
 
-    # Build precise schedule
-    ordered      = round_robin_articles(articles)
-    scheduled    = build_precise_schedule(ordered, date_str)
-    interval_min = int((SCHEDULE_END_HOUR - SCHEDULE_START_HOUR) * 60 / max(len(scheduled), 1))
+    # Determine which batch to run
+    force_batch = None
+    if "--batch" in sys.argv:
+        idx = sys.argv.index("--batch")
+        try:
+            force_batch = int(sys.argv[idx + 1])
+        except (IndexError, ValueError):
+            pass
 
-    now_ist = datetime.now(IST)
+    now_ist   = datetime.now(IST)
+    sent_log  = load_sent_log(date_str)
+
+    ordered  = round_robin_articles(articles)
+    batches  = split_into_batches(ordered)
+
     print(f"📅 {date_str} | Now: {now_ist.strftime('%H:%M:%S')} IST")
-    print(f"📊 {len(scheduled)} articles | Interval: ~{interval_min} min")
+    print(f"📊 {len(articles)} articles → "
+          f"{' | '.join(f'B{k}:{len(v)}' for k,v in sorted(batches.items()))}")
 
-    # -----------------------------------------------------------------------
-    # REVISED WINDOW: ±WINDOW_MINUTES (default ±3 min = 6 min total)
-    # This fully covers a 5-min cron cycle with no dead zones.
-    # The sent log below prevents double-sends from overlapping windows.
-    # -----------------------------------------------------------------------
-    window_start = now_ist - timedelta(minutes=WINDOW_MINUTES)
-    window_end   = now_ist + timedelta(minutes=WINDOW_MINUTES)
-
-    due = [
-        art for art in scheduled
-        if window_start.timestamp() <= art["_send_at_epoch"] <= window_end.timestamp()
-    ]
-
-    print(f"⏰ Window: {window_start.strftime('%H:%M')}–{window_end.strftime('%H:%M')} "
-          f"({WINDOW_MINUTES * 2} min) | Due: {len(due)}")
-
-    # -----------------------------------------------------------------------
-    # Load sent log — skip articles already delivered this run or a prior run
-    # -----------------------------------------------------------------------
-    sent_ids = load_sent_log(date_str)
-    already_sent = [a for a in due if a["article_id"] in sent_ids]
-    due          = [a for a in due if a["article_id"] not in sent_ids]
-
-    if already_sent:
-        print(f"⏭️  Skipping {len(already_sent)} already-sent article(s)")
-
-    # -----------------------------------------------------------------------
-    # Send
-    # -----------------------------------------------------------------------
-    sent = 0
-    for art in due:
-        headline   = art["headline"]
-        summary    = art["summary"]
-        category   = art.get("category", "News")
-        article_id = art["article_id"]
-
-        pages_url = f"{SITE_URL}/#article-{article_id}"
-        emoji     = CATEGORY_EMOJI.get(category, "📰")
-        body      = f"{emoji} {category}\n\n{summary[:350]}..."
-        tags      = [category.lower().replace(" ", "_"), "news", "daily"]
-
-        print(f"📱 [{art['_send_at_ist']}] {headline[:60]}")
-        if send_ntfy(ntfy_topic, headline, body, pages_url, tags):
-            sent += 1
-            sent_ids.add(article_id)
-            print(f"   ✅ Sent → {pages_url}")
-        else:
-            print(f"   ❌ Failed")
-
-    # Persist updated sent log (only if something changed)
-    if sent > 0:
-        save_sent_log(date_str, sent_ids)
-        print(f"\n🎉 Sent {sent}/{len(due)} notifications | Log updated")
+    if force_batch is not None:
+        batch_num = force_batch
+        print(f"\n🚀 Forced batch {batch_num} ({BATCH_TIMES[batch_num-1]['label']})")
     else:
-        print(f"\n— Nothing new to send this run")
+        batch_num = detect_current_batch(now_ist)
+        if batch_num is None:
+            print("\n— No batch is scheduled right now. Nothing to send.")
+            # Debug: show next batch
+            for slot in BATCH_TIMES[1:]:
+                target = now_ist.replace(
+                    hour=slot["hour"], minute=slot["minute"],
+                    second=0, microsecond=0
+                )
+                if target > now_ist:
+                    mins = int((target - now_ist).total_seconds() / 60)
+                    print(f"⏭️  Next: Batch {slot['batch']} ({slot['label']}) in ~{mins} min")
+                    break
+            return
+        print(f"\n⏰ Batch {batch_num} detected ({BATCH_TIMES[batch_num-1]['label']})")
 
-    # -----------------------------------------------------------------------
-    # Debug: show next 3 upcoming articles
-    # -----------------------------------------------------------------------
-    future = [a for a in scheduled if a["_send_at_epoch"] > now_ist.timestamp()]
-    future = [a for a in future if a["article_id"] not in sent_ids]
-    if future:
-        print("\n⏭️  Next up:")
-        for a in future[:3]:
-            print(f"   {a['_send_at_ist']} [{a.get('category')}] {a.get('headline', '')[:55]}")
+    # Skip if this batch was already fully dispatched
+    if batch_num in sent_log.get("batches_sent", []):
+        print(f"⏭️  Batch {batch_num} already sent in a prior run — skipping")
+        return
+
+    batch_articles = batches.get(batch_num, [])
+    if not batch_articles:
+        print(f"  No articles assigned to batch {batch_num}")
+        return
+
+    sent = dispatch_batch(batch_num, batch_articles, ntfy_topic, sent_log)
+    print(f"\n🎉 Batch {batch_num} complete: {sent} notifications sent")
 
 
 if __name__ == "__main__":
