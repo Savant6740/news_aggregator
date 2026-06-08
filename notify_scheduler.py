@@ -12,15 +12,16 @@ all categories (round-robin). The sent log (docs/.sent_today.json) prevents
 double-sends if a cron run overlaps the window.
 
 Cron schedule (UTC):
-  '*/5 8 * * *'    →  1:30 PM IST  (08:00–08:30 UTC)
-  '*/5 11 * * *'   →  4:30 PM IST  (11:00–11:30 UTC)
-  '*/5 14 * * *'   →  7:30 PM IST  (14:00–14:30 UTC)
+  '0 8 * * *'    →  1:30 PM IST  (08:00 UTC)
+  '0 11 * * *'   →  4:30 PM IST  (11:00 UTC)
+  '0 14 * * *'   →  7:30 PM IST  (14:00 UTC)
 
 Batch 1 is triggered by generate_site.py directly — NOT a cron job.
 
 Usage:
-  python3 notify_scheduler.py           # normal cron dispatch
-  python3 notify_scheduler.py --batch 1 # force Batch 1 (called by generate_site.py)
+  python3 notify_scheduler.py                # normal cron dispatch (reads BATCH_NUM env)
+  python3 notify_scheduler.py --batch 1      # force batch (called by generate_site.py)
+  BATCH_NUM=2 python3 notify_scheduler.py    # explicit batch via env (set by GH Actions)
 """
 
 import os
@@ -47,8 +48,9 @@ BATCH_TIMES = [
     {"batch": 4, "hour": 19,   "minute": 30,   "label": "7:30 PM IST"},
 ]
 
-# Cron window: ±4 min around each batch time so a 5-min cron gap has no dead zone.
-WINDOW_MINUTES = 4
+# Fallback clock-based window (minutes) — used only when BATCH_NUM env is absent.
+# Wide enough to survive typical GitHub Actions scheduler delays (~90 min).
+WINDOW_MINUTES = 90
 
 CATEGORY_EMOJI = {
     "Politics":       "🏛️",
@@ -155,22 +157,41 @@ def split_into_batches(articles: list[dict]) -> dict[int, list[dict]]:
 
 # ── Batch detection ──────────────────────────────────────────────────────────
 
-def detect_current_batch(now_ist: datetime) -> int | None:
+def detect_batch_from_env() -> int | None:
     """
-    Return which batch number (2, 3, or 4) is due right now,
-    based on a ±WINDOW_MINUTES window around the scheduled time.
-    Returns None if no batch is due.
+    Primary: read BATCH_NUM set explicitly by the GitHub Actions workflow.
+    Returns None if the env var is absent or invalid.
+    """
+    raw = os.environ.get("BATCH_NUM", "").strip()
+    if raw:
+        try:
+            val = int(raw)
+            if val in (1, 2, 3, 4):
+                return val
+            print(f"⚠️  BATCH_NUM={raw} is out of range (expected 1-4)")
+        except ValueError:
+            print(f"⚠️  BATCH_NUM={raw!r} is not an integer — ignoring")
+    return None
+
+
+def detect_batch_from_clock(now_ist: datetime) -> int | None:
+    """
+    Fallback: infer the batch from the current IST time within a ±WINDOW_MINUTES
+    window. Covers typical GitHub Actions scheduler delays.
     Batch 1 is never detected here — it is triggered explicitly.
     """
+    best_batch = None
+    best_delta = float("inf")
     for slot in BATCH_TIMES[1:]:   # skip batch 1 (no fixed time)
         target = now_ist.replace(
             hour=slot["hour"], minute=slot["minute"],
             second=0, microsecond=0
         )
         delta = abs((now_ist - target).total_seconds())
-        if delta <= WINDOW_MINUTES * 60:
-            return slot["batch"]
-    return None
+        if delta <= WINDOW_MINUTES * 60 and delta < best_delta:
+            best_batch = slot["batch"]
+            best_delta = delta
+    return best_batch
 
 
 # ── ntfy sender ──────────────────────────────────────────────────────────────
@@ -259,7 +280,21 @@ def main():
         print("No articles in digest")
         return
 
-    # Determine which batch to run
+    now_ist  = datetime.now(IST)
+    sent_log = load_sent_log(date_str)
+
+    ordered = round_robin_articles(articles)
+    batches = split_into_batches(ordered)
+
+    print(f"📅 {date_str} | Now: {now_ist.strftime('%H:%M:%S')} IST")
+    print(f"📊 {len(articles)} articles → "
+          f"{' | '.join(f'B{k}:{len(v)}' for k,v in sorted(batches.items()))}")
+
+    # ── Determine batch number (3-way priority) ──────────────────────────────
+    # 1. --batch CLI arg  (called by generate_site.py for Batch 1)
+    # 2. BATCH_NUM env var (set explicitly by GitHub Actions workflow)
+    # 3. Clock-based fallback (wide ±90 min window)
+
     force_batch = None
     if "--batch" in sys.argv:
         idx = sys.argv.index("--batch")
@@ -268,35 +303,30 @@ def main():
         except (IndexError, ValueError):
             pass
 
-    now_ist   = datetime.now(IST)
-    sent_log  = load_sent_log(date_str)
-
-    ordered  = round_robin_articles(articles)
-    batches  = split_into_batches(ordered)
-
-    print(f"📅 {date_str} | Now: {now_ist.strftime('%H:%M:%S')} IST")
-    print(f"📊 {len(articles)} articles → "
-          f"{' | '.join(f'B{k}:{len(v)}' for k,v in sorted(batches.items()))}")
-
     if force_batch is not None:
         batch_num = force_batch
-        print(f"\n🚀 Forced batch {batch_num} ({BATCH_TIMES[batch_num-1]['label']})")
+        print(f"\n🚀 Forced batch {batch_num} via --batch flag ({BATCH_TIMES[batch_num-1]['label']})")
+
     else:
-        batch_num = detect_current_batch(now_ist)
-        if batch_num is None:
-            print("\n— No batch is scheduled right now. Nothing to send.")
-            # Debug: show next batch
-            for slot in BATCH_TIMES[1:]:
-                target = now_ist.replace(
-                    hour=slot["hour"], minute=slot["minute"],
-                    second=0, microsecond=0
-                )
-                if target > now_ist:
-                    mins = int((target - now_ist).total_seconds() / 60)
-                    print(f"⏭️  Next: Batch {slot['batch']} ({slot['label']}) in ~{mins} min")
-                    break
-            return
-        print(f"\n⏰ Batch {batch_num} detected ({BATCH_TIMES[batch_num-1]['label']})")
+        env_batch = detect_batch_from_env()
+        if env_batch is not None:
+            batch_num = env_batch
+            print(f"\n🎯 Batch {batch_num} from BATCH_NUM env var ({BATCH_TIMES[batch_num-1]['label']})")
+        else:
+            batch_num = detect_batch_from_clock(now_ist)
+            if batch_num is None:
+                print("\n— No batch is scheduled right now. Nothing to send.")
+                for slot in BATCH_TIMES[1:]:
+                    target = now_ist.replace(
+                        hour=slot["hour"], minute=slot["minute"],
+                        second=0, microsecond=0
+                    )
+                    if target > now_ist:
+                        mins = int((target - now_ist).total_seconds() / 60)
+                        print(f"⏭️  Next: Batch {slot['batch']} ({slot['label']}) in ~{mins} min")
+                        break
+                return
+            print(f"\n⏰ Batch {batch_num} from clock fallback ({BATCH_TIMES[batch_num-1]['label']})")
 
     # Skip if this batch was already fully dispatched
     if batch_num in sent_log.get("batches_sent", []):
