@@ -176,7 +176,8 @@ jobs:
   # Algorithm:
   #   1. Reads docs/digest.json (committed by digest job)
   #   2. Splits articles into 4 equal batches drawn round-robin across categories
-  #   3. Detects which batch is due based on current IST time (±4 min window)
+  #   3. BATCH_NUM env var tells notify_scheduler.py exactly which batch to send
+  #      (no clock inference needed — immune to GitHub Actions schedule delays)
   #   4. Sends that batch; skips articles already in docs/.sent_today.json
   #   5. Commits the updated sent log [skip ci]
   #
@@ -206,6 +207,10 @@ jobs:
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           SITE_URL:   ${{ secrets.SITE_URL }}
+          BATCH_NUM: >-
+            ${{ github.event.schedule == '0 8 * * *'  && '2' ||
+                github.event.schedule == '0 11 * * *' && '3' ||
+                github.event.schedule == '0 14 * * *' && '4' || '' }}
         run: python3 notify_scheduler.py
 
       - name: 💾 Commit sent log
