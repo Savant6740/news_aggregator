@@ -150,15 +150,20 @@ function buildAll() {
   hTrack.style.transform='translateX(0)';
   syncV(0,false);
   
-  // FIXED: Apply deep link after build
+  // Apply deep link after build — 200ms ensures card heights are measured
   if (deepLinkTarget) {
-    setTimeout(() => applyDeepLink(deepLinkTarget), 100);
+    setTimeout(() => applyDeepLink(deepLinkTarget), 200);
   }
 }
 
 function buildCard(art,h,m,cat,articleIndex) {
   const src=art.sources?.[0];
-  const href=src?.pdf_filename?`pdfs/${src.pdf_filename}#page=${src.page}`:(src?.telegram_url||'#');
+  // Direct PDF link with #page=N - respected by all modern browser PDF viewers
+  // when the file is opened via a link click (Chrome, Firefox, Safari, Edge).
+  // Falls back to the Telegram source URL if no PDF is available.
+  const href = src?.pdf_filename
+    ? ('pdfs/' + src.pdf_filename + '#page=' + (src.page || 1))
+    : (src?.telegram_url || '#');
   const card=document.createElement('div');
   card.className='card';
   card.dataset.articleId = art.article_id;
@@ -209,13 +214,22 @@ function applyDeepLink(target) {
     byCategory[cat].some(art => art.article_id === target.hash)
   );
   if (ci === -1) return;
-  goCat(ci, false);
+
+  // Set catIdx BEFORE calling goCat so the horizontal track lands correctly
+  catIdx = ci;
+  hTrack.style.transition = 'none';
+  hTrack.style.transform = `translateX(${-ci * vpW}px)`;
+
   const ai = byCategory[sortedCats[ci]].findIndex(art => art.article_id === target.hash);
   if (ai === -1) return;
   panels[ci].artIdx = ai;
   syncV(ci, false);
+
   const card = document.getElementById('article-' + target.hash);
-  if (card) { card.classList.add('target-highlight'); setTimeout(() => card.classList.remove('target-highlight'), 3000); }
+  if (card) {
+    card.classList.add('target-highlight');
+    setTimeout(() => card.classList.remove('target-highlight'), 3000);
+  }
 }
 
 function goArt(d) {
