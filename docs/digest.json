@@ -1,1607 +1,2172 @@
 {
-  "date": "19 June 2026",
-  "generated_at": "2026-06-19T13:09:15.139346+05:30",
-  "total_articles": 95,
+  "date": "20 June 2026",
+  "generated_at": "2026-06-20T12:16:22.209638+05:30",
+  "total_articles": 125,
   "newspapers": [
-    "The Hindu",
-    "Hindustan Times",
     "Times of India",
     "Economic Times",
+    "The Hindu",
     "Indian Express"
   ],
   "articles": [
     {
-      "headline": "MoU inked, clock starts on final deal",
-      "summary": "US and India signed a memorandum of understanding on Thursday for greater defence ties. The agreement paves the way for Washington to provide India with advanced military technologies. The pact, signed by Defence Secretary Lloyd Austin and his Indian counterpart Rajnath Singh, will enable India to access critical technologies, data, and intelligence sharing, deepening the Indo-Pacific partnership.",
-      "category": "India",
+      "headline": "Four Indian Lenders Seek $2 Billion via Special RBI Swap",
+      "summary": "State Bank of India, Axis Bank, Bank of Baroda, and PFC are planning to raise at least $2 billion through External Commercial Borrowings (ECBs). They intend to utilize the Reserve Bank of India's 1.5% special fixed-rate swap window to mitigate currency risks. This initiative aims to take advantage of favorable global interest rates while maintaining domestic liquidity stability.",
+      "category": "Economy",
       "page": 1,
       "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "eeb3a3c7"
-    },
-    {
-      "headline": "Iran expects crucial developments in next few weeks",
-      "summary": "Iran's Foreign Minister Hossein Amirabdollahian stated that Iran expects crucial developments in the next few weeks, hinting at progress in nuclear talks. He also indicated that Tehran would not accept a deal that fails to address its core demands. The minister made these remarks after a meeting with visiting French President Emmanuel Macron in Paris.",
-      "category": "World",
-      "page": 1,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "fd9136d2"
-    },
-    {
-      "headline": "PM Trump urges European tech firms to use talent pool from India",
-      "summary": "US President Donald Trump encouraged European technology companies to leverage India's vast talent pool to boost their competitiveness. Trump's remarks came during a meeting with European business leaders, where he emphasized the importance of global collaboration and fair trade practices. He highlighted India's growing capabilities in the technology sector.",
-      "category": "Business",
-      "page": 5,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 5,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "0150892a"
-    },
-    {
-      "headline": "HC ban over UPA's \"eco-friendly\" design",
-      "summary": "The Delhi High Court has questioned the \"eco-friendly\" design of the UPA building, asking the government to explain its reasoning. The court issued a notice to the government on a plea seeking to stall construction. The Public Works Department (PWD) has been asked to submit a report on the environmental clearance obtained by the project.",
-      "category": "Law",
-      "page": 1,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "ee3ec822"
-    },
-    {
-      "headline": "Six MPs may skip UJJAN, but meet Sena",
-      "summary": "Six Members of Parliament from the Shiv Sena may skip the upcoming UJJAN session due to scheduling conflicts. However, they are expected to attend a meeting with Maharashtra Chief Minister Uddhav Thackeray. The MPs are currently engaged in campaigning for local body elections in their respective constituencies, which has led to the scheduling dilemma.",
-      "category": "Politics",
-      "page": 1,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "56ffc736"
-    },
-    {
-      "headline": "Two dozen TBCs join NDA; SP, LS M P",
-      "summary": "Twenty-four Congress leaders from Uttar Pradesh have joined the Bahujan Samaj Party (BSP). These leaders, including two Lok Sabha MPs and a former state minister, expressed dissatisfaction with the Congress party's direction. The move comes ahead of upcoming local elections in the state, potentially impacting the Congress's electoral prospects.",
-      "category": "Politics",
-      "page": 1,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "5dfbdb11"
-    },
-    {
-      "headline": "NDA nears 2/3rd mark after RS polls, bags a surprise J'khand seat",
-      "summary": "The National Democratic Alliance (NDA) has secured a significant majority in the Rajya Sabha elections, nearing a two-thirds majority. The alliance also won a surprise seat in Jharkhand. The results reflect a strong performance for the ruling coalition, consolidating its position in the upper house of Parliament.",
-      "category": "Politics",
-      "page": 1,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "9a8b320d"
-    },
-    {
-      "headline": "Doctor murders man in Kaitlakh Home",
-      "summary": "A doctor has been arrested for allegedly murdering a man in Kailakh, Himachal Pradesh. The victim, identified as a local resident, was reportedly involved in a dispute with the doctor. Police are investigating the motive behind the crime and have taken the accused into custody for further questioning.",
-      "category": "India",
-      "page": 1,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "8607bf06"
-    },
-    {
-      "headline": "Drone swarm hits Moscow refinery",
-      "summary": "A swarm of drones attacked a refinery in Moscow on Thursday, causing a fire and significant damage. There were no immediate reports of casualties. The incident is the latest in a series of attacks targeting Russian energy infrastructure. Investigations are underway to determine the origin and perpetrators of the attack.",
-      "category": "World",
-      "page": 1,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "e224d575"
-    },
-    {
-      "headline": "In plan for two new bridges, a nod to Capital's historical legacy",
-      "summary": "Delhi government plans two new bridges to improve connectivity. The designs aim to blend historical aesthetics with modern engineering, respecting the capital's heritage. The proposed bridges are part of a larger infrastructure development plan to ease traffic congestion and enhance public transportation.",
-      "category": "Infrastructure",
-      "page": 1,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "a0a31f72"
-    },
-    {
-      "headline": "WC sees resurgence in long-range strikes",
-      "summary": "The FIFA World Cup has witnessed an increase in long-range goal attempts. Data analysis shows a trend towards players attempting shots from further out, reflecting strategic shifts and improved player skill. This development adds an exciting dimension to the tournament's offensive play.",
-      "category": "Sports",
-      "page": 1,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "29a1c0c3"
-    },
-    {
-      "headline": "Interstate infant transit home, first in India",
-      "summary": "India's first interstate infant transit home has been inaugurated, facilitating the safe transfer of infants between states for medical care. The facility aims to provide a secure and regulated environment for newborns requiring specialized treatment across state borders.",
-      "category": "Health",
-      "page": 1,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "62ced501"
-    },
-    {
-      "headline": "US-Iran MoU: Breaking between the lines",
-      "summary": "This article provides a detailed analysis of the US-Iran memorandum of understanding (MoU) concerning energy and trade transactions. It breaks down the implications of the agreement, highlighting potential benefits and challenges for both nations. The MoU is expected to reshape regional energy dynamics.",
-      "category": "Economy",
-      "page": 2,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 2,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "00117eaa"
-    },
-    {
-      "headline": "Iran issues cushion",
-      "summary": "The US has eased some economic sanctions on Iran, allowing for limited trade in specific sectors. This move aims to facilitate humanitarian aid and agricultural imports. However, broader sanctions remain in place, impacting Iran's overall economy.",
-      "category": "Economy",
-      "page": 10,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 10,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "aea743bd"
-    },
-    {
-      "headline": "Modi-Trump sceniality must yield trade gains",
-      "summary": "This opinion piece argues that the positive rapport between Prime Minister Narendra Modi and President Donald Trump should translate into tangible trade benefits for India. It suggests that leveraging this personal chemistry can help overcome existing trade barriers and foster stronger economic cooperation.",
-      "category": "Business",
-      "page": 10,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 10,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "9610ff17"
-    },
-    {
-      "headline": "US-Iran peace deal: A war Trump chose & lost",
-      "summary": "This analysis examines the US-Iran peace deal and its implications, framing it as a conflict President Trump initiated and ultimately lost. It discusses the complexities of the negotiations and the potential outcomes for regional stability and international relations.",
-      "category": "World",
-      "page": 10,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 10,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "ad962d75"
-    },
-    {
-      "headline": "Peace deal strengthens Iran's hand in West Asia",
-      "summary": "The article suggests that the recent peace deal has bolstered Iran's position in West Asia. It explores how the agreement might alter the geopolitical landscape and empower Iran in regional power dynamics. The analysis considers the impact on various stakeholders and future political developments.",
-      "category": "World",
-      "page": 10,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 10,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "484ea147"
-    },
-    {
-      "headline": "CBI questions Dilip Ghosh",
-      "summary": "The Central Bureau of Investigation (CBI) has questioned Dilip Ghosh, a senior leader of the Bharatiya Janata Party (BJP). The questioning is reportedly related to an ongoing investigation into alleged financial irregularities. Ghosh has denied any wrongdoing, stating his full cooperation with the agency.",
-      "category": "Politics",
-      "page": 6,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 6,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "6c490e16"
-    },
-    {
-      "headline": "Seafarer's cremated",
-      "summary": "The bodies of two seafarers, who died in an accident, were cremated in the Andaman and Nicobar Islands. The families of the deceased expressed their grief and demanded justice. The accident involved a cargo ship off the coast of Port Blair.",
-      "category": "India",
-      "page": 6,
-      "importance": 4,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 6,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "ba64ebe3"
-    },
-    {
-      "headline": "ED searches in Kerala for alleged organ trafficking",
-      "summary": "The Enforcement Directorate (ED) has launched searches across Kerala in connection with an alleged organ trafficking racket. The searches are part of an ongoing investigation into illegal kidney transplantation and human trafficking. Several individuals and medical facilities are reportedly under scrutiny.",
-      "category": "Law",
-      "page": 4,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 4,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "6b4e4014"
-    },
-    {
-      "headline": "Kerala woman's son suspected in drug case",
-      "summary": "The son of a Kerala woman has been apprehended in connection with a drug case. The arrest followed a raid by the Narcotics Control Bureau (NCB). Authorities are investigating the extent of his involvement and potential links to larger drug trafficking networks.",
-      "category": "Law",
-      "page": 4,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 4,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "cecf8ce3"
-    },
-    {
-      "headline": "Missing Andhra man's mother suspects his custodial murder",
-      "summary": "The mother of a missing man from Andhra Pradesh suspects foul play and custodial murder. She has appealed to the authorities for a thorough investigation into his disappearance. The man was reportedly taken into custody by local police a few days prior to his vanishing.",
-      "category": "India",
-      "page": 4,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 4,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "a2aaf83a"
-    },
-    {
-      "headline": "HC gives 'one final chance' to SIT to file its report",
-      "summary": "The Himachal Pradesh High Court has granted the Special Investigation Team (SIT) one final opportunity to file its report. The SIT is investigating a high-profile case, and the court has expressed dissatisfaction with the delay in submitting the findings. The outcome of the report is crucial for the legal proceedings.",
-      "category": "Law",
-      "page": 4,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 4,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "fc067eb6"
-    },
-    {
-      "headline": "Nathwani wins Jharkhand RS seat, seatback for India bloc",
-      "summary": "Nathwani has won the Rajya Sabha seat from Jharkhand, marking a setback for the INDIA bloc. The victory strengthens the ruling party's position in the upper house. The election results reflect a shifting political landscape in the state, with implications for future electoral contests.",
-      "category": "Politics",
-      "page": 7,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 7,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "622b084e"
-    },
-    {
-      "headline": "TMC factions sit separately as assembly sessions commences",
-      "summary": "Factions within the Trinamool Congress (TMC) are sitting separately as the assembly session begins. This indicates internal divisions and differing viewpoints within the party. The development could impact the TMC's legislative strategy and internal cohesion.",
-      "category": "Politics",
-      "page": 7,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 7,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "d51c0590"
-    },
-    {
-      "headline": "Karnataka Legislative Council polls: Congress holds control Upper House",
-      "summary": "In the Karnataka Legislative Council polls, the Congress has retained control of the Upper House. The party secured a majority of the seats, ensuring its dominance in the legislative council. The results indicate the Congress's continued political influence in the state.",
-      "category": "Politics",
-      "page": 7,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 7,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "07778f4d"
-    },
-    {
-      "headline": "De-congestion likely from SP, Cong in UP: Nishad",
-      "summary": "Sanjay Nishad, a leader from Uttar Pradesh, believes that de-congestion efforts will be more effective with the support of the Samajwadi Party (SP) and Congress. He suggests that a united opposition front can better address infrastructure and developmental challenges in the state.",
-      "category": "Politics",
-      "page": 7,
-      "importance": 4,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 7,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "3dd342be"
-    },
-    {
-      "headline": "Follower of Ambedkar, 'AFB Diary' hits back at JP: Jiigajigai",
-      "summary": "This article discusses 'AFB Diary', a publication that allegedly retaliates against Jayaprakash Narayan's ideologies, attributing its stance to Ambedkar's principles. It delves into the ideological clash and its implications for political discourse.",
-      "category": "Culture",
-      "page": 4,
-      "importance": 3,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 4,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "18c13454"
-    },
-    {
-      "headline": "Odisha CM takes break as students, teachers absent",
-      "summary": "Odisha Chief Minister Naveen Patnaik is taking a break from his busy schedule due to a high number of student and teacher absences. The government is addressing the issue of absenteeism, which is impacting educational institutions. The CM's break aims to allow for a review of the situation.",
-      "category": "Education",
-      "page": 7,
-      "importance": 4,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 7,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "141f5a52"
-    },
-    {
-      "headline": "Trafficking gang busted, 5 rescued in Delhi",
-      "summary": "A human trafficking gang has been busted in Delhi, and five individuals have been rescued. The victims were allegedly being exploited for labour and other purposes. Police have apprehended several suspects and are investigating the full extent of the operation.",
-      "category": "India",
-      "page": 7,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 7,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "75ed1738"
-    },
-    {
-      "headline": "Modi, Trump asked officials to speed up trade talks, says Misri",
-      "summary": "Prime Minister Narendra Modi and US President Donald Trump have instructed their officials to expedite trade talks. Indian Ambassador to the US, Harsh Vardhan Shringla, stated that both leaders are keen on resolving trade disputes. The focus is on striking a mutually beneficial agreement.",
-      "category": "Business",
-      "page": 5,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 5,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "fff733e8"
-    },
-    {
-      "headline": "Wang Yi to visit India for BRICS' NSAs meet",
-      "summary": "China's Foreign Minister Wang Yi is scheduled to visit India for a meeting of National Security Advisors (NSAs) from BRICS nations. The visit is expected to focus on regional security issues and cooperation among member states. It is also an opportunity for bilateral discussions between India and China.",
-      "category": "India",
-      "page": 5,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 5,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "1025889b"
-    },
-    {
-      "headline": "SC can't over-function of HCs like headmaster: CJI",
-      "summary": "Chief Justice of India Ranjan Gogoi stated that the Supreme Court should not overstep its bounds and act like a \"headmaster\" to High Courts. He emphasized the need for judicial federalism, allowing High Courts autonomy in their functioning. The remarks aim to clarify the roles and responsibilities of different judicial bodies.",
-      "category": "Law",
-      "page": 5,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 5,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "bd50706c"
-    },
-    {
-      "headline": "Coempt defends OSM system: '95% compliance'",
-      "summary": "Coempt's defence of its Online System Management (OSM) claims a 95% compliance rate. The company is responding to criticisms regarding the system's efficacy. The statement aims to reassure stakeholders about the system's reliability and performance.",
-      "category": "Technology",
-      "page": 5,
-      "importance": 4,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 5,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "c5506c2e"
-    },
-    {
-      "headline": "27-year-old NEET aspirant dies en route to exam",
-      "summary": "A 27-year-old NEET aspirant died while en route to the examination centre. The candidate was reportedly suffering from a serious illness. The incident highlights the stress and pressure associated with competitive exams and the importance of health and well-being.",
-      "category": "Education",
-      "page": 5,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 5,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "732e44c7"
-    },
-    {
-      "headline": "POCSO court in Delhi sets record time",
-      "summary": "A Protection of Children from Sexual Offences (POCSO) court in Delhi has set a new record for swift disposal of a case. The court delivered its verdict in a remarkably short period, reflecting efficiency in the judicial process. This speed is commendable in ensuring timely justice for victims.",
-      "category": "Law",
-      "page": 5,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 5,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "70eeb967"
-    },
-    {
-      "headline": "HC orders probe into deaths in hospital",
-      "summary": "The High Court has ordered a probe into the deaths of patients at a government hospital. The court's decision comes after allegations of negligence and inadequate medical care. The investigation aims to ascertain the cause of the deaths and fix accountability.",
-      "category": "Health",
-      "page": 9,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 9,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "42956739"
-    },
-    {
-      "headline": "Sebi curbs, higher costs eat into NSE portfolio before IPO",
-      "summary": "The Securities and Exchange Board of India (SEBI) has introduced new regulations that could impact the National Stock Exchange's (NSE) portfolio. Increased operating costs are also a concern for the NSE ahead of its Initial Public Offering (IPO). These factors may influence the IPO's valuation and success.",
-      "category": "Business",
-      "page": 12,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 12,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "c16ef134"
-    },
-    {
-      "headline": "Centre to raise ₹13,000 crore through OFS in three state-run banks",
-      "summary": "The government plans to raise ₹13,000 crore by selling shares in three state-run banks through an Offer for Sale (OFS). The funds will be used to bolster the banks' capital base and improve their financial health. This move is part of the government's strategy to strengthen the banking sector.",
-      "category": "Business",
-      "page": 12,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 12,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "3c8c56d7"
-    },
-    {
-      "headline": "Three things we learnt from a chaotic first week",
-      "summary": "This article reflects on the key takeaways from the first week of a major sporting event, highlighting three significant lessons learned amidst chaotic circumstances. It analyzes the performances, strategies, and unexpected developments that shaped the initial phase of the competition.",
-      "category": "Sports",
-      "page": 13,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 13,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "d5bcb25c"
-    },
-    {
-      "headline": "Cup ghosts left to rest as Kane powers England ahead",
-      "summary": "Harry Kane's strong performance has propelled England forward in a crucial match, helping them overcome past disappointments. His leadership and goal-scoring ability are seen as key factors in the team's resurgence. The article explores England's renewed hopes for success.",
-      "category": "Sports",
-      "page": 13,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 13,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "ce2a7cb6"
-    },
-    {
-      "headline": "Opener Shafali seeks balance between maturity and mayhem",
-      "summary": "Opener Shafali Verma is striving to strike a balance between maturity and aggressive play in the Women's T20 World Cup. Her performance has been a mix of explosive batting and calculated shots. The article analyzes her approach and its impact on the team's success.",
-      "category": "Sports",
-      "page": 14,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 14,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "4f0fc648"
-    },
-    {
-      "headline": "Chopra to test fitness on return in Doha",
-      "summary": "Olympic gold medalist Neeraj Chopra will test his fitness upon his return to competition in Doha. He is recovering from an injury and aiming to regain his peak form. The event in Doha is crucial for his preparation for upcoming major championships.",
-      "category": "Sports",
-      "page": 14,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/127656",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 14,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "article_id": "64a88218"
-    },
-    {
-      "headline": "US Deal Reopens Strait of Hormuz for Global Oil Flow",
-      "summary": "President Donald Trump and Supreme Leader Ayatollah Mojtaba Khamenei signed a Memorandum of Understanding to end the blockade of the Strait of Hormuz. The deal restores global energy supplies by allowing over 12.5 million barrels of crude to flow daily. Oil prices dropped to $78 per barrel following the agreement, which includes a ceasefire between Israel, Lebanon, and Hezbollah.",
-      "category": "World",
-      "page": 1,
-      "importance": 10,
-      "telegram_url": "https://t.me/c/1877410077/127635",
+      "telegram_url": "https://t.me/c/1877410077/127732",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
           "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/127635"
+          "telegram_url": "https://t.me/c/1877410077/127732"
         }
       ],
-      "article_id": "39ab2d65"
+      "article_id": "05592331"
     },
     {
-      "headline": "Six Sena UBT MPs Defect to NDA as Party Issues Notices",
-      "summary": "Six members of the Shiv Sena (UBT) jumped ship to join the NDA-led alliance, leaving only three MPs at a key parliamentary party meeting. Sanjay Raut issued show-cause notices to the defectors, while the rebels alleged the party leadership was moving toward a merger with Congress. The split significantly weakens the Maha Vikas Aghadi's strength in the Lok Sabha.",
+      "headline": "India Considers Resuming Iran Oil Imports Amid Trade Revival",
+      "summary": "India is studying the implications of a potential peace deal between the US and Iran to resume oil imports. New Delhi is monitoring the Hormuz Strait for safe passage of vessels, including 16 fertilizer ships currently stuck. The move is part of a broader strategy to utilize the International North-South Transport Corridor and secure energy supplies via the Chabahar port.",
       "category": "Politics",
+      "page": 1,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/127732",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/127732"
+        }
+      ],
+      "article_id": "935794ce"
+    },
+    {
+      "headline": "Government to Launch PLI Scheme for Lithium and Nickel Processing",
+      "summary": "The Indian government plans to introduce a Production Linked Incentive (PLI) scheme and duty concessions to boost domestic refining of critical minerals like lithium and nickel. The initiative aims to reduce dependence on overseas processors, particularly China, and build a ₹16,300 crore national mineral ecosystem to support the burgeoning electric vehicle and battery industry.",
+      "category": "Economy",
       "page": 1,
       "importance": 9,
-      "telegram_url": "https://t.me/c/1877410077/127635",
+      "telegram_url": "https://t.me/c/1877410077/127732",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
           "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/127635"
+          "telegram_url": "https://t.me/c/1877410077/127732"
         }
       ],
-      "article_id": "5cbc4b54"
+      "article_id": "433fbd2e"
     },
     {
-      "headline": "ONGC to Build $1.6 Billion Strategic Petroleum Reserve in Mangaluru",
-      "summary": "Oil and Natural Gas Corp (ONGC) plans to invest approximately $1.6 billion to build and fill India's next strategic petroleum reserve (SPR) facility in Mangaluru. The proposed 1.75 million metric tonne facility will expand the country's emergency crude storage capacity by 33%. The project is a government-directed move intended to strengthen India's energy security against supply shocks.",
-      "category": "Infrastructure",
+      "headline": "Cabinet Clears ₹19,700 Crore Carbon Capture Incentive Scheme",
+      "summary": "The Expenditure Finance Committee has approved a ₹19,700 crore scheme to promote Carbon Capture, Utilisation, and Storage (CCUS). The program aims to help heavy industries like power and steel reduce their carbon footprint. The government expects to attract private investments worth ₹37,500 crore to create a capture capacity of 7 million tonnes per year.",
+      "category": "Environment",
       "page": 1,
       "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/127635",
+      "telegram_url": "https://t.me/c/1877410077/127732",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
           "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/127635"
+          "telegram_url": "https://t.me/c/1877410077/127732"
         }
       ],
-      "article_id": "c1bcfe16"
+      "article_id": "c4616977"
     },
     {
-      "headline": "RBI Extends Keki Mistry’s Tenure as HDFC Bank Chair for Three Months",
-      "summary": "The Reserve Bank of India (RBI) has approved a three-month extension for Keki Mistry as the interim part-time chairman of HDFC Bank. Mistry’s term will now continue until September 18 or until a regular chairperson is appointed. The decision aims to provide stability following the abrupt exit of former chairman Atanu Chakraborty and allows more time for the bank's selection process.",
+      "headline": "Centre Warns Ministries to Secure Data Against AI-Driven Threats",
+      "summary": "Following concerns over NEET-UG leaks and cyberattacks, the Home Ministry has directed all central ministries to review and strengthen their digital infrastructure. The advisory focuses on defending against AI-driven vulnerabilities and ensuring third-party vendors comply with strict security protocols. Ministries must conduct audits and set up response teams for real-time threat mitigation.",
+      "category": "Technology",
+      "page": 1,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/127732",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/127732"
+        }
+      ],
+      "article_id": "136b0660"
+    },
+    {
+      "headline": "Sauce VC Exits Innovist with Massive 8-10x Returns",
+      "summary": "Consumer-focused Sauce VC has achieved a significant exit by selling its stake in Innovist to L’Oréal. The deal, valued at approximately ₹350-450 crore, marks one of the most successful early-stage exits in India’s D2C sector. The venture capital firm had initially invested about ₹10 crore in the startup, which owns brands like Bare Anatomy and SunScoop.",
       "category": "Business",
       "page": 1,
       "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/127635",
+      "telegram_url": "https://t.me/c/1877410077/127732",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
           "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/127635"
+          "telegram_url": "https://t.me/c/1877410077/127732"
         }
       ],
-      "article_id": "b853ef6b"
+      "article_id": "39948254"
     },
     {
-      "headline": "SBI Board Approves Record ₹60,000 Crore Fundraise for FY27",
-      "summary": "State Bank of India's (SBI) central board has cleared plans to raise up to ₹60,000 crore through various debt instruments during the current fiscal year. The funds will be raised via private placements of Basel III compliant bonds and infrastructure bonds in both Indian rupees and foreign currencies. This is the largest annual fundraise by the lender to support its credit growth.",
+      "headline": "RIL Targets 40 Billion Units of Green Power Annually",
+      "summary": "Reliance Industries (RIL) announced its goal to generate 40 billion units of green electricity annually, representing nearly 3% of India’s current power requirement. The company is setting up a 40-gigawatt-hour battery giga-factory this year as part of its transition to a net-zero future. RIL plans to use proprietary technology to manufacture affordable solar modules and hydrogen.",
       "category": "Business",
       "page": 1,
       "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/127635",
+      "telegram_url": "https://t.me/c/1877410077/127732",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
           "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/127635"
+          "telegram_url": "https://t.me/c/1877410077/127732"
         }
       ],
-      "article_id": "8c178afb"
+      "article_id": "25f87713"
     },
     {
-      "headline": "L'Oréal Acquires Majority Stake in Gurugram-based Beauty Startup Innovist",
-      "summary": "French beauty giant L'Oréal is acquiring a majority stake in Innovist, valuing the Gurugram-based startup at approximately $425 million (₹4,000 crore). Innovist, known for brands like Bare Anatomy and Chemist at Play, represents one of the largest acquisitions in India’s direct-to-consumer beauty sector. The deal reflects growing global interest in India's emerging skincare market.",
-      "category": "Business",
-      "page": 1,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/127635",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/127635"
-        }
-      ],
-      "article_id": "ce994634"
-    },
-    {
-      "headline": "India's Net Direct Tax Collection Grows 15 Percent to 5.2 Lakh Crore",
-      "summary": "India's net direct tax collection grew by 14.64% year-on-year to reach ₹5.21 lakh crore between April 1 and June 17, 2026. The increase is driven by strong corporate profitability and individual income tax returns. Refund amounts also saw an increase, reaching ₹89,026 crore, up 1.2% from the previous year. The data indicates steady economic activity and improved tax compliance.",
-      "category": "Economy",
-      "page": 1,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/127635",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/127635"
-        }
-      ],
-      "article_id": "d7e5f8ca"
-    },
-    {
-      "headline": "Election Commission Seeks ₹500 Crore for New EVMs for 2029 Polls",
-      "summary": "The Election Commission of India has requested over ₹500 crore from the government to upgrade its stock of Electronic Voting Machines (EVMs) ahead of the 2029 general elections. The commission plans to increase the number of polling stations from 10.53 lakh to 15.39 lakh. The funds will be used to procure approximately 3.57 lakh ballot units and 1.25 lakh control units.",
+      "headline": "BRICS Security Meeting to Discuss Post-Conflict Stability in Iran",
+      "summary": "National Security Advisor Ajit Doval is set to join BRICS counterparts to discuss regional security and the potential for stability in Iran following recent diplomatic shifts. The meeting, scheduled for June 23, will focus on counter-terrorism, maritime security, and building a consensus on non-traditional threats ahead of the main BRICS summit in September.",
       "category": "Politics",
       "page": 2,
       "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/127635",
+      "telegram_url": "https://t.me/c/1877410077/127732",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
           "page": 2,
-          "telegram_url": "https://t.me/c/1877410077/127635"
+          "telegram_url": "https://t.me/c/1877410077/127732"
         }
       ],
-      "article_id": "347e72c7"
+      "article_id": "d93e00e3"
     },
     {
-      "headline": "Technology Must be Democratized for Progress, says PM Modi at VivaTech",
-      "summary": "Addressing the VivaTech summit in Paris, Prime Minister Narendra Modi emphasized that technology can only lead to true progress when it is democratized and inclusive. He highlighted India’s role as a global test-bed for digital public infrastructure and affordable innovations. Modi invited global startups to collaborate with India, noting that the country's tech ecosystem is built for all.",
-      "category": "Politics",
-      "page": 2,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/127635",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 2,
-          "telegram_url": "https://t.me/c/1877410077/127635"
-        }
-      ],
-      "article_id": "3cc432ed"
-    },
-    {
-      "headline": "India and Vietnam Finalizing Deal for BrahMos Missile Export",
-      "summary": "India is in the final stages of negotiations with Vietnam for the export of BrahMos supersonic cruise missiles. DRDO Chief Dr. Samir Kamat confirmed that minor clearances are pending and the deal is expected to be signed shortly. The agreement follows a previous export deal with the Philippines and highlights India's growing status as a defense manufacturing hub for high-tech systems.",
+      "headline": "DGMO Channel with Pakistan Remains Functional Despite LAC Tensions",
+      "summary": "A parliamentary panel was informed that the Director General of Military Operations (DGMO) level communication channel between India and Pakistan remains active. Despite ongoing challenges on the Line of Actual Control (LAC) with China, the 2021 ceasefire agreement with Pakistan along the Line of Control (LoC) is largely holding, providing a mechanism for de-escalation.",
       "category": "India",
       "page": 2,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/127635",
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/127732",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
           "page": 2,
-          "telegram_url": "https://t.me/c/1877410077/127635"
+          "telegram_url": "https://t.me/c/1877410077/127732"
         }
       ],
-      "article_id": "75f3d099"
+      "article_id": "39ca92df"
     },
     {
-      "headline": "Supreme Court Describes Cybercriminals as Parasites during Bail Hearing",
-      "summary": "The Supreme Court of India observed that cybercriminals act like \"parasites\" who prey on innocent people's hard-earned money. Chief Justice Sanjiv Khanna made the remarks while hearing the bail plea of a man accused of laundering money through fraudulent investment schemes. The court emphasized the need for strict legal action to protect public interests against digital financial fraud.",
+      "headline": "TMC Files for Disqualification of 20 Rebel Members of Parliament",
+      "summary": "The Trinamool Congress (TMC) has formally approached the Lok Sabha Speaker seeking the disqualification of 20 rebel MPs who have shifted allegiance to other political factions. The party argues that these members have violated the anti-defection law. This move follows internal friction and significant shifts in regional political dynamics ahead of upcoming sessions.",
+      "category": "Politics",
+      "page": 2,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/127732",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 2,
+          "telegram_url": "https://t.me/c/1877410077/127732"
+        }
+      ],
+      "article_id": "e16fd94d"
+    },
+    {
+      "headline": "Supreme Court Dismisses Plea for CBI Probe into Tamil Nadu Trust",
+      "summary": "The Supreme Court has rejected a petition seeking a CBI investigation into alleged financial irregularities within a prominent Tamil Nadu state trust. The bench headed by the Chief Justice noted that the allegations were vague and lacked credible material evidence. The court emphasized that investigative agencies cannot be deployed based on unsubstantiated claims and political rivalry.",
       "category": "Law",
       "page": 2,
       "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/127635",
+      "telegram_url": "https://t.me/c/1877410077/127732",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
           "page": 2,
-          "telegram_url": "https://t.me/c/1877410077/127635"
+          "telegram_url": "https://t.me/c/1877410077/127732"
         }
       ],
-      "article_id": "9b3fe519"
+      "article_id": "b4f3af6e"
     },
     {
-      "headline": "NDA-backed Nathwani Defeats Congress Candidate in Jharkhand RS Polls",
-      "summary": "Parimal Nathwani, an independent candidate supported by the NDA, defeated Congress nominee Pranav Jha in the Rajya Sabha biennial election from Jharkhand. Nathwani secured 28 votes, surpassing the required 20 votes, while Jha managed only 20. The victory was bolstered by cross-voting from opposition MLAs and support from regional parties like AJSU and JMM rebels.",
-      "category": "Politics",
+      "headline": "Karnataka Approves ₹7,506 Crore Industrial Investments, Creating 28,000 Jobs",
+      "summary": "The Karnataka state government has cleared 55 industrial projects worth ₹7,506 crore. Key investors include Kaynes Technology and Bellatrix Aerospace. These projects, spread across electronics, manufacturing, and ESDM sectors, are expected to generate over 28,000 jobs. A significant portion of these investments will be located in the Chamarajanagar and Kolar districts.",
+      "category": "Business",
       "page": 3,
       "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/127635",
+      "telegram_url": "https://t.me/c/1877410077/127732",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
           "page": 3,
-          "telegram_url": "https://t.me/c/1877410077/127635"
+          "telegram_url": "https://t.me/c/1877410077/127732"
         }
       ],
-      "article_id": "79c850ee"
+      "article_id": "4171d6b0"
     },
     {
-      "headline": "Reliance New Energy to Launch Two-Wheeler Battery Swapping Service",
-      "summary": "Reliance New Energy Plans to roll out a battery-swapping service for electric two-wheelers by the end of FY27. The project will initially target commercial fleet operators and delivery companies in select cities before expanding to individual consumers. Reliance has developed proprietary lithium-ion battery packs and is collaborating with multiple vehicle manufacturers.",
-      "category": "Business",
-      "page": 7,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/127635",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 7,
-          "telegram_url": "https://t.me/c/1877410077/127635"
-        }
-      ],
-      "article_id": "4bfd3d85"
-    },
-    {
-      "headline": "India’s HPV Vaccination Drive Covers 50 Lakh Girls in Three Months",
-      "summary": "India's national campaign against cervical cancer has reached 50 lakh girls aged 14 within the first three months of its launch. The program, utilizing the indigenously developed Cervavac vaccine, aims to eliminate cervical cancer by targeting adolescent girls. Health officials reported nearly 100% coverage in certain districts, marking a significant milestone in public health care.",
-      "category": "Health",
-      "page": 7,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/127635",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 7,
-          "telegram_url": "https://t.me/c/1877410077/127635"
-        }
-      ],
-      "article_id": "2c2bcef2"
-    },
-    {
-      "headline": "Used Mobile Phone Prices Surge as New Models Get More Expensive",
-      "summary": "Refurbished and second-hand mobile phone prices in India have risen by 30-35% as new smartphone prices continue to climb. Consumers are increasingly opting for pre-owned devices, particularly in the premium segment, to manage rising costs. Analysts project that the used car and phone markets will see continued growth throughout the festive season due to persistent inflation.",
-      "category": "Business",
-      "page": 9,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/127635",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 9,
-          "telegram_url": "https://t.me/c/1877410077/127635"
-        }
-      ],
-      "article_id": "5698eb1e"
-    },
-    {
-      "headline": "Apple May Raise iPhone Prices in India due to Higher Component Costs",
-      "summary": "Apple is reportedly considering a price increase for iPhones in the Indian market to offset rising chip costs and rupee depreciation. Analysts expect the hike to impact demand for current-generation models, potentially leading to flat or low single-digit growth in 2026. However, the premium Pro and Pro Max models are expected to remain less price-sensitive among high-end consumers.",
-      "category": "Business",
-      "page": 9,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/127635",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 9,
-          "telegram_url": "https://t.me/c/1877410077/127635"
-        }
-      ],
-      "article_id": "4d7d523a"
-    },
-    {
-      "headline": "Five Indian Cities Dominate Country's AI Talent Map, Report Shows",
-      "summary": "Bengaluru, Pune, Hyderabad, Mumbai, and Chennai account for nearly 20% of AI professionals in India, according to a report by Scaler. While Tier I cities remain dominant, Tier II cities like Lucknow and Jaipur are emerging as talent hubs. The report also highlights a 145% jump in women joining AI roles, driven by increased accessibility to online upskilling and diverse career opportunities.",
-      "category": "Technology",
-      "page": 10,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/127635",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 10,
-          "telegram_url": "https://t.me/c/1877410077/127635"
-        }
-      ],
-      "article_id": "bb1deb20"
-    },
-    {
-      "headline": "Delhi High Court Questions Proposed Telegram Ban over NEET Paper Leak",
-      "summary": "The Delhi High Court questioned the feasibility of banning Telegram after the government raised concerns over its use in leaking NEET-UG exam papers. The court asked the government to explore alternative ways to manage the platform's misuse without affecting millions of users. Authorities argue that Telegram's architecture makes it difficult to track illegal content effectively.",
+      "headline": "ED Raids Companies Over Alleged ₹2,500 Crore Crypto Money Laundering",
+      "summary": "The Enforcement Directorate (ED) conducted raids on multiple entities in Bengaluru for alleged violations in cross-border money transfers involving crypto assets worth ₹2,500 crore. The investigation focuses on firms using virtual digital assets to bypass traditional banking channels and the Foreign Exchange Management Act (FEMA). Several bank accounts have been frozen as part of the probe.",
       "category": "Law",
-      "page": 10,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/127635",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 10,
-          "telegram_url": "https://t.me/c/1877410077/127635"
-        }
-      ],
-      "article_id": "4bb66f79"
-    },
-    {
-      "headline": "Emirates NBD Completes $2.75 Billion Acquisition of RBL Bank",
-      "summary": "Dubai-based Emirates NBD has successfully completed the acquisition of a majority stake in RBL Bank for approximately $2.75 billion (₹26,000 crore). The deal involves a primary infusion of capital to support the bank's growth and digitisation efforts. Following the transaction, Emirates NBD will nominate five representatives to RBL Bank's board, including the CEO and CFO.",
-      "category": "Business",
-      "page": 11,
-      "importance": 9,
-      "telegram_url": "https://t.me/c/1877410077/127635",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 11,
-          "telegram_url": "https://t.me/c/1877410077/127635"
-        }
-      ],
-      "article_id": "67e48a4e"
-    },
-    {
-      "headline": "Indian Rupee Rallies to 6-Week High against US Dollar",
-      "summary": "The Indian rupee rose to a six-week high of 94.16 against the US dollar, bolstered by falling crude oil prices and dollar sales by the Reserve Bank of India. The rally reflects improved investor sentiment following the US-Iran peace deal. Analysts suggest that continued foreign inflows and stable global energy costs could support the currency's strength in the near term.",
-      "category": "Economy",
-      "page": 12,
+      "page": 3,
       "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/127635",
+      "telegram_url": "https://t.me/c/1877410077/127732",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 12,
-          "telegram_url": "https://t.me/c/1877410077/127635"
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/127732"
         }
       ],
-      "article_id": "985e8cde"
+      "article_id": "73f455ec"
     },
     {
-      "headline": "Meta to Build Massive AI Data Centre Infrastructure in India",
-      "summary": "Meta Platforms is planning a multi-billion dollar investment to build cutting-edge AI data centres in India over the next decade. Santosh Janardhan, Meta’s global head of infrastructure, stated that India is a key market for building the physical backbone of the next-generation internet. The company aims to support its growing AI-driven user base and developer ecosystem within the country.",
+      "headline": "IHG Hotels Plans Expansion at Adani-Managed Airports in India",
+      "summary": "InterContinental Hotels Group (IHG) is in talks to expand its hotel portfolio by partnering with Adani Airports. The plan involves building high-end transit hotels and business properties near major airports like Mumbai and Ahmedabad. This move aligns with IHG's strategy to capture the growing demand for luxury airport-linked hospitality services in India’s Tier-1 cities.",
+      "category": "Business",
+      "page": 4,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/127732",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/127732"
+        }
+      ],
+      "article_id": "acfc397e"
+    },
+    {
+      "headline": "Ray-Ban Meta AI Glasses Face Privacy Concerns During Gujarat Pilot",
+      "summary": "A pilot project using Meta's AI-powered Ray-Ban glasses for visually impaired users in Gujarat has sparked privacy debates. While the glasses help users navigate and identify objects, experts worry about the lack of consent from bystanders whose images are captured and processed by AI models. Legal activists are calling for stricter data protection guidelines for wearable cameras.",
       "category": "Technology",
-      "page": 13,
+      "page": 4,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/127732",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/127732"
+        }
+      ],
+      "article_id": "ea5b0690"
+    },
+    {
+      "headline": "MNCs and Consultancy Firms Face New Taxes on Expat Salaries",
+      "summary": "High Court rulings have clarified that salary reimbursements for seconded employees from foreign headquarters to Indian subsidiaries will attract a 10-15% tax as 'fees for technical services'. This affects several Big Four consultancy firms and MNCs, potentially increasing the cost of hiring international talent. Companies are now reviewing their global secondment agreements.",
+      "category": "Business",
+      "page": 4,
       "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/127635",
+      "telegram_url": "https://t.me/c/1877410077/127732",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 13,
-          "telegram_url": "https://t.me/c/1877410077/127635"
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/127732"
         }
       ],
-      "article_id": "2a198f93"
+      "article_id": "156fef03"
     },
     {
-      "headline": "India-UK Free Trade Agreement Set to Go Live on July 15",
-      "summary": "The landmark Free Trade Agreement (FTA) between India and the UK is scheduled to enter into force on July 15, 2026. The deal is expected to boost bilateral trade by £25.5 billion annually and will immediately lower tariffs on several goods. Key sectors like textiles, automotive, and professional services are anticipated to be the biggest beneficiaries of the comprehensive agreement.",
-      "category": "Economy",
-      "page": 14,
-      "importance": 10,
-      "telegram_url": "https://t.me/c/1877410077/127635",
+      "headline": "BSH Repositions Bosch for India’s Entry-Level Consumer Market",
+      "summary": "BSH Home Appliances is shifting its strategy in India by introducing entry-level Bosch products at lower price points. The German manufacturer aims to challenge market leaders in the washing machine and refrigerator segments by localizing 90% of production. Previously focused on the premium segment, the brand will now target value-conscious urban consumers to gain market share.",
+      "category": "Business",
+      "page": 5,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/127732",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 14,
-          "telegram_url": "https://t.me/c/1877410077/127635"
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 5,
+          "telegram_url": "https://t.me/c/1877410077/127732"
         }
       ],
-      "article_id": "8c29776e"
+      "article_id": "ee50fd1f"
     },
     {
-      "headline": "PM Modi to Release ₹2,400 Crore Under Job Incentive Scheme",
-      "summary": "Prime Minister Narendra Modi will disburse ₹2,400 crore to over 1.5 million first-time employees and their employers under the PM-VBRY scheme. The initiative provides financial incentives to encourage job creation in the formal sector, particularly for small enterprises. Since its inception in August 2025, the scheme has reportedly benefited over 6.3 million first-time workers.",
+      "headline": "Passenger Vehicle Sales Projected to Rise 4-6% by FY27",
+      "summary": "A report by ICRA suggests that passenger vehicle sales in India will see a moderate growth of 4-6% through fiscal year 2027. The growth is expected to be driven by demand for SUVs and electric vehicles, although high interest rates and rising input costs remain concerns. The industry recorded a strong 27% growth in the last fiscal year, fueled by a post-pandemic consumption surge.",
+      "category": "Business",
+      "page": 5,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/127732",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 5,
+          "telegram_url": "https://t.me/c/1877410077/127732"
+        }
+      ],
+      "article_id": "f7c68095"
+    },
+    {
+      "headline": "India to Host 26,000 High Net Worth Families by 2030",
+      "summary": "The number of high-net-worth families in India, those with a net worth over $30 million, is expected to grow from 16,000 today to 26,000 by 2030. This growth is fueling the rise of professional family offices that manage multi-generational wealth and direct investments into startups. India currently ranks behind only the US and China in the number of such wealthy households.",
       "category": "Economy",
-      "page": 14,
+      "page": 5,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/127732",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 5,
+          "telegram_url": "https://t.me/c/1877410077/127732"
+        }
+      ],
+      "article_id": "8240fba8"
+    },
+    {
+      "headline": "IT Stocks Slump as Accenture Forecasts Lower Quarterly Revenue",
+      "summary": "Indian IT stocks, including Infosys and TCS, saw a significant decline after global major Accenture lowered its revenue growth forecast. Accenture's warning about delayed spending on consulting and digital transformation has sparked fears of a prolonged slowdown in the Indian tech sector. Analysts predict that major firms may report their lowest organic growth in over a decade.",
+      "category": "Business",
+      "page": 8,
       "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/127635",
+      "telegram_url": "https://t.me/c/1877410077/127732",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 14,
-          "telegram_url": "https://t.me/c/1877410077/127635"
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/127732"
         }
       ],
-      "article_id": "56d2ccc4"
+      "article_id": "e1530a49"
     },
     {
-      "headline": "Asia Warming Faster than Global Average, WMO Report Warns",
-      "summary": "A report by the World Meteorological Organization (WMO) states that Asia is warming significantly faster than the global average, leading to rapid glacier melt and extreme heat. The report highlights that millions in India were affected by droughts and floods in 2025. Experts called for an early warning system to minimize the impact on densely populated urban centers.",
-      "category": "Environment",
-      "page": 14,
-      "importance": 9,
-      "telegram_url": "https://t.me/c/1877410077/127635",
+      "headline": "RBI MPC Minutes Highlight Persistence of Food Inflation Concerns",
+      "summary": "The recently released minutes of the Reserve Bank of India’s Monetary Policy Committee meeting show that members remain concerned about volatile food prices. Deputy Governor Michael Patra emphasized that while core inflation is easing, shocks in the food supply chain could derail the 4% inflation target. The committee maintains a cautious 'withdrawal of accommodation' stance.",
+      "category": "Economy",
+      "page": 8,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/127732",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 14,
-          "telegram_url": "https://t.me/c/1877410077/127635"
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/127732"
         }
       ],
-      "article_id": "9c9a10e7"
+      "article_id": "92976644"
     },
     {
-      "headline": "Art Basel Fair Sees Multi-Million Dollar Sales of Picasso and Hockney",
-      "summary": "The Art Basel fair in Switzerland opened with high-profile sales, including a 1963 painting by Pablo Picasso that fetched $35 million. David Hockney’s \"Studio Interior #2, 2014\" was sold for $8.5 million. Despite global economic uncertainty, the art market showed resilience, with gallery owners reporting strong interest from international collectors and record attendance.",
-      "category": "Culture",
-      "page": 15,
+      "headline": "SBI Funds Management Receives SEBI Approval for Stock Listing",
+      "summary": "SBI Funds Management, India's second-largest fund house, has received the green light from SEBI for its proposed initial public offering. The IPO will consist of an offer for sale by existing shareholders, including State Bank of India and Amundi. The listing is expected to set a new valuation benchmark for the Indian asset management industry, which currently manages over ₹65 lakh crore.",
+      "category": "Business",
+      "page": 8,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/127732",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/127732"
+        }
+      ],
+      "article_id": "a85d021e"
+    },
+    {
+      "headline": "Mexico Becomes First Team to Reach Copa America Knockouts",
+      "summary": "Mexico secured their spot in the Copa America knockout stages with a 1-0 victory over South Korea. A crucial mistake by the Korean goalkeeper allowed Romo to score the only goal of the match. Despite intense pressure in the second half, the Mexican defense held firm to become the first team in the tournament to officially progress. They now look to top their group in the final round.",
+      "category": "Sports",
+      "page": 10,
       "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/127635",
+      "telegram_url": "https://t.me/c/1877410077/127732",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 15,
-          "telegram_url": "https://t.me/c/1877410077/127635"
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 10,
+          "telegram_url": "https://t.me/c/1877410077/127732"
         }
       ],
-      "article_id": "f156caa7"
+      "article_id": "da11224d"
     },
     {
-      "headline": "Scientists Discover Physical Mechanism Behind Venus Flytrap’s Rapid Snap",
-      "summary": "Researchers from France have identified the physiological mechanism that allows the Venus flytrap to snap shut in a fraction of a second. The process involves a rapid change in the leaf’s curvature driven by water pressure movement between cells. The study, published in the journal Science, provides new insights into how plants perform fast movements without possessing a nervous system.",
-      "category": "Science",
-      "page": 17,
+      "headline": "Switzerland Defeats Bosnia 4-1 with Manzambi’s Second-Half Brace",
+      "summary": "Switzerland secured a dominant 4-1 victory over Bosnia in their latest Euro 2024 group stage match. The highlight was a two-goal performance from super-sub Manzambi, who changed the course of the game after coming off the bench. The win puts Switzerland in a strong position to qualify for the next round, while Bosnia faces a difficult path ahead following two consecutive losses.",
+      "category": "Sports",
+      "page": 10,
       "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/127635",
+      "telegram_url": "https://t.me/c/1877410077/127732",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 17,
-          "telegram_url": "https://t.me/c/1877410077/127635"
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 10,
+          "telegram_url": "https://t.me/c/1877410077/127732"
         }
       ],
-      "article_id": "3e3b5f0f"
+      "article_id": "4d4fddef"
     },
     {
-      "headline": "Knicks Win First NBA Title in 53 Years Under Owner James Dolan",
-      "summary": "The New York Knicks have secured their first NBA championship since 1973, marking a turnaround for the team under owner James Dolan. Despite years of criticism, the franchise's valuation has risen to nearly $10 billion. The victory is expected to drive significant revenue growth for Madison Square Garden Sports through merchandise, ticket sales, and increased sponsorship deals.",
+      "headline": "Trump Considers Using Private 'Qatar Force One' for Official Travel",
+      "summary": "Speculation is rising among US officials that Donald Trump may use a Boeing 747 gifted by Qatar for his future presidential travel. The aircraft, dubbed 'Qatar Force One' by critics, is reportedly more modern than the aging VC-25B currently serving as Air Force One. The move has raised questions about protocol and potential security concerns regarding foreign-gifted transport.",
+      "category": "World",
+      "page": 10,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/127732",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 10,
+          "telegram_url": "https://t.me/c/1877410077/127732"
+        }
+      ],
+      "article_id": "d64d8f8b"
+    },
+    {
+      "headline": "Delhi Capitals May Trade Kuldeep Yadav for Rishabh Pant",
+      "summary": "Speculation is rife in the IPL circuit that Lucknow Super Giants (LSG) is looking to trade star spinner Kuldeep Yadav to Delhi Capitals in exchange for Rishabh Pant. The potential mega-swap comes as teams begin preparations for the 2025 mega-auction. While neither franchise has officially confirmed the move, sources suggest negotiations are in the early stages regarding valuation.",
+      "category": "Sports",
+      "page": 10,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/127732",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 10,
+          "telegram_url": "https://t.me/c/1877410077/127732"
+        }
+      ],
+      "article_id": "f14049bc"
+    },
+    {
+      "headline": "Rajasthan Royals Lead IPL 2024 Points Table as Standings Are Updated",
+      "summary": "Rajasthan Royals lead the IPL 2024 points table with 16 points. Kolkata Knight Riders and Lucknow Super Giants follow with 12 points each, while Royal Challengers Bengaluru sits at the bottom with 6 points. As the league phase continues, teams are focused on total points and net run rates to secure a playoff berth, making every upcoming match critical for the final top-four standings.",
       "category": "Sports",
       "page": 18,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/127635",
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/127720",
       "sources": [
         {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
+          "newspaper": "Indian Express",
+          "pdf_filename": "IE Delhi 20-06-2026.pdf",
           "page": 18,
-          "telegram_url": "https://t.me/c/1877410077/127635"
+          "telegram_url": "https://t.me/c/1877410077/127720"
         }
       ],
-      "article_id": "bca8e3d5"
+      "article_id": "ad7c7dd3"
     },
     {
-      "headline": "Sustainability Norms in Works for Export Goods in the Works",
-      "summary": "India's commerce ministry is developing sustainability certification standards for export products to help local businesses meet stricter environmental norms in developed markets. The initiative aims to provide data points and verification processes that comply with global requirements like the EU's Deforestation Regulation, ensuring Indian exports remain competitive and socially responsible.",
-      "category": "Economy",
-      "page": 14,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/127635",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 14,
-          "telegram_url": "https://t.me/c/1877410077/127635"
-        }
-      ],
-      "article_id": "93b2c22d"
-    },
-    {
-      "headline": "Govt Targets 69% Jump in FY27 Rural Road Construction",
-      "summary": "The Indian government plans to significantly accelerate rural road construction, targeting a 69% increase in completed projects during the 2026-27 fiscal year. The initiative, under the Pradhan Mantri Gram Sadak Yojana, aims to provide all-weather connectivity to isolated villages. The project focus includes faster land acquisition and simplified forest clearance proposals.",
-      "category": "Infrastructure",
-      "page": 14,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/127635",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "ET Bangalore ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 14,
-          "telegram_url": "https://t.me/c/1877410077/127635"
-        }
-      ],
-      "article_id": "470ae8a2"
-    },
-    {
-      "headline": "At least 40 Indians killed in massive Kuwait building fire",
-      "summary": "A fire at a housing facility in Mangaf, Kuwait, killed at least 49 people, including over 40 Indians. PM Narendra Modi expressed condolences and chaired a high-level review meeting. Minister of State Kirti Vardhan Singh was dispatched to Kuwait to coordinate assistance and repatriate bodies. Most victims died due to smoke inhalation while sleeping in the crowded labor housing building.",
-      "category": "World",
-      "page": 1,
-      "importance": 10,
-      "telegram_url": "https://t.me/c/1877410077/127612",
-      "sources": [
-        {
-          "newspaper": "Indian Express",
-          "pdf_filename": "IE Delhi 19-06-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/127612"
-        }
-      ],
-      "article_id": "6c986ea1"
-    },
-    {
-      "headline": "Chandrababu Naidu sworn in as Andhra Pradesh Chief Minister",
-      "summary": "TDP chief N. Chandrababu Naidu was sworn in as the Chief Minister of Andhra Pradesh for his fourth term. The ceremony in Vijayawada was attended by PM Narendra Modi and top NDA leaders. Janasena chief Pawan Kalyan took oath as Deputy Chief Minister. A total of 24 ministers were inducted, including representatives from Janasena and BJP, establishing the state's new coalition government.",
+      "headline": "Trade deals have opened doors for youth and businesses says Modi",
+      "summary": "PM Narendra Modi stated that recent trade agreements with nearly 40 countries have created new market opportunities for Indian industries and youth. Speaking at a Rozgar Mela, he highlighted the expansion of sectors like infrastructure and manufacturing, which have generated significant employment opportunities.",
       "category": "Politics",
       "page": 1,
-      "importance": 9,
-      "telegram_url": "https://t.me/c/1877410077/127612",
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/127739",
       "sources": [
         {
-          "newspaper": "Indian Express",
-          "pdf_filename": "IE Delhi 19-06-2026.pdf",
+          "newspaper": "Times of India",
+          "pdf_filename": "ToI Bangalore + Times ²⁰⁰⁶²⁰²⁶.pdf",
           "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/127612"
+          "telegram_url": "https://t.me/c/1877410077/127739"
         }
       ],
-      "article_id": "ec650f39"
+      "article_id": "425765bf"
     },
     {
-      "headline": "Cabinet portfolios: Amit Shah, Rajnath Singh, and Jaishankar retain ministries",
-      "summary": "Prime Minister Narendra Modi has allocated portfolios to his Council of Ministers. Key leaders Amit Shah, Rajnath Singh, S. Jaishankar, and Nirmala Sitharaman have retained their respective ministries of Home, Defence, External Affairs, and Finance. The distribution signals a strategy of continuity within the top echelons of the NDA government following the 2024 general elections.",
+      "headline": "Voter ID key as Karnataka cleans up guarantee rolls",
+      "summary": "The Karnataka government will launch a state-wide verification drive to identify and remove bogus beneficiaries from its five guarantee schemes. Starting June 30, officials will conduct door-to-door checks, making Aadhaar-linked bank accounts and mobile numbers mandatory to ensure benefits reach genuine BPL card holders.",
       "category": "Politics",
       "page": 1,
-      "importance": 9,
-      "telegram_url": "https://t.me/c/1877410077/127612",
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/127739",
       "sources": [
         {
-          "newspaper": "Indian Express",
-          "pdf_filename": "IE Delhi 19-06-2026.pdf",
+          "newspaper": "Times of India",
+          "pdf_filename": "ToI Bangalore + Times ²⁰⁰⁶²⁰²⁶.pdf",
           "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/127612"
+          "telegram_url": "https://t.me/c/1877410077/127739"
         }
       ],
-      "article_id": "1a805778"
+      "article_id": "6d795025"
     },
     {
-      "headline": "Terrorist killed in Jammu and Kashmir's Doda during search operations",
-      "summary": "Security forces killed a terrorist in Doda district during an intensified anti-terror operation in the Jammu region. This follows recent attacks in Reasi, Kathua, and Doda that claimed several lives. The Union Home Ministry has reviewed the situation, focusing on neutralizing foreign terrorists suspected to have infiltrated. Operations continue in the forested terrains of Kathua and Doda.",
+      "headline": "Two feared drowned in BWSSB sewage tank in Bengaluru",
+      "summary": "A massive search operation is underway for two workers who went missing while cleaning a sewage treatment plant tank at Balagere. Activists allege the workers were engaged illegally for manual scavenging without safety equipment. A three-member panel has been ordered to probe the incident and BWSSB's safety SOPs.",
       "category": "India",
       "page": 1,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/127739",
+      "sources": [
+        {
+          "newspaper": "Times of India",
+          "pdf_filename": "ToI Bangalore + Times ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/127739"
+        }
+      ],
+      "article_id": "f4dd1804"
+    },
+    {
+      "headline": "Will study before reacting: DKS on TN's resolution against Mekedatu",
+      "summary": "Karnataka Deputy CM D.K. Shivakumar stated the government would review the Tamil Nadu assembly's unanimous resolution opposing the Mekedatu reservoir project before responding. TN argues the project would affect its share of Cauvery water, while Karnataka maintains it is for drinking water and power generation.",
+      "category": "Infrastructure",
+      "page": 1,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/127739",
+      "sources": [
+        {
+          "newspaper": "Times of India",
+          "pdf_filename": "ToI Bangalore + Times ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/127739"
+        }
+      ],
+      "article_id": "ce112ffd"
+    },
+    {
+      "headline": "At four billion dollars Jio IPO set to be India's biggest",
+      "summary": "Reliance Industries has filed draft papers for Jio Platforms' IPO, aiming to raise up to $4 billion. This would be the largest public offering in Indian history, surpassing the 2022 LIC IPO. The funds are expected to be used for debt reduction as the company weights its satellite network expansion.",
+      "category": "Business",
+      "page": 4,
       "importance": 9,
-      "telegram_url": "https://t.me/c/1877410077/127612",
+      "telegram_url": "https://t.me/c/1877410077/127739",
       "sources": [
         {
-          "newspaper": "Indian Express",
-          "pdf_filename": "IE Delhi 19-06-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/127612"
+          "newspaper": "Times of India",
+          "pdf_filename": "ToI Bangalore + Times ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/127739"
         }
       ],
-      "article_id": "6de81c4a"
+      "article_id": "c8e9a3f0"
     },
     {
-      "headline": "India's retail inflation eases to one-year low of 4.75 percent",
-      "summary": "India's retail inflation dropped to a 12-month low of 4.75% in May 2024, down from 4.83% in April. Government data shows that despite high food inflation of 8.62%, the overall headline inflation eased due to lower prices in the fuel and light categories. The current rate remains within the Reserve Bank of India’s target range of 4% plus/minus 2%, providing a stable economic outlook.",
-      "category": "Economy",
-      "page": 1,
+      "headline": "Monsoon deficit at forty percent as reservoir levels dip sharply",
+      "summary": "India's monsoon deficit has reached 40%, with water storage in 166 major reservoirs falling to 27% of their total capacity. Central Water Commission data reveals that levels in the northern and central regions are particularly concerning, potentially impacting kharif crop sowing and hydropower generation.",
+      "category": "Environment",
+      "page": 4,
       "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/127612",
+      "telegram_url": "https://t.me/c/1877410077/127739",
       "sources": [
         {
-          "newspaper": "Indian Express",
-          "pdf_filename": "IE Delhi 19-06-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/127612"
+          "newspaper": "Times of India",
+          "pdf_filename": "ToI Bangalore + Times ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/127739"
         }
       ],
-      "article_id": "d4be3e4d"
+      "article_id": "fd665cc1"
     },
     {
-      "headline": "Supreme Court hears petitions over grace marks in NEET-UG 2024 results",
-      "summary": "The Supreme Court is hearing petitions regarding the NEET-UG 2024 results, focusing on the grant of grace marks to over 1,500 candidates. While the Court refused to stay the counseling process, it issued a notice to the National Testing Agency. Students have alleged irregularities and paper leaks, leading to nationwide protests and demands for an independent investigation or re-examination.",
-      "category": "Education",
-      "page": 1,
+      "headline": "19km Blue line metro set for trial run in October",
+      "summary": "The KR Pura-Silk Board stretch of the Bengaluru Metro's Blue Line is scheduled for trial runs starting October 2024. Development Minister Krishna Byre Gowda confirmed that 90% of the work is complete, though labor shortages due to recent elections had briefly slowed construction progress.",
+      "category": "Infrastructure",
+      "page": 7,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/127739",
+      "sources": [
+        {
+          "newspaper": "Times of India",
+          "pdf_filename": "ToI Bangalore + Times ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 7,
+          "telegram_url": "https://t.me/c/1877410077/127739"
+        }
+      ],
+      "article_id": "996bc97b"
+    },
+    {
+      "headline": "Same state very different odds for a child's survival",
+      "summary": "New SRS 2024 data reveals sharp intra-state disparities in infant and under-five mortality rates. High-performing states like Kerala and Tamil Nadu still show gaps between tribal belts and urban areas, while Madhya Pradesh and Uttar Pradesh continue to record the highest national averages for child mortality.",
+      "category": "Health",
+      "page": 9,
       "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/127612",
+      "telegram_url": "https://t.me/c/1877410077/127739",
       "sources": [
         {
-          "newspaper": "Indian Express",
-          "pdf_filename": "IE Delhi 19-06-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/127612"
+          "newspaper": "Times of India",
+          "pdf_filename": "ToI Bangalore + Times ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 9,
+          "telegram_url": "https://t.me/c/1877410077/127739"
         }
       ],
-      "article_id": "a937db15"
+      "article_id": "f07b44c7"
     },
     {
-      "headline": "Mohan Charan Majhi sworn in as Odisha's first BJP Chief Minister",
-      "summary": "Mohan Charan Majhi took the oath as the first BJP Chief Minister of Odisha, ending the 24-year rule of the Biju Janata Dal. The ceremony took place in Bhubaneswar and was attended by Prime Minister Modi. K.V. Singh Deo and Pravati Parida were sworn in as Deputy Chief Ministers. The new government has promised to focus on local welfare schemes and the preservation of Odia culture.",
-      "category": "Politics",
-      "page": 3,
+      "headline": "PM to lead ceremony to commission two warships into Navy",
+      "summary": "Prime Minister Modi will lead the commissioning of two indigenous warships, Dunagiri (a stealth frigate) and Agray (an anti-submarine vessel), in Kolkata. The ships, built by Garden Reach Shipbuilders, enhance the Navy's capabilities in coastal defense and anti-submarine warfare.",
+      "category": "India",
+      "page": 13,
       "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/127612",
+      "telegram_url": "https://t.me/c/1877410077/127739",
       "sources": [
         {
-          "newspaper": "Indian Express",
-          "pdf_filename": "IE Delhi 19-06-2026.pdf",
-          "page": 3,
-          "telegram_url": "https://t.me/c/1877410077/127612"
+          "newspaper": "Times of India",
+          "pdf_filename": "ToI Bangalore + Times ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 13,
+          "telegram_url": "https://t.me/c/1877410077/127739"
         }
       ],
-      "article_id": "1c88c4b2"
+      "article_id": "d1984cd0"
     },
     {
-      "headline": "Congress delays decision on Rahul Gandhi's Wayanad or Rae Bareli seat",
-      "summary": "Congress leader Rahul Gandhi is deliberating whether to vacate the Wayanad or Rae Bareli Lok Sabha seat. He won both in the 2024 elections and must resign from one within 14 days of the results. While the Kerala Congress wants him to stay in Wayanad, Uttar Pradesh leaders argue that Rae Bareli is vital for the party's regional revival. A decision is expected before the legal deadline.",
-      "category": "Politics",
-      "page": 3,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/127612",
-      "sources": [
-        {
-          "newspaper": "Indian Express",
-          "pdf_filename": "IE Delhi 19-06-2026.pdf",
-          "page": 3,
-          "telegram_url": "https://t.me/c/1877410077/127612"
-        }
-      ],
-      "article_id": "8e660347"
-    },
-    {
-      "headline": "Pema Khandu takes oath as Arunachal Pradesh Chief Minister",
-      "summary": "Pema Khandu was sworn in as the Chief Minister of Arunachal Pradesh for his third consecutive term. The BJP leader was administered the oath of office by Governor K.T. Parnaik in Itanagar. Chowna Mein also took oath as the Deputy Chief Minister. The BJP won 46 of the 60 assembly seats in the state, securing a clear mandate to continue its infrastructure and development-led governance.",
-      "category": "Politics",
-      "page": 6,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/127612",
-      "sources": [
-        {
-          "newspaper": "Indian Express",
-          "pdf_filename": "IE Delhi 19-06-2026.pdf",
-          "page": 6,
-          "telegram_url": "https://t.me/c/1877410077/127612"
-        }
-      ],
-      "article_id": "b440838f"
-    },
-    {
-      "headline": "US Federal Reserve maintains interest rates at current 23-year high",
-      "summary": "The US Federal Reserve held its key interest rate at 5.25%-5.50%, the highest in over two decades. In a shift from previous projections, the Fed now anticipates only one rate cut in 2024, down from the three cuts forecast in March. Chair Jerome Powell noted that while there has been modest progress toward the 2% inflation target, more confidence is needed before lowering borrowing costs.",
-      "category": "Economy",
-      "page": 12,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/127612",
-      "sources": [
-        {
-          "newspaper": "Indian Express",
-          "pdf_filename": "IE Delhi 19-06-2026.pdf",
-          "page": 12,
-          "telegram_url": "https://t.me/c/1877410077/127612"
-        }
-      ],
-      "article_id": "95ba62ae"
-    },
-    {
-      "headline": "India qualifies for T20 World Cup Super 8s after beating USA",
-      "summary": "India defeated the USA by seven wickets to enter the Super 8 stage of the T20 World Cup. Suryakumar Yadav scored 50 not out, while Arshdeep Singh recorded figures of 4/9. The match was notable for the USA being penalized five runs under the new stop-clock rule for exceeding the 60-second time limit between overs three times, a first in international cricket. India successfully chased 111.",
-      "category": "Sports",
+      "headline": "Even remote Himalayan air losing its clean edge per study",
+      "summary": "A study at Munsyari found that even remote areas of the Himalayas are seeing build-up of harmful gases and secondary organic aerosols. Researchers from ARIES found levels of VOCs and pollutants are higher during spring and autumn, attributed to regional biomass burning and urban pollution inflow.",
+      "category": "Environment",
       "page": 14,
       "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/127612",
+      "telegram_url": "https://t.me/c/1877410077/127739",
       "sources": [
         {
-          "newspaper": "Indian Express",
-          "pdf_filename": "IE Delhi 19-06-2026.pdf",
+          "newspaper": "Times of India",
+          "pdf_filename": "ToI Bangalore + Times ²⁰⁰⁶²⁰²⁶.pdf",
           "page": 14,
-          "telegram_url": "https://t.me/c/1877410077/127612"
+          "telegram_url": "https://t.me/c/1877410077/127739"
         }
       ],
-      "article_id": "aafc5c02"
+      "article_id": "29d3c063"
     },
     {
-      "headline": "Severe heatwave persists in Delhi as temperature crosses 45 degrees Celsius",
-      "summary": "The India Meteorological Department has issued a red alert for Delhi as a severe heatwave continues across the capital. Maximum temperatures have consistently crossed 45 degrees Celsius in several areas. The extreme weather has triggered a power demand surge and a water crisis, with the city government imposing fines for water wastage in residential areas to manage the shortage.",
+      "headline": "NTA guardian of paper making process as well as exams",
+      "summary": "The National Testing Agency has expanded its expert panel to reduce paper-setting risks following the NEET-UG leak controversy. The new system involves a high-security process where no single expert has a complete view of the final paper, aimed at cutting down the value of partial leaks.",
+      "category": "Education",
+      "page": 15,
+      "importance": 9,
+      "telegram_url": "https://t.me/c/1877410077/127739",
+      "sources": [
+        {
+          "newspaper": "Times of India",
+          "pdf_filename": "ToI Bangalore + Times ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 15,
+          "telegram_url": "https://t.me/c/1877410077/127739"
+        }
+      ],
+      "article_id": "b10750fb"
+    },
+    {
+      "headline": "Sebi allows easier transfer of shares for dead investors",
+      "summary": "The Securities and Exchange Board of India has introduced new conduct rules allowing easier share transfers for deceased investors' heirs. For claims up to Rs 10,000 for physical shares and Rs 30,000 for demat shares, procedures have been simplified to reduce the burden of documentation for small investors.",
+      "category": "Business",
+      "page": 16,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/127739",
+      "sources": [
+        {
+          "newspaper": "Times of India",
+          "pdf_filename": "ToI Bangalore + Times ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 16,
+          "telegram_url": "https://t.me/c/1877410077/127739"
+        }
+      ],
+      "article_id": "087f2aa9"
+    },
+    {
+      "headline": "Our India data centre will power global AI work says Meta",
+      "summary": "Meta plans to establish its first AI-enabled data centre in India to serve global markets. Vice-president Santosh Janardhan stated the facility will focus on power-efficient technologies to support Meta's networking of global servers, leveraging India's engineering talent and growing digital infrastructure.",
+      "category": "Technology",
+      "page": 16,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/127739",
+      "sources": [
+        {
+          "newspaper": "Times of India",
+          "pdf_filename": "ToI Bangalore + Times ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 16,
+          "telegram_url": "https://t.me/c/1877410077/127739"
+        }
+      ],
+      "article_id": "9f55ad30"
+    },
+    {
+      "headline": "Smriti Mandhana makes T20I history with record six hundred fours",
+      "summary": "India's vice-captain Smriti Mandhana became the first player in T20 international history across men's and women's cricket to hit 600 fours. The milestone came during India's 95-run victory over the Netherlands, where she scored a fluent 85 to lead the team to a massive total.",
+      "category": "Sports",
+      "page": 29,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/127739",
+      "sources": [
+        {
+          "newspaper": "Times of India",
+          "pdf_filename": "ToI Bangalore + Times ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 29,
+          "telegram_url": "https://t.me/c/1877410077/127739"
+        }
+      ],
+      "article_id": "f35c6837"
+    },
+    {
+      "headline": "Scientists discover new insect species in expedition to Angola",
+      "summary": "An international research team discovered dozens of previously unknown insect species in Angola's Okavango region. Finds include a crab spider that fluoresces under UV light and new species of dragonflies and butterflies, highlighting the biodiversity of Africa's major river sources.",
+      "category": "Science",
+      "page": 27,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/127739",
+      "sources": [
+        {
+          "newspaper": "Times of India",
+          "pdf_filename": "ToI Bangalore + Times ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 27,
+          "telegram_url": "https://t.me/c/1877410077/127739"
+        }
+      ],
+      "article_id": "d04441c0"
+    },
+    {
+      "headline": "Delhi HC upholds curbs on Telegram amid NEET row",
+      "summary": "The Delhi High Court upheld the Centre's temporary ban on Telegram, citing its use by cheating networks in the NEET (UG), 2026 controversy. The court found the government followed IT Act Section 69A, including emergency powers, and confirmed \"information\" includes software. The ban was proportionate given content takedowns were ineffective.",
+      "category": "Law",
+      "page": 1,
+      "importance": 9,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "9a6a0a92"
+    },
+    {
+      "headline": "T.N. Assembly unanimously opposes dam at Mekedatu",
+      "summary": "The Tamil Nadu Assembly unanimously adopted a resolution opposing Karnataka's proposal to construct a balancing reservoir across the Cauvery at Mekedatu. Chief Minister C. Joseph Vijay moved the resolution, citing Karnataka's unilateral attempt without concurrence from basin states or Union government approval, violating tribunal awards.",
+      "category": "Politics",
+      "page": 1,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "7e8aaada"
+    },
+    {
+      "headline": "Satheesan banks on ‘dream projects’ to transform Kerala",
+      "summary": "Kerala CM V.D. Satheesan tabled the 2026-27 budget, highlighting UDF's 'dream projects' like transforming Kerala into a port city and aviation hub, 'Land Reforms 2.0', and 'Kerala Knowledge Valley'. The budget allocates ₹600 crore for free travel for women, ₹400 crore for Mission Samudra, and ₹100 crore for a health city.",
+      "category": "Politics",
+      "page": 2,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 2,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "7cec3f71"
+    },
+    {
+      "headline": "Security up for CJP’s protest at Jantar Mantar today",
+      "summary": "Security measures, including CCTV cameras, body-worn cameras, and videographers, have been intensified in Delhi for the Cockroach Janta Party’s (CJP) protest at Jantar Mantar on Saturday. Traffic diversions are possible, but metro services are expected to be unaffected.",
+      "category": "India",
+      "page": 2,
+      "importance": 2,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 2,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "3eb3d4bd"
+    },
+    {
+      "headline": "AAP alleges corruption in tenders under BJP govt.",
+      "summary": "AAP Delhi chief Saurabh Bharadwaj alleged corruption in tenders issued since the BJP took power in Delhi, citing examples like tent houses for Kanwar Yatra and hospital supplies. The BJP refuted the claims.",
+      "category": "Politics",
+      "page": 2,
+      "importance": 3,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 2,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "536f8c36"
+    },
+    {
+      "headline": "Cong. forms panel to run its communications centre",
+      "summary": "The Delhi Congress constituted a three-member committee to manage, coordinate, monitor, and strengthen communication for its ‘Congress Connect Centre’ outreach initiative.",
+      "category": "Politics",
+      "page": 2,
+      "importance": 1,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 2,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "a2b6eb5a"
+    },
+    {
+      "headline": "CM notifies winter air quality framework, outlines curbs",
+      "summary": "Delhi government notified a ‘Proactive Winter Air Quality Management Framework’ for November-February. Measures, expected from November, include fuel supply only to vehicles with valid PUC certificates, restrictions on non-BS VI commercial vehicles from outside Delhi, double parking charges, and staggered office timings for 50% physical attendance.",
       "category": "Environment",
       "page": 2,
       "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/127612",
+      "telegram_url": "https://t.me/c/1877410077/127729",
       "sources": [
         {
-          "newspaper": "Indian Express",
-          "pdf_filename": "IE Delhi 19-06-2026.pdf",
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
           "page": 2,
-          "telegram_url": "https://t.me/c/1877410077/127612"
+          "telegram_url": "https://t.me/c/1877410077/127729"
         }
       ],
-      "article_id": "0f5d4e5b"
+      "article_id": "44cfffd4"
     },
     {
-      "headline": "PM Modi, Trump boost trade ties",
-      "summary": "Prime Minister Narendra Modi and US President Donald Trump expressed a commitment to enhancing trade relations between India and the US. They discussed various trade issues and agreed to work towards a comprehensive agreement. The discussions aim to strengthen economic cooperation and address existing trade imbalances.",
-      "category": "Business",
+      "headline": "City gets first police station only for women, POCSO cases",
+      "summary": "Lieutenant-Governor Taranjit Singh Sandhu inaugurated Delhi’s first police station exclusively for crimes against women and children in Subzi Mandi. With 60% female personnel, including the SHO and ACP, it aims to create a comfortable environment for complainants, offering counselling and conducting awareness programs.",
+      "category": "India",
+      "page": 2,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/127729",
       "sources": [
         {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/127656"
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 2,
+          "telegram_url": "https://t.me/c/1877410077/127729"
         }
       ],
-      "importance": 8,
-      "article_id": "379d496f"
+      "article_id": "ac9f78bd"
     },
     {
-      "headline": "India-US trade deal ahead of July 15 deadline",
-      "summary": "India and the US are working towards a trade deal before the July 15 deadline. The agreement aims to resolve outstanding trade disputes and enhance bilateral economic ties. Negotiations are ongoing, focusing on issues like market access, tariffs, and regulatory barriers.",
-      "category": "Business",
+      "headline": "Woman, son die as parked car rolls into Lahaul gorge",
+      "summary": "A 26-year-old woman, Tanu Kumari, and her 11-month-old son, Daksh Kumar, from Gurugram, died in Himachal Pradesh’s Lahaul and Spiti district. Their parked car rolled backward and plunged into a gorge near Gramphu while the family was on a holiday trip.",
+      "category": "India",
+      "page": 2,
+      "importance": 3,
+      "telegram_url": "https://t.me/c/1877410077/127729",
       "sources": [
         {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 10,
-          "telegram_url": "https://t.me/c/1877410077/127656"
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 2,
+          "telegram_url": "https://t.me/c/1877410077/127729"
         }
       ],
-      "importance": 8,
-      "article_id": "8da5b0ff"
+      "article_id": "6ad80ae8"
     },
     {
-      "headline": "Oil, gas tankers exit strait after US-Iran peace deal",
-      "summary": "Following the US-Iran peace deal, oil and gas tankers are reportedly exiting the Strait of Hormuz. This development suggests a de-escalation of tensions in the vital shipping lane. The move is expected to ease concerns about potential supply disruptions and global energy prices.",
-      "category": "World",
+      "headline": "A.P. Congress leaders trek to Tirumala shrine on Rahul’s birthday",
+      "summary": "Andhra Pradesh Congress leaders, led by AICC member Sunkara Padmasree, trekked to Tirupati on Rahul Gandhi’s 56th birthday. They prayed for his well-being and sought Lord Venkateswara’s blessings for his efforts to restore democracy and the party’s victory in the next State election.",
+      "category": "Politics",
+      "page": 2,
+      "importance": 3,
+      "telegram_url": "https://t.me/c/1877410077/127729",
       "sources": [
         {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 11,
-          "telegram_url": "https://t.me/c/1877410077/127656"
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 2,
+          "telegram_url": "https://t.me/c/1877410077/127729"
         }
       ],
-      "importance": 8,
-      "article_id": "63ea1f70"
+      "article_id": "fd1fb8d5"
     },
     {
-      "headline": "Moscow will tighten if Russian strikes continue: Zelensky",
-      "summary": "Ukrainian President Zelensky warned that Moscow would intensify its actions if Russian strikes persist. He stated that Ukraine is prepared for further escalation and will retaliate accordingly. The remarks highlight the ongoing volatile situation and the potential for increased conflict.",
-      "category": "World",
+      "headline": "BJP calls Karnataka leaders to Delhi over ‘cross-voting’ in MLC poll",
+      "summary": "BJP national president Nitin Nabin summoned Karnataka State chief B.Y. Vijayendra and other leaders to Delhi on June 23 over alleged “cross-voting” in the recent Legislative Council election. The Congress won five of seven seats, BJP two. A fact-finding panel was formed, and the State leadership might be revamped.",
+      "category": "Politics",
+      "page": 4,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/127729",
       "sources": [
         {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 11,
-          "telegram_url": "https://t.me/c/1877410077/127656"
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/127729"
         }
       ],
+      "article_id": "cb262cf0"
+    },
+    {
+      "headline": "Taking part in Yoga Day not mandatory, Bengal govt. tells HC",
+      "summary": "The Calcutta High Court disposed of a petition challenging the West Bengal government's notification asking State employees to participate in International Yoga Day. The State clarified that participation was “not mandatory” and no punitive action would be taken for non-attendance. PM Modi will lead a session in Kolkata.",
+      "category": "India",
+      "page": 4,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "e10ad036"
+    },
+    {
+      "headline": "Bihar to bear cost of bringing back migrant workers’ remains",
+      "summary": "The Bihar government will now bear the cost of transporting the remains of migrant workers who die outside the State or abroad. The ex-gratia amount for dependents of deceased migrant workers has also been doubled from ₹2,00,000 to ₹4,00,000.",
+      "category": "India",
+      "page": 4,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "10761bf0"
+    },
+    {
+      "headline": "Eight killed in lightning strikes across Jharkhand",
+      "summary": "At least eight people, including two women and a two-year-old boy, were killed in lightning strikes across six districts of Jharkhand. Hazaribag district reported three deaths. The victims included a 30-year-old woman, a 15-year-old girl, and a 13-year-old girl.",
+      "category": "India",
+      "page": 4,
+      "importance": 3,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "65c1c03b"
+    },
+    {
+      "headline": "NEET aspirant dies in Indore; probe under way, say police",
+      "summary": "A 21-year-old NEET aspirant, Avantika Maurya, died after \"falling\" from the third floor of a building in Indore, Madhya Pradesh, under \"suspicious circumstances.\" Police have launched an investigation. Her family stated she was disheartened by the recent question paper leak and the upcoming re-examination.",
+      "category": "India",
+      "page": 4,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "0e1d27cf"
+    },
+    {
+      "headline": "Compulsory three-language policy not viable in Nagaland, say CBSE schools",
+      "summary": "Principals of 19 CBSE-affiliated schools in Nagaland wrote to Union Education Minister Dharmendra Pradhan, citing difficulties in implementing the compulsory three-language policy, especially Sanskrit. They highlighted Nagaland's linguistic diversity, with English serving as the lingua franca, and urged a special exemption or flexible framework.",
+      "category": "Education",
+      "page": 4,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "38de54af"
+    },
+    {
+      "headline": "BJP worker killed in Howrah: Suvendu promises law to seize properties of accused",
+      "summary": "BJP worker Prasanta Dey was killed in Howrah, West Bengal, after a confrontation over alleged corruption. Chief Minister Suvendu Adhikari announced his government would introduce a Bill to auction properties of accused in such crimes, offering ₹9 lakh compensation and a government job to Dey's wife. Eight arrests made, case handed to CID.",
+      "category": "Politics",
+      "page": 4,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "d29e73f4"
+    },
+    {
+      "headline": "Maker of Battlefield says his film related to present-day conflict in Manipur",
+      "summary": "Manipuri filmmaker Borun Thokchom's 80-minute anti-war documentary, Battlefield, revisiting WWII battles of Imphal and Kohima, will screen at the Mumbai International Film Festival. Thokchom states the film, though about events 8 decades ago, is \"very much related\" to Manipur's present-day ethnic conflict.",
+      "category": "Culture",
+      "page": 4,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "0ccf04df"
+    },
+    {
+      "headline": "Kuki people boarding flights from Imphal a positive sign: CM",
+      "summary": "Manipur CM Yumnam Khemchand Singh stated Kuki community members traveling to Imphal for flights is a positive sign for the conflict-scarred state. He urged unity and dialogue among the 36 communities for development and peace, noting the economy suffered from violence.",
+      "category": "India",
+      "page": 4,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "48f955bc"
+    },
+    {
+      "headline": "Uproar over defacing of Ambedkar’s statue in U.P.",
+      "summary": "Jajouli village in U.P.'s Kaushambi district was tense after Dr. B.R. Ambedkar's statue was vandalized. Dalit villagers protested, demanding strict action. Police reinstalled the statue and promised action, stationing personnel in the area.",
+      "category": "Politics",
+      "page": 4,
+      "importance": 3,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "f00c2d2c"
+    },
+    {
+      "headline": "The pressures of counting India",
+      "summary": "Census enumerators face challenges like heat, connectivity, and safety during India's first fully digital Census. Field workers, mostly teachers, report hostility, denied entry, and pressure from superiors to edit data, especially on sanitation and water access, affecting data accuracy and raising concerns about real-time monitoring and reporting.",
+      "category": "India",
+      "page": 7,
       "importance": 7,
-      "article_id": "87036862"
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 7,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "a2607e01"
     },
     {
-      "headline": "UAE bans social media for U-15s",
-      "summary": "The United Arab Emirates has banned social media access for individuals under 15 years old. The move is aimed at protecting young users from harmful online content and promoting responsible digital citizenship. The ban applies to popular platforms and aims to ensure children's safety online.",
+      "headline": "SC refuses urgent hearing on plea to defer NEET retest",
+      "summary": "The Supreme Court declined to grant an urgent hearing for a plea challenging the NTA's decision to conduct the NEET-UG 2026 re-examination on June 21 for 22 lakh candidates. Aspirants cited heightened stress and anxiety after the original May 3 exam was cancelled due to a paper leak.",
+      "category": "Law",
+      "page": 8,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "f1c7933b"
+    },
+    {
+      "headline": "Pakistan is an example of a ‘Frankenstein state’, India says at UN",
+      "summary": "India slammed Pakistan at the UN, calling it a “Frankenstein state” shocked when its “own monster bites back,” accusing Islamabad of hosting, training, and deploying terrorists. India's Anupama Singh rejected Pakistan's allegations on Jammu & Kashmir, stating denial of freedoms there is met with \"bullets and brutality.\"",
+      "category": "World",
+      "page": 8,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "459d0d75"
+    },
+    {
+      "headline": "Extraordinary level of opacity, says Congress leader on Nicobar project",
+      "summary": "Jairam Ramesh termed Environment Minister Bhupender Yadav’s defence of the Great Nicobar Island Project \"disappointing.\" Ramesh accused the Ministry of \"extraordinary level of non-transparency\" by withholding reports and studies on environmental safeguards, questioning the adequacy of impact assessments and the secrecy around the HPC report.",
+      "category": "Environment",
+      "page": 8,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "c7811389"
+    },
+    {
+      "headline": "A nation capable of meeting its defence needs can move forward confidently: Rajnath",
+      "summary": "Defence Minister Rajnath Singh inaugurated a 10,000-tonne aluminium extrusion press at Ordnance Factory Ambajhari, Nagpur. He stated a nation meeting its defence needs moves forward confidently, emphasising indigenous manufacturing in defence, aerospace, missiles, and aviation. The project aims to strengthen India's self-reliance in critical sectors.",
+      "category": "Politics",
+      "page": 8,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "80a3b679"
+    },
+    {
+      "headline": "Palestine envoy seeks medical assistance for Gaza, West Bank",
+      "summary": "The Palestinian Authority appealed to India for urgent medical assistance for Gaza and the West Bank, citing the healthcare sector's \"state of collapse\" after three years of Israeli military campaigns. Ambassador Abdullah M. Abu Shawesh highlighted critical shortages of essential medicines, including 50 cancer drugs at zero stock.",
+      "category": "World",
+      "page": 8,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "fde6112e"
+    },
+    {
+      "headline": "SC directs tribunal to hear lawyer’s plea in SIR row",
+      "summary": "The Supreme Court directed an appellate tribunal to expeditiously decide the appeal of 75-year-old Murshidabad lawyer Yean Ali, challenging the deletion of his name from West Bengal's electoral rolls. The Bench noted a panel of former judges exists for such disputes and asked for a decision within two months.",
+      "category": "Law",
+      "page": 8,
+      "importance": 3,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "2dc12cc2"
+    },
+    {
+      "headline": "Rebel Trinamool MPs must be disqualified: Abhishek",
+      "summary": "Trinamool Congress leader Abhishek Banerjee called for the disqualification of 20 Lok Sabha MPs who declared a merger with Nationalist Citizens Party of India (NCPI). He argued that per the Tenth Schedule, two-thirds of the political party, not just legislature, must agree to a merger, accusing them of disrespecting the Constitution.",
+      "category": "Politics",
+      "page": 9,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 9,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "178dbcb5"
+    },
+    {
+      "headline": "Trinamool faces fresh exits, arrests in Bengal",
+      "summary": "Six weeks after election defeat, Trinamool Congress is seeing continued desertions and arrests in West Bengal. Former Minister Jyoti Priya Mallick resigned citing health, as did district president Narendranath Chakraborty. Former MLA Ramendu Sinharoy was arrested in Karnataka over multiple allegations.",
+      "category": "Politics",
+      "page": 9,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 9,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "4763f176"
+    },
+    {
+      "headline": "Uddhav offers to step down while Shinde hints at more defections",
+      "summary": "Shiv Sena (UBT) chief Uddhav Thackeray emotionally offered to resign if leaders believed allegations against him for aligning with Congress, condemning BJP's \"dirty politics\" and \"Operation Lotus.\" Deputy CM Eknath Shinde hinted at more defections, stating the public \"has only seen a trailer\" of political changes.",
+      "category": "Politics",
+      "page": 9,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 9,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "f0e5a2e4"
+    },
+    {
+      "headline": "Parliamentary panel seeks clarity from govt. on future engagement with Pakistan",
+      "summary": "The Parliamentary Standing Committee on External Affairs questioned Foreign Secretary Vikram Misri on future engagement with Pakistan, including Prime Minister Modi's attendance at the SCO summit. Ministry officials stated \"normal neighbourly relations\" require an atmosphere free of violence, noting Track-II diplomacy continues.",
+      "category": "Politics",
+      "page": 9,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 9,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "3e1e3037"
+    },
+    {
+      "headline": "Attempt to tarnish image: CPI(ML) on ‘cross-voting’",
+      "summary": "CPI(ML) Liberation general secretary Dipankar Bhattacharya protested against \"malicious propaganda\" and attempts to \"tarnish our party’s image\" following allegations of cross-voting against its MLAs in the Jharkhand Rajya Sabha elections. He affirmed the party's commitment to the INDIA bloc.",
+      "category": "Politics",
+      "page": 9,
+      "importance": 3,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 9,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "c35027f6"
+    },
+    {
+      "headline": "Four glacial lakes in Arunachal have expanded in a decade: study",
+      "summary": "A satellite-based study by Suhora Technologies found four of five glacial lakes in Arunachal Pradesh's Tawang district have expanded over the last decade, with Sanhapo Lake showing rapid growth (10 hectares). This raises concerns about Glacial Lake Outburst Floods (GLOFs), stressing continuous monitoring.",
+      "category": "Environment",
+      "page": 10,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 10,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "95b76012"
+    },
+    {
+      "headline": "Sickle cell anaemia to be eradicated by 2047: Murmu",
+      "summary": "President Droupadi Murmu announced India would eradicate sickle cell anaemia well before the 2047 target. Speaking in Omkareshwar, she urged collective efforts, especially among tribal communities, for awareness. Murmu noted the National Mission's key targets for screening 7 crore people have been achieved ahead of schedule.",
+      "category": "Health",
+      "page": 10,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 10,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "a1b1170b"
+    },
+    {
+      "headline": "3 indigenous naval vessels to be launched by PM tomorrow",
+      "summary": "Prime Minister Narendra Modi will commission three indigenously-built Indian Navy frontline platforms—Dunagiri, Sanshodhak, and Agray—at Kolkata’s Syama Prasad Mookerjee Port. Designed by the Indian Navy, these vessels, with over 75% indigenous content, boost maritime combat, hydrographic surveying, and anti-submarine warfare capabilities.",
+      "category": "India",
+      "page": 10,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 10,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "27b7f4c0"
+    },
+    {
+      "headline": "Man arrested in Chhattisgarh for brutally assaulting wife",
+      "summary": "A 44-year-old man was arrested in Chhattisgarh's Korea district for brutally assaulting his wife on June 14. He allegedly tied her, partially disrobed her, shaved her head, blackened her face, and forced her to drink their son’s urine over a purported extramarital affair.",
+      "category": "Law",
+      "page": 10,
+      "importance": 3,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 10,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "0d486630"
+    },
+    {
+      "headline": "Truth will prevail, says U.P. CM on probe into Ram temple row",
+      "summary": "Uttar Pradesh Chief Minister Yogi Adityanath stated \"truth will prevail\" after the SIT completed its probe into alleged embezzlement of Ram Temple trust donations. He urged devotees not to be misled by Opposition spreading misinformation to \"tarnish\" Ayodhya's reputation, accusing them of worshipping Babur instead of Ram.",
+      "category": "Politics",
+      "page": 10,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 10,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "62611e5a"
+    },
+    {
+      "headline": "Culture Secretary Vivek Aggarwal is new FATF Vice-President",
+      "summary": "Union Culture Secretary Vivek Aggarwal was appointed Vice-President of the Financial Action Task Force (FATF) for 2026-2027. His selection signifies India's enhanced role in global financial governance, anti-money laundering, counter-terrorist financing, and illicit financial flows. He previously headed India's FATF delegation.",
+      "category": "Economy",
+      "page": 10,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 10,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "91ef16ee"
+    },
+    {
+      "headline": "World Bank approves $1.5 bn support for India reform plan",
+      "summary": "The World Bank approved $1.5 billion financing for India's Development Policy Financing (DPF) Operation. This support targets structural reforms to boost private sector-led job creation and economic growth, aiming to create opportunities for 11 million youth entering the labour market annually.",
+      "category": "Economy",
+      "page": 11,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 11,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "e255d4e4"
+    },
+    {
+      "headline": "West Asia impact dominated MPC meeting discourse",
+      "summary": "The Monetary Policy Committee (MPC) noted that the prolonged West Asia conflict is the most significant risk to India’s economic outlook, raising concerns about inflation, growth, and financial stability. All members agreed to maintain the repo rate at 5.25% and a neutral stance, adopting a cautious approach.",
+      "category": "Economy",
+      "page": 11,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 11,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "1b20135e"
+    },
+    {
+      "headline": "Nifty IT dips on Accenture revenue guidance",
+      "summary": "The Nifty IT index slid 3.65% after Accenture Plc. cut its full-year revenue guidance to 3-4% growth (local currency), down from 3-5%, citing macroeconomic uncertainty and a $100 million impact from the West Asia crisis. Infosys slid 6.5%, while TCS, LTM, and Tech Mahindra also declined.",
+      "category": "Business",
+      "page": 11,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 11,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "2b9777f3"
+    },
+    {
+      "headline": "RIL to turn oil into chemicals: Ambani",
+      "summary": "Reliance Industries CMD Mukesh Ambani announced that RIL will convert all refined oil into chemicals and new materials long-term, aiming to make it the world's leading integrated energy and materials company. This transformation, including New Energy initiatives, will create two lakh green jobs.",
+      "category": "Business",
+      "page": 11,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 11,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "cc90b5c5"
+    },
+    {
+      "headline": "U.S. strike on alleged drug boat kills 3 in the eastern Pacific Ocean",
+      "summary": "The U.S. military attacked a boat suspected of drug smuggling in the eastern Pacific Ocean, killing three people. This incident brings the total number of deaths in such U.S. military strikes to at least 211 since the Trump administration began targeting \"narcoterrorists.\"",
+      "category": "World",
+      "page": 12,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 12,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "3503955d"
+    },
+    {
+      "headline": "Colombia investigates ex-President Uribe over paramilitary massacres",
+      "summary": "The Colombian prosecutor’s office initiated a probe into influential former President Alvaro Uribe. He is being investigated for alleged links to massacres by paramilitary groups during the 1996 and 1997 armed conflict, marking a significant development in the country's efforts to address past violence.",
+      "category": "World",
+      "page": 12,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 12,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "b085133c"
+    },
+    {
+      "headline": "Venezuela govt., Opposition hold talks on ‘democratic transition’",
+      "summary": "Members of Venezuela’s interim government and Opposition representatives met in Caracas to discuss a roadmap for democratic transition. Opposition figure Dinorah Figuera, returning after eight years abroad, joined talks with National Assembly chief Jorge Rodriguez, as confirmed by the U.S. State Department.",
+      "category": "World",
+      "page": 12,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 12,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "71411b00"
+    },
+    {
+      "headline": "U.S. Vice-President Vance delays trip to Switzerland for Iran talks",
+      "summary": "U.S. Vice-President J.D. Vance delayed his trip to Switzerland, where he was scheduled for talks following up on the deal to end the war with Iran. The White House spokesperson cited \"logistics of these negotiations\" as complex and unpredictable for the delay.",
+      "category": "World",
+      "page": 12,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 12,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "e03b45b1"
+    },
+    {
+      "headline": "Russian strikes on Ukraine kill three: Kyiv",
+      "summary": "Russia renewed strikes on Ukraine, killing three people, including an eight-year-old girl, Ukrainian officials reported. This comes a day after Ukraine's largest-ever drone attack on Moscow, which also killed an eight-year-old and sparked an oil refinery fire. The Kremlin vowed to \"continue\" striking Ukraine.",
+      "category": "World",
+      "page": 12,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 12,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "38a18ed2"
+    },
+    {
+      "headline": "Starmer says he won’t step down after Burnham’s victory",
+      "summary": "U.K. Labour leader Keir Starmer affirmed he would not resign after Andy Burnham's Makerfield byelection victory, despite a weakening grip on his position. Burnham, a left-leaning challenger, comfortably won with 55% of the vote, calling for Labour to change. Starmer faces pressure for an internal party contest.",
+      "category": "Politics",
+      "page": 12,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 12,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "e93a9d8c"
+    },
+    {
+      "headline": "‘All of Lebanon must burn’, says Israeli Minister Ben Gvir",
+      "summary": "Far-right Israeli National Security Minister Itamar Ben Gvir stated, \"All of Lebanon must burn,\" following the deaths of four Israeli soldiers. He added, \"For every tear shed by an Israeli mother, a thousand Lebanese mothers must weep,\" urging Israel to \"go wild\" and \"open the gates of hell.\"",
+      "category": "World",
+      "page": 12,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 12,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "3dc5f348"
+    },
+    {
+      "headline": "Italy’s top diplomat cancels U.S. trip as Meloni slams Trump’s claim",
+      "summary": "Italian Foreign Minister Antonio Tajani cancelled his U.S. trip after President Donald Trump claimed Premier Giorgia Meloni \"begged\" for a photo-op at the G7 summit. Meloni called Trump's claims \"completely fabricated\" and \"offensive,\" asserting, \"Italy and I do not beg.\"",
+      "category": "World",
+      "page": 12,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 12,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "ce5527bb"
+    },
+    {
+      "headline": "How pitches are laid, how they age, and why it’s both art and science",
+      "summary": "A cricket pitch is a blend of clay, water, and grass, its behavior governed by these components and environmental factors. Curators select clay types, use heavy rollers, and manage moisture through deep saturation. Grass reinforces soil and influences ball friction. Pitches deteriorate over time, with decay depending on clay type and weather, impacting game dynamics.",
+      "category": "Science",
+      "page": 13,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 13,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "2338cc4e"
+    },
+    {
+      "headline": "Hot-seat shuffle: Alonso, Iraola, Maresca sign up for big-club roulette",
+      "summary": "Xabi Alonso, Andoni Iraola, and Enzo Maresca have joined Chelsea, Liverpool, and Manchester City as new managers, respectively. Their interconnected destinies involve high expectations. Alonso faces challenges reviving Chelsea after a turbulent season, Iraola must resuscitate Liverpool without Salah, and Maresca fills Guardiola’s shoes amidst City’s financial charges.",
+      "category": "Sports",
+      "page": 14,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 14,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "ba096cd8"
+    },
+    {
+      "headline": "Super subs fire Switzerland past Bosnia and close in on last 32 spot",
+      "summary": "Super substitutes Johan Manzambi and Ruben Vargas led Switzerland to a 4-1 victory over 10-man Bosnia-Herzegovina in Los Angeles. The late goal rush gave the Swiss a strong chance to qualify for the FIFA World Cup 2026 knockout round as one of the top two teams in Group B.",
+      "category": "Sports",
+      "page": 15,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 15,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "375cb9b4"
+    },
+    {
+      "headline": "Six-star Canada hammers Qatar into submission",
+      "summary": "Jonathan David scored three goals, leading Canada to a dominant 6-0 victory over Qatar. This win marked Canada's first World Cup match victory and almost secured its spot in the knockout round. Qatar was reduced to nine players due to red cards in the chaotic match.",
+      "category": "Sports",
+      "page": 15,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 15,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "e39de738"
+    },
+    {
+      "headline": "Alleyne’s heroics hand West Indies thrilling victory over Scotland",
+      "summary": "Aaliyah Alleyne's three-wicket burst helped West Indies secure a thrilling seven-run victory over Scotland in a Women's T20 World Cup match in Leeds. West Indies scored 153/6, with Taylor hitting 47 n.o., while Scotland was restricted to 146. Taylor was named Player of the Match.",
+      "category": "Sports",
+      "page": 15,
+      "importance": 3,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 15,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "338fb688"
+    },
+    {
+      "headline": "Prema replaces injured Shreyanka in India’s T20 World Cup squad",
+      "summary": "Leg-spinner Prema Rawat has replaced Shreyanka Patil in India’s T20 Women’s World Cup squad. Patil injured her ankle during India’s match against the Netherlands and was ruled out of the tournament. The Event Technical Committee approved the replacement.",
+      "category": "Sports",
+      "page": 15,
+      "importance": 3,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 15,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "fb416493"
+    },
+    {
+      "headline": "Hydration break appears to be affecting the outcome of contests",
+      "summary": "Hydration breaks, introduced in the FIFA World Cup to protect players from heat, seem to influence match outcomes. 53 of 89 goals so far were scored after these breaks, with 20 within 10 minutes of restart. Coaches are recognizing tactical possibilities. The breaks also provide lucrative commercial opportunities for broadcasters.",
+      "category": "Sports",
+      "page": 15,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 15,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "41eeacb5"
+    },
+    {
+      "headline": "Sri Lanka-A to meet India-A in the final",
+      "summary": "Sri Lanka-A will face India-A in the tri-nation tournament final. The host team secured its spot by beating Afghanistan-A by 103 runs, with Avishka Fernando scoring a century and Dulaj Samuditha taking five wickets. Captain Sahan Arachchige urged his side to focus on the trophy.",
+      "category": "Sports",
+      "page": 15,
+      "importance": 3,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 15,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "7297be7a"
+    },
+    {
+      "headline": "Shree Charani — a great find for the Women in Blue",
+      "summary": "Left-arm spinner Shree Charani has become an integral part of the Indian women's cricket team, showing impressive form since her T20I debut a year ago. She has taken 62 international wickets, is ranked No. 2 in ICC T20I bowlers, and is praised for her control and variations.",
+      "category": "Sports",
+      "page": 15,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 15,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "1d031146"
+    },
+    {
+      "headline": "Jane and Jill — the pioneers who created a rich legacy",
+      "summary": "Twins Jane and Jill Powell, former England cricketers, reflect on their pioneering careers and the growth of women's cricket. Jane, a former England captain, led in a World Cup final and was Yorkshire's first female president. They noted the lack of recognition and money in their era compared to today's game.",
+      "category": "Sports",
+      "page": 15,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 15,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "492cfde1"
+    },
+    {
+      "headline": "Nicholls puts Kiwis on top",
+      "summary": "Henry Nicholls scored an unbeaten century, helping New Zealand boost its lead to 352 runs against England on day three of the second Test at the Oval. New Zealand is currently 252/3 in its second innings.",
+      "category": "Sports",
+      "page": 15,
+      "importance": 3,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 15,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "fdf3f015"
+    },
+    {
+      "headline": "Dominant India eyes series sweep against Afghanistan",
+      "summary": "India, having clinched the ODI series against Afghanistan, aims for a 3-0 sweep in the final game at Chepauk. The team will likely experiment with bench strength, with young pacers like Gurnoor Brar and Prince Yadav impressing. Afghanistan seeks improved batting performance.",
+      "category": "Sports",
+      "page": 16,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 16,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "4388f2a5"
+    },
+    {
+      "headline": "India finishes runner-up in World Team snooker c’ship",
+      "summary": "India lost 2-3 to host China 'A' in the final of the World Team snooker championship in Guangdong, finishing as runner-up. Pankaj Advani secured two wins, but China 'A' ultimately clinched the title.",
+      "category": "Sports",
+      "page": 16,
+      "importance": 3,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 16,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "9a5746ee"
+    },
+    {
+      "headline": "Macau Open: Ashmita storms into semifinals, Anmol out",
+      "summary": "Ashmita Chaliha advanced to the women’s singles semifinals at the Macau Open Super 300 tournament, defeating Korea’s Kim Min Sun 21-16, 21-18. However, compatriot Anmol Kharb was eliminated after a quarterfinal defeat to Han Qian Xi of China.",
+      "category": "Sports",
+      "page": 16,
+      "importance": 3,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 16,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "bdc4d031"
+    },
+    {
+      "headline": "Prachi leads the way as India puts up a good show",
+      "summary": "Prachi secured a 4-1 victory against Paris Olympics bronze medallist Shih Yi Wu of Taiwan, confirming multiple medals for India at the Boxing World Cup 2026 (Stage 2). Other Indian boxers like Minakshi, Nikhil, and Deepak also advanced to the semifinals.",
+      "category": "Sports",
+      "page": 16,
+      "importance": 3,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 16,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "9d32c128"
+    },
+    {
+      "headline": "Yuvraj to join Delhi Capitals as batting coach",
+      "summary": "Former white-ball stalwart Yuvraj Singh is set to join Delhi Capitals as its batting coach for the 2027 season, according to IPL sources. This move will bring his extensive experience to the franchise.",
+      "category": "Sports",
+      "page": 16,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 16,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "972532b1"
+    },
+    {
+      "headline": "Manika rails against Asiad exclusion",
+      "summary": "India’s top women’s paddler Manika Batra sought intervention from the Sports Ministry and IOA after her exclusion from the Asian Games table tennis squad. The 2018 bronze medallist stated her omission was \"deeply disheartening\" due to how selection criteria were interpreted.",
+      "category": "Sports",
+      "page": 16,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 16,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "df09fb58"
+    },
+    {
+      "headline": "Thanya swims to new mark in 400m medley",
+      "summary": "Thanya Shadakshari broke an eight-year-old record in the women’s 400m medley at the National aquatics championships in Ahmedabad, clocking 4:56.78. Tanishi Gupta also set a new national mark twice in the women's 100m butterfly.",
+      "category": "Sports",
+      "page": 16,
+      "importance": 3,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 16,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "32dc2586"
+    },
+    {
+      "headline": "Sang-uk clinches men’s sabre gold",
+      "summary": "South Korean Oh Sang-uk won gold in the men’s sabre event on the opening day of the 26th Senior Asian Fencing Championships in New Delhi. China’s Luo Shaotong took silver, while two South Koreans and one Japanese fencer shared bronze.",
+      "category": "Sports",
+      "page": 16,
+      "importance": 3,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 16,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "fba53c1b"
+    },
+    {
+      "headline": "IOA and NCF organise Athletes’ Forum",
+      "summary": "The second IOA Athletes’ Forum gathered over 75 active and retired athletes from 30+ sports federations. It launched the Clean Sport Campaign and focused on providing practical insights and professional guidance for athletes' journeys and post-competitive careers.",
+      "category": "Sports",
+      "page": 16,
+      "importance": 3,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 16,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "74fc39cc"
+    },
+    {
+      "headline": "Reliance Foundation launch movement-based activities and community sports sessions",
+      "summary": "The International Olympic Committee, Abhinav Bindra Foundation, and Reliance Foundation launched ‘Let’s Move’ initiative in India. Starting on Olympic Day (June 23), it aims to encourage young people to be active through sporting activities and community sports sessions, engaging 1,800 Anganwadis and 44,000 children.",
+      "category": "Sports",
+      "page": 16,
+      "importance": 3,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 16,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "18f3b386"
+    },
+    {
+      "headline": "Iniyan wins 360 One Global Chess Masters title",
+      "summary": "GM Pa. Iniyan won the 360 One Global Chess Masters crown, accumulating 7.5 points from 9 rounds. The 23-year-old from Erode, a top seed, secured six wins and three draws in the tournament.",
+      "category": "Sports",
+      "page": 16,
+      "importance": 3,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 16,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "6ca26dc1"
+    },
+    {
+      "headline": "India loses to Germany",
+      "summary": "India lost 1-2 to reigning champion Germany in an FIH Pro League match. Germany secured the win with Jakob Brilla scoring a penalty corner in the 56th minute after the teams were goalless at halftime.",
+      "category": "Sports",
+      "page": 16,
+      "importance": 3,
+      "telegram_url": "https://t.me/c/1877410077/127729",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 16,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "article_id": "04b4d406"
+    },
+    {
+      "headline": "Jio Platforms Files DRHP for India's Largest ₹40,000 Crore IPO",
+      "summary": "Jio Platforms (JPL) filed a DRHP with SEBI for India's largest IPO, valued at ₹35,000-₹40,000 crore (approx. $4 billion). The issue of 27 crore fresh shares aims to repay ₹27,500 crore debt of subsidiary Reliance Jio Infocomm and fund digital/telecom growth, potentially valuing the company at over $150 billion.",
+      "category": "Business",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/127732"
+        },
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 11,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "importance": 10,
+      "article_id": "3d44ec17"
+    },
+    {
+      "headline": "SEBI Reinstates Open Market Stock Buybacks via Exchanges from August 1",
+      "summary": "SEBI approved reintroduction of open-market buybacks via stock exchanges from August 1, following eased tax treatment. Buybacks must be announced electronically and completed within 66 working days through the normal trading window. This provides flexibility for capital management and ensures transparency. SEBI also relaxed mutual fund borrowing norms, adopted a new board member code, and approved changes for municipal bonds and quick securities transfer.",
+      "category": "Economy",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/127732"
+        },
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 11,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "importance": 8,
+      "article_id": "6e2cb6d7"
+    },
+    {
+      "headline": "Jio Platforms Explores LEO Satellite Constellation for Broadband, AI Backbone",
+      "summary": "Jio Platforms is developing a sovereign Low Earth Orbit (LEO) satellite constellation and building ground station infrastructure to provide high-speed satellite broadband across India, competing with Starlink and OneWeb. Reliance Industries CMD Mukesh Ambani announced this, stating Jio demonstrated JioSpaceFiber and seeks GMPCS approvals for an end-to-end ecosystem. Jio is also building India's sovereign AI backbone.",
       "category": "Technology",
       "sources": [
         {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
+          "newspaper": "Economic Times",
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/127732"
+        },
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
           "page": 11,
-          "telegram_url": "https://t.me/c/1877410077/127656"
+          "telegram_url": "https://t.me/c/1877410077/127729"
         }
       ],
-      "importance": 6,
-      "article_id": "468825c2"
+      "importance": 8,
+      "article_id": "edad19d4"
     },
     {
-      "headline": "SC explores digital database for lawyers, link to verify degrees",
-      "summary": "The Supreme Court is considering the establishment of a digital database for lawyers to verify their degrees and credentials. This initiative aims to enhance transparency and prevent the practice of unqualified individuals posing as legal professionals. The court seeks to streamline the process of lawyer registration and verification.",
+      "headline": "Supreme Court: Right to Safe Footpaths a Fundamental Right Under Article 21",
+      "summary": "The Supreme Court declared the right to walk on safe, unobstructed, and well-maintained footpaths a fundamental right under Article 21, prioritizing pedestrians over vehicles. It directed civic authorities to ensure all roads have dedicated, unencroached footpaths, noting citizens can sue for violations. Justice Narasimha stressed a statutory framework is needed, citing a case where a child was killed.",
       "category": "Law",
       "sources": [
         {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 8,
-          "telegram_url": "https://t.me/c/1877410077/127656"
+          "newspaper": "Economic Times",
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 2,
+          "telegram_url": "https://t.me/c/1877410077/127732"
+        },
+        {
+          "newspaper": "Times of India",
+          "pdf_filename": "ToI Bangalore + Times ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/127739"
+        },
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/127729"
         }
       ],
-      "importance": 6,
-      "article_id": "ea263393"
+      "importance": 9,
+      "article_id": "13727ac8"
     },
     {
-      "headline": "Yogi to offer property to Ram Temple: UP",
-      "summary": "Uttar Pradesh Chief Minister Yogi Adityanath is set to offer land and property for the construction of the Ram Temple in Ayodhya. This move signals the state government's commitment to the temple project and its potential impact on religious tourism and regional development.",
-      "category": "Politics",
+      "headline": "Delhi HC Upholds Telegram Channel Ban Over NEET-UG Leaks, Citing Misinformation",
+      "summary": "The Delhi High Court declined to lift the temporary ban on specific Telegram channels accused of circulating leaked NEET-UG papers and misinformation. The court deemed it a \"least restrictive measure\" and necessary emergency action, stating the government followed due process. Telegram is required to cooperate with investigators by sharing user data linked to the leaks.",
+      "category": "Law",
       "sources": [
         {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 8,
-          "telegram_url": "https://t.me/c/1877410077/127656"
+          "newspaper": "Economic Times",
+          "pdf_filename": "ET Bangalore ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/127732"
+        },
+        {
+          "newspaper": "Times of India",
+          "pdf_filename": "ToI Bangalore + Times ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/127739"
         }
       ],
-      "importance": 6,
-      "article_id": "50151050"
+      "importance": 8,
+      "article_id": "5a24ff93"
     },
     {
-      "headline": "Considering mandatory durability certificates for buildings: Khattar",
-      "summary": "Haryana Chief Minister Manohar Lal Khattar is contemplating making durability certificates mandatory for buildings. This measure aims to ensure structural integrity and safety standards, particularly in light of recent incidents of building collapses. The proposal seeks to improve construction quality across the state.",
-      "category": "Infrastructure",
+      "headline": "Israel, Hezbollah Agree to Truce in Southern Lebanon After Deadly Clashes",
+      "summary": "Israel and Hezbollah agreed to a halt in heavy fighting in southern Lebanon, mediated by the US, Qatar, and Iran, following clashes that killed 47 in Lebanon and four Israeli soldiers. Israeli PM Netanyahu warned of severe retaliation if the truce is violated, with Israeli forces remaining in a temporary security zone. The accord faces threats from Lebanon and delays planned U.S.-Iran talks.",
+      "category": "World",
       "sources": [
         {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 8,
-          "telegram_url": "https://t.me/c/1877410077/127656"
+          "newspaper": "Times of India",
+          "pdf_filename": "ToI Bangalore + Times ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/127739"
+        },
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 12,
+          "telegram_url": "https://t.me/c/1877410077/127729"
         }
       ],
-      "importance": 5,
-      "article_id": "78afc1da"
+      "importance": 10,
+      "article_id": "a85de42e"
     },
     {
-      "headline": "Cops quiz ex-WB Messi tour back",
-      "summary": "Police are questioning a former World Bank employee regarding disruptions at a Lionel Messi tour event. The individual's actions caused chaos at the stadium. The investigation aims to understand his motives and the reasons behind his disruptive behaviour.",
+      "headline": "Co-host Mexico First to Reach World Cup Knockout Stages with 1-0 Win",
+      "summary": "Co-host Mexico became the first team to reach the 2026 FIFA World Cup knockout stages with a 1-0 win over South Korea in Guadalajara. Luis Romo scored the decisive 56th-minute goal after a goalkeeping error, with stopper Raul Rangel making crucial late saves. Meanwhile, Canada edged closer to the last 32 after beating Qatar.",
       "category": "Sports",
       "sources": [
         {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 8,
-          "telegram_url": "https://t.me/c/1877410077/127656"
+          "newspaper": "Times of India",
+          "pdf_filename": "ToI Bangalore + Times ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 12,
+          "telegram_url": "https://t.me/c/1877410077/127739"
+        },
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 15,
+          "telegram_url": "https://t.me/c/1877410077/127729"
         }
       ],
-      "importance": 4,
-      "article_id": "b524b282"
+      "importance": 8,
+      "article_id": "0c75c47e"
     },
     {
-      "headline": "ED raids Bengal BJP worker",
-      "summary": "The Enforcement Directorate (ED) has conducted raids on the premises of a West Bengal BJP worker as part of a money laundering investigation. The searches are aimed at uncovering alleged financial irregularities and asset accumulation. The worker has denied any involvement in illegal activities.",
+      "headline": "Neeraj Chopra Finishes Fourth in Doha Diamond League Season Opener",
+      "summary": "Olympic javelin champion Neeraj Chopra finished fourth in his season opener at the Doha Diamond League after recovering from a minor groin injury. He achieved a best throw of 85.69m. Sri Lanka’s Rumesh Pathirage won the event with 88.68m, with Grenada's Anderson Peters placing second with 88.38m and Curtis Thompson third.",
+      "category": "Sports",
+      "sources": [
+        {
+          "newspaper": "Times of India",
+          "pdf_filename": "ToI Bangalore + Times ²⁰⁰⁶²⁰²⁶.pdf",
+          "page": 17,
+          "telegram_url": "https://t.me/c/1877410077/127739"
+        },
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 15,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "importance": 7,
+      "article_id": "167a09e6"
+    },
+    {
+      "headline": "Home Minister Launches 'Abhigyan' App for Instant Police Fingerprint Verification",
+      "summary": "Union Home Minister Amit Shah launched 'Abhigyan', a smartphone app for police to instantly verify criminal records. It links portable fingerprint scanners to the National Automated Fingerprint Identification System (NAFIS) database of 1.3 crore suspects/convicts, enabling real-time identification for ground-level policing. Shah emphasized continuous database enrichment and time-bound justice.",
+      "category": "Technology",
+      "sources": [
+        {
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/127729"
+        }
+      ],
+      "importance": 7,
+      "article_id": "09813c6c"
+    },
+    {
+      "headline": "Doctor Remanded in Custody for Domestic Help's Murder; Mental Illness Cited",
+      "summary": "Delhi court remanded dermatologist Dr. Manish Gupta to two-day police custody for the murder of his 58-year-old domestic help, Mina Halder, who sustained three stab wounds. A neighbor found Gupta disoriented, confessing \"I have done it.\" Police seek custody to probe co-conspirators. The victim's family alleged police rushed cremation, which police deny. Gupta reportedly suffers from mental illnesses.",
       "category": "Law",
       "sources": [
         {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 6,
-          "telegram_url": "https://t.me/c/1877410077/127656"
+          "newspaper": "The Hindu",
+          "pdf_filename": "TH Delhi 20-06-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/127729"
         }
       ],
       "importance": 5,
-      "article_id": "7cb69746"
-    },
-    {
-      "headline": "30-yr-old gang-raped, brutalised",
-      "summary": "A 30-year-old woman was allegedly gang-raped and brutalized in Bihar. Five people have been accused in the incident. The woman is receiving medical treatment, and police are investigating the case. The incident has sparked outrage and calls for swift justice.",
-      "category": "India",
-      "sources": [
-        {
-          "newspaper": "Hindustan Times",
-          "pdf_filename": "HT Bengaluru ¹⁹⁰⁶²⁰²⁶.pdf",
-          "page": 8,
-          "telegram_url": "https://t.me/c/1877410077/127656"
-        }
-      ],
-      "importance": 6,
-      "article_id": "f435dd99"
+      "article_id": "8a610c26"
     }
   ]
 }
