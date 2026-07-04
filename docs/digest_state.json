@@ -1,1857 +1,1844 @@
 {
-  "date": "2026-07-02",
+  "date": "2026-07-04",
   "downloaded": [
     "Business Line",
+    "Business Standard",
     "Economic Times",
+    "Financial Express",
     "Hindustan Times",
-    "Mint",
+    "Indian Express",
     "The Hindu",
     "Times of India"
   ],
   "articles": [
     {
-      "headline": "TPG team, I Squared edge closer to Re Sustainability",
-      "summary": "I Squared Capital and a TPG-Canada Pension Plan consortium are final contenders to acquire a controlling stake in KKR-backed Re Sustainability Ltd. The deal is expected to value the Hyderabad-based waste management company at over $1.6 billion, with binding bids due in 10-15 days.",
-      "category": "Business",
-      "page": 1,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "8bdfff5c"
-    },
-    {
-      "headline": "Haze over Tata Sons IPO as RBI defines ‘indirect receipts’",
-      "summary": "RBI's new definition of \"indirect receipt of public funds\" has clouded Tata Sons' mandatory listing fate. The definition was restored in an updated circular, crucial for Tata Sons as listed Tata companies own stakes, making it an indirect recipient of public funds.",
-      "category": "Business",
-      "page": 1,
-      "importance": 9,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "939e75cd"
-    },
-    {
-      "headline": "Why hybrid vehicles are losing policy support in India",
-      "summary": "The Delhi government excluded hybrid vehicles from tax benefits, part of a national trend. States like Rajasthan, Chhattisgarh, and Uttar Pradesh also withdrew incentives, pushing for 100% electric vehicles. GST rates for large hybrids also increased, impacting sales.",
-      "category": "Economy",
-      "page": 3,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 3,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "769dc050"
-    },
-    {
-      "headline": "Positive signals for Indian economy despite global disruptions",
-      "summary": "India's economic activity holds up well, with June's GST mop-up climbing 14% to ₹1.95 trillion, the fastest in over a year. Manufacturing PMI fell slightly to 54.2 but remains in expansion, reinforcing positive economic signals. Easing West Asian conflict also helps.",
-      "category": "Economy",
-      "page": 3,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 3,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "f34e2207"
-    },
-    {
-      "headline": "India’s passport mobility score ranks 66th globally",
-      "summary": "An Indian passport provides visa-free or visa-on-arrival entry to 72 destinations, ranking 66th globally. The external affairs ministry clarified it's a travel document, not conclusive citizenship proof. UAE, France, and Spain top the list.",
-      "category": "India",
-      "page": 3,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 3,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "a4afc53f"
-    },
-    {
-      "headline": "Kotak Mahindra Bank faces challenges under new Chief",
-      "summary": "Kotak Mahindra Bank MD and CEO Ashok Vaswani will not seek reappointment. His tenure faced regulatory setbacks, slowing profitability, high attrition, and muted shareholder returns. The bank's credit card base shrank after an RBI ban.",
-      "category": "Business",
-      "page": 4,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 4,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "8a59130e"
-    },
-    {
-      "headline": "PMI indicates cooling prices, stalled growth in manufacturing",
-      "summary": "The June manufacturing PMI fell to a three-month low of 54.2, showing cooling inflationary pressures but slowing growth. Output and new orders had their weakest growth in four years. Input costs increased at the slowest pace since February.",
-      "category": "Economy",
-      "page": 4,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 4,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "955ddf02"
-    },
-    {
-      "headline": "Delhi HC: NSE is public authority under RTI Act",
-      "summary": "The Delhi High Court ruled that the National Stock Exchange (NSE) is a \"public authority\" under the Right to Information (RTI) Act, ending a 16-year legal battle. This allows greater transparency in its functioning and regulatory oversight.",
+      "headline": "SC stays planned CAG audit of power discoms in Capital",
+      "summary": "The Supreme Court stayed a proposed CAG audit of Delhi's three private power distribution companies. The court is examining the legality of the Delhi Electricity Regulatory Commission's decision to appoint the national auditor. The interim order is a setback for the Delhi government, which sought the audit to scrutinize finances before allowing recovery of over ₹38,500 crore in assets.",
       "category": "Law",
-      "page": 4,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 4,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "ae2db3e0"
-    },
-    {
-      "headline": "Aurobindo Pharma’s investors await next growth phase",
-      "summary": "Aurobindo Pharma completed its acquisition of Lannett Company, Inc., USA, adding nearly $300 million to annual revenue. The deal, valued at $250 million, offers a turnaround opportunity by improving Lannett's underutilized manufacturing and product portfolio.",
-      "category": "Business",
-      "page": 4,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 4,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "1b50abd8"
-    },
-    {
-      "headline": "Indian equities underperform global bull run in H1 2026",
-      "summary": "Indian equities faced a turbulent first half of 2026, with the Nifty 50 declining 8.7%, its worst H1 since 2022. Geopolitical tensions, foreign selling, earnings downgrades, and AI concerns weighed on sentiment, contrasting with strong gains in other Asian markets.",
-      "category": "Economy",
-      "page": 4,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 4,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "3cc6b98d"
-    },
-    {
-      "headline": "AI, nuclear investments hide India’s capex slump",
-      "summary": "India Inc's new project announcements rose 30% to ₹14.5 trillion in April-June, but nuclear power and data centers account for three-fourths of this. Traditional sectors like manufacturing, mining, and transport services saw significant declines in investments.",
-      "category": "Economy",
-      "page": 4,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 4,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "1d616bf2"
-    },
-    {
-      "headline": "Monsoon waiting: dry soil, empty wells, and a Plan C",
-      "summary": "Monsoon rains are delayed and scanty in Madhya Pradesh, impacting Kharif sowing. A 40% rainfall deficit in June nationwide has led to a 23% lower planting area year-on-year for crops like oilseeds and pulses. Farmers face potential yield losses and economic hardship.",
-      "category": "Environment",
-      "page": 5,
-      "importance": 9,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 5,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "b8c6684f"
-    },
-    {
-      "headline": "MFs wary of Sebi’s proposal to allow celeb ads",
-      "summary": "Sebi's proposal to allow celebrity endorsements for mutual fund houses faces industry resistance, with executives warning it could encourage mis-selling and unfairly benefit larger asset managers. The move could also significantly increase advertising costs for all MFs.",
-      "category": "Business",
-      "page": 5,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 5,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "e64f6888"
-    },
-    {
-      "headline": "OMCs under pressure to cut fuel prices as oil cools",
-      "summary": "Pressure is mounting on state-run oil marketing companies (OMCs) to cut petrol and diesel prices after private refiner Nayara Energy reduced its retail fuel prices. Global crude oil prices have fallen to pre-war levels, but OMCs' auto fuel prices remain high.",
-      "category": "Economy",
-      "page": 6,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 6,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "ccc43758"
-    },
-    {
-      "headline": "Government plans framework to regulate solar waste recycling",
-      "summary": "India is developing a national policy for solar module recycling to minimize environmental impact and recover materials. With solar projects ending by 2030, the government plans to mandate module recycling by 2029-30, engaging industry stakeholders.",
-      "category": "Environment",
-      "page": 6,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 6,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "73e05884"
-    },
-    {
-      "headline": "Government to assess economic output of cities first time",
-      "summary": "The housing ministry has formed an inter-ministerial committee to develop a standardized methodology for estimating the City Economic Product (CEP) of Indian cities. This first-of-its-kind initiative aims to quantify urban economic contributions for evidence-based planning.",
-      "category": "Economy",
-      "page": 6,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 6,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "cd3bd61a"
-    },
-    {
-      "headline": "India, Japan to deepen ties on AI, chips during PM Takaichi’s visit",
-      "summary": "Japanese Prime Minister Sanae Takaichi's visit aims to deepen cooperation with India in AI, semiconductors, defence, and strategic ties. Discussions will focus on energy resilience, critical minerals, and digital collaboration amidst global geopolitical shifts.",
-      "category": "Politics",
-      "page": 6,
+      "page": 1,
       "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/129059",
+      "telegram_url": "https://t.me/c/1877410077/129278",
       "sources": [
         {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 6,
-          "telegram_url": "https://t.me/c/1877410077/129059"
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/129278"
         }
       ],
-      "article_id": "2ee70836"
+      "article_id": "6208a3f1"
     },
     {
-      "headline": "AI included in top deck performance appraisals",
-      "summary": "Employers are integrating AI adoption as a parameter in performance appraisals for senior leadership, especially in banking and consulting. Business houses are rating 5-15% of senior leaders based on beneficial AI use, linking it to productivity gains and efficiency.",
-      "category": "Business",
-      "page": 6,
+      "headline": "NGT orders probe in illegal mining near Sariska reserve",
+      "summary": "The National Green Tribunal ordered an independent inquiry into alleged illegalities in multiple mining leases near the Sariska Tiger Reserve in Rajasthan. The court heard a petition that several leases were delisted for failing to get mandatory clearances from the National Board of Wildlife. The probe will examine revised distance certificates that placed mines outside the protected zone.",
+      "category": "Environment",
+      "page": 1,
       "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129059",
+      "telegram_url": "https://t.me/c/1877410077/129278",
       "sources": [
         {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 6,
-          "telegram_url": "https://t.me/c/1877410077/129059"
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/129278"
         }
       ],
-      "article_id": "b67f3a41"
+      "article_id": "d5bac48e"
     },
     {
-      "headline": "FSSAI pulls up beverage brands over ‘energy drink’ labels",
-      "summary": "FSSAI issued notices to several beverage manufacturers for misbranding and misleading claims using \"energy drink\" labels without official standards. It also objected to unpermitted functional/therapeutic claims like \"stimulates mind\" on these products.",
-      "category": "Health",
-      "page": 6,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/129059",
+      "headline": "Iran begins Khamenei's week-long funeral ceremonies in Tehran",
+      "summary": "Iran has begun a week of funeral processions for Ayatollah Ali Khamenei, who died at age 87. Dignitaries and foreign officials, including Indian representatives, paid respects at Tehran's Grand Mosalla. The event marks a critical moment for the nation as it enters a period of mourning and state transition amid regional tensions and international scrutiny.",
+      "category": "World",
+      "page": 1,
+      "importance": 10,
+      "telegram_url": "https://t.me/c/1877410077/129278",
       "sources": [
         {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 6,
-          "telegram_url": "https://t.me/c/1877410077/129059"
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/129278"
         }
       ],
-      "article_id": "a60addef"
+      "article_id": "d3cc3d94"
     },
     {
-      "headline": "Small LPG cylinders stare at a big problem",
-      "summary": "Demand for portable 5kg LPG cylinders, mainly used by migrant workers, has plunged by 80-90% after prices doubled following the West Asia war. The price hike has made them more expensive per kg than larger commercial cylinders.",
-      "category": "Economy",
-      "page": 6,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 6,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "1d74e1d2"
-    },
-    {
-      "headline": "State land authorities lose bankruptcy leverage",
-      "summary": "A change in law clarifies that land development authorities do not automatically get secured creditor status in insolvency processes, providing relief to banks and home buyers. This speeds up rescue of bankrupt real estate projects by reducing litigation.",
+      "headline": "SC questions bail for murder accused Sonam Raghuvanshi",
+      "summary": "The Supreme Court refused to stay the bail of Sonam Raghuvanshi, accused of murdering her husband during their honeymoon, but expressed reservations about the Meghalaya High Court order. The court issued notice to Raghuvanshi and the state government. The case involves a 'shocking' and 'pre-meditated' murder. The court will further hear the matter regarding her return to custody in July.",
       "category": "Law",
-      "page": 6,
+      "page": 1,
       "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/129059",
+      "telegram_url": "https://t.me/c/1877410077/129278",
       "sources": [
         {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 6,
-          "telegram_url": "https://t.me/c/1877410077/129059"
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/129278"
         }
       ],
-      "article_id": "845111b4"
+      "article_id": "c2a20168"
     },
     {
-      "headline": "Hyderabad airport plans new arrival fees",
-      "summary": "GMR-run Hyderabad airport proposed introducing an arrival fee for passengers for the first time while cutting departure fees by 23%. This tariff restructuring aims to fund its ₹13,975-crore expansion plan without changing overall passenger revenue significantly.",
-      "category": "Infrastructure",
-      "page": 7,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 7,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "fe361110"
-    },
-    {
-      "headline": "Young travellers, easier access fuel cruise demand",
-      "summary": "Cruise vacations are gaining popularity in India, shifting from niche luxury to mainstream, driven by young travellers and easier access. Operators like Cordelia Cruises are expanding capacity, and travel companies are deepening offerings to meet growing demand.",
-      "category": "Business",
-      "page": 7,
+      "headline": "Yogesh Singh's term as DU Vice-Chancellor extended",
+      "summary": "President Droupadi Murmu has reappointed Yogesh Singh as Delhi University Vice-Chancellor, making him the first to serve consecutive terms in the institution's history. The reappointment follows 2023 statute amendments allowing a VC's second term. Singh was appointed the 23rd VC in 2021; his current term was set to end on October 7. He has overseen several key reforms in the university.",
+      "category": "Education",
+      "page": 1,
       "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/129059",
+      "telegram_url": "https://t.me/c/1877410077/129278",
       "sources": [
         {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 7,
-          "telegram_url": "https://t.me/c/1877410077/129059"
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/129278"
         }
       ],
-      "article_id": "0414f760"
+      "article_id": "a67cf519"
     },
     {
-      "headline": "Digital, AI standards key to global trade: ICC’s Singhania",
-      "summary": "Harsh Pati Singhania, newly elected ICC chairman, states that digital standards and responsible AI rules are crucial for global trade amidst geopolitical shifts. He prioritizes digitizing trade documentation to simplify cross-border commerce for SMEs.",
-      "category": "Economy",
-      "page": 8,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 8,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "f06a36c9"
-    },
-    {
-      "headline": "Zee promoter family to infuse ₹3,143 cr",
-      "summary": "The Goenka family, promoters of Zee Entertainment, proposed to invest up to ₹3,143.51 crore via fully convertible warrants, potentially raising their stake to nearly 25%. This move comes after a subdued FY26 for the company.",
-      "category": "Business",
-      "page": 8,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 8,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "308015cb"
-    },
-    {
-      "headline": "CtrlS faces CPP stake hike if targets slip",
-      "summary": "CtrlS Datacenters Pvt. Ltd faces a potential increase in Canada Pension Plan Investment Board's (CPP Investments) stake from 8.2% to 10.3% if execution milestones for its Hyderabad and Mumbai data center projects are missed.",
-      "category": "Business",
-      "page": 8,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 8,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "10bf7acf"
-    },
-    {
-      "headline": "Govt directs Meta to halt WhatsApp usernames rollout",
-      "summary": "MeitY directed Meta to halt the rollout of WhatsApp's username feature due to concerns over potential impersonation and cyberfraud. The government sought an explanation and warned of regulatory action under IT Act and Rules.",
-      "category": "Technology",
-      "page": 8,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 8,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "a41861af"
-    },
-    {
-      "headline": "Accenture expands Pune workplace strategy",
-      "summary": "Accenture Solutions Pvt. Ltd leased 345,872 sq. ft. in Pune, part of its expansion strategy across Indian tech hubs. This follows significant leases in Hyderabad, Noida, and Kolkata, consolidating offices and bringing employees under one roof.",
-      "category": "Business",
-      "page": 8,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 8,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "b4633270"
-    },
-    {
-      "headline": "Regional studios diversify into multilingual content",
-      "summary": "Regional content studios, traditionally working in niche languages, are diversifying into Hindi and other non-Hindi languages. This strategy helps diversify risk and expand portfolios, leveraging OTT platforms and growing demand for diverse stories.",
-      "category": "Culture",
-      "page": 8,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 8,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "e6a6b137"
-    },
-    {
-      "headline": "Alphabet’s $2 trillion gain turns ‘rock star’ into question mark",
-      "summary": "Alphabet's stock, despite doubling in 12 months, struggled recently, losing 6% in June. Investors are wary of high AI spending, potential equity dilution, and intense competition in the AI sector, causing its valuation to be questioned.",
-      "category": "Business",
-      "page": 9,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 9,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "5e145f72"
-    },
-    {
-      "headline": "Xi hails party as force for global prosperity",
-      "summary": "Chinese leader Xi Jinping asserted the ruling party's role as a force for global progress and prosperity, backed by a strong military. He outlined ambitions for China to lead global affairs and achieve \"national rejuvenation,\" including resolving the \"Taiwan problem.\"",
-      "category": "Politics",
-      "page": 9,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 9,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "743bea43"
-    },
-    {
-      "headline": "Ukraine’s missiles now reach almost half of Russia",
-      "summary": "Ukraine has expanded the range and intensity of its missile strikes deep inside Russia, triggering alerts across nearly half the country's regions this year. This highlights evolving tactics and long-range strike capabilities, bringing the war closer to home for Russians.",
-      "category": "World",
-      "page": 9,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 9,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "715aff22"
-    },
-    {
-      "headline": "US lifts export curbs on Anthropic’s Fable 5 AI model",
-      "summary": "The US government removed foreign access restrictions on Anthropic PBC’s Fable 5 AI model after the startup resolved safety concerns. Anthropic deployed new classifiers to block cybersecurity tasks and agreed to work with the government on AI safety standards.",
-      "category": "Technology",
-      "page": 9,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 9,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "ba5d25de"
-    },
-    {
-      "headline": "Trump made over $1 bn on crypto deals",
-      "summary": "Former President Trump reported a windfall of over $1 billion last year from crypto businesses, including royalties from his memecoin and proceeds from World Liberty Financial token sales. He also earned from real estate, licensing, and legal settlements.",
-      "category": "Politics",
-      "page": 10,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 10,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "11199dfc"
-    },
-    {
-      "headline": "Meta building cloud business to sell AI compute",
-      "summary": "Meta Platforms Inc. plans to develop a cloud infrastructure business to sell access to AI computing power and models. This new venture sets up competition with industry leaders like AWS and Azure, leveraging Meta's extensive AI infrastructure investments.",
-      "category": "Technology",
-      "page": 10,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 10,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "0c6f66bc"
-    },
-    {
-      "headline": "US, Iran hold technical talks on Venezuela peace deal",
-      "summary": "The US and Iran held indirect technical talks in Doha to agree on shipping flow through the Strait of Hormuz and secure a lasting ceasefire, based on a 14-point interim accord.",
-      "category": "World",
-      "page": 10,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 10,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "10bbfdd3"
-    },
-    {
-      "headline": "Venezuela earthquake death toll nears 2,000",
-      "summary": "The death toll from twin earthquakes in Venezuela last week rose to nearly 2,000, with almost 20,000 survivors in La Guaira. Over 10,000 people were injured, and 15,000 displaced.",
-      "category": "World",
-      "page": 10,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 10,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "fa64d711"
-    },
-    {
-      "headline": "Prudential-HCL wins Irdai approval for health insurance",
-      "summary": "India’s insurance regulator Irdai granted a certificate of registration to Prudential HCL Health Insurance Ltd, allowing it to begin health insurance operations in India as the country’s eighth standalone health insurer.",
-      "category": "Business",
-      "page": 11,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 11,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "59c50d0e"
-    },
-    {
-      "headline": "India aims to recycle 16K ships in 10 years",
-      "summary": "India plans to recycle nearly 16,000 ships over the next decade with an $8 billion financial commitment to shipbuilding and recycling. India and the EU reaffirmed cooperation in sustainable ship recycling.",
-      "category": "Environment",
-      "page": 11,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 11,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "5b679e0f"
-    },
-    {
-      "headline": "Magnet Hospitals debuts with 8 hospitals",
-      "summary": "Dinesh Madhavan launched Magnet Hospitals, a new healthcare network with an initial portfolio of eight city hospitals and ₹224 crore investment. It aims to disrupt the corporate hospital model by offering equity stakes to doctors and nurses.",
-      "category": "Health",
-      "page": 11,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 11,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "1026b96e"
-    },
-    {
-      "headline": "Cabinet clears UP highway, Delhi tunnel projects",
-      "summary": "CCEA approved two major road infrastructure projects worth over ₹14,000 crore: a ₹6,970-crore 8km, six-lane tunnel in Delhi and a ₹7,145-crore 242km access-controlled highway in Uttar Pradesh.",
-      "category": "Infrastructure",
-      "page": 11,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 11,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "a919a300"
-    },
-    {
-      "headline": "Foreign secretary Misri gets one-year extension",
-      "summary": "Foreign secretary Vikram Misri was granted a one-year extension until 14 July 2027. Misri, known for his expertise on China, was appointed to the post in June 2024.",
-      "category": "Politics",
-      "page": 11,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 11,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "93d6de38"
-    },
-    {
-      "headline": "IndiGo launches cabin-only fares",
-      "summary": "IndiGo introduced entry-level \"lite fare\" category for passengers travelling with only cabin baggage on direct domestic and international flights, allowing them to pay only for needed services.",
-      "category": "Business",
-      "page": 11,
-      "importance": 4,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 11,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "c14ce301"
-    },
-    {
-      "headline": "Passenger vehicle sales up 25% in June",
-      "summary": "Passenger vehicle sales in India are estimated to have grown nearly 25% in June to about 400,000 units, led by Maruti Suzuki, Tata Motors, and Mahindra & Mahindra, despite concerns over the West Asia war and deficient monsoon.",
-      "category": "Business",
-      "page": 11,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 11,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "66ab76e4"
-    },
-    {
-      "headline": "TVS’s Norton bet enters test phase",
-      "summary": "TVS Motor Co. Ltd has booked nearly ₹2,000 crore in losses at its British premium motorcycle brand, The Norton Motorcycle Co., since acquiring it in 2020. These losses reflect TVS's investments in reviving the brand for a global relaunch.",
-      "category": "Business",
-      "page": 5,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 5,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "af54c973"
-    },
-    {
-      "headline": "AI skill can be your next multibagger investment",
-      "summary": "AI credentials are now essential in the job market, with courses ranging from ₹500 to ₹10 lakh. Industry leaders emphasize practical projects and workplace application over mere certifications, suggesting a \"learning budget\" and cautious investment.",
-      "category": "Technology",
-      "page": 13,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 13,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "a98fcb3b"
-    },
-    {
-      "headline": "The voice of the Minions finally understands them",
-      "summary": "Filmmaker Pierre Coffin, creator and chief practitioner of Minionese, discusses the evolution and challenges of the Minions franchise. He admits initial doubts about sequels but expresses enthusiasm for the latest film, 'Minions & Monsters,' where the characters become filmmakers in 1920s Hollywood.",
-      "category": "Culture",
-      "page": 16,
-      "importance": 4,
-      "telegram_url": "https://t.me/c/1877410077/129059",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 16,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        }
-      ],
-      "article_id": "2060300a"
-    },
-    {
-      "headline": "Govt asks Meta to pause WhatsApp user names rollout over fraud risks",
-      "summary": "The IT Ministry issued a notice to Meta seeking a pause on WhatsApp’s 'user names' feature. The government is concerned that allowing users to hide phone numbers could facilitate impersonation, financial fraud, and the spread of misinformation. Meta must now seek regulatory approval and detail safeguards against misuse before the feature can be launched in India.",
+      "headline": "Centre to summon Meta over Instagram child abuse ads",
+      "summary": "The IT ministry will summon Meta officials following a BBC investigation alleging Instagram promoted ads featuring child sexual abuse material. Minister Ashwini Vaishnaw directed officials to seek an explanation on content moderation systems. The government's move comes amid growing concerns over child safety on social media. Meta stated they use automated tools to block such content.",
       "category": "Technology",
       "page": 1,
-      "importance": 9,
-      "telegram_url": "https://t.me/c/1877410077/129063",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
-      "article_id": "014e3d16"
-    },
-    {
-      "headline": "Auto wholesales maintain positive momentum in June dispatches",
-      "summary": "Domestic automobile wholesale volumes grew across passenger and two-wheeler segments in June. Maruti Suzuki reported a 24% increase in domestic sales to 1,47,187 units. Mahindra & Mahindra saw a 28% jump in domestic wholesales. However, Hyundai India recorded a 10% decline. The growth is attributed to improved chip supplies and sustained demand for utility vehicles.",
-      "category": "Business",
-      "page": 1,
       "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/129063",
+      "telegram_url": "https://t.me/c/1877410077/129278",
       "sources": [
         {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
           "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/129063"
+          "telegram_url": "https://t.me/c/1877410077/129278"
         }
       ],
-      "article_id": "ac6ec8fc"
+      "article_id": "5e7e1f8b"
     },
     {
-      "headline": "Manufacturing PMI slips to 54.2 in June as orders weaken",
-      "summary": "The HSBC India Manufacturing Purchasing Managers' Index (PMI) moderated to 54.2 in June from 57.5 in May. While still indicating expansion, the figure marks the slowest growth in output and new orders since the start of the fiscal year. Job creation also grew at its weakest pace in three months, though input price inflation softened as supply disruptions receded.",
-      "category": "Economy",
-      "page": 1,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/129063",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
-      "article_id": "a62ba13e"
-    },
-    {
-      "headline": "JPC to take up Bill seeking to sack jailed PM and CMs",
-      "summary": "The Joint Parliamentary Committee (JPC) will meet in July to finalize the 130th Constitution Amendment Bill, 2025. The Bill seeks to bar a Prime Minister, Union Minister, or Chief Minister from continuing in office if they are under arrest or judicial detention for over 30 days in connection with a serious criminal offense. It aims to address governance issues in Delhi.",
-      "category": "Politics",
-      "page": 1,
-      "importance": 9,
-      "telegram_url": "https://t.me/c/1877410077/129063",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
-      "article_id": "f98aa1ef"
-    },
-    {
-      "headline": "Jana SFB promoters seek to monetise shares to repay debenture holders",
-      "summary": "Jana Small Finance Bank (JSFB) promoters, Jana Holdings Ltd and Jana Capital Ltd, plan to sell their stake to repay non-convertible debenture holders. The Bengaluru-based promoters have restructured their debt, extending maturity to June 2026. The bank is currently the fourth largest SFB in India and saw its net profit rise 35% in FY26 to ₹501 crore.",
-      "category": "Business",
-      "page": 1,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/129063",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
-      "article_id": "79a8ed73"
-    },
-    {
-      "headline": "IndiGo introduces entry-level economy fare for ‘lite’ travellers",
-      "summary": "IndiGo has launched a new 'IndiGo Lite' fare for passengers traveling only with cabin baggage. This lower-priced ticket category allows the airline to unbundle services, where check-in baggage and meals are charged separately. The fare will be available for domestic and select international bookings from July 1 for travel starting July 15.",
-      "category": "Business",
-      "page": 1,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/129063",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
-      "article_id": "cbf57bfc"
-    },
-    {
-      "headline": "Super El Nino threat unseen since 1950 is shaping up",
-      "summary": "Meteorologists warn that a potential 'Super El Nino' is developing in the Pacific, which could trigger worldwide weather extremes. Global sea surface temperatures have reached record highs, with June 2026 seeing the highest temperatures since 1900. This phenomenon threatens to disrupt monsoon patterns and intensify heatwaves and floods globally through the end of the year.",
-      "category": "Environment",
-      "page": 1,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/129063",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
-      "article_id": "a514fc52"
-    },
-    {
-      "headline": "NCDEX reports daily trade of ₹20 crore in RAINMUMBAI derivatives",
-      "summary": "The National Commodity and Derivatives Exchange (NCDEX) is seeing daily trade of ₹20 crore for its 'RAINMUMBAI' weather derivative. The contract, which tracks rainfall in Mumbai, is being used by insurance firms, construction companies, and retail traders to hedge against weather-related risks. Trade volumes are expected to rise as the monsoon intensifies.",
-      "category": "Economy",
-      "page": 1,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/129063",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
-      "article_id": "551eddc4"
-    },
-    {
-      "headline": "Ola Electric sales double year-on-year in first quarter of FY27",
-      "summary": "Ola Electric reported sales of 43,719 electric two-wheelers in Q1 FY27, more than doubling the 22,252 units sold in Q1 FY26. The company maintained a 41% market share in the segment. Management attributed the growth to increased consumer awareness, network expansion, and a direct-to-consumer distribution model that reaches over 97% of India's pin codes.",
-      "category": "Business",
-      "page": 2,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/129063",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 2,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
-      "article_id": "dd149fd5"
-    },
-    {
-      "headline": "Retail electric car registrations jump 89 per cent in April-June",
-      "summary": "Retail registrations for electric passenger vehicles surged to 82,737 units in the first quarter of FY27, up from 43,710 units in the same period last year. Tata Motors led the market with a 39% share, followed by MG Motor and Mahindra. The growth indicates that electric mobility is moving from a niche segment into a broader, mainstream consumer phase in India.",
-      "category": "Business",
-      "page": 2,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/129063",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 2,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
-      "article_id": "2c78447a"
-    },
-    {
-      "headline": "AP CM lays foundation for Hero MotoCorp global parts centre in Tirupati",
-      "summary": "Andhra Pradesh Chief Minister N. Chandrababu Naidu laid the foundation stone for Hero MotoCorp’s Global Parts Centre (GPC) in Madanapalle, Tirupati. The project involves an investment of ₹1,500 crore and is expected to create 4,000 direct and indirect jobs. The GPC will have an automated storage system and is designed to handle an annual capacity of 1.2-1.5 million units.",
-      "category": "Infrastructure",
-      "page": 2,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/129063",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 2,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
-      "article_id": "de9d5cd3"
-    },
-    {
-      "headline": "Japan’s $3 billion grant powers India’s Green Hydrogen Mission",
-      "summary": "Japan has decided to support a green ammonia joint venture in Odisha with a $3 billion grant under its 'Contract for Difference' (CfD) programme. The project, led by Acme Group and IHI Corporation, aims to produce 2.28 lakh tonnes of green ammonia annually for the Japanese power sector. This marks a major commercial endorsement of India’s Green Hydrogen Mission.",
-      "category": "Economy",
-      "page": 2,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/129063",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 2,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
-      "article_id": "4bb77a82"
-    },
-    {
-      "headline": "Adani Energy Solutions plans ₹10,000 crore QIP for expansion",
-      "summary": "Adani Energy Solutions has approved a plan to raise up to ₹10,000 crore from institutional investors through a Qualified Institutional Placement (QIP). The funds will be used to strengthen the company’s balance sheet and support its expansion in the power transmission and smart metering sectors. The raising will be done in one or more tranches.",
-      "category": "Business",
-      "page": 2,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/129063",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 2,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
-      "article_id": "55924330"
-    },
-    {
-      "headline": "MEIL forays into IT with $50 million joint venture with Analogy",
-      "summary": "Megha Engineering and Infrastructures Ltd (MEIL) has formed a 50:50 joint venture with US-based Analogy to provide IT and engineering solutions for urban infrastructure. The JV, with an initial revenue target of $55,000 crore, will focus on 'robo-drones' and intelligent security systems to address urban challenges like traffic and security.",
+      "headline": "Apple and Google told to remove e-rickshaw kill switch apps",
+      "summary": "The Centre has asked Apple and Google to remove at least seven mobile apps used to remotely disable battery-operated e-rickshaws. The apps, which connect via Bluetooth, were reportedly used by pranksters to switch off vehicles mid-journey. The action is taken under Section 69A of the IT Act. The ministry stated these apps pose a potential legal violation and risk to passenger safety.",
       "category": "Technology",
-      "page": 2,
-      "importance": 4,
-      "telegram_url": "https://t.me/c/1877410077/129063",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 2,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
-      "article_id": "2b45ccce"
-    },
-    {
-      "headline": "Semiconductor push should be followed through with ISM 2.0",
-      "summary": "The Centre's decision to approve ₹1.25 lakh crore for India Semiconductor Mission (ISM) 2.0 highlights the strategic priority of domestic chip manufacturing. While current investments exceed ₹1.6 lakh crore, experts argue for continued support for local fabless start-ups, advanced lithography access, and R&D to ensure long-term global competitiveness in the silicon supply chain.",
-      "category": "Technology",
-      "page": 4,
+      "page": 1,
       "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129063",
+      "telegram_url": "https://t.me/c/1877410077/129278",
       "sources": [
         {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 4,
-          "telegram_url": "https://t.me/c/1877410077/129063"
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/129278"
         }
       ],
-      "article_id": "424ad953"
+      "article_id": "5dd35d01"
     },
     {
-      "headline": "FIFA World Cup controversies fade as tournament enters business end",
-      "summary": "The FIFA World Cup in Miami has seen significant upsets, with nine of the ten participating African teams exiting early. Despite pre-tournament controversies regarding hosting and visas, global attention has shifted to on-field performances. Heavyweights like Germany and the Netherlands have also exited, while Spain and Japan show strong momentum heading into the knock-out rounds.",
+      "headline": "Offside ball technology put to test in World Cup match",
+      "summary": "Controversy erupted as Croatia exited the World Cup after a stoppage-time equalizer was ruled out for offside using new motion-sensing ball technology. A 500Hz sensor inside the ball detects the exact moment of contact, while limb-tracking cameras map player positions. The VAR decision, based on a hair-width margin, has sparked debate over the use of extreme technology in the game.",
       "category": "Sports",
-      "page": 4,
+      "page": 1,
       "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/129063",
+      "telegram_url": "https://t.me/c/1877410077/129278",
       "sources": [
         {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 4,
-          "telegram_url": "https://t.me/c/1877410077/129063"
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/129278"
         }
       ],
-      "article_id": "af436758"
+      "article_id": "fade3fa0"
     },
     {
-      "headline": "Roadmap for electric trucks: Charging infra and cheap power are critical",
-      "summary": "For India to decarbonize its freight sector, which consumes 40% of road transport energy, a roadmap for electric trucks is essential. Experts propose the 'Power Sector Model' involving standardized charging systems, interoperable protocols, and access to clean, low-cost electricity. Initial focus should be on closed-loop operations with high utilization for economic viability.",
-      "category": "Infrastructure",
-      "page": 4,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/129063",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 4,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
-      "article_id": "4f408542"
-    },
-    {
-      "headline": "Calcutta Stock Exchange revival seeks to serve MSMEs and green bonds",
-      "summary": "A proposed revival strategy for the Calcutta Stock Exchange (CSE) involves positioning it as a specialized hub for MSME listings, carbon credits, and green bonds. By focusing on niche market segments rather than competing directly with NSE or BSE, the CSE aims to provide regional liquidity and serve as a gateway for BIMSTEC economies and maritime economy funds.",
-      "category": "Economy",
-      "page": 4,
-      "importance": 5,
-      "telegram_url": "https://t.me/c/1877410077/129063",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 4,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
-      "article_id": "6ea938bc"
-    },
-    {
-      "headline": "India-Japan ties mature into a Special Strategic and Global Partnership",
-      "summary": "Economic cooperation between India and Japan has reached $53 billion in Official Development Assistance (ODA). New areas of collaboration include semiconductors, AI, and green energy. To further strengthen ties, both nations are looking to renegotiate the Comprehensive Economic Partnership Agreement (CEPA) and explore joint ventures in critical minerals and digital infrastructure.",
-      "category": "Politics",
-      "page": 5,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129063",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 5,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
-      "article_id": "0fa5ad5d"
-    },
-    {
-      "headline": "Modi-Takaichi talks to focus on economy, energy, and supply chains",
-      "summary": "Prime Minister Narendra Modi and Japanese PM Sanae Takaichi held bilateral talks in New Delhi focused on economic security, emerging technologies, and AI. The leaders discussed enhancing cooperation in energy security and strengthening global supply chains to reduce vulnerabilities. A bilateral framework to promote biogas-powered vehicles is also expected to be launched.",
-      "category": "Politics",
-      "page": 6,
-      "importance": 9,
-      "telegram_url": "https://t.me/c/1877410077/129063",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 6,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
-      "article_id": "6a600cd7"
-    },
-    {
-      "headline": "Centre clears ₹14,115 crore highway projects for Delhi and UP",
-      "summary": "The Cabinet Committee on Economic Affairs approved two major National Highway projects worth ₹14,115 crore. These include a six-lane tunnel connecting Vasant Kunj to the Dwarka Expressway and a four-lane greenfield highway between Kanpur and Kabrai. The projects aim to improve connectivity between Delhi, Haryana, and Uttar Pradesh, reducing travel time significantly.",
-      "category": "Infrastructure",
-      "page": 6,
+      "headline": "Trump plans July 4 address at Mount Rushmore",
+      "summary": "President Donald Trump will kick off July 4th weekend with a speech at Mount Rushmore, South Dakota. The event will feature a massive fireworks display, which the National Park Service previously banned due to wildfire risks. Trump's speech is expected to focus on national pride and heritage. This trip is seen as part of his strategy to highlight historical monuments and American values.",
+      "category": "World",
+      "page": 2,
       "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/129063",
+      "telegram_url": "https://t.me/c/1877410077/129278",
       "sources": [
         {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 6,
-          "telegram_url": "https://t.me/c/1877410077/129063"
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 2,
+          "telegram_url": "https://t.me/c/1877410077/129278"
         }
       ],
-      "article_id": "211cb27c"
+      "article_id": "7d7fadbd"
     },
     {
-      "headline": "AI-enabled cyber threats key risk for financial institutions says RBI",
-      "summary": "The RBI’s Financial Stability Report warns that AI has increased the sophistication and scale of cyberattacks on financial institutions. NBFCs and banks are vulnerable to AI-generated phishing, automated fraud, and supply chain risks. The report calls for enhanced investment in cybersecurity frameworks and suggests that operational dependence on third-party AI tools is a growing concern.",
-      "category": "Technology",
-      "page": 7,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/129063",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 7,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
-      "article_id": "73afbc9b"
-    },
-    {
-      "headline": "FPI holdings in Indian equities fall to two-decade low",
-      "summary": "Foreign Portfolio Investor (FPI) holdings in Indian stocks have dropped to their lowest level in 20 years, now accounting for 16% of the market compared to 20% for domestic institutional investors. The decline is attributed to high valuations and concerns over supply chain disruptions. However, domestic equity markets remain resilient due to strong retail and institutional inflows.",
-      "category": "Economy",
-      "page": 7,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/129063",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 7,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
-      "article_id": "2b22042c"
-    },
-    {
-      "headline": "PE-VC investments fall 3% to $6.4 billion in June quarter",
-      "summary": "Private Equity and Venture Capital (PE-VC) investments in India totaled $6.4 billion in Q2 2026, a 3% decline compared to the previous year. Data center and IT infrastructure sectors attracted the most capital, accounting for $2.7 billion across 149 deals. While large deal counts slowed, experts suggest that new investment opportunities in BFSI and healthcare remain attractive.",
-      "category": "Business",
-      "page": 7,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/129063",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 7,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
-      "article_id": "69c5ec48"
-    },
-    {
-      "headline": "KPIT Technologies dives 17% as revenue warning triggers retail sell-off",
-      "summary": "Shares of KPIT Technologies crashed 17% after the company projected a 1% decline in Q1 FY27 revenue. The warning, attributed to spending cuts by European car makers, led to a loss of ₹4-year market value gains. Nearly 6 lakh retail investors were affected. Analysts have downgraded the stock, citing near-term headwinds in the automotive software sector.",
-      "category": "Business",
-      "page": 8,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129063",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 8,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
-      "article_id": "a1af7e5a"
-    },
-    {
-      "headline": "SEBI bars 222 entities and imposes ₹47.7 crore fine in pump-and-dump",
-      "summary": "SEBI has barred 222 entities from the securities market for seven years for their involvement in a coordinated pump-and-dump scheme. The entities used Telegram and SMS to spread misleading messages and inflate stock prices of five companies before selling at a profit. The regulator has imposed a total penalty of ₹47.7 crore and ordered the disgorgement of unlawful gains.",
-      "category": "Law",
-      "page": 8,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129063",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 8,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
-      "article_id": "3504fb8a"
-    },
-    {
-      "headline": "Quick commerce reshaping strategies and premiumization of FMCG companies",
-      "summary": "FMCG companies like Britannia, HUL, and Tata Consumer are reshaping their portfolios as quick commerce accounts for up to 25% of their e-commerce sales. This shift is driving demand for premium products and smaller pack sizes. Industry experts note that quick commerce is no longer just for convenience but is becoming a primary channel for monthly grocery replenishment.",
-      "category": "Business",
-      "page": 9,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129063",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 9,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
-      "article_id": "9a39171c"
-    },
-    {
-      "headline": "Weak monsoon may intensify water stress and threaten kharif sowing",
-      "summary": "Deficient monsoon rains in June have led to a 13.7% rainfall deficit, threatening kharif crop sowing and reservoirs levels. Areas in Central and North-West India face potential water stress if rainfall does not pick up by mid-July. This could impact agricultural yields and food prices, though the IMD expects a recovery as low-pressure systems develop in the Bay of Bengal.",
-      "category": "Environment",
-      "page": 10,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129063",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 10,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
-      "article_id": "c53e34bf"
-    },
-    {
-      "headline": "US limits on Mythos AI access keep foreign firms in limbo",
-      "summary": "Continued US export controls on Anthropic's 'Mythos' AI model have left international companies unable to access the latest artificial intelligence tools. While global users can access the 'Fable 5' model, the more powerful Mythos remains restricted to a select group of US firms. This has raised concerns about a digital divide and the competitive disadvantage for non-US tech companies.",
-      "category": "Technology",
-      "page": 12,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/129063",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 12,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
-      "article_id": "a405cd69"
-    },
-    {
-      "headline": "FSSAI sends notices to energy drink brands over misleading claims",
-      "summary": "The Food Safety and Standards Authority of India (FSSAI) has issued notices to energy drink manufacturers for making misleading health and therapeutic claims. Brands like Adrenaline Rush and Drink-Gold Boost are being investigated for labeling products with claims like 'vitalises body and mind' without scientific evidence. FSSAI has intensified enforcement against such misbranding.",
+      "headline": "US record fireworks show draws major health warnings",
+      "summary": "A project to launch more than 850,000 fireworks shells over the Potomac River has drawn health warnings from experts. The show, which aims to break the Guinness World Record, could significantly increase PM2.5 particulate matter levels. Analysts warn that the resulting smoke could create a localized air quality peak worse than typical levels seen in highly polluted Asian cities.",
       "category": "Health",
-      "page": 12,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/129063",
+      "page": 2,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129278",
       "sources": [
         {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 12,
-          "telegram_url": "https://t.me/c/1877410077/129063"
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 2,
+          "telegram_url": "https://t.me/c/1877410077/129278"
         }
       ],
-      "article_id": "cc0f6c00"
+      "article_id": "e238fece"
     },
     {
-      "headline": "Lenovo rolls out LOQ game monitors and Tab Plus Gen 2",
-      "summary": "Lenovo has expanded its gaming and entertainment portfolio in India with the launch of the LOQ monitor series and Tab Plus Gen 2. The flagship monitor features a 27-inch QHD display with a 180 Hz refresh rate. The new tablet is equipped with an eight-speaker system tuned by JBL and Dolby Atmos. Prices for the LOQ monitors start at ₹9,799.",
-      "category": "Technology",
-      "page": 15,
-      "importance": 4,
-      "telegram_url": "https://t.me/c/1877410077/129063",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 15,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
-      "article_id": "0d9c04ba"
-    },
-    {
-      "headline": "Aarogya Setu 2.0 uses Google Gemma 4 to digitise medical records",
-      "summary": "The National Health Authority has integrated Google’s Gemma 4 AI model into Aarogya Setu 2.0. The upgrade allows the app to process unstructured health documents, such as lab reports and prescriptions, and convert them into a standard digital format. This is part of the Ayushman Bharat Digital Mission to help users organize and share their medical history securely.",
-      "category": "Health",
-      "page": 15,
-      "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/129063",
-      "sources": [
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 15,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
-      "article_id": "274c0bb4"
-    },
-    {
-      "headline": "India's GST Revenue Hits ₹1.95 Lakh Crore in June",
-      "summary": "India's GST collections rose 13.9% year-on-year to ₹1.95 lakh crore in June 2026, driven by robust domestic activity. Despite global roadblocks and a three-month low in manufacturing activity, UPI transactions grew by 23%, and power consumption rose by 11.6%. The central bank has cut its FY27 growth forecast to 6.6% due to high energy costs and global disruptions.",
-      "category": "Economy",
-      "page": 1,
-      "importance": 10,
-      "telegram_url": "https://t.me/c/1877410077/129072",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "Bangalore_ET_02-07-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/129072"
-        }
-      ],
-      "article_id": "c6be32db"
-    },
-    {
-      "headline": "Udaan Parent Faces Bankruptcy Proceedings Over $170 Million Default",
-      "summary": "Global creditors have initiated insolvency proceedings in Singapore against Trustroot Internet Pvt Ltd, the parent of B2B e-commerce firm Udaan. The move follows a default on $170 million in convertible notes due June 30. The company, which has seen its valuation drop by 70%, has incurred cumulative losses of approximately ₹13,000 crore since its launch.",
-      "category": "Business",
-      "page": 1,
-      "importance": 9,
-      "telegram_url": "https://t.me/c/1877410077/129072",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "Bangalore_ET_02-07-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/129072"
-        }
-      ],
-      "article_id": "a24cbdfa"
-    },
-    {
-      "headline": "Adani and IHC to Invest $11.5 Billion in Aluminium Smelter",
-      "summary": "Adani Group and Abu Dhabi’s IHC plan to jointly invest $11.5 billion to build an aluminium smelter in Odisha. The plant will have an annual capacity of over 2 million tonnes. This marks one of the largest foreign investments in India’s metals and minerals space, reflecting Adani’s strategy to secure commodity supplies for its expanding infrastructure empire.",
-      "category": "Business",
-      "page": 1,
-      "importance": 9,
-      "telegram_url": "https://t.me/c/1877410077/129072",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "Bangalore_ET_02-07-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/129072"
-        }
-      ],
-      "article_id": "6a12f7fa"
-    },
-    {
-      "headline": "SP Group to Issue ₹25,500 Crore Bonds Against Tata Stake",
-      "summary": "Shapoorji Pallonji Group plans to raise ₹25,500 crore through a bond issue next week, using its 18.37% stake in Tata Sons as collateral. The funds will be used primarily to refinance existing debt. The move follows a recent RBI clarification that effectively bars major NBFCs, including Tata Sons, from remaining privately held if they reach certain asset thresholds.",
-      "category": "Business",
-      "page": 1,
-      "importance": 9,
-      "telegram_url": "https://t.me/c/1877410077/129072",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "Bangalore_ET_02-07-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/129072"
-        }
-      ],
-      "article_id": "8fd6f8da"
-    },
-    {
-      "headline": "Government to Propose 30-Day Detention Bill for PM and CMs",
-      "summary": "The Centre plans to introduce the Constitution (130th Amendment) Bill, 2025, in the upcoming monsoon session of Parliament. The bill seeks to allow the detention of the Prime Minister, Chief Ministers, and other ministers for up to 30 consecutive days without trial in cases involving offenses punishable by five years or more in prison.",
+      "headline": "Manipur CM plans Churachandpur visit amid sporadic violence",
+      "summary": "Manipur Chief Minister N Biren Singh plans to visit Kuki-dominated Churachandpur on Saturday for the funeral of a Meitei MLA's relative. This would be the first visit by a Meitei representative to the district since ethnic clashes began in May 2023. Kuki-Zo groups have reportedly objected to the visit, citing a tense situation. Security reviews are underway to prevent any escalation.",
       "category": "Politics",
-      "page": 1,
-      "importance": 10,
-      "telegram_url": "https://t.me/c/1877410077/129072",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "Bangalore_ET_02-07-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/129072"
-        }
-      ],
-      "article_id": "376a6f77"
-    },
-    {
-      "headline": "Hero MotoCorp to Invest ₹3,200 Crore in Manufacturing Expansion",
-      "summary": "Hero MotoCorp is scaling up investments to ₹3,200 crore over the next 3-5 years to expand production capacity in Andhra Pradesh and global centers. Executive Chairman Pawan Munjal cited reviving demand for motorcycles and scooters. The company is also developing an electric motorcycle to be showcased at the EICMA show in Milan.",
-      "category": "Business",
-      "page": 1,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/129072",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "Bangalore_ET_02-07-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/129072"
-        }
-      ],
-      "article_id": "16090fc6"
-    },
-    {
-      "headline": "Tamil Nadu Government Challenges High Court Ban on Cow Slaughter",
-      "summary": "The Tamil Nadu government has moved the Supreme Court against a Madras High Court order that banned cow slaughter during Bakrid. The state argues that the ban contradicts statutory schemes and that existing laws already ensure animals are not subjected to unnecessary pain. The High Court had previously directed the state to ensure no cow or calf is slaughtered on the holiday.",
-      "category": "Law",
       "page": 2,
       "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129072",
+      "telegram_url": "https://t.me/c/1877410077/129278",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 2,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        }
+      ],
+      "article_id": "dc2f09b9"
+    },
+    {
+      "headline": "El Nino to intensify by September setting off weather chaos",
+      "summary": "The WMO warns that El Nino conditions are likely to strengthen rapidly between July and September, raising the likelihood of heatwaves, droughts, and floods globally. Surface ocean temperatures in the Pacific are significantly above average. In India, El Nino is linked to weaker monsoons. Experts call for 'unprecedented mobilization' to mitigate impacts on food security and health.",
+      "category": "Environment",
+      "page": 3,
+      "importance": 9,
+      "telegram_url": "https://t.me/c/1877410077/129278",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        }
+      ],
+      "article_id": "115c7ec3"
+    },
+    {
+      "headline": "Military purchases worth ₹52,000 crore cleared by DAC",
+      "summary": "The Defence Acquisition Council (DAC), chaired by Rajnath Singh, approved the procurement of military hardware worth ₹52,000 crore. Acquisitions include 'AKASH TARANG' electronic warfare systems, anti-tank guided missiles, and medium-range surface-to-air missiles. The military hardware aims to boost the capabilities of the Indian Army, Navy, and Air Force amid regional security challenges.",
+      "category": "India",
+      "page": 3,
+      "importance": 9,
+      "telegram_url": "https://t.me/c/1877410077/129278",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        }
+      ],
+      "article_id": "629480d9"
+    },
+    {
+      "headline": "India monitoring Bangladesh plans to develop Teesta with China",
+      "summary": "India is closely monitoring Bangladesh's plan to develop the Teesta River with Chinese assistance. Dhaka has unveiled plans for a $1 billion comprehensive management and restoration project. The move comes as New Delhi and Dhaka have long-standing unresolved issues regarding water sharing of the river. MEA stated that India will take 'appropriate measures' regarding its neighborhood interests.",
+      "category": "World",
+      "page": 3,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/129278",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        }
+      ],
+      "article_id": "e87f97bd"
+    },
+    {
+      "headline": "Woman arrested over abuse in Bengaluru creche",
+      "summary": "A woman working at a daycare center on a corporate campus in Bengaluru was arrested for allegedly abusing a child. The incident came to light after a video surfaced showing the staffer mistreating the toddler. Police are investigating if other children were harmed and are searching for a second suspect. The daycare center's license is under review following the allegations.",
+      "category": "India",
+      "page": 3,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129278",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        }
+      ],
+      "article_id": "6499f6ea"
+    },
+    {
+      "headline": "RSS breaks silence on Ram Temple trust allegations",
+      "summary": "The Rashtriya Swayamsevak Sangh (RSS) has demanded a thorough investigation into alleged financial irregularities within the Ram Temple trust. General Secretary Dattatreya Hosabale stated that action must follow to protect the faith and reverence of the Hindu society. The RSS urged the government and the trust to show 'necessary patience' and ensure complete transparency in its operations.",
+      "category": "India",
+      "page": 3,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/129278",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        }
+      ],
+      "article_id": "2c5aea81"
+    },
+    {
+      "headline": "Punjab Congress leaders seek Charanjit Channi as state president",
+      "summary": "Section of Punjab Congress leaders has urged the party high command to appoint former CM Charanjit Singh Channi as the state unit president. The demand follows a series of meetings among party leaders to rethink the leadership. Current PCC president Amarinder Singh Raja Warring is facing pressure amid speculation about organizational reshuffles. Channi is seen as a key Dalit face for the party.",
+      "category": "Politics",
+      "page": 3,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/129278",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        }
+      ],
+      "article_id": "9d622499"
+    },
+    {
+      "headline": "KSEC holding parallel voter revision to please Rahul Gandhi",
+      "summary": "Union Minister Shobha Karandlaje alleged that the Karnataka State Election Commission (KSEC) is conducting a 'parallel' Special Intensive Revision (SIR) of electoral rolls to 'please Rahul Gandhi'. She claimed that officials are carrying out house-to-house verification in select areas under pressure from the state government. Karandlaje has requested the Chief Election Commissioner to intervene.",
+      "category": "Politics",
+      "page": 3,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129278",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        }
+      ],
+      "article_id": "22151373"
+    },
+    {
+      "headline": "BJP seeks explanation from DK Shivakumar on Cauvery water",
+      "summary": "The BJP in Karnataka has sought an explanation from Deputy CM DK Shivakumar regarding the release of Cauvery water to Tamil Nadu despite a shortage in the state. BJP leaders alleged that water is being released from the Krishnaraja Sagar dam to 'please' alliance partners in the INDIA bloc. Shivakumar stated that water was released following standard protocols and legal obligations.",
+      "category": "Politics",
+      "page": 3,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/129278",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        }
+      ],
+      "article_id": "55d61439"
+    },
+    {
+      "headline": "Three held in Bengaluru quarry collapse investigation",
+      "summary": "Three people, including the quarry owner, were arrested in connection with a stone quarry collapse in Bengaluru that killed seven workers. Preliminary investigations revealed that the quarry was operating without proper safety measures and mandatory licenses. The police are also probing operations at two adjoining sites. The state government has announced compensation for the victims' families.",
+      "category": "India",
+      "page": 3,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129278",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        }
+      ],
+      "article_id": "fdf6e9b6"
+    },
+    {
+      "headline": "Karnataka drafts new coastal tourism and cruise policy",
+      "summary": "The Karnataka government is drafting a 'Comprehensive Coastal Tourism Policy 2028' to unlock the state's tourism potential. The policy aims to develop world-class infrastructure in Dakshina Kannada, Udupi, and Uttara Kannada districts. Key features include the promotion of cruise tourism, beach resorts, and water sports. The government plans to invite global cruise operators to manage major circuits.",
+      "category": "Infrastructure",
+      "page": 3,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/129278",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        }
+      ],
+      "article_id": "b71ae016"
+    },
+    {
+      "headline": "UP man arrested for hoax bomb threat to ISRO",
+      "summary": "A man from Ghaziabad was arrested for allegedly sending a hoax bomb threat email to the Indian Space Research Organisation (ISRO) headquarters. The Delhi Police traced the email to the suspect, who reportedly committed the act under a false identity. No suspicious objects were found during the search of the premises. The accused has been booked under relevant sections of the BNS and IT Act.",
+      "category": "Law",
+      "page": 3,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129278",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        }
+      ],
+      "article_id": "3cc6c2a4"
+    },
+    {
+      "headline": "DMK MLA arrested for public remarks against actor Vijay",
+      "summary": "DMK MLA Anitha R Radhakrishnan was arrested for making 'objectionable' comments against actor Vijay during a public meeting. The remarks reportedly provoked a strong reaction from fans and political opponents. The police booked the legislator under various sections for promoting enmity and inciting public disorder. The arrest follows a complaint filed by fans of the actor-turned-politician.",
+      "category": "Politics",
+      "page": 4,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/129278",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        }
+      ],
+      "article_id": "ed943c94"
+    },
+    {
+      "headline": "Kerala court stays AMMA ad hoc panel",
+      "summary": "The Ernakulam Additional Munsiff Court stayed the functioning of the ad hoc committee of the Association of Malayalam Movie Artists (AMMA). The court's decision follows a petition challenging the validity of the panel's formation. The committee was formed to manage the body's affairs after the entire executive committee resigned following the Hema Committee report on sexual harassment.",
+      "category": "Law",
+      "page": 4,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/129278",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        }
+      ],
+      "article_id": "918f9897"
+    },
+    {
+      "headline": "AIADMK exodus continues as former minister S Selvan resigns",
+      "summary": "Former AIADMK minister S Selvan has resigned from the party, marking a continued exodus of senior leaders. Selvan, who was a key figure in the party's southern stronghold, reportedly cited leadership failure and lack of inner-party democracy as reasons. His resignation comes amid a series of defections from the AIADMK to the DMK and other rival parties following recent electoral losses.",
+      "category": "Politics",
+      "page": 4,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/129278",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        }
+      ],
+      "article_id": "aaae95f4"
+    },
+    {
+      "headline": "Hyderabad kamaans to be restored with 11.86 crore grant",
+      "summary": "The Telangana government has sanctioned ₹11.86 crore for the restoration of historical 'kamaans' (arches) in Hyderabad's Old City. The project aims to preserve the 400-year-old structures that were part of the original Qutb Shahi layout. The restoration will involve structural strengthening and artistic restoration to bring back their original glory. Work is expected to be completed within 18 months.",
+      "category": "Culture",
+      "page": 4,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129278",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        }
+      ],
+      "article_id": "68c7ca0d"
+    },
+    {
+      "headline": "PM Modi to visit Indonesia, Australia and New Zealand",
+      "summary": "Prime Minister Narendra Modi will begin a three-nation tour on July 6, visiting Indonesia, Australia, and New Zealand. The visit aims to strengthen bilateral ties in trade, security, and defense. Key agendas include talks on the Comprehensive Economic Partnership Agreement and meeting with the Indian diaspora. This will be the first visit by an Indian PM to New Zealand in over two decades.",
+      "category": "Politics",
+      "page": 5,
+      "importance": 9,
+      "telegram_url": "https://t.me/c/1877410077/129278",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 5,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        }
+      ],
+      "article_id": "d3da373c"
+    },
+    {
+      "headline": "India seeks info on missing seafarer from Venezuela",
+      "summary": "India has raised the issue of a missing seafarer with Venezuelan authorities. The merchant navy officer went missing from a vessel off the Venezuelan coast. The MEA stated it is in constant touch with the local government to fast-track the search and rescue operations. Family members have sought government intervention for a thorough investigation into the circumstances of his disappearance.",
+      "category": "World",
+      "page": 5,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/129278",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 5,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        }
+      ],
+      "article_id": "8816fe04"
+    },
+    {
+      "headline": "Places of Worship Act does not bar public-use takeover",
+      "summary": "The Allahabad High Court ruled that the Places of Worship (Special Provisions) Act, 1991 does not prohibit the state from acquiring the property of a place of worship for a 'secular and public purpose'. The court dismissed a petition against the acquisition of land in Varanasi for a beautification project. It clarified that acquisition for infrastructure does not violate religious freedom.",
+      "category": "Law",
+      "page": 5,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/129278",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 5,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        }
+      ],
+      "article_id": "8e8b6c3a"
+    },
+    {
+      "headline": "M.P. to table draft UCC bill in cabinet meeting",
+      "summary": "The Madhya Pradesh government is set to table a draft bill on the Uniform Civil Code (UCC) in the next cabinet meeting. The state government had formed a committee to study the implementation of UCC, similar to Uttarakhand. The draft includes recommendations on marriage, divorce, and inheritance laws. If approved, the bill will be introduced in the upcoming monsoon session of the assembly.",
+      "category": "Law",
+      "page": 6,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/129278",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 6,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        }
+      ],
+      "article_id": "6877841d"
+    },
+    {
+      "headline": "MHA and Ladakh bodies reach consensus after 3-hour meeting",
+      "summary": "The Ministry of Home Affairs and Ladakh-based organizations reached a consensus on several key demands after a three-hour meeting in Leh. The discussion focused on constitutional safeguards, land rights, and job protection for locals under the Sixth Schedule. Both parties agreed to form a high-powered committee to finalize the details of the agreement and ensure timely implementation.",
+      "category": "Politics",
+      "page": 6,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/129278",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 6,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        }
+      ],
+      "article_id": "a2d197be"
+    },
+    {
+      "headline": "India-Japan relations set for new era after Takaichi visit",
+      "summary": "Japanese Prime Minister Sanae Takaichi's visit to India has heralded a new era in bilateral relations. The two nations signed several agreements on defense technology, supply chain resilience, and clean energy. A key highlight was the joint declaration on the India-Japan AI Initiative. The visit also focused on strengthening maritime security in the Indo-Pacific region amid global challenges.",
+      "category": "World",
+      "page": 10,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/129278",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 10,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        }
+      ],
+      "article_id": "9f0d84a4"
+    },
+    {
+      "headline": "Russia and Ukraine exchange strikes after Kyiv drone attack",
+      "summary": "Russia and Ukraine exchanged heavy strikes following a major drone attack on Kyiv. At least 10 people were killed in Ukrainian strikes on Russian border regions, while Russian missiles targeted energy infrastructure across Ukraine. The exchange comes as both nations ramp up aerial warfare. International observers have expressed concern over the rising civilian toll and risk of further escalation.",
+      "category": "World",
+      "page": 15,
+      "importance": 9,
+      "telegram_url": "https://t.me/c/1877410077/129278",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 15,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        }
+      ],
+      "article_id": "afd64276"
+    },
+    {
+      "headline": "NASA launches rescue mission for Swift space telescope",
+      "summary": "NASA has launched a rescue mission to save the Swift space telescope, which recently entered safe mode due to a technical glitch. The mission involves sending a repair signal and software updates to restore the telescope's ability to detect gamma-ray bursts. Swift has been a key tool in studying black holes and cosmic explosions since its launch in 2004. Officials hope to restore full operations.",
+      "category": "Science",
+      "page": 15,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/129278",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 15,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        }
+      ],
+      "article_id": "18b3d5e2"
+    },
+    {
+      "headline": "HCL wins $1.14 billion Merc deal once held by Infosys",
+      "summary": "HCL Technologies has secured a $1.14 billion deal from Mercedes-Benz, a contract previously held by Infosys. The multi-year deal involves managing the German automaker's global digital workplace and cloud infrastructure. This win marks a significant expansion for HCL in the European automotive market. The transition is expected to be completed within the next six months.",
+      "category": "Business",
+      "page": 16,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/129278",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 16,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        }
+      ],
+      "article_id": "53ff89cf"
+    },
+    {
+      "headline": "India targets $1 trillion exports by FY27: Goyal",
+      "summary": "Union Minister Piyush Goyal stated that India is on track to achieve $1 trillion in merchandise exports by FY27. Speaking at a Board of Trade meeting, Goyal highlighted that the government is focusing on emerging sectors and new markets. He emphasized the importance of high-quality standards and competitive pricing to boost global trade presence. Current exports have shown steady growth despite global headwind.",
+      "category": "Economy",
+      "page": 16,
+      "importance": 9,
+      "telegram_url": "https://t.me/c/1877410077/129278",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 16,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        }
+      ],
+      "article_id": "370f6eca"
+    },
+    {
+      "headline": "Spain and Portugal prepare for World Cup quarter-final clash",
+      "summary": "Iberian rivals Spain and Portugal are set for a high-stakes quarter-final clash in the World Cup. Spain advanced after a dominant 3-0 win over Austria, while Portugal secured a narrow victory over Croatia. The match is expected to be a tactical battle between Spain's possession-based play and Portugal's clinical counter-attacks. Both teams have several star players in peak form heading into the game.",
+      "category": "Sports",
+      "page": 17,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/129278",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 17,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        }
+      ],
+      "article_id": "1ea68eb9"
+    },
+    {
+      "headline": "Novak Djokovic reaches Wimbledon Round of 16 with victory",
+      "summary": "Novak Djokovic moved into the Wimbledon Round of 16 after a four-set victory over Arthur Rinderknech. The top seed survived a scare in the second set to win 7-5, 6-4, 1-6, 7-6. This victory marks his 18th appearance in the fourth round at the All England Club. Djokovic will next face Russian qualifier Roman Safiullin. He remains the favorite to defend his title and equal Federer's record.",
+      "category": "Sports",
+      "page": 18,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/129278",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 18,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        }
+      ],
+      "article_id": "1fe6fed5"
+    },
+    {
+      "headline": "India Flips Switch for Beijing-linked Power Gear Cos",
+      "summary": "Four Indian firms, with local partners like L&T and Siemens, secured a 2-year exemption to supply critical power equipment. This bypasses a restrictive policy on Beijing-linked companies, ensuring continued infrastructure development and power grid stability.",
+      "category": "Business",
+      "page": 1,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/129262",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "Bangalore_ET_02-07-2026.pdf",
-          "page": 2,
-          "telegram_url": "https://t.me/c/1877410077/129072"
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/129262"
         }
       ],
-      "article_id": "87f50391"
+      "article_id": "c7d3400b"
     },
     {
-      "headline": "Tangkhul Naga Houses Torched by Militants Near Manipur Border",
-      "summary": "Militants suspected to have crossed from Myanmar torched at least 12 houses belonging to the Tangkhul Naga community in Manipur's Kamjong district. Security forces are reviewing the situation as the area remains volatile. Kuki groups have condemned the arson, claiming it was carried out by outfits operating from across the border.",
+      "headline": "Gulf of Gulf Sovereign Wealth Enters India in '26",
+      "summary": "Sovereign wealth funds (SWFs) from the Gulf region invested $1.75 billion in India during Q1 2024. Half of all SWF capital deployed in emerging markets went to India, indicating strong investor confidence and long-term strategic interest.",
+      "category": "Economy",
+      "page": 1,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "c83dca83"
+    },
+    {
+      "headline": "Meta Faces Child Abuse Content Glare, Summons",
+      "summary": "India's MeitY summoned Meta officials over alleged child sexual abuse material (CSAM) on its platforms. The ministry demands explanations for compliance with user safety guidelines, emphasizing the need for robust content moderation and user protection.",
+      "category": "Technology",
+      "page": 1,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "42cb7960"
+    },
+    {
+      "headline": "HCI, ITel Lacks in S1.14 b Mercedes-Benz Contract",
+      "summary": "HCI and ITel failed to secure a 5-year, $1.14 billion digital services contract from Mercedes-Benz. Instead, TCS and HCLTech are among the Indian companies that successfully bagged portions of the lucrative deal.",
+      "category": "Business",
+      "page": 1,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "bab9aca2"
+    },
+    {
+      "headline": "One Love Services for T20 WC",
+      "summary": "One Love Services, a BPO firm, was involved in providing support services for the T20 World Cup. This indicates its role in event logistics and operations, contributing to the smooth execution of the major sports event.",
+      "category": "Business",
+      "page": 1,
+      "importance": 2,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "eb3e35c8"
+    },
+    {
+      "headline": "S'pore Firms to Invest $1.4 Billion",
+      "summary": "Singaporean firms have committed to investing $1.4 billion in various projects across India. This reinforces robust bilateral economic ties and is expected to boost infrastructure development and economic cooperation between the two nations.",
+      "category": "Economy",
+      "page": 1,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "c4b28381"
+    },
+    {
+      "headline": "D Street Ends Week with Lag of Gains",
+      "summary": "The Indian stock market closed the week with only marginal gains, reflecting cautious investor sentiment. The broader market experienced a lack of strong momentum, ending on a subdued note after a volatile trading period.",
+      "category": "Economy",
+      "page": 1,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "45df5434"
+    },
+    {
+      "headline": "Adani Enterprises QIP Up to ₹12.5k Cr",
+      "summary": "Adani Enterprises plans to raise up to ₹12,500 crore via a Qualified Institutional Placement (QIP). The funds are intended to fuel the company's expansion plans and capital expenditure across various businesses.",
+      "category": "Business",
+      "page": 1,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "230826bf"
+    },
+    {
+      "headline": "ONDC Aims for 2.0% Profit Margin",
+      "summary": "The Open Network for Digital Commerce (ONDC) targets a 2.0% profit margin on its Gross Merchandise Value (GMV) within three years. This objective underscores its focus on sustainable growth and financial viability in the e-commerce sector.",
+      "category": "Technology",
+      "page": 1,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 1,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "d583df0a"
+    },
+    {
+      "headline": "India, Japan Agree on Crude Oil Stockpiling",
+      "summary": "India and Japan signed an agreement to cooperate on strategic crude oil stockpiling and reserve management. The initiative aims to enhance energy security, stabilize global markets, and facilitate information exchange on supply chain resilience and emergency response mechanisms.",
+      "category": "Business",
+      "page": 2,
+      "importance": 8,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 2,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "72e3ba5d"
+    },
+    {
+      "headline": "India, Japan Pledges Cooperation on Digital Technologies",
+      "summary": "India and Japan reaffirmed their commitment to cooperate on digital technologies, including cybersecurity and ICT infrastructure. The collaboration aims to leverage technological advancements for mutual economic growth and security, fostering innovation and resilience.",
+      "category": "Technology",
+      "page": 2,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 2,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "edecd871"
+    },
+    {
+      "headline": "Lessons from Op Sindoor: DAC Nod to Pseudo Satellites, Air Defense",
+      "summary": "The Defence Acquisition Council (DAC) approved proposals for pseudo satellite technology and advanced air defense systems. These acquisitions, including drones and missiles, aim to modernize India's military capabilities and enhance national security, drawing lessons from Operation Sindoor.",
       "category": "India",
       "page": 2,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/129072",
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/129262",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "Bangalore_ET_02-07-2026.pdf",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
           "page": 2,
-          "telegram_url": "https://t.me/c/1877410077/129072"
+          "telegram_url": "https://t.me/c/1877410077/129262"
         }
       ],
-      "article_id": "d92d9764"
+      "article_id": "e22f42b9"
     },
     {
-      "headline": "Gujarat High Court Rules Marriages Invalid Without Vedic Rituals",
-      "summary": "The Gujarat High Court has ruled that Hindu marriages performed without the 'Saptapadi' (seven steps) and other traditional rites are 'null and void ab initio.' The court set aside a family court ruling, stating that a marriage certificate alone does not validate a marriage if the mandatory religious rituals were not performed under the Hindu Marriage Act.",
+      "headline": "Centre Extends Punjab Right to Business Act to Chandigarh",
+      "summary": "The Punjab Right to Business Act will be extended to Chandigarh, aiming to simplify regulatory processes for MSMEs. This move seeks to improve the ease of doing business, facilitate investments, and boost economic growth in the Union Territory.",
+      "category": "Economy",
+      "page": 2,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 2,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "0405cc21"
+    },
+    {
+      "headline": "Dissent Grows as Channi Camp Seeks Rethink on Warring",
+      "summary": "Dissent is growing within the Punjab Congress, with Sukhjinder Singh Randhawa and other leaders from the Channi camp demanding a review of state party chief Amrinder Singh Raja Warring's leadership following recent electoral setbacks.",
+      "category": "Politics",
+      "page": 2,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 2,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "5c1f246d"
+    },
+    {
+      "headline": "CBI Nabs 3 in ₹2.07 cr Digital Arrest Scam",
+      "summary": "The CBI arrested three individuals for their alleged involvement in a ₹2.07 crore \"digital arrest\" scam. The fraudsters impersonated law enforcement officials to extort money from victims, highlighting a growing cybercrime trend targeting unsuspecting citizens.",
       "category": "Law",
       "page": 2,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129072",
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129262",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "Bangalore_ET_02-07-2026.pdf",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
           "page": 2,
-          "telegram_url": "https://t.me/c/1877410077/129072"
+          "telegram_url": "https://t.me/c/1877410077/129262"
         }
       ],
-      "article_id": "2680b93a"
+      "article_id": "002f5b0d"
     },
     {
-      "headline": "Demographic Panel to Study Migration Impact in Border States",
-      "summary": "A high-level committee on demographic changes, chaired by Justice Prakash Prabhakar, will begin visiting states and Union Territories. The panel aims to study demographic shifts caused by illegal migration and other factors. Home Minister Amit Shah met with the panel to discuss gathering data on migration patterns to assist in policy formulation.",
+      "headline": "Centre to Fund ₹52,000 cr Infra Projects",
+      "summary": "The Centre cleared 44 infrastructure projects worth ₹52,000 crore, primarily in the power and petroleum sectors. This significant investment aims to boost national infrastructure development, enhance energy security, and create employment opportunities across various regions.",
+      "category": "Infrastructure",
+      "page": 2,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 2,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "c6767f68"
+    },
+    {
+      "headline": "Previous Meeting Held in Delhi Made Public",
+      "summary": "The proceedings of a significant political meeting held in Delhi were made public, emphasizing transparency in governance. This move aims to ensure public accountability and access to information regarding key policy discussions and decisions.",
       "category": "Politics",
       "page": 2,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129072",
+      "importance": 3,
+      "telegram_url": "https://t.me/c/1877410077/129262",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "Bangalore_ET_02-07-2026.pdf",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
           "page": 2,
-          "telegram_url": "https://t.me/c/1877410077/129072"
+          "telegram_url": "https://t.me/c/1877410077/129262"
         }
       ],
-      "article_id": "f10d52e5"
+      "article_id": "f56601bd"
     },
     {
-      "headline": "India-Japan Summit Focuses on AI, Chips, and Renewable Energy",
-      "summary": "The 16th India-Japan Annual Summit will focus on deepening collaboration in artificial intelligence, semiconductors, and clean energy. Japan remains India's fifth-largest investor, with cumulative investments reaching $46.17 billion. Key projects discussed include the Mumbai-Ahmedabad High-Speed Rail and a $27 billion bilateral trade target for 2025-26.",
+      "headline": "Nothing We Say May Influence Decision",
+      "summary": "A statement from the Opposition suggests that their views might not influence a pending government decision, highlighting a perceived lack of impact on policy outcomes. This reflects ongoing political dynamics and legislative challenges in the current scenario.",
       "category": "Politics",
-      "page": 3,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/129072",
+      "page": 2,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/129262",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "Bangalore_ET_02-07-2026.pdf",
-          "page": 3,
-          "telegram_url": "https://t.me/c/1877410077/129072"
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 2,
+          "telegram_url": "https://t.me/c/1877410077/129262"
         }
       ],
-      "article_id": "237e4d37"
+      "article_id": "55349fe1"
     },
     {
-      "headline": "Karnataka Government to Audit Free Power Scheme Beneficiaries",
-      "summary": "The Karnataka government is seeking caste and income details to audit the Gruha Jyoti free power scheme. The move aims to limit subsidy benefits to bona fide residents and manage the ₹34,000 crore annual cost of the program. The opposition BJP has criticized the move, calling it a plot to reduce the number of beneficiaries.",
+      "headline": "RSS Calls Ram Temple Donation Theft 'Unfortunate, Hurtful'",
+      "summary": "The RSS condemned the alleged theft of donations from the Ram Temple collection boxes, terming it \"unfortunate and hurtful.\" The organization urged authorities to enhance security measures and ensure the sanctity and proper management of sacred donations.",
+      "category": "India",
+      "page": 3,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "82580dd9"
+    },
+    {
+      "headline": "HDK, BJP Cry Foul Over Sir, Allege Congress Interference",
+      "summary": "HD Kumaraswamy and the BJP accused the Congress government in Karnataka of interfering with the administration. They allege misuse of power and political vendettas, demanding fair governance and an end to partisan practices, impacting state politics.",
       "category": "Politics",
       "page": 3,
       "importance": 6,
-      "telegram_url": "https://t.me/c/1877410077/129072",
+      "telegram_url": "https://t.me/c/1877410077/129262",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "Bangalore_ET_02-07-2026.pdf",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
           "page": 3,
-          "telegram_url": "https://t.me/c/1877410077/129072"
+          "telegram_url": "https://t.me/c/1877410077/129262"
         }
       ],
-      "article_id": "2d6d9da8"
+      "article_id": "0131e61e"
     },
     {
-      "headline": "ITC Enters Cola Market with Sugar-Free Coconut Variant",
-      "summary": "ITC has launched B Natural Select, a carbonated beverage made with tender coconut water, marking its entry into the cola segment. The product is positioned as a healthier alternative to traditional colas. ITC plans to expand its beverage portfolio with more functional variants to compete with global giants Coca-Cola and PepsiCo.",
-      "category": "Business",
-      "page": 4,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129072",
+      "headline": "CBSE Plans to Ease Norms for Private School Affiliation",
+      "summary": "CBSE is planning to relax affiliation norms for private schools, aiming to streamline the process and reduce bureaucracy. The move is expected to simplify compliance for new and existing schools, promoting better access to quality education across India.",
+      "category": "Education",
+      "page": 3,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/129262",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "Bangalore_ET_02-07-2026.pdf",
-          "page": 4,
-          "telegram_url": "https://t.me/c/1877410077/129072"
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/129262"
         }
       ],
-      "article_id": "ca2b43c0"
+      "article_id": "83f78fc6"
     },
     {
-      "headline": "Consumer Firms to Create 5,000 Jobs Amid Rural Growth",
-      "summary": "Leading FMCG and consumer durable firms, including McDonald’s, L’Oreal, and Haier, are set to create 5,000 new jobs in India over the next two years. The expansion is driven by a resilient domestic market and growing demand in rural areas. Companies are also setting up global capability centers to support international operations.",
-      "category": "Business",
-      "page": 4,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129072",
+      "headline": "Uddhav Alleges Temple Funds Used to Split Parties",
+      "summary": "Uddhav Thackeray alleged that funds collected for the Ram Temple were used by the BJP to split political parties in Maharashtra. He claimed that the temple construction was politicized to serve electoral agendas rather than religious devotion.",
+      "category": "Politics",
+      "page": 3,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129262",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "Bangalore_ET_02-07-2026.pdf",
-          "page": 4,
-          "telegram_url": "https://t.me/c/1877410077/129072"
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/129262"
         }
       ],
-      "article_id": "67bc8fd5"
+      "article_id": "b2415830"
     },
     {
-      "headline": "Electric Vehicle Sales More Than Double in June",
-      "summary": "Indian electric car and two-wheeler sales more than doubled in June 2026, reaching 30,454 units. The growth is attributed to rising fuel prices, new model launches, and improving charging infrastructure. Two-wheeler registrations rose 62% to 170,426 units for the quarter, with TVS Motor and Bajaj Auto maintaining strong market positions.",
-      "category": "Business",
-      "page": 4,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129072",
+      "headline": "DMK MLA Arrested Over Remarks on Tamil Nadu CM",
+      "summary": "A DMK MLA has been arrested for making derogatory remarks against the Tamil Nadu Chief Minister. The arrest comes amid heightened political tensions and allegations of free speech suppression by the ruling party, sparking public debate.",
+      "category": "Politics",
+      "page": 3,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129262",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "Bangalore_ET_02-07-2026.pdf",
-          "page": 4,
-          "telegram_url": "https://t.me/c/1877410077/129072"
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/129262"
         }
       ],
-      "article_id": "9dea218c"
+      "article_id": "6e9b4d0e"
     },
     {
-      "headline": "New WhatsApp Rules Require Verified Usernames for Security",
-      "summary": "The government has issued a notice requiring WhatsApp users to set up unique, verified usernames. The move aims to prevent impersonation and cybercrime by allowing users to hide their mobile numbers. Meta has until the end of the week to share details on how it will integrate the feature with existing trust environments like UPI.",
-      "category": "Technology",
-      "page": 5,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/129072",
+      "headline": "Corrupt SDC Cleric Gets Adva From Mamata",
+      "summary": "A cleric accused of corruption received an advance from West Bengal CM Mamata Banerjee, sparking controversy. This incident raises questions about accountability and political patronage within the state administration, leading to public scrutiny.",
+      "category": "Politics",
+      "page": 3,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/129262",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "Bangalore_ET_02-07-2026.pdf",
-          "page": 5,
-          "telegram_url": "https://t.me/c/1877410077/129072"
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/129262"
         }
       ],
-      "article_id": "0c352872"
+      "article_id": "4632a8dd"
     },
     {
-      "headline": "Regulatory Concerns Loom Over Zepto’s Dual-Entity IPO Structure",
-      "summary": "Zepto’s hybrid business structure is drawing regulatory scrutiny ahead of its planned $1 billion IPO. The company operates a marketplace and a separate wholesale unit to comply with FDI rules. Experts suggest this could lead to closer monitoring by the CCI and SEBI regarding intra-group transactions and consumer data privacy.",
-      "category": "Business",
-      "page": 5,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129072",
+      "headline": "Krishna Byre Gowda Asks Agencies to Sync Infra Projects",
+      "summary": "Karnataka Minister Krishna Byre Gowda urged various agencies to synchronize infrastructure projects to avoid repeated digging and ensure efficient execution. This aims to minimize public inconvenience and optimize resource utilization for urban development, benefiting citizens.",
+      "category": "Infrastructure",
+      "page": 3,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/129262",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "Bangalore_ET_02-07-2026.pdf",
-          "page": 5,
-          "telegram_url": "https://t.me/c/1877410077/129072"
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/129262"
         }
       ],
-      "article_id": "5fcbc0b9"
+      "article_id": "355d6745"
     },
     {
-      "headline": "Anthropic Launches ‘Claude Science’ Platform for Global R&D",
-      "summary": "AI startup Anthropic has released Claude Science, a specialized AI workbench designed for scientific research. The platform helps researchers analyze large datasets, automate complex workflows, and generate insights in plain language. The tool aims to simplify the research process for scientists across various disciplines.",
+      "headline": "US' Holtec Eyes Tie-ups With NTPC, Vedanta",
+      "summary": "US-based Holtec International is exploring partnerships with NTPC and Vedanta to develop modular nuclear reactors (SMRs) in India. This collaboration aims to leverage advanced nuclear technology for clean energy generation and energy security, fostering sustainable development.",
       "category": "Science",
-      "page": 5,
+      "page": 4,
       "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129072",
+      "telegram_url": "https://t.me/c/1877410077/129262",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "Bangalore_ET_02-07-2026.pdf",
-          "page": 5,
-          "telegram_url": "https://t.me/c/1877410077/129072"
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/129262"
         }
       ],
-      "article_id": "6fee8c26"
+      "article_id": "45f5e7de"
     },
     {
-      "headline": "IT Sector Slump Hits Shares of KPIT, Tata Elxsi",
-      "summary": "Indian IT stocks fell sharply in mid-2026 as fears of AI-led disruptions and slowing global demand took a toll. Shares of KPIT Technologies plunged 17% after a profit warning, while Tata Elxsi and L&T Technology Services also saw significant declines. Analysts suggest that AI is beginning to offset productivity gains in traditional IT services.",
-      "category": "Economy",
-      "page": 9,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/129072",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "Bangalore_ET_02-07-2026.pdf",
-          "page": 9,
-          "telegram_url": "https://t.me/c/1877410077/129072"
-        }
-      ],
-      "article_id": "4c8930f0"
-    },
-    {
-      "headline": "Indian Rupee Falls Past 95 Per Dollar on Fed Hawkishness",
-      "summary": "The Indian rupee slipped past the 95-per-dollar mark for the first time, driven by high dollar demand and expectations of a hawkish US Federal Reserve policy. Despite RBI interventions, the currency ended at 95.24. Experts anticipate the rupee could fluctuate between 94.7 and 95.5 in the coming days as inflation remains above central bank targets.",
-      "category": "Economy",
-      "page": 9,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/129072",
-      "sources": [
-        {
-          "newspaper": "Economic Times",
-          "pdf_filename": "Bangalore_ET_02-07-2026.pdf",
-          "page": 9,
-          "telegram_url": "https://t.me/c/1877410077/129072"
-        }
-      ],
-      "article_id": "065a6b11"
-    },
-    {
-      "headline": "Together AI Raises $800 Million in Aramco-Led Funding",
-      "summary": "Together AI, an infrastructure platform for artificial intelligence, has raised $800 million in a funding round led by Aramco Ventures. The investment values the firm at $8.3 billion. The company plans to use the capital to expand its cloud-based AI services and develop new technologies for private-sector customers globally.",
+      "headline": "Apps Blocked Over EV Shutdowns Due to Auto Cybersecurity",
+      "summary": "Several mobile apps are being blocked on electric vehicles following cybersecurity concerns. This measure aims to protect user data and vehicle systems from potential threats, though it impacts the functionality and user experience of smart cars.",
       "category": "Technology",
-      "page": 11,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129072",
+      "page": 4,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129262",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "Bangalore_ET_02-07-2026.pdf",
-          "page": 11,
-          "telegram_url": "https://t.me/c/1877410077/129072"
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/129262"
         }
       ],
-      "article_id": "582f9fbc"
+      "article_id": "5091ad95"
     },
     {
-      "headline": "US Approves Export of Anthropic AI Models to Allies",
-      "summary": "The US Commerce Department has lifted export controls on two advanced AI models from Anthropic, Fable and Mythos, for export to allied nations. The decision followed a review of the models' safety and potential security risks. Anthropic will collaborate with the US government to establish safety standards and prevent misuse of the technology.",
-      "category": "World",
-      "page": 12,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/129072",
+      "headline": "Eye on 17% Goods Exports Growth Next Fiscal",
+      "summary": "India aims for a 17% growth in goods exports in the next fiscal year, targeting key markets like the EU, UK, and Africa. The government plans to boost exports through free trade agreements and diversification into new product categories.",
+      "category": "Economy",
+      "page": 4,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/129262",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "Bangalore_ET_02-07-2026.pdf",
-          "page": 12,
-          "telegram_url": "https://t.me/c/1877410077/129072"
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/129262"
         }
       ],
-      "article_id": "d2b20a59"
+      "article_id": "e06fde80"
     },
     {
-      "headline": "Trump Earned $1.4 Billion from Crypto Ventures in 2025",
-      "summary": "Financial disclosures reveal that former US President Donald Trump earned over $1.4 billion from cryptocurrency ventures in 2025. The income includes sales of digital tokens and management fees from crypto-related projects. Trump's involvement in the industry has grown since his presidency, with his family members also taking on leadership roles in the sector.",
-      "category": "World",
-      "page": 12,
-      "importance": 7,
-      "telegram_url": "https://t.me/c/1877410077/129072",
+      "headline": "Middle Class to Remain India's Growth Engine",
+      "summary": "The finance ministry emphasized that the middle class will continue to be the primary engine of India's economic growth. Their rising consumption and investment capabilities are crucial for driving demand and sustaining the nation's development trajectory, supporting overall prosperity.",
+      "category": "Economy",
+      "page": 4,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/129262",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "Bangalore_ET_02-07-2026.pdf",
-          "page": 12,
-          "telegram_url": "https://t.me/c/1877410077/129072"
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/129262"
         }
       ],
-      "article_id": "e4b15ddf"
+      "article_id": "a3d085d1"
     },
     {
-      "headline": "Google to Pay $1.5 Billion in Swedish Antitrust Case",
-      "summary": "A Swedish court has ordered Google to pay $1.5 billion in damages to PriceRunner for antitrust violations. The court found that Google manipulated search results to favor its own comparison-shopping service. The fine is one of the largest ever imposed on a tech company in Europe for competitive malpractices.",
+      "headline": "Monsoon Watch: Rainfall Up",
+      "summary": "Rainfall distribution across India indicates an increase in precipitation, crucial for agriculture and water resources. The monsoon forecast suggests continued active rainfall, impacting cropping patterns, reservoir levels, and overall water availability for the upcoming season.",
+      "category": "Environment",
+      "page": 4,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "a9a93041"
+    },
+    {
+      "headline": "World Cup Fails to Score For TV Makers",
+      "summary": "TV manufacturers saw a sales dip in June, partly attributed to lower-than-expected viewership during the T20 World Cup. Despite the tournament, demand for new televisions did not surge as anticipated, impacting retail sales and the consumer electronics market.",
+      "category": "Business",
+      "page": 5,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 5,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "c1b25183"
+    },
+    {
+      "headline": "As Food Inflation Bites, Nestle Turns to Smaller Cities to Drive Demand",
+      "summary": "Nestle is focusing on smaller cities and towns to drive demand amidst rising food inflation. The strategy involves targeting new consumption pockets and offering value-for-money products to sustain growth in challenging economic conditions, expanding its market reach.",
+      "category": "Business",
+      "page": 5,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 5,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "47da0a47"
+    },
+    {
+      "headline": "Limited Audience Impact Undercuts Zee5",
+      "summary": "Zee5's limited audience impact and challenges in securing key content rights have led to significant financial setbacks, resulting in widespread layoffs. The company is facing increased competition and pressure to achieve profitability in a competitive streaming market.",
+      "category": "Business",
+      "page": 5,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 5,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "501e6ae0"
+    },
+    {
+      "headline": "Telcos Do Well in Q1, But Tariff Hikes Likely",
+      "summary": "Indian telecom companies performed strongly in Q1, driven by increased subscriber bases and data consumption. However, analysts anticipate tariff hikes in the second half of the year to further boost Average Revenue Per User (ARPU) and revenue growth.",
+      "category": "Business",
+      "page": 5,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 5,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "9b8962cf"
+    },
+    {
+      "headline": "ACME Unit to Supply $10 bn Green Ammonia",
+      "summary": "ACME Group's unit will supply $10 billion worth of green ammonia to customers, emphasizing its role in the renewable energy sector. This initiative underscores India's push towards sustainable energy solutions and a greener economy, attracting global partners.",
+      "category": "Business",
+      "page": 5,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 5,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "1fbd7845"
+    },
+    {
+      "headline": "Screenwriters Wanted to Create $2.65-B Content",
+      "summary": "India aims to generate $2.65 billion worth of content through a talent hunt for screenwriters. This initiative seeks to boost the creative economy, foster original storytelling, and provide opportunities for emerging and established writers in the entertainment industry.",
+      "category": "Culture",
+      "page": 5,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 5,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "4257d173"
+    },
+    {
+      "headline": "'Pre-crime' Ain't a Policing Option",
+      "summary": "The editorial argues against \"pre-crime\" policing tactics, emphasizing that AI and data analytics should not be used to predict future crimes or target individuals before offenses occur. It advocates for ethical use of technology in law enforcement to avoid biases.",
       "category": "Law",
-      "page": 12,
-      "importance": 8,
-      "telegram_url": "https://t.me/c/1877410077/129072",
+      "page": 6,
+      "importance": 7,
+      "telegram_url": "https://t.me/c/1877410077/129262",
       "sources": [
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "Bangalore_ET_02-07-2026.pdf",
-          "page": 12,
-          "telegram_url": "https://t.me/c/1877410077/129072"
-        }
-      ],
-      "article_id": "ec097f64"
-    },
-    {
-      "headline": "June GST mop-up rises 14% on higher import tax",
-      "summary": "India's Gross Goods and Services Tax (GST) collections grew 14% year-on-year to ₹1.95 lakh crore in June 2026. This growth was driven by a 34.6% surge in GST from imports and a 6.5% rise in domestic transactions. Total collections for the first quarter of FY27 reached ₹6.32 lakh crore, representing an 8.4% growth over the previous year.",
-      "category": "Economy",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
           "page": 6,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        },
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/129063"
+          "telegram_url": "https://t.me/c/1877410077/129262"
         }
       ],
-      "importance": 9,
-      "article_id": "8501373e"
+      "article_id": "e7683381"
     },
     {
-      "headline": "Centre notifies minimum wage of ₹300 per day under VB-G Ram G",
-      "summary": "The Centre has notified new wage rates under the Viksit Bharat - Rozgar and Ajeevika Mission (Gramin) (VB-G Ram G) scheme. The national average wage has been hiked to ₹327.4 per day, with the interim base rate set at ₹300. Some states like Andhra Pradesh and Himachal Pradesh saw increases of up to 25%. The move aims to strengthen rural livelihoods and strengthen the mission.",
-      "category": "Economy",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 6,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        },
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 11,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
-      "importance": 8,
-      "article_id": "3c6b592c"
-    },
-    {
-      "headline": "Rupee closes at three-week low of 95.24 per dollar",
-      "summary": "The Indian rupee fell 58 paise to close at 95.24 against the US dollar on Wednesday, its biggest single-day decline in over three weeks. The drop was triggered by aggressive dollar buying from importers and a lack of intervention from the central bank. The rupee was the worst-performing Asian currency of the day as the dollar index strengthened.",
-      "category": "Economy",
-      "sources": [
-        {
-          "newspaper": "Mint",
-          "pdf_filename": "BENGALURU_Mint_02-07-2026.pdf",
-          "page": 11,
-          "telegram_url": "https://t.me/c/1877410077/129059"
-        },
-        {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
-          "page": 1,
-          "telegram_url": "https://t.me/c/1877410077/129063"
-        }
-      ],
+      "headline": "Open and Shut Big AI Overselling Case",
+      "summary": "The article criticizes the overhyping of AI capabilities, stating that many claims about advanced AI are speculative. It argues that a significant portion of AI's current impact is due to basic automation, not sentient intelligence, urging a more realistic perspective.",
+      "category": "Technology",
+      "page": 6,
       "importance": 7,
-      "article_id": "c5e8be51"
-    },
-    {
-      "headline": "Centre slashes LPG prices and reduces commercial gas and ATF rates",
-      "summary": "The government reduced the price of 19-kg commercial LPG cylinders by ₹183.50 and 14.2-kg domestic cylinders by ₹13. This marks the second price cut in a month, attributed to easing global energy prices. Aviation Turbine Fuel (ATF) prices were also cut by ₹5 to ₹110 per litre in Delhi, providing relief to the airline industry.",
-      "category": "Economy",
+      "telegram_url": "https://t.me/c/1877410077/129262",
       "sources": [
         {
-          "newspaper": "Business Line",
-          "pdf_filename": "Bangalore_BL_02-07-2026.pdf",
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
           "page": 6,
-          "telegram_url": "https://t.me/c/1877410077/129063"
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "56005709"
+    },
+    {
+      "headline": "The Unconditional Love",
+      "summary": "This piece explores the concept of unconditional love, particularly in the context of human relationships and personal growth. It delves into the emotional depth and psychological impact of selfless affection, highlighting its significance in well-being.",
+      "category": "Culture",
+      "page": 6,
+      "importance": 3,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 6,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "d06d57ad"
+    },
+    {
+      "headline": "250 Years of Trysts With the Future",
+      "summary": "This opinion piece reflects on 250 years of global historical progress and the concept of \"trysts with the future.\" It examines how nations and individuals have shaped their destiny through choices and challenges over centuries, exploring societal evolution.",
+      "category": "Culture",
+      "page": 6,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 6,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "847f073f"
+    },
+    {
+      "headline": "What America (Still) Teaches Us",
+      "summary": "This article discusses the enduring lessons that America offers the world, from innovation and democracy to economic models. It explores both the strengths and weaknesses, providing a nuanced view of its global influence and historical contributions.",
+      "category": "World",
+      "page": 6,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 6,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "992606a8"
+    },
+    {
+      "headline": "Sleeping Your Way to Success",
+      "summary": "This article emphasizes the critical role of adequate sleep for success, productivity, and overall well-being. It highlights how sufficient rest improves cognitive function, decision-making, and emotional resilience, advocating for prioritizing sleep as a strategic asset.",
+      "category": "Health",
+      "page": 6,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 6,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "62f9c22d"
+    },
+    {
+      "headline": "Flight of Capital on Saturday",
+      "summary": "This brief discusses the phenomenon of capital flight occurring on weekends, likely due to financial markets closing. It indicates strategies investors might use to move funds during non-trading hours, potentially impacting market stability.",
+      "category": "Economy",
+      "page": 6,
+      "importance": 3,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 6,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "f1fa9dff"
+    },
+    {
+      "headline": "Drill, Baby, Drill, For Oil",
+      "summary": "This brief discusses the ongoing debate surrounding increased oil drilling. It likely addresses the economic benefits of expanded fossil fuel extraction versus environmental concerns, highlighting policy implications and industry discussions.",
+      "category": "Environment",
+      "page": 6,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 6,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "5fdf9ec4"
+    },
+    {
+      "headline": "Who's Watching Our Privacy?",
+      "summary": "This brief raises concerns about personal privacy in the digital age, questioning who has access to our data and how it is used. It touches upon issues of surveillance, data breaches, and the importance of robust data protection measures.",
+      "category": "Technology",
+      "page": 6,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 6,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "e0c12218"
+    },
+    {
+      "headline": "Tough Rules Shatter NRIs' Equity Dreams",
+      "summary": "Stricter rules and taxation policies are dampening the enthusiasm of Non-Resident Indians (NRIs) for investing in Indian equities. These regulatory hurdles are making it more challenging for NRIs to participate effectively in the stock market, impacting foreign investment.",
+      "category": "Economy",
+      "page": 7,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 7,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "05f79eff"
+    },
+    {
+      "headline": "Udan Flights Discontinued on 50% of the Routes",
+      "summary": "Approximately 50% of the routes under the UDAN regional connectivity scheme have been discontinued due to financial unviability and lack of demand. This impacts air travel in smaller towns, raising questions about the scheme's long-term effectiveness.",
+      "category": "Infrastructure",
+      "page": 7,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 7,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "be2f0453"
+    },
+    {
+      "headline": "NuVentures Invests in US-based Firm LinqAlpha",
+      "summary": "NuVentures, an Indian venture capital firm, has invested in US-based LinqAlpha, an AI-driven marketing technology company. This strategic investment aims to bolster LinqAlpha's growth and expand its market reach, fostering innovation in marketing tech.",
+      "category": "Business",
+      "page": 7,
+      "importance": 4,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 7,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "093e8be0"
+    },
+    {
+      "headline": "General Insurance: Call for CXO Executive",
+      "summary": "Universal Sompo General Insurance is seeking a CXO-level executive for a leadership role. The position involves strategic management, driving business growth, and enhancing customer operations within the general insurance sector, focusing on experienced candidates.",
+      "category": "Business",
+      "page": 7,
+      "importance": 3,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 7,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "f0e2f924"
+    },
+    {
+      "headline": "D-St Also Smokes Peace Pipe, Ends in Green",
+      "summary": "Indian equities ended the week in the green, with key indices showing positive movement. Despite earlier volatility, a late surge in buying across sectors helped the market close with gains, reflecting renewed investor confidence.",
+      "category": "Economy",
+      "page": 8,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "70ae4f20"
+    },
+    {
+      "headline": "Rupee Ends Losing Run on Whiff of FPI Inflows",
+      "summary": "The Indian rupee strengthened against the dollar, ending its losing streak due to expectations of fresh foreign portfolio investment (FPI) inflows. This positive sentiment is driven by improving economic outlook and global market trends, bolstering currency stability.",
+      "category": "Economy",
+      "page": 8,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "dda06df7"
+    },
+    {
+      "headline": "Sebi Tweaks Rules on Handling of Unpaid Securities",
+      "summary": "SEBI has modified rules for handling unpaid securities and funds in trading accounts. The changes aim to streamline the process, enhance investor protection, and ensure greater transparency and efficiency in the financial markets, benefiting investors.",
+      "category": "Law",
+      "page": 8,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "2c16a0f0"
+    },
+    {
+      "headline": "Bond Street, Falling Yields Spur ₹3,700-cr Fundraise",
+      "summary": "Indian companies raised ₹3,700 crore through bond issuances, driven by falling yields and favorable market conditions. This trend indicates a robust debt market, supporting corporate financing and investment activities across various sectors, boosting economic growth.",
+      "category": "Economy",
+      "page": 8,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "8b814af7"
+    },
+    {
+      "headline": "SBI Funds Seeks ₹2K cr in Pre-IPO Placement",
+      "summary": "SBI Funds Management is planning to raise ₹2,000 crore through a pre-IPO placement. This strategic move aims to secure early investments ahead of its initial public offering, positioning the fund for future growth and expanding its market presence.",
+      "category": "Business",
+      "page": 8,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "7c45ccc9"
+    },
+    {
+      "headline": "Zero Tolerance to CSAM, Says Meta",
+      "summary": "Meta reiterated its \"zero tolerance\" policy for Child Sexual Abuse Material (CSAM), emphasizing its continuous efforts to combat such content through advanced technology and collaboration with law enforcement agencies. This highlights their commitment to user safety.",
+      "category": "Technology",
+      "page": 8,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "702c9257"
+    },
+    {
+      "headline": "Adani Ent QIP Gets Nearly 4X Bids",
+      "summary": "Adani Enterprises' Qualified Institutional Placement (QIP) received bids nearly four times the offer size, indicating strong investor confidence. The oversubscription suggests robust demand for the company's shares and future growth prospects, boosting market sentiment.",
+      "category": "Business",
+      "page": 8,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "37d4a4b9"
+    },
+    {
+      "headline": "Kpack Packaging IPO Gets 83X Bids",
+      "summary": "Kpack Packaging's Initial Public Offering (IPO) was oversubscribed by 83 times, demonstrating overwhelming investor demand. The strong response reflects positive market sentiment towards the packaging sector and the company's growth potential, securing significant capital.",
+      "category": "Business",
+      "page": 8,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "e3dd7ca3"
+    },
+    {
+      "headline": "AI-led Operating Model Huge Revenue",
+      "summary": "Companies implementing AI-led operating models are experiencing huge revenue growth, with some seeing annual revenue for artificial intelligence growing 5.5x faster than companies not using it. This trend highlights AI's transformative impact on business efficiency and profitability.",
+      "category": "Technology",
+      "page": 8,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "86764cc0"
+    },
+    {
+      "headline": "Transmission Plans for Power",
+      "summary": "India is developing extensive transmission plans to enhance its power grid infrastructure, focusing on improving connectivity and reliability. These initiatives are crucial for integrating renewable energy and meeting growing electricity demand across the nation, ensuring energy security.",
+      "category": "Infrastructure",
+      "page": 8,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 8,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "23ad27d9"
+    },
+    {
+      "headline": "Portugal Survive a Chaotic Finish to Reach Last 16",
+      "summary": "Portugal narrowly escaped a chaotic finish against Hungary to secure a 2-1 victory, advancing to the Euro 2024 Round of 16. The match saw late drama and controversial VAR decisions, ultimately ensuring their progression in the tournament.",
+      "category": "Sports",
+      "page": 10,
+      "importance": 6,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 10,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "fab6f1e2"
+    },
+    {
+      "headline": "France, Beware: Benzema Threatens Neymar",
+      "summary": "Karim Benzema issued a warning to Neymar, emphasizing that France is ready to face Brazil in an upcoming match. The rivalry between the players and nations adds intensity to the contest, setting the stage for a thrilling football encounter.",
+      "category": "Sports",
+      "page": 10,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 10,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "9504376d"
+    },
+    {
+      "headline": "Hamilton Puts Ferrari on Pole for Brazilian GP",
+      "summary": "Lewis Hamilton secured pole position for Ferrari at the Brazilian Grand Prix, showcasing strong performance in qualifying. This puts him in a prime position to challenge for victory, setting up an exciting race weekend for Formula 1 enthusiasts.",
+      "category": "Sports",
+      "page": 10,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 10,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "63844fe5"
+    },
+    {
+      "headline": "Mahakala in Baghdad: How Tantra Shaped Islam",
+      "summary": "This article explores the historical influence of Tantric traditions, particularly the deity Mahakala, on early Islamic esoteric practices in Baghdad. It delves into cultural exchange and the synthesis of religious thought, highlighting cross-cultural intellectual connections.",
+      "category": "Culture",
+      "page": 10,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 10,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "89f515b6"
+    },
+    {
+      "headline": "Should India Aspire to be a DIY Society?",
+      "summary": "This opinion piece questions whether India should strive to become a \"DIY society\" (Do It Yourself). It explores the implications of self-reliance, local innovation, and domestic production on economic growth and societal development, fostering a national debate.",
+      "category": "Economy",
+      "page": 10,
+      "importance": 5,
+      "telegram_url": "https://t.me/c/1877410077/129262",
+      "sources": [
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 10,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "article_id": "3c3a854d"
+    },
+    {
+      "headline": "SIT widens scrutiny into Ram Temple trust financials",
+      "summary": "A three-member Special Investigation Team (SIT) has expanded its probe into the financial system of the Shri Ram Janmabhoomi Teerth Kshetra Trust. The team is scrutinizing the complete trail of donations received from within India and abroad during the temple's construction. This follows allegations of financial irregularities and 'unauthorized' fund management within the trust.",
+      "category": "Law",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/129278"
         },
         {
           "newspaper": "Economic Times",
-          "pdf_filename": "Bangalore_ET_02-07-2026.pdf",
-          "page": 11,
-          "telegram_url": "https://t.me/c/1877410077/129072"
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/129262"
         }
       ],
-      "importance": 7,
-      "article_id": "0396e309"
+      "importance": 8,
+      "article_id": "adf2f2cb"
+    },
+    {
+      "headline": "DMK moves SC in Karur stampede case for CBI probe",
+      "summary": "The DMK has moved the Supreme Court seeking a CBI probe into the Karur stampede incident. The party alleged that the state government's distribution of gift coupons led to the crowd surge that killed several people. The DMK claimed that the current police investigation is compromised and lacks transparency. The petition seeks to ensure accountability of officials and fair compensation for victims.",
+      "category": "Law",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        },
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 3,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "importance": 6,
+      "article_id": "7f0af3e8"
+    },
+    {
+      "headline": "Services sector growth hits 17-month low in June",
+      "summary": "India's services sector growth slowed to a 17-month low in June, as measured by the HSBC Purchasing Managers' Index (PMI). The index fell to 57.4 from 61.2 in May, cited as a result of weak domestic demand and inflationary pressures. Despite the decline, the sector remains in expansion territory (above 50). Experts suggest that business confidence remains positive for the long-term outlook.",
+      "category": "Economy",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 16,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        },
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 4,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "importance": 8,
+      "article_id": "d1a91221"
+    },
+    {
+      "headline": "England to face Australia in women's T20 World Cup final",
+      "summary": "England will take on arch-rivals Australia in the final of the women's T20 World Cup. England secured their place with a dominant 40-run win over South Africa in the semi-final, powered by Nat Sciver-Brunt's half-century. Australia, the defending champions, are seeking their seventh title. The final is scheduled to be held at Lord's on Sunday, with a record crowd expected for the showpiece event.",
+      "category": "Sports",
+      "sources": [
+        {
+          "newspaper": "Hindustan Times",
+          "pdf_filename": "HT Bengaluru ⁰⁴⁰⁷²⁰²⁶.pdf",
+          "page": 18,
+          "telegram_url": "https://t.me/c/1877410077/129278"
+        },
+        {
+          "newspaper": "Economic Times",
+          "pdf_filename": "Bangalore_ET_04-07-2026.pdf",
+          "page": 10,
+          "telegram_url": "https://t.me/c/1877410077/129262"
+        }
+      ],
+      "importance": 8,
+      "article_id": "c715984d"
     }
   ],
   "newspapers": [
-    "Hindustan Times",
+    "Business Standard",
     "Times of India",
+    "Hindustan Times",
+    "Financial Express",
     "Economic Times",
     "Business Line",
-    "Mint",
-    "The Hindu"
+    "The Hindu",
+    "Indian Express"
   ],
   "is_complete": false
 }
